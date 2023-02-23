@@ -34,7 +34,7 @@ header {
             display: block;
             height: 42px;
             text-indent: -9999px;
-            background-image: url('assets/images/logo.svg');
+            background-image: url('../assets/images/logo.svg');
             background-repeat: no-repeat;
             background-position: 0 50%;
             background-size: cover;
@@ -99,7 +99,7 @@ header {
         &__btn {
             height: 56px;
             padding-left: 68px;
-            background-image: url('assets/images/img_profile.svg');           
+            background-image: url('../assets/images/img_profile.svg');           
             background-position: center left;
             background-repeat: no-repeat;
             background-size: contain;
