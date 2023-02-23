@@ -48,5 +48,5 @@ $(function() {
         headerShortcut();
         // gnb focus
         gnbFocus();
-    }, 300);
+    }, 200);
 });

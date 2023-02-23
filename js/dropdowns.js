@@ -20,5 +20,5 @@ function dropdown() {
 $(function() {
     setTimeout(function() {
         dropdown();
-    }, 100);
+    }, 200);
 });
