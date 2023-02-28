@@ -86,19 +86,19 @@ body {
     }
 
     &--first {
-        background-image: url('../assets/images/ico_pagenation_first.svg');
+        background-image: url('/lms/assets/image/ico_pagenation_first.svg');
     }
 
     &--prev {
-        background-image: url('../assets/images/ico_pagenation_prev.svg');
+        background-image: url('/lms/assets/image/ico_pagenation_prev.svg');
     }
 
     &--next {
-        background-image: url('../assets/images/ico_pagenation_next.svg');
+        background-image: url('/lms/assets/image/ico_pagenation_next.svg');
     }
 
     &--last {
-        background-image: url('../assets/images/ico_pagenation_last.svg');
+        background-image: url('/lms/assets/image/ico_pagenation_last.svg');
     }
 }
 
@@ -141,18 +141,18 @@ body {
     }
 
     &--prev {
-        background-image: url('../assets/images/ico_date_prev.svg');
+        background-image: url('/lms/assets/image/ico_date_prev.svg');
 
         &--disabled {
-            background-image: url('../assets/images/ico_date_prev_disabled.svg');
+            background-image: url('/lms/assets/image/ico_date_prev_disabled.svg');
         }
     }
 
     &--next {
-        background-image: url('../assets/images/ico_date_next.svg');
+        background-image: url('/lms/assets/image/ico_date_next.svg');
 
         &--disabled {
-            background-image: url('../assets/images/ico_date_next_disabled.svg');
+            background-image: url('/lms/assets/image/ico_date_next_disabled.svg');
         }
     }
 }
@@ -251,7 +251,7 @@ body {
                     left: 0;
                     width: 20px;
                     height: 20px;
-                    background: url('../assets/images/ico_dropdown_calendar.svg') no-repeat center/ contain;
+                    background: url('/lms/assets/image/ico_dropdown_calendar.svg') no-repeat center/ contain;
                 }
             }
         }
@@ -711,10 +711,10 @@ $menu_font_weight : 400;
     &-teacher {
         .change {
             &--color {
-                background-image: url('../assets/images/img_change_teacher.svg');
+                background-image: url('/lms/assets/image/img_change_teacher.svg');
 
                 &-gray {
-                    background-image: url('../assets/images/img_change_manager.svg');
+                    background-image: url('/lms/assets/image/img_change_manager.svg');
                 }
             }
         }
@@ -723,10 +723,10 @@ $menu_font_weight : 400;
     &-manager {
         .change {
             &--color {
-                background-image: url('../assets/images/img_change_manager_2.svg');
+                background-image: url('/lms/assets/image/img_change_manager_2.svg');
 
                 &-gray {
-                    background-image: url('../assets/images/img_change_teacher_2.svg');
+                    background-image: url('/lms/assets/image/img_change_teacher_2.svg');
                 }
             }
         }
