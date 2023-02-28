@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+        <link href="/scss/notice_standby_account.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/html/common/layouts/header.html"></header>
+        <main class="page">
+            <div class="standby-account">
+                <div id="modal-standby-account" class="modal alert modal--fade modal--showed" style="display: block;">                
+                    <div class="modal__dialog modal--center">
+                        <div class="modal__content">
+                            <div class="modal__header">
+                                <h5 class="modal__title">대기 계정 안내</h5>
+                            </div>
+                            <div class="modal__body">
+                                <h6 class="modal__sub-title">고객님의 계정은 1년 이상 로그인하지 않아 
+                                <br><strong>대기 상태로 전환되었습니다.</strong></h6>
+                                <p class="modal__txt">
+                                    대교 KReaD독해 LMS 서비스는 관련 법률에 의거하여 1년 이상 로그인하지 않은 회원님의 개인 정보를 안전하게 보호하기 위해, 대기계정 정책을 시행하고 있습니다.
+                                </p>
+                                <p class="standby-account__txt">
+                                    (관련법률:정보통신망이용촉진및정보보호등에관한법률 <br>
+                                    (정보통신망법) 제29조(개인 정보의 파기) 제2항)
+                                </p>
+                                <p class="modal__txt">
+                                    서비스를 다시 이용하려면 하단의 ‘대기 해제하기’ 버튼을 클릭해 주세요. 대기 상태가 해제되며 정상적으로 서비스를 이용하실 수 있습니다.
+                                </p>
+                            </div>
+                            <div class="modal__footer">
+                                <p class="btn__content--half">
+                                    <button type="button" class="btn btn--color-gray-200-outline" data-dismiss="modal">다음에 변경</button>
+                                    <button type="submit" class="btn btn--primary">대기해제</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__bg"></div>
+            </div>
+        </main>
+    </body>
+</html>

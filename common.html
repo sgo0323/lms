@@ -27,6 +27,7 @@
         <link href="/scss/header.css" rel="stylesheet">
         <link href="/scss/form.css" rel="stylesheet">
         <link href="/scss/modal.css" rel="stylesheet">
+        <link href="/scss/alert.css" rel="stylesheet">
 
         <!--- Js -->
         <script src="/js/jquery-2.2.4.min.js"></script>
@@ -38,30 +39,29 @@
     <body>
         <header data-include="/html/common/layouts/header.html"></header>
         <main class="page">
-            <section>
-                <button type="button" class="btn" data-type="modal" data-target="#modal-authority-alert-close">학원관리자 권한 변경2</button>
-            </section>
-        </main>
-
-        <div id="modal-authority-alert-close" class="modal alert">
-            <div class="modal__dialog modal--center">
-                <div class="modal__content">
-                    <div class="modal__header modal__header--close">
-                        <h5 class="modal__title">학원관리자 권한 변경학원관리자 권한 변경학원관리자 권한 변경학원관리자 권한 변경학원관리자 권한 변경학원관리자 권한 변경</h5>
-                        <button class="modal--close" data-dismiss="modal">취소</button>
-                    </div>
-                    <div class="modal__body">
-                        <p class="modal__txt">학원 관리자 권한이 변경되었습니다.<br>
-                            확인 후 재로그인 필요합니다.</p>
-                    </div>
-                    <div class="modal__footer">
-                        <p class="btn__content--half">
-                            <button type="button" class="btn btn--color-gray-200-outline" data-dismiss="modal">취소</button>
-                            <button type="submit" class="btn btn--primary">확인</button>
-                        </p>
-                    </div>
+            <div class="menu">
+                <div class="menu__content">
+                    <h2 class="menu__title">대메뉴</h2>
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="" class="menu__link">학습관리</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">학습현황</a></li>
+                    </ul>
                 </div>
+                <p class="menu__txt">text text text text text text text text text text text text</p>
             </div>
-        </div>
+
+            <div>
+                <h2>tag</h2>
+                <p class="tag">결석</p>
+                <p class="tag tag--warning">수업예정</p>
+                <p class="tag tag--color-purple">1레벨 1레슨 문학</p>
+                <p class="tag tag--color-green">1레벨 1레슨 비문학</p>
+                <p class="tag tag--color-lightGreen-outline">맞춤</p>
+                <p class="tag tag--positive-outline">추천</p>
+                <p class="tag tag--secondary-outline">리셋</p>
+                <p class="tag tag--negative-outline">진도수정</p>
+                <p class="tag tag--color-black-outline">현재 학습중</p>
+            </div>
+        </main>
     </body>
 </html>

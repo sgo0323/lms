@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/html/common/layouts/header.html"></header>
+        <main class="page">
+            <section>
+                <form action="" method="get">
+                    <div class="button">
+                        <h2>Button</h2>
+                        <fieldset name="button">
+                            <legend>States (H=52px)</legend>
+                            <button type="button" class="btn">default</button>
+                            <button type="button" class="btn btn--primary">primary</button>
+                            <button type="button" class="btn btn--secondary">secondary</button>
+                            <button type="button" class="btn btn--tertiary">tertiary</button>
+                            <button type="button" class="btn btn--negative">negative</button>
+                            <button type="button" class="btn btn--warning">warning</button>
+                            <button type="button" class="btn btn--positive">positive</button>
+                            <button type="button" class="btn btn--neutral">neutral</button>
+                            <button type="button" class="btn btn--disabled">disabled</button>
+                        </fieldset>
+                        <fieldset name="button">
+                            <legend>color button</legend>
+                            <button type="button" class="btn btn--color-gray-600">Gray-600</button>
+                            <button type="button" class="btn btn--color-gray-400">Gray-400</button>
+                            <button type="button" class="btn btn--color-gray-200">Gray-200</button>
+                            <button type="button" class="btn btn--color-red">Red</button>
+                            <button type="button" class="btn btn--color-black">Black</button>            
+                            <button type="button" class="btn btn--color-blue">Blue</button>  
+                            <button type="button" class="btn btn--color-blue2">Blue2</button>  
+                            <button type="button" class="btn btn--color-light">light</button>
+                            <button type="button" class="btn btn--color-dark">dark</button>
+                        </fieldset>
+                        <fieldset>
+                            <legend>outline button</legend>
+                            <button type="button" class="btn btn-outline">default-outline</button>
+                            <button type="button" class="btn btn--primary-outline">primary-outline</button>
+                            <button type="button" class="btn btn--secondary-outline">secondary-outline</button>
+                            <button type="button" class="btn btn--tertiary-outline">tertiary-outline</button>
+                            <button type="button" class="btn btn--negative-outline">negative-outline</button>
+                            <button type="button" class="btn btn--warning-outline">warning-outline</button>
+                            <button type="button" class="btn btn--positive-outline">positive-outline</button>
+                            <button type="button" class="btn btn--neutral-outline">neutral-outline</button>
+    
+                            <button type="button" class="btn btn--color-gray-600-outline">Gray-600-outlin</button>
+                            <button type="button" class="btn btn--color-gray-400-outline">Gray-400-outlin</button>
+                            <button type="button" class="btn btn--color-gray-200-outline">Gray-200-outlin</button>
+                            <button type="button" class="btn btn--color-red-outline">color-red-outlin</button>
+                            <button type="button" class="btn btn--color-black-outline">color-black-outlin</button>
+                            <button type="button" class="btn btn--color-blue-outline">color-blue-outlin</button>
+                            <button type="button" class="btn btn--color-blue2-outline">color-blue2-outlin</button>
+                            <button type="button" class="btn btn--color-light-outline">color-light-outlin</button>
+                            <button type="button" class="btn btn--color-dark-outline">color-dark-outlin</button>
+                        </fieldset>
+                        <fieldset>
+                            <legend>fixed button</legend>
+                            <button type="button" class="btn btn--fixed btn--color-light">파일첨부</button>
+                            <button type="button" class="btn btn--fixed btn--color-light">중복체크</button>
+                            <button type="button" class="btn btn--fixed btn--color-dark">주소검색</button>
+                            <button type="button" class="btn btn--fixed btn--primary">선택</button>
+                            <button type="button" class="btn btn--fixed btn--color-dark">스케줄등록</button>
+                            <button type="button" class="btn btn--fixed btn--color-dark">학원관리자 권한변경</button>
+                            <button type="button" class="btn btn--fixed btn--color-dark">비밀번호 초기화</button>
+                            <button type="button" class="btn btn--fixed btn--color-dark">휴대폰 인증</button>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Large button (H=72px)</legend>
+                            <button type="button" class="btn btn--color-gray-600-outline btn--large">취소</button>
+                            <button type="button" class="btn btn--primary btn--large">확인</button>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Medium button (H=48px)</legend>
+                            <button type="button" class="btn btn--color-gray-600-outline btn--medium">스케줄 관리</button>
+                            <button type="button" class="btn btn--primary btn--medium">선생님등록</button>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Small button (H=40px)</legend>
+                            <button type="button" class="btn btn--color-gray-600-outline btn--small">다음에 변경</button>
+                            <button type="button" class="btn btn--primary btn--small">비밀번호 변경</button>
+                        </fieldset>
+                    </div> 
+                    
+                    <div class="check_box">
+                        <h2>Controls</h2>
+                        <fieldset name="Check box">
+                            <legend>Check box</legend>
+                            <div class="input__field">
+                                <h3 class="input__title">Check box</h3>
+                                <p class="input__box">
+                                    <input class="check__input" type="checkbox" id="check1">
+                                    <label class="check__label" for="check1">
+                                    체크박스
+                                    </label>
+                                    <input class="check__input" type="checkbox" id="check2">
+                                    <label class="check__label label--hidden" for="check2">라벨히든</label>
+                                </p>
+                            </div>
+                        </fieldset>        
+                        <fieldset name="Radio Button">
+                            <legend>Radio Button</legend>
+                            <input type="radio" id="radio1" name="radio" value="radio1" class="radio__input">
+                            <label for="radio1" class="radio__label">오늘</label>
+                            <input type="radio" id="radio2" name="radio" value="radio2" class="radio__input">
+                            <label for="radio2" class="radio__label">7일간</label>
+                            <input type="radio" id="radio3" name="radio" value="radio3" class="radio__input">
+                            <label for="radio3" class="radio__label label--hidden">7일간</label>
+                        </fieldset>
+                    </div>
+
+                    <div class="select_box">
+                        <fieldset name="select box">
+                            <legend>Select box</legend>
+                            <div class="input__field">
+                                <select class="select">
+                                    <option selected>선택</option>
+                                    <option value="1">1레슨</option>
+                                    <option value="2">2레슨</option>
+                                    <option value="3">3레슨</option>
+                                </select>
+                                <select class="select select--disabled">
+                                    <option selected>선택</option>
+                                    <option value="1">1레슨</option>
+                                    <option value="2">2레슨</option>
+                                    <option value="3">3레슨</option>
+                                </select>
+                                <select class="select" disabled>
+                                    <option selected>선택</option>
+                                    <option value="1">1레슨</option>
+                                    <option value="2">2레슨</option>
+                                    <option value="3">3레슨</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="input_text">
+                        <fieldset>
+                            <legend>Input text</legend>
+                            <p class="input__box">
+                                <label for="base" class="input__label">기본</label>
+                                <input type="text" id="base" class="input" placeholder="활성-디폴트 입력 값" autocomplete="off">
+                            </p>                            
+                            <p class="input__field">
+                                <label for="article" class="input__label">Article<span class="input__sup">*</span></label>
+                                <input type="text" id="article" class="input" placeholder="활성-필수 입력 항목" autocomplete="off">
+                            </p>
+                            <p class="input__box">
+                                <label for="disabled" class="input__label">비활성/읽기전용</label>
+                                <input type="text" id="disabled" class="input input--disabled" placeholder="활성-필수 입력 항목" autocomplete="off">
+                            </p>   
+                        </fieldset>
+                    </div>
+                </form>
+            </section>
+            
+            <section>
+                <h2>Pagenation</h2>
+                <ul class="pagenation__list">
+                    <li class="pagenation__item pagenation--first pagenation--disabled"><a href="javascript:void(0);" class="pagenation__link">first</a></li>
+                    <li class="pagenation__item pagenation--prev"><a href="javascript:void(0);" class="pagenation__link">prev</a></li>
+                    <li class="pagenation__item pagenation--on"><a href="javascript:void(0);" class="pagenation__link">1</a></li>
+                    <li class="pagenation__item"><a href="javascript:void(0);" class="pagenation__link">2</a></li>
+                    <li class="pagenation__item"><a href="javascript:void(0);" class="pagenation__link">3</a></li>
+                    <li class="pagenation__item pagenation--next"><a href="javascript:void(0);" class="pagenation__link">next</a></li>
+                    <li class="pagenation__item pagenation--last"><a href="javascript:void(0);" class="pagenation__link">last</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Date</h2>
+                <ul class="date__list">
+                    <li class="date__item date--prev--disabled"><a href="javascript:void(0);" class="date__link">prev</a></li>
+                    <li class="date__item"><a href="javascript:void(0);" class="date__link">
+                        <span class="date-year">2023</span>
+                        -
+                        <span class="date-day">01</span>
+                    </a></li>
+                    <li class="date__item date--next"><a href="javascript:void(0);" class="date__link">next</a></li>
+                </ul>
+            </section>
+
+            <section>    
+                <h2>Dropdown</h2>
+                <div class="input__field">
+                    <div class="dropdown dropdown__date">
+                        <p class="dropdown__select">
+                            <span class="dropdown__title">2022.02.12</span>
+                            <span class="dropdown__arrow">
+                                <img src="assets/images/ico_dropdown_chevron.svg" alt="dropdown arrow">
+                            </span>
+                        </p>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item" data-value="2022.02.12">2022.02.12</li>
+                            <li class="dropdown__item" data-value="2022.02.13">2022.02.13</li>
+                            <li class="dropdown__item" data-value="2022.02.14">2022.02.14</li>
+                        </ul>
+                        <input class="dropdown__input" type="text">
+                    </div>
+                    <div class="dropdown">
+                        <p class="dropdown__select">
+                            <span class="dropdown__title">선택</span>
+                            <span class="dropdown__arrow">
+                                <img src="assets/images/ico_dropdown_chevron.svg" alt="dropdown arrow">
+                            </span>
+                        </p>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item" data-value="초등학교">초등학교</li>
+                            <li class="dropdown__item" data-value="중학교">중학교</li>
+                            <li class="dropdown__item" data-value="고등학교">고등학교</li>
+                        </ul>
+                        <input class="dropdown__input" type="text">
+                    </div>
+                    <div class="dropdown">
+                        <p class="dropdown__select">
+                            <span class="dropdown__title">선택</span>
+                            <span class="dropdown__arrow">
+                                <img src="assets/images/ico_dropdown_chevron.svg" alt="dropdown arrow">
+                            </span>
+                        </p>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item" data-value="1레슨">1레슨</li>
+                            <li class="dropdown__item" data-value="2레슨">2레슨</li>
+                            <li class="dropdown__item" data-value="3레슨">3레슨</li>
+                            <li class="dropdown__item" data-value="4레슨">4레슨</li>
+                            <li class="dropdown__item" data-value="5레슨">5레슨</li>
+                        </ul>
+                        <input class="dropdown__input" type="text">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

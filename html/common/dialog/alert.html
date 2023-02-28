@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+        <link href="/scss/alert.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/html/common/layouts/header.html"></header>
+        <main class="page">
+            <section>
+                <h2>Alert</h2>
+                <button type="button" class="btn" data-type="modal" data-target="#modal-alert">학원관리자 권한 변경</button>
+                <button type="button" class="btn" data-type="modal" data-target="#modal-alert2">학원관리자 권한 변경2</button>
+            </section>
+        </main>
+        
+        <div id="modal-alert" class="modal alert">
+            <div class="modal__dialog">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">학원관리자 권한 변경</h5>
+                        <p class="modal__txt">학원 관리자 권한이 변경되었습니다.<br>
+                            확인 후 재로그인 필요합니다.</p>
+                    </div>
+                    <div class="modal__footer">
+                        <p class="btn__content--half">
+                            <button type="button" class="btn btn--color-gray-200-outline" data-dismiss="modal">취소</button>
+                            <button type="submit" class="btn btn--primary">확인</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-alert2" class="modal alert">
+            <div class="modal__dialog">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">학원관리자 권한 변경</h5>
+                        <p class="modal__txt">선택한 선생님에게 학원관리자 권한을<br>
+                            이관 하시겠습니까?</p>
+                    </div>
+                    <div class="modal__footer">
+                        <p class="btn__content--half">
+                            <button type="button" class="btn btn--color-gray-200-outline" data-dismiss="modal">취소</button>
+                            <button type="submit" class="btn btn--primary">확인</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

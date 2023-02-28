@@ -23,11 +23,11 @@
 }
 
 @mixin blind {
+    overflow:hidden;
     position:absolute; 
     width: 0;
     height: 0;
     font-size: 0;
-    overflow:hidden;
     z-index:-1;
 }
 
@@ -55,9 +55,9 @@
 * @include text-ellipsis;
 */
 @mixin text-ellipsis() {
-    text-overflow:ellipsis;
-    white-space:nowrap;
-    overflow:hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /*
@@ -66,13 +66,13 @@
 */
 @mixin text-ellipsisClamp($line, $line-height) {
     display: -webkit-box;
-    max-height: $line * $line-height;
-    line-height:$line-height;
-    text-overflow: ellipsis;
     overflow: hidden;
+    max-height: $line * $line-height;
+    text-overflow: ellipsis;
+    line-height: $line-height;
     -webkit-box-orient: vertical;
     -wekbit-line-clamp: $line;
-    word-wrap:break-word;
+    word-wrap: break-word;
 }
 
 /*

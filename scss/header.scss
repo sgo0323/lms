@@ -41,7 +41,9 @@ header {
         }
     }
 
-    .dropdown {        
+    .dropdown {
+        width: auto;
+        
         &__content {
             width: 210px;
             max-width: none;            
@@ -62,9 +64,7 @@ header {
         }
 
         &__title {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            @include text-ellipsis();
         }
 
         &__list {
@@ -79,13 +79,11 @@ header {
         }
 
         &__item {
-            overflow: hidden;
             padding: 14px 24px 10px;
             font-weight: 400;;
             color: $color_gray_900;
-            text-overflow: ellipsis;
-            letter-spacing: inherit;
             white-space: nowrap;
+            @include text-ellipsis();
 
             &:last-of-type {
                 padding: 14px 24px 16px;
@@ -99,7 +97,7 @@ header {
         &__btn {
             height: 56px;
             padding-left: 68px;
-            background-image: url('../assets/images/img_profile.svg');           
+            background-image: url(../assets/images/img_profile.svg);           
             background-position: center left;
             background-repeat: no-repeat;
             background-size: contain;
@@ -181,18 +179,18 @@ header {
         }
 
         &__item {
-            margin: 0 27px;
             padding: 0 30px;
+            margin: 0 27px;
             cursor: pointer;
 
             &:first-of-type {
-                margin-left: 0;
                 padding-left: 0;
+                margin-left: 0;
             }
 
             &:last-of-type {
-                margin-right: 0;
                 padding-right: 0;
+                margin-right: 0;
             }
 
             &--on {

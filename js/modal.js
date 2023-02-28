@@ -1,32 +1,32 @@
 function modal() {
 
-    // 모달 오픈
+    // 팝업 오픈
     function open_modal(){
-        modal_bg = document.createElement('div');
-        modal_bg.className = 'modal_bg';
+        modal__bg = document.createElement('div');
+        modal__bg.className = 'modal__bg';
 
         if(document.querySelector(target)){ 
 
-            $('body').addClass('modal_open').append(modal_bg);
+            $('body').addClass('modal--on').append(modal__bg);
             
-            $('.modal_bg').fadeIn(300);
-            $(target).show().addClass('fade');
+            $('.modal__bg').fadeIn(300);
+            $(target).show().addClass('modal--fade');
 
             setTimeout(function(){
-                $(target).addClass('showed');
+                $(target).addClass('modal--showed');
             }, 100);
 
         }
     }
 
     function hide_modal(modal_id){
-        $('.modal_bg').fadeOut(200);
-        $('#'+modal_id).removeClass('showed');
+        $('.modal__bg').fadeOut(200);
+        $('#'+modal_id).removeClass('modal--showed');
 
         setTimeout(function(){
-            $('.modal_bg').remove();
+            $('.modal__bg').remove();
             $('#'+modal_id).removeClass('fade').hide();
-            $('body').removeClass('modal_open');
+            $('body').removeClass('modal--on');
 
         }, 200);
     }
@@ -46,11 +46,11 @@ function modal() {
         hide_modal(modal_id);
     });
 
-    // 모달 닫기
+    // 팝업 닫기
     $('body').on('click', function(e){
         if($('.modal').css('display') == 'block'){
-            modal_id = $('.modal.showed').attr('id');
-            modal_dialog = $('#'+modal_id).find('.modal_dialog');
+            modal_id = $('.modal--show').attr('id');
+            modal_dialog = $('#'+modal_id).find('.modal__dialog');
 
             // backdrop 클래스를 갖고있으면 백그라운드 클릭 시 닫힘
             if(modal_dialog.hasClass('backdrop')){
@@ -63,5 +63,7 @@ function modal() {
 }
 
 $(function (){
-    modal();
+    setTimeout(function() {
+        modal();
+    }, 200);
 });

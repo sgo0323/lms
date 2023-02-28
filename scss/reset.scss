@@ -78,9 +78,7 @@ input {
 input[type="text"], input[type="password"], input[type="tel"], input[type="url"], input[type="email"], input[type="number"] {
     appearance:none; 
     -webkit-appearance:none; 
-    -moz-appearance:none; 
-    border-radius:0; 
-    -webkit-border-radius:0; 
+    -moz-appearance:none;
 }
 input[type="checkbox"], input[type="radio"] { 
     box-sizing: border-box; 

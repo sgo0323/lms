@@ -14,26 +14,61 @@
         <meta property="og:title" content="">
         <meta property="og:description" content="">
         <meta property="og:url" content="">
-        <meta property="og:image" content="/dist/images/image_link_thumbnail.svg">
-        <link rel="icon" href="/images/favicon/favicon-16x16.png" type="image/x-icon">
-        <link rel="icon" href="/images/favicon/favicon-32x32.png" type="image/x-icon">
-        <link rel="shortcut icon" href="/images/favicon/mstile-150x150.png">
-        <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
-        <link rel="apple-touch-startup-image" href="/images/favicon/apple-touch-icon.png">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
         
         <!--- css -->
-        <link href="scss/reset.css" rel="stylesheet">
-        <link href="scss/common.css" rel="stylesheet">        
-        <link href="scss/header.css" rel="stylesheet">
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+        <link href="/scss/alert.css" rel="stylesheet">
 
         <!--- Js -->
-        <script src="js/jquery-2.2.4.min.js"></script>
-        <script src="js/includeHtml.js"></script>
-        <script src="js/dropdowns.js"></script>
-        <script src="js/common.js"></script>
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+
+        <style type="text/css">
+            .temporary__title { padding-top: 48px; font-size: 32px; }
+            .temporary__list { margin-top: 15px; }
+            .temporary__list li { margin-left: 30px; list-style-type: disc; }
+            .temporary__list li:nth-of-type(n+2) { margin-top: 10px; }
+            .temporary__list li a { text-decoration: underline; }
+            .temporary__txt { margin-top: 15px; }
+            .temporary__txt a { text-decoration: underline; }
+        </style>
     </head>
     <body>
-        <header data-include="html/common/layouts/header.html"></header>
-        <main class="page"></main>
-    </body>    
+        <header data-include="/html/common/layouts/header.html"></header>
+        <main class="page">
+            <h2 class="temporary__title">[KRT] LMS 퍼블리싱 폴더 구조</h2>
+            <p class="temporary__txt">
+                <a href="https://daekyo.atlassian.net/wiki/spaces/KREAD/pages/623838527/KRT+LMS">https://daekyo.atlassian.net/wiki/spaces/KREAD/pages/623838527/KRT+LMS</a>
+            </p>
+
+            <h2 class="temporary__title">Page Link</h2>
+            <ul class="temporary__list">
+                <li><a href="common.html">/common.html</a></li>
+                <li></li>
+                <li><a href="html/common/layouts/form.html">/html/common/layouts/form.html</a></li>
+                <li><a href="html/common/layouts/change_teacher.html">/html/common/layouts/change_teacher.html</a></li>
+                <li><a href="html/common/layouts/change_manager.html">/html/common/layouts/change_manager.html</a></li>
+                <li></li>
+                <li><a href="html/common/dialog/alert.html">/html/common/dialog/alert.html</a></li>
+                <li><a href="html/common/dialog/confirm.html">/html/common/dialog/confirm.html</a></li>
+                <li></li>
+                <!-- <li><a href="/html/common/layer/modal.html">/html/common/layer/modal.html</a></li> -->
+                <li><a href="html/common/layer/notice_change_password.html">/html/common/layer/notice_change_password.html</a></li>
+                <li><a href="html/common/layer/notice_standby_account.html">/html/common/layer/notice_standby_account.html</a></li>
+            </ul>
+        </main>
+    </body>
 </html>
