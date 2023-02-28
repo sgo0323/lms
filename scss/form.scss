@@ -179,7 +179,7 @@
 
             &:checked + .check__label:before {
                 border-color: $color_primary;
-                background: $color_primary url("/lms/assets/image/ico_check.svg") no-repeat center/ 70% auto;
+                background: $color_primary url("../assets/image/ico_check.svg") no-repeat center/ 70% auto;
             }
 
             &:disabled + .check__label,
@@ -219,7 +219,7 @@
             @include blind;
 
             &:checked + .radio__label:before {
-                background:url('/lms/assets/image/ico_radio.svg') no-repeat center/ 18px;
+                background:url('../assets/image/ico_radio.svg') no-repeat center/ 18px;
             }
 
             &:disabled + .radio__label,
@@ -310,7 +310,7 @@
     padding: 11px;    
     border: 1px solid $color_gray_400;
     @include border-radius(8px);
-    background: #fff url('/lms/assets/image/ico_dropdown_chevron.svg') no-repeat right 12px center/ 20px auto;
+    background: #fff url('/lms/assets/images/ico_dropdown_chevron.svg') no-repeat right 12px center/ 20px auto;
     font-size: $font_size_base;
     font-weight: 500;
     color: $color_gray_700;
