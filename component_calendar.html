@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/lms/scss/reset.css" rel="stylesheet">
+        <link href="/lms/scss/common.css" rel="stylesheet">
+        <link href="/lms/scss/header.css" rel="stylesheet">
+        <link href="/lms/scss/form.css" rel="stylesheet">
+        <link href="/lms/scss/modal.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/lms/js/jquery-2.2.4.min.js"></script>
+        <script src="/lms/js/includeHtml.js"></script>
+        <script src="/lms/js/dropdowns.js"></script>   
+        <script src="/lms/js/modal.js"></script>
+        <script src="/lms/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/lms/html/common/layouts/header.html"></header>
+        <main class="page component calendar">            
+            <h2>Type 1</h2>
+            <section class="panel">
+                <form action="" method="">
+                    <div class="input__field">
+                        <p class="input__title">기간</p>
+                        <p class="input__box">
+                            <input type="date" id="date" class="input input--date" data-placeholder="2022.02.12" required aria-required="true">
+                        </p>
+                        <p class="duration">~</p>
+                        <p class="input__box">
+                            <input type="date" id="date" class="input input--date" data-placeholder="2022.02.12" required aria-required="true">
+                        </p>                        
+                        <div class="radio__content">
+                            <p class="radio__box">
+                                <input type="radio" id="today" name="radio" value="오늘" class="radio__input">
+                                <label for="today" class="radio__label">오늘</label>
+                            </p>
+                            <p class="radio__box">
+                                <input type="radio" id="7day" name="radio" value="7일간" class="radio__input">
+                                <label for="7day" class="radio__label">7일간</label>
+                            </p>
+                            <p class="radio__box">
+                                <input type="radio" id="1month" name="radio" value="1개월" class="radio__input">
+                                <label for="1month" class="radio__label">1개월</label>
+                            </p>
+                            <p class="radio__box">
+                                <input type="radio" id="6month" name="radio" value="6개월" class="radio__input">
+                                <label for="6month" class="radio__label">6개월</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="input__field">
+                        <p class="input__title">재직상태</p>
+                        <p class="check__box">
+                            <input class="check__input" type="checkbox" id="all">
+                            <label class="check__label" for="all">전체</label>
+                        </p>
+                        <p class="check__box">
+                            <input class="check__input" type="checkbox" id="work">
+                            <label class="check__label" for="work">재직</label>
+                        </p>
+                        <p class="check__box">
+                            <input class="check__input" type="checkbox" id="waiting">
+                            <label class="check__label" for="waiting">대기</label>
+                        </p>
+                        <p class="check__box">
+                            <input class="check__input" type="checkbox" id="retiracy">
+                            <label class="check__label" for="retiracy">퇴직</label>
+                        </p>
+                        </p>                        
+                    </div>
+                    <div class="input__field">
+                        <p class="input__title">검색</p>
+                        <div class="dropdown">
+                            <p class="dropdown__select">
+                                <span class="dropdown__title">선택</span>
+                                <span class="dropdown__arrow">
+                                    <img src="/lms/assets/images/ico_dropdown_chevron.svg" alt="dropdown arrow">
+                                </span>
+                            </p>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item" data-value="초등학교">초등학교</li>
+                                <li class="dropdown__item" data-value="중학교">중학교</li>
+                                <li class="dropdown__item" data-value="고등학교">고등학교</li>
+                            </ul>
+                            <input class="dropdown__input" type="text">
+                        </div>
+                        <p class="input__box">
+                            <input type="search" class="input input--reset" placeholder="검색어를 입력해 주세요.">
+                        </p>
+                    </div>
+                    <p class="btn__box">
+                        <button type="reset" class="btn">초기화</button>
+                        <button type="submit" class="btn btn--primary">조회</button>
+                    </p>
+                </form>
+            </section>
+            
+            <h2>Type 2</h2>
+            <section class="panel">
+                <form action="" method="">
+                    <div class="input__field">
+                        <p class="input__title">기간</p>
+                        <p class="input__box">
+                            <div class="dropdown">
+                                <p class="dropdown__select">
+                                    <span class="dropdown__title">선택</span>
+                                    <span class="dropdown__arrow">
+                                        <img src="/lms/assets/images/ico_dropdown_chevron.svg" alt="dropdown arrow">
+                                    </span>
+                                </p>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item" data-value="2023년">2023년</li>
+                                    <li class="dropdown__item" data-value="2023년">2023년</li>
+                                    <li class="dropdown__item" data-value="2023년">2023년</li>
+                                </ul>
+                                <input class="dropdown__input" type="text">
+                            </div>
+                            <div class="dropdown">
+                                <p class="dropdown__select">
+                                    <span class="dropdown__title">선택</span>
+                                    <span class="dropdown__arrow">
+                                        <img src="/lms/assets/images/ico_dropdown_chevron.svg" alt="dropdown arrow">
+                                    </span>
+                                </p>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item" data-value="1월">1월</li>
+                                    <li class="dropdown__item" data-value="1월">1월</li>
+                                    <li class="dropdown__item" data-value="1월">1월</li>
+                                </ul>
+                                <input class="dropdown__input" type="text">
+                            </div>
+                        </p>
+                        <p class="duration">~</p>
+                        <p class="input__box">
+                            <div class="dropdown">
+                                <p class="dropdown__select">
+                                    <span class="dropdown__title">선택</span>
+                                    <span class="dropdown__arrow">
+                                        <img src="/lms/assets/images/ico_dropdown_chevron.svg" alt="dropdown arrow">
+                                    </span>
+                                </p>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item" data-value="2023년">2023년</li>
+                                    <li class="dropdown__item" data-value="2022년">2022년</li>
+                                    <li class="dropdown__item" data-value="2021년">2021년</li>
+                                </ul>
+                                <input class="dropdown__input" type="text">
+                            </div>
+                            <div class="dropdown">
+                                <p class="dropdown__select">
+                                    <span class="dropdown__title">선택</span>
+                                    <span class="dropdown__arrow">
+                                        <img src="/lms/assets/images/ico_dropdown_chevron.svg" alt="dropdown arrow">
+                                    </span>
+                                </p>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item" data-value="1월">1월</li>
+                                    <li class="dropdown__item" data-value="2월">2월</li>
+                                    <li class="dropdown__item" data-value="3월">3월</li>
+                                </ul>
+                                <input class="dropdown__input" type="text">
+                            </div>
+                        </p>
+                    </div>
+                    <div class="input__field">
+                        <p class="input__title">재직상태</p>
+                        <p class="check__box">
+                            <input class="check__input" type="checkbox" id="all">
+                            <label class="check__label" for="all">전체</label>
+                        </p>
+                        <p class="check__box">
+                            <input class="check__input" type="checkbox" id="work">
+                            <label class="check__label" for="work">재직</label>
+                        </p>
+                        <p class="check__box">
+                            <input class="check__input" type="checkbox" id="waiting">
+                            <label class="check__label" for="waiting">대기</label>
+                        </p>
+                        <p class="check__box">
+                            <input class="check__input" type="checkbox" id="retiracy">
+                            <label class="check__label" for="retiracy">퇴직</label>
+                        </p>
+                        </p>                        
+                    </div>
+                    <div class="input__field">
+                        <p class="input__title">검색</p>
+                        <div class="dropdown">
+                            <p class="dropdown__select">
+                                <span class="dropdown__title">선택</span>
+                                <span class="dropdown__arrow">
+                                    <img src="/lms/assets/images/ico_dropdown_chevron.svg" alt="dropdown arrow">
+                                </span>
+                            </p>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item" data-value="초등학교">초등학교</li>
+                                <li class="dropdown__item" data-value="중학교">중학교</li>
+                                <li class="dropdown__item" data-value="고등학교">고등학교</li>
+                            </ul>
+                            <input class="dropdown__input" type="text">
+                        </div>
+                        <p class="input__box">
+                            <input type="search" class="input input--reset" placeholder="검색어를 입력해 주세요.">
+                        </p>
+                    </div>
+                    <p class="btn__box">
+                        <button type="reset" class="btn">초기화</button>
+                        <button type="submit" class="btn btn--primary">조회</button>
+                    </p>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

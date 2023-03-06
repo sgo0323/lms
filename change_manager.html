@@ -27,39 +27,30 @@
         <link href="/lms/scss/header.css" rel="stylesheet">
         <link href="/lms/scss/form.css" rel="stylesheet">
         <link href="/lms/scss/modal.css" rel="stylesheet">
+        <link href="/lms/scss/alert.css" rel="stylesheet">
 
         <!--- Js -->
         <script src="/lms/js/jquery-2.2.4.min.js"></script>
         <script src="/lms/js/includeHtml.js"></script>
-        <script src="/lms/js/dropdowns.js"></script>   
+        <script src="/lms/js/dropdowns.js"></script>
         <script src="/lms/js/modal.js"></script>
         <script src="/lms/js/common.js"></script>
     </head>
-    <body class="modal--on">
+    <body>
         <header data-include="/lms/html/common/layouts/header.html"></header>
         <main class="page">
-            <div id="modal-attempts-exceeded" class="modal modal--fade modal--showed" style="display: block;">                
-                <div class="modal__dialog modal--center">
-                    <div class="modal__content">
-                        <div class="modal__header">
-                            <h5 class="modal__title">로그인 횟수 초과 안내</h5>
-                        </div>
-                        <div class="modal__body">
-                            <form action="" method="get">
-                                <h6 class="modal__title">로그인 시도 횟수가 많습니다.</h6>
-                                <p class="modal__txt">보안을 위해 지금은 로그인할 수 없습니다.<br>
-                                나중에 다시 시도하십시오.</p>
-                            </form>
-                        </div>
-                        <div class="modal__footer">
-                            <p class="btn__content--half btn__content--center">
-                                <button type="button" class="btn btn--primary" data-dismiss="modal">확인</button>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal__bg"></div>
+            <section class="change change-manager">
+                <p class="change__txt">현재 선생님으로 접속하셨습니다.</p>
+                <h2 class="change__title">학원관리자로 변경하시겠습니까?</h2>
+                <ul class="change__list">
+                    <li class="change__item change--color-gray">선생님</li>
+                    <li class="change__item change-arrow">
+                        <img src="/lms/assets/images/img_change_arrow.svg" alt="change arrow">
+                    </li>
+                    <li class="change__item change--color">학원관리자</li>
+                </ul>
+                <button type="button" class="btn btn--primary">전환하기</button>
+            </section>
         </main>
     </body>
 </html>

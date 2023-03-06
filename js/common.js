@@ -8,17 +8,6 @@ function is_screen(max_width) {
     return output;
 }
 
-// iframe height
-function autoResizeIframe() {	
-    $('iframe.active').on('load', function() {
-        if(this.contentDocument) {
-            $(this).height(this.contentDocument.documentElement.scrollHeight);
-        } else {
-            $(this).height(this.contentWindow.document.body.scrollHeight);
-        }
-    });
-}
-
 // header shortcut
 function headerShortcut() {
     $('.shortcut__btn').click(function() {
@@ -38,15 +27,25 @@ function gnbFocus() {
     });
 }
 
+// input field button 활성
+function inputBtn() {
+    $(".input").on("keyup", function() {
+        var flag = true;
+        flag = $(this).val().length > 0 ? false : true;
+        $(this).parents('.input__field').find('.btn').attr('disabled', flag);
+    });
+}
+
 
 $(function() {
-    // iframe height
-    autoResizeIframe();    
-
     setTimeout(function() {
         // header shortcut
         headerShortcut();
+
         // gnb focus
         gnbFocus();
+
+        // input field button 활성
+       inputBtn();
     }, 200);
 });

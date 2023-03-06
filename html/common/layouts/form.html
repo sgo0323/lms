@@ -29,7 +29,7 @@
         <link href="/lms/scss/modal.css" rel="stylesheet">
 
         <!--- Js -->
-        <script src="/lms/js/jquery-2.2.4.min.js"></script>
+        <script src="/lms/lms/js/jquery-2.2.4.min.js"></script>
         <script src="/lms/js/includeHtml.js"></script>
         <script src="/lms/js/dropdowns.js"></script>   
         <script src="/lms/js/modal.js"></script>
@@ -39,7 +39,7 @@
         <header data-include="/lms/html/common/layouts/header.html"></header>
         <main class="page">
             <section>
-                <form action="" method="get">
+                <form action="" method="">
                     <div class="button">
                         <h2>Button</h2>
                         <fieldset name="button">
@@ -56,15 +56,18 @@
                         </fieldset>
                         <fieldset name="button">
                             <legend>color button</legend>
-                            <button type="button" class="btn btn--color-gray-600">Gray-600</button>
-                            <button type="button" class="btn btn--color-gray-400">Gray-400</button>
-                            <button type="button" class="btn btn--color-gray-200">Gray-200</button>
-                            <button type="button" class="btn btn--color-red">Red</button>
-                            <button type="button" class="btn btn--color-black">Black</button>            
-                            <button type="button" class="btn btn--color-blue">Blue</button>  
-                            <button type="button" class="btn btn--color-blue2">Blue2</button>  
-                            <button type="button" class="btn btn--color-light">light</button>
-                            <button type="button" class="btn btn--color-dark">dark</button>
+                            <button type="button" class="btn btn--color-gray">color-Gray</button>
+                            <button type="button" class="btn btn--color-gray-700">color-Gray-700</button>
+                            <button type="button" class="btn btn--color-gray-600">color-Gray-600</button>
+                            <button type="button" class="btn btn--color-gray-400">color-Gray-400</button>
+                            <button type="button" class="btn btn--color-gray-200">color-Gray-200</button>
+                            <button type="button" class="btn btn--color-red">color-Red</button>
+                            <button type="button" class="btn btn--color-white">color-White</button>
+                            <button type="button" class="btn btn--color-black">color-Black</button>
+                            <button type="button" class="btn btn--color-blue">color-Blue</button>  
+                            <button type="button" class="btn btn--color-blue2">color-Blue2</button>  
+                            <button type="button" class="btn btn--color-light">color-light</button>
+                            <button type="button" class="btn btn--color-dark">color-dark</button>
                         </fieldset>
                         <fieldset>
                             <legend>outline button</legend>
@@ -77,9 +80,11 @@
                             <button type="button" class="btn btn--positive-outline">positive-outline</button>
                             <button type="button" class="btn btn--neutral-outline">neutral-outline</button>
     
-                            <button type="button" class="btn btn--color-gray-600-outline">Gray-600-outlin</button>
-                            <button type="button" class="btn btn--color-gray-400-outline">Gray-400-outlin</button>
-                            <button type="button" class="btn btn--color-gray-200-outline">Gray-200-outlin</button>
+                            <button type="button" class="btn btn--color-gray-outline">color-Gray-outlin</button>
+                            <button type="button" class="btn btn--color-gray-700-outline">color-Gray-700-outlin</button>
+                            <button type="button" class="btn btn--color-gray-600-outline">color-Gray-600-outlin</button>
+                            <button type="button" class="btn btn--color-gray-400-outline">color-Gray-400-outlin</button>
+                            <button type="button" class="btn btn--color-gray-200-outline">color-Gray-200-outlin</button>
                             <button type="button" class="btn btn--color-red-outline">color-red-outlin</button>
                             <button type="button" class="btn btn--color-black-outline">color-black-outlin</button>
                             <button type="button" class="btn btn--color-blue-outline">color-blue-outlin</button>
@@ -89,6 +94,7 @@
                         </fieldset>
                         <fieldset>
                             <legend>fixed button</legend>
+                            <button type="button" class="btn btn--small btn--color-list">개인코칭</button>                            
                             <button type="button" class="btn btn--fixed btn--color-light">파일첨부</button>
                             <button type="button" class="btn btn--fixed btn--color-light">중복체크</button>
                             <button type="button" class="btn btn--fixed btn--color-dark">주소검색</button>
@@ -179,10 +185,87 @@
                                 <label for="article" class="input__label">Article<span class="input__sup">*</span></label>
                                 <input type="text" id="article" class="input" placeholder="활성-필수 입력 항목" autocomplete="off">
                             </p>
-                            <p class="input__box">
+                            <p class="input__field">
                                 <label for="disabled" class="input__label">비활성/읽기전용</label>
                                 <input type="text" id="disabled" class="input input--disabled" placeholder="활성-필수 입력 항목" autocomplete="off">
-                            </p>   
+                            </p>
+                            <p class="input__field">
+                                <label for="date" class="input__label">date</label>
+                                <input type="date" id="date" class="input input--date" data-placeholder="날짜 선택" required
+                                aria-required="true">
+                            </p>                            
+
+                            <div class="input__field">
+                                <p class="input__box">
+                                    <label for="text_base" class="input__label">Article</label>
+                                    <input type="text" id="text_base" class="input" placeholder="활성-필수 입력 항목" autocomplete="off">
+                                </p>
+                                <p class="input__box">
+                                    <label for="number_base" class="input__label">Article</label>
+                                    <input type="number" id="number_base" class="input" placeholder="123456-1234567">
+                                </p>
+                                <p class="input__box">
+                                    <label for="password_base" class="input__label">Article</label>
+                                    <input type="password" id="password_base" class="input" placeholder="······">
+                                </p>                                
+                            </div>
+                            <div class="input__field">
+                                <p class="input__box">
+                                    <label for="text_base" class="input__label">Article<span class="input__sup">*</span></label>
+                                    <input type="text" id="text_base" class="input" placeholder="활성-필수 입력 항목" autocomplete="off">
+                                </p>
+                                <p class="input__box">
+                                    <label for="number_base" class="input__label">Article<span class="input__sup">*</span></label>
+                                    <input type="number" id="number_base" class="input" placeholder="123456-1234567">
+                                </p>
+                                <p class="input__box">
+                                    <label for="password_base" class="input__label">Article<span class="input__sup">*</span></label>
+                                    <input type="password" id="password_base" class="input" placeholder="······">
+                                </p>                                
+                            </div>
+                            <div class="input__field">
+                                <p class="input__box">
+                                    <label for="text_base" class="input__label">Article</label>
+                                    <input type="text" id="text_base" class="input" placeholder="활성-필수 입력 항목" autocomplete="off" disabled>
+                                </p>
+                                <p class="input__box">
+                                    <label for="number_base" class="input__label">Article</label>
+                                    <input type="number" id="number_base" class="input" placeholder="123456-1234567" disabled>
+                                </p>
+                                <p class="input__box">
+                                    <label for="password_base" class="input__label">Article</label>
+                                    <input type="password" id="password_base" class="input" placeholder="······" disabled>
+                                </p>                                
+                            </div>
+
+                            <p class="input__box">
+                                <input type="text" id="text_base" class="input" placeholder="활성-필수 입력 항목" autocomplete="off" required>                                
+                                <span class="input-message input-message--invalid">이메일주소 규격에 맞게 입력해 주세요..</span>
+                            </p>
+                            
+                            <div class="input__field">
+                                <p class="input__box">
+                                    <input type="text" id="text_base" class="input" placeholder="아이디" autocomplete="off">
+                                    <button type="button" class="btn btn--color-gray-200-outline">중복체크</button>
+                                </p>
+                                <p class="input__box">
+                                    <input type="text" id="text_base" class="input" placeholder="아이디" autocomplete="off">
+                                    <button type="button" class="btn btn--color-gray-200-outline">중복체크</button>
+                                    <span class="input-message input-message--valid">이메일주소 규격에 맞게 입력해 주세요..</span>
+                                </p>
+                                <p class="input__box">
+                                    <input type="text" id="text_base" class="input" placeholder="아이디" autocomplete="off">
+                                    <button type="button" class="btn btn--color-gray-200-outline">중복체크</button>
+                                    <span class="input-message input-message--invalid">이메일주소 규격에 맞게 입력해 주세요..</span>
+                                </p>                      
+                            </div>
+                            <p class="input__field">
+                                <input type="search" class="input input--reset" placeholder="검색어를 입력해 주세요.">
+                            </p>
+                            <div class="input__field">
+                                <input type="search" class="input input--search" placeholder="지문명을 입력해주세요.">
+                                <button type="button" class="search__btn">search</button>
+                            </div>
                         </fieldset>
                     </div>
                 </form>
@@ -205,10 +288,10 @@
                 <h2>Date</h2>
                 <ul class="date__list">
                     <li class="date__item date--prev--disabled"><a href="javascript:void(0);" class="date__link">prev</a></li>
-                    <li class="date__item"><a href="javascript:void(0);" class="date__link">
-                        <span class="date-year">2023</span>
-                        -
-                        <span class="date-day">01</span>
+                    <li class="date__item">
+                        <a href="javascript:void(0);" class="date__link date-year">2023</a>
+                        <span>-</span>
+                        <a href="javascript:void(0);" class="date__link date-day">01</a>
                     </a></li>
                     <li class="date__item date--next"><a href="javascript:void(0);" class="date__link">next</a></li>
                 </ul>
@@ -226,11 +309,27 @@
                         </p>
                         <ul class="dropdown__list">
                             <li class="dropdown__item" data-value="2022.02.12">2022.02.12</li>
-                            <li class="dropdown__item" data-value="2022.02.13">2022.02.13</li>
-                            <li class="dropdown__item" data-value="2022.02.14">2022.02.14</li>
+                            <li class="dropdown__item" data-value="2022.02.12">2022.02.12</li>
+                            <li class="dropdown__item" data-value="2022.02.12">2022.02.12</li>
                         </ul>
                         <input class="dropdown__input" type="text">
                     </div>
+
+                    <div class="dropdown dropdown__date dropdown--disabled">
+                        <p class="dropdown__select">
+                            <span class="dropdown__title">2022.02.12</span>
+                            <span class="dropdown__arrow">
+                                <img src="/lms/assets/images/ico_dropdown_chevron.svg" alt="dropdown arrow">
+                            </span>
+                        </p>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item" data-value="2022.02.12">2022.02.12</li>
+                            <li class="dropdown__item" data-value="2022.02.12">2022.02.12</li>
+                            <li class="dropdown__item" data-value="2022.02.12">2022.02.12</li>
+                        </ul>
+                        <input class="dropdown__input" type="text">
+                    </div>
+
                     <div class="dropdown">
                         <p class="dropdown__select">
                             <span class="dropdown__title">선택</span>

@@ -1,0 +1,111 @@
+@import '_global';
+
+.schedule-calendar {
+    .modal {
+        &__dialog {
+            max-width: 400px;
+        }
+
+        &__header {
+            padding: 4px 0 20px;
+            border-bottom: 1px solid #EFEFEF;
+
+            &--close {
+                .modal {
+                    &__title {
+                        max-width: 100%;
+                        font-size: $font_size_base;
+                        text-align: center;
+                        line-height: 1.5;
+                        letter-spacing: 0;
+                    }
+                }
+            }
+        }        
+
+        &--close {
+            top: calc(50% - 10px);
+            width: 28px;
+            height: 28px;
+
+            &:before, &:after {
+                right: -5px;
+                width: 36.55px;
+                height: 3.05px;
+                background: $color_gray_600;
+            }
+        }
+    }
+
+    .date {
+        &__list {
+            margin: 20px 4px 0;
+        }
+    }
+
+    .calendar {
+        margin: 17px calc(38px - 24px) calc(32px - 24px);
+
+        &-focus {            
+            background: $color_primary;
+            color: $color_white;
+
+            &:hover {
+                background: $color_gray_300;
+                color: $color_gray_900;
+            }
+        }
+    }
+
+    .table {
+        // th & td
+        > :not(caption) > * > * {
+            display: inline-block;
+            padding: 6px;
+            width: 36px;
+            //height: 36px;
+            @include border-radius(8px);
+            line-height: 24px;
+
+            &:first-of-type , &:last-of-type {
+                text-align: center;
+            }
+            
+            &:nth-of-type(n+2) {
+                margin-left: 8px;
+            }
+        }
+
+        > :not(caption) > tr {            
+            display: inline-block;
+            
+            &:nth-of-type(n+2) {
+                margin-top: 4px;
+            }
+        }
+
+        > :not(caption) > * > th {            
+            font-weight: 500;
+            color: $color_gray_600;
+
+            &::after {
+                display: none;
+            }
+        }
+        
+        > :not(caption) > * > td {
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover {
+                background: $color_gray_300;
+            }
+        }
+
+        tbody {
+            > tr:hover {
+                background: none;
+            }
+        }
+    }
+}

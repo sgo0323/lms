@@ -81,17 +81,16 @@ $madal_font_size : $font_size_large;
     }
 
     &__header {
-        padding-bottom: 15px;
-        border-bottom: 1px solid #EFEFEF;
+        padding-bottom: 16px;
+        border-bottom:1px solid $color_gray_400;
 
         &--close {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0;
-            border-bottom:1px solid $color_gray_600;
+            // display: -webkit-box;
+            // display: -ms-flexbox;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            position: relative;
 
             .modal {
                 &__title {
@@ -113,10 +112,13 @@ $madal_font_size : $font_size_large;
     }
 
     &--close {
-        position: relative;
+        position: absolute;
+        top: calc(50% - 8px);
+        right: 0;
         width: 24px;
         height: 24px;
         text-indent: -9999px;
+        @include transform(translateY(-50%));
 
         &:before, &:after {
             content:'';
@@ -126,7 +128,7 @@ $madal_font_size : $font_size_large;
             width: 31.33px; 
             height: 2.61px;
             margin-top: -1px;
-            background: $color_gray_600;
+            background: $color_gray_500;
             @include transform(rotate(45deg));
             @include transition(opacity .15s);
         }
@@ -164,10 +166,6 @@ $madal_font_size : $font_size_large;
         img {
             max-width:100%;
         }
-
-        .btn {
-            min-width: none;
-        }
     }
 
     &__title {
@@ -179,7 +177,7 @@ $madal_font_size : $font_size_large;
     }
 
     &__sub-title {
-        margin-top: 24px;
+        margin-top: 40px;
         font-size: $font_size_h2;
         color: $color_gray_900;
         line-height: 1.6;
@@ -203,29 +201,7 @@ $madal_font_size : $font_size_large;
         text-align: center;
 
         .btn {
-            //margin: .5rem .125rem;
             min-width: 203px;
-
-            &__content {
-                &--full {
-                    .btn {
-                        display: block;
-                        width: 100%;
-                    }
-                }     
-                
-                &--half {
-                    display: -webkit-box;
-                    display: -ms-flexbox;
-                    display: flex;
-                    justify-content: space-between;
-
-                    .btn {
-                        display: block;
-                        width: calc(50% - 8px);
-                    }
-                }
-            }
         }
     }
 
@@ -235,13 +211,14 @@ $madal_font_size : $font_size_large;
         left: 0;
         width: 100%;
         height: 100%;
-        background:rgba(0,0,0,.5);
+        background:rgba(0,0,0,.4);
         z-index: 990;
     }
 
-    /* mini size layer popup */
+    /* size layer popup */
     &--large {
         max-width: 700px;
+        /*
         margin: auto;
         @include border-radius(1rem);
         background: rgba(#fff, .95);
@@ -254,6 +231,7 @@ $madal_font_size : $font_size_large;
                 font-size: $font_size_base;
             }
         }
+        */
     }
 
     &--small {
@@ -269,6 +247,170 @@ $madal_font_size : $font_size_large;
             p {
                 font-size: $font_size_base;
             }
+        }
+    }
+
+    .btn {
+        min-width: 136px;
+
+        &__content {
+            &--full {
+                .btn {
+                    display: block;
+                    width: 100%;
+                }
+            }     
+            
+            &--half {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                justify-content: space-between;
+
+                .btn {
+                    display: block;
+                    width: calc(50% - 8px);
+                }
+            }
+
+            &--center {
+                justify-content: center;
+            }
+        }
+    }
+
+    .input {
+        &__label {
+            font-size: $font_size_large;
+            font-weight: 500;
+            line-height: ceil(($font_size_large * 1.44));
+        }
+    }
+}
+
+
+/*
+    #modal 개별 layout
+*/
+
+// #modal-schedule-register 
+.schedule-register {
+    &__content {
+        position: relative;
+        margin: 50px 31px 0;
+        padding-bottom: 36px;
+    }
+
+    .modal {
+        &__footer {
+            margin-top: 0;
+        }
+    }
+
+    .input {
+        &__field {
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
+
+        &-message {
+            position: absolute;
+            top: auto; 
+            left: 50%;
+            width: 100%;
+            margin-top: 8px;
+            text-align: center;
+            line-height: ceil(($font_size_small * 1.4)); // 20px
+            @include transform(translateX(-50%));
+        }
+    }
+
+    .check {
+        &__label {
+            color: $color_gray_900;
+        }
+    }
+}
+
+// #modal-permission-change
+.permission-change {
+    &__content {
+        text-align: center; 
+        
+        .error {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            font-size: $font_size_large;
+            font-weight: 500;
+            color: $color_gray_600;
+            line-height: ceil(($font_size_base * 1.44));
+        }
+        
+        .btn {
+            margin-top: 36px;
+            min-width: 203px;
+        }
+    }
+
+    .input {
+        &__field {
+            margin-bottom: 16px;
+
+            &:last-of-type {
+                padding-top: 16px;
+                border-top: 1px solid $color_gray_400;
+
+                .input__label {
+                    width: 87px;
+                }
+            }
+            
+            
+            .input {
+                &__title {
+                    width: 87px;
+                    margin-right: 12px;
+                }
+
+                &__label {    
+                    & + .input {
+                        & + .btn {
+                            margin-left: 12px;    
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                min-width: 95px;
+            }
+        }
+    }
+
+    .table {
+        &__box {
+            position: relative;
+            height: 428px;
+            margin-top: 36px;
+            padding: 0 6px;
+        }
+
+        // th & td
+        > :not(caption) > * > * {
+            &:first-of-type {
+                min-width: 120px;
+                text-align: center;
+            }
+
+            &:last-of-type {
+                text-align: center;
+            }
+        }
+
+        > :not(caption) > * > th {
+            padding: 16px 15px;
         }
     }
 }
