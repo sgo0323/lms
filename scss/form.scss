@@ -210,6 +210,11 @@ input[type='number'] {
         }
     }
 
+    // 파일첨부
+    &-file {
+        display: none;
+    }
+
     &--date {
         position: relative;
         padding: 9.5px 12px 10.5px 43px;
@@ -497,6 +502,7 @@ $button_text : $color_white;
     text-align: center;
     line-height: 1.5; 
     @include transition_All();
+    cursor: pointer;
 
     &:hover {
         background: $color_gray_700;
