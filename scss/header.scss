@@ -109,16 +109,17 @@ header {
             background-repeat: no-repeat;
             background-size: contain;
             font-weight: 700;
+            color: $color_gray_800;
             line-height: ceil(($font_size_base * 3.5)); // 56px;
         }        
 
-        &-manager {
-            color: $color_primary;
-        }
+        // &-manager {
+        //     color: $color_primary;
+        // }
 
-        &-teacher {
-            color: #FF4E7C;
-        }
+        // &-teacher {
+        //     color: #FF4E7C;
+        // }
 
         &__content {
             display: none;            
