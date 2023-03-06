@@ -43,6 +43,10 @@
 
                 <button type="button" class="btn" data-type="modal" data-target="#modal-permission-change">학원관리자 권한 변경 검색</button>
                 <button type="button" class="btn" data-type="modal" data-target="#modal-permission-change-none">학원관리자 권한 변경 데이터 없음</button>
+
+                <button type="button" class="btn" data-type="modal" data-target="#modal-attainment">지문별 성취율 상세</button>
+
+                <button type="button" class="btn" data-type="modal" data-target="#modal-learning-time">학습시간 상세</button>
             </section>
         </main>
 
@@ -219,6 +223,111 @@
                                 <p class="error">확인 가능한 데이터가 없습니다.</p>
                             </div>
                             <button type="button" class="btn btn--primary">권한 이관</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 지문별 성취율 상세 popup -->
+        <div id="modal-attainment" class="modal attainment">
+            <div class="modal__dialog modal--small modal--center">
+                <div class="modal__content">
+                    <div class="modal__header modal__header--close">
+                        <h5 class="modal__title">지문별 성취율 상세</h5>
+                        <button class="modal--close" data-dismiss="modal">취소</button>
+                    </div>
+                    <div class="modal__body">
+                        <h6 class="attainment__title">문항 난이도별 정답 수</h6>
+                        <div class="attainment__content">
+                            <div class="panel panel--bg-gray">
+                                <p class="question__title">코어</p>
+                                <p class="question__content">
+                                    <span class="question-score">4</span>
+                                    /
+                                    <span class="question-all">4</span>
+                                </p>
+                            </div>
+                            <div class="panel">
+                                <ul class="question__list">
+                                    <li class="question__item panel--bg-gray">
+                                        <span class="question__title">본격</span>
+                                        <span class="question__content">
+                                            <span class="question-score">4</span>
+                                            /
+                                            <span class="question-all">4</span>
+                                        </span>
+                                    </li>
+                                    <li class="question__item">
+                                        <span class="question__title">킬러</span>
+                                        <span class="question__content">
+                                            <span class="question-score">4</span>
+                                            /
+                                            <span class="question-all">4</span>
+                                        </span>
+                                    </li>
+                                    <li class="question__item">
+                                        <span class="question__title">핵심</span>
+                                        <span class="question__content">
+                                            <span class="question-score">2</span>
+                                            /
+                                            <span class="question-all">7</span>
+                                        </span>
+                                    </li>
+                                    <li class="question__item">
+                                        <span class="question__title">기초</span>
+                                        <span class="question__content">
+                                            <span class="question-score">4</span>
+                                            /
+                                            <span class="question-all">8</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="panel panel--bg-gray">
+                                <p class="question__title">어휘</p>
+                                <p class="question__content">
+                                    <span class="question-score">4</span>
+                                    /
+                                    <span class="question-all">4</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 학습시간 상세 popup -->
+        <div id="modal-learning-time" class="modal learning-time">
+            <div class="modal__dialog modal--small modal--center">
+                <div class="modal__content">
+                    <div class="modal__header modal__header--close">
+                        <h5 class="modal__title">학습시간 상세</h5>
+                        <button class="modal--close" data-dismiss="modal">취소</button>
+                    </div>
+                    <div class="modal__body">
+                        <div class="learning-time__content">
+                            <ul class="panel">
+                                <li class="panel--bg-gray learning-time__title">
+                                    지문 읽은 시간
+                                    <span class="recommend">(권장시간)</span>
+                                </li>
+                                <li class="learning-time__txt">
+                                    <span class="time">2분 30초</span>
+                                    <span class="recommend">(2분)</span>
+                                </li>
+                            </ul>
+                            <ul class="panel">
+                                <li class="panel--bg-gray learning-time__title">
+                                    문제풀이 시간
+                                    <span class="recommend">(권장시간)</span>
+                                </li>
+                                <li class="learning-time__txt">
+                                    <span class="time">2분 30초</span>
+                                    <span class="recommend">(4분)</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

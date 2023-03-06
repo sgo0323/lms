@@ -278,7 +278,7 @@ $scrollbar_color : #D9D9D9;
         .dropdown {
             &__select {
                 background: $color_gray_200;
-                //color: $color_gray_900;
+                color: $color_gray_900;
             }
         }
     }
@@ -675,7 +675,7 @@ $menu_font_weight : 400;
     @include border-radius(8px);
     background: $color_white;
 
-    &__bg-gray {
+    &--bg-gray {
         background: $color_gray_200;
     }
 }
@@ -860,6 +860,12 @@ $menu_font_weight : 400;
 
 // 컴퍼넌트 검색 & 캘린더
 .component {
+    .menu {
+        &__content {
+            margin-bottom: 25px;
+        } 
+    }
+
     .panel {
         margin-bottom: 44px;
         padding: 24px 40px;        
@@ -953,11 +959,11 @@ $menu_font_weight : 400;
                 padding: 29px 8px 19px;
 
                 &:first-of-type {
-                    padding: 29px 8px 19px 37px;
+                    padding: 29px 8px 19px 35px;
                 } 
                 
                 &:last-of-type {
-                    padding: 29px 38px 19px 8px;
+                    padding: 29px 35px 19px 8px;
                 }
             }
 
@@ -965,11 +971,11 @@ $menu_font_weight : 400;
                 padding: 11px 8px;
                 
                 &:first-of-type {
-                    padding: 11px 8px 11px 37px;
+                    padding: 11px 8px 11px 35px;
                 } 
                 
                 &:last-of-type {
-                    padding: 11px 38px 11px 8px;
+                    padding: 11px 35px 11px 8px;
                 }
             }
 
