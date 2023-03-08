@@ -5,6 +5,7 @@
         margin: 12px 0 20px;
         font-size: $font_size_b2;
         color: $color_gray_600;
+        text-align: center;
         line-height: ceil(($font_size_b2 * 1.47)); // 25px
     }
 
@@ -14,12 +15,12 @@
         }
 
         &__sub-title {
-            text-align: left;
+            //text-align: left;
         }        
 
         &__txt {
             font-size: $font_size_h4;
-            text-align: left;
+            //text-align: left;
         }
     }
 }

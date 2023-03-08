@@ -41,20 +41,13 @@
             <div id="modal-attempts-exceeded" class="modal modal--fade modal--showed" style="display: block;">                
                 <div class="modal__dialog modal--center">
                     <div class="modal__content">
-                        <div class="modal__header">
+                        <div class="modal__body">                                
                             <h5 class="modal__title">로그인 횟수 초과 안내</h5>
-                        </div>
-                        <div class="modal__body">
-                            <form action="" method="get">
-                                <h6 class="modal__title">로그인 시도 횟수가 많습니다.</h6>
-                                <p class="modal__txt">보안을 위해 지금은 로그인할 수 없습니다.<br>
-                                나중에 다시 시도하십시오.</p>
-                            </form>
+                            <p class="modal__txt">로그인 시도 횟수를 초과하였습니다.<br>
+                            30분 후 다시 시도하십시오.</p>
                         </div>
                         <div class="modal__footer">
-                            <p class="btn__content--half btn__content--center">
-                                <button type="button" class="btn btn--primary" data-dismiss="modal">확인</button>
-                            </p>
+                            <button type="button" class="btn btn--popup btn--primary" data-dismiss="modal">확인</button>
                         </div>
                     </div>
                 </div>

@@ -41,7 +41,8 @@
             <section>
                 <button type="button" class="btn" data-type="modal" data-target="#modal-schedule-register">스케줄 등록</button>
 
-                <button type="button" class="btn" data-type="modal" data-target="#modal-permission-change">학원관리자 권한 변경 검색</button>
+                <button type="button" class="btn" data-type="modal" data-target="#modal-permission-change">학원관리자 권한 변경 검색</button>                
+                <button type="button" class="btn" data-type="modal" data-target="#modal-permission-change-data">학원관리자 권한 변경 데이터</button>
                 <button type="button" class="btn" data-type="modal" data-target="#modal-permission-change-none">학원관리자 권한 변경 데이터 없음</button>
 
                 <button type="button" class="btn" data-type="modal" data-target="#modal-attainment">지문별 성취율 상세</button>
@@ -62,26 +63,17 @@
                         <form action="" method="get">
                             <div class="input__field">
                                 <p class="input__label">학습상품</p>
-                                <div class="dropdown">
-                                    <p class="dropdown__select">
-                                        <span class="dropdown__title">솔루니상품/주3회 학습</span>
-                                        <span class="dropdown__arrow">
-                                            <img src="/lms/assets/images/ico_dropdown_chevron.svg" alt="dropdown arrow">
-                                        </span>
-                                    </p>
-                                    <ul class="dropdown__list">
-                                        <li class="dropdown__item" data-value="솔루니상품/주3회 학습">솔루니상품/주3회 학습</li>
-                                        <li class="dropdown__item" data-value="2레슨">2레슨</li>
-                                        <li class="dropdown__item" data-value="3레슨">3레슨</li>
-                                        <li class="dropdown__item" data-value="4레슨">4레슨</li>
-                                        <li class="dropdown__item" data-value="5레슨">5레슨</li>
-                                    </ul>
-                                    <input class="dropdown__input" type="text">
-                                </div>
+                                <select class="select">
+                                    <option value="솔루니상품/주3회 학습" selected>솔루니상품/주3회 학습</option>
+                                    <option value="2레슨">2레슨</option>
+                                    <option value="3레슨">3레슨</option>
+                                    <option value="4레슨">4레슨</option>
+                                    <option value="5레슨">5레슨</option>
+                                </select>
                             </div>
                             <div class="schedule-register__content">
                                 <fieldset name="schedule-register" class="input__field">
-                                    <input class="check__input" type="checkbox" id="mon">
+                                    <input class="check__input" type="checkbox" id="mon" checked>
                                     <label class="check__label" for="mon">월</label>
                                     <input class="check__input" type="checkbox" id="tue">
                                     <label class="check__label" for="tue">화</label>
@@ -99,10 +91,7 @@
                         </form>
                     </div>
                     <div class="modal__footer">
-                        <p class="btn__content--half">
-                            <button type="button" class="btn btn--color-gray-200-outline" data-dismiss="modal">취소</button>
-                            <button type="submit" class="btn btn--primary">확인</button>
-                        </p>
+                        <button type="submit" class="btn btn--popup btn--primary">확인</button>
                     </div>
                 </div>
             </div>
@@ -121,9 +110,39 @@
                             <div class="input__field">
                                 <P class="input__title">검색조건</P>
                                 <p class="input__box">
-                                    <input type="radio" id="name" name="radio" value="name" class="radio__input">
+                                    <input type="radio" id="name" name="radio" value="name" class="radio__input" checked>
                                     <label for="name" class="radio__label">이름</label>
                                     <input type="radio" id="id" name="radio" value="id" class="radio__input">
+                                    <label for="id" class="radio__label">ID</label>
+                                </p>
+                            </div>
+                            <div class="input__field">
+                                <label for="reset" class="input__label">검색어</label>
+                                <input type="search" id="reset" class="input input--reset" placeholder="2글자 이상 입력해주세요." autocomplete="off">
+                                <button type="button" class="btn btn--primary btn--medium" disabled>조회</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 학원관리자 권한 변경 검색 데이터 popup -->
+        <div id="modal-permission-change-data" class="modal permission-change">
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__header modal__header--close">
+                        <h5 class="modal__title">학원 관리자 권한 변경</h5>
+                        <button class="modal--close" data-dismiss="modal">취소</button>
+                    </div>
+                    <div class="modal__body">
+                        <form action="" method="get">
+                            <div class="input__field">
+                                <P class="input__title">검색조건</P>
+                                <p class="input__box">
+                                    <input type="radio" id="name" name="radio2" value="name" class="radio__input" checked>
+                                    <label for="name" class="radio__label">이름</label>
+                                    <input type="radio" id="id" name="radio2" value="id" class="radio__input">
                                     <label for="id" class="radio__label">ID</label>
                                 </p>
                             </div>
@@ -178,7 +197,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <button type="button" class="btn btn--primary">권한 이관</button>
+                            <button type="button" class="btn btn--popup btn--primary">권한 이관</button>
                         </div>
                     </div>
                 </div>
@@ -198,9 +217,9 @@
                             <div class="input__field">
                                 <P class="input__title">검색조건</P>
                                 <p class="input__box">
-                                    <input type="radio" id="name2" name="radio" value="name" class="radio__input">
+                                    <input type="radio" id="name2" name="radio3" value="name" class="radio__input" checked>
                                     <label for="name2" class="radio__label">이름</label>
-                                    <input type="radio" id="id2" name="radio" value="id" class="radio__input">
+                                    <input type="radio" id="id2" name="radio3" value="id" class="radio__input">
                                     <label for="id2" class="radio__label">ID</label>
                                 </p>
                             </div>
@@ -222,7 +241,7 @@
                                 </table>
                                 <p class="error">확인 가능한 데이터가 없습니다.</p>
                             </div>
-                            <button type="button" class="btn btn--primary">권한 이관</button>
+                            <button type="button" class="btn btn--popup btn--primary">권한 이관</button>
                         </div>
                     </div>
                 </div>

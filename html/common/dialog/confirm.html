@@ -41,22 +41,36 @@
             <section>
                 <h2>Confirm</h2>
                 <button type="button" class="btn" data-type="modal" data-target="#modal-confirm">대기 해제 완료</button>
+                <button type="button" class="btn" data-type="modal" data-target="#modal-confirm2">로그인 횟수 초과 안내</button>
             </section>
         </main>
 
         <div id="modal-confirm" class="modal confirm">
             <div class="modal__dialog">
                 <div class="modal__content">
-                    <div class="modal__header">
-                        <h5 class="modal__title">대기 해제 완료</h5>
-                    </div>
                     <div class="modal__body">
-                        <h5 class="modal__title">고객님의 대기해제가 정상적으로 처리되었습니다.</h5>
-                        <p class="modal__txt">비밀번호 재설정후 로그인 가능합니다.</p>
+                        <h5 class="modal__title">대기 해제 완료</h5>
+                        <p class="modal__txt">고객님의 대기해제가 정상적으로 처리되었습니다.<br>
+                            비밀번호 재설정후 로그인 가능합니다.</p>
                     </div>
-                    <div class="modal__footer">
-                        <button type="button" class="btn btn--primary" data-dismiss="modal">확인</button>
+                    <P class="modal__footer">
+                        <button type="submit" class="btn btn--popup btn--primary" data-dismiss="modal">확인</button>
+                    </P>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-confirm2" class="modal confirm">
+            <div class="modal__dialog">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">로그인 횟수 초과 안내</h5>
+                        <p class="modal__txt">로그인 시도 횟수를 초과하였습니다.<br>
+                            30분 후 다시 시도하십시오.</p>
                     </div>
+                    <P class="modal__footer">
+                        <button type="submit" class="btn btn--popup btn--primary" data-dismiss="modal">확인</button>
+                    </P>
                 </div>
             </div>
         </div>

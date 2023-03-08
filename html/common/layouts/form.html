@@ -42,133 +42,211 @@
                 <form action="" method="">
                     <div class="button">
                         <h2>Button</h2>
-                        <fieldset name="button">
-                            <legend>States (H=52px)</legend>
-                            <button type="button" class="btn">default</button>
-                            <button type="button" class="btn btn--primary">primary</button>
-                            <button type="button" class="btn btn--secondary">secondary</button>
-                            <button type="button" class="btn btn--tertiary">tertiary</button>
-                            <button type="button" class="btn btn--negative">negative</button>
-                            <button type="button" class="btn btn--warning">warning</button>
-                            <button type="button" class="btn btn--positive">positive</button>
-                            <button type="button" class="btn btn--neutral">neutral</button>
-                            <button type="button" class="btn btn--disabled">disabled</button>
+                        <fieldset name="button size">
+                            <legend>Button size</legend>
+                            <p>States (H=52px) class="btn"</p>
+                            <button type="button" class="btn">취소</button>
+                            <p>Large button (H=72px) class="btn btn--large"</p>
+                            <button type="button" class="btn btn--large">취소</button>
+                            <p>Medium button (H=48px) class="btn btn--medium"</p>
+                            <button type="button" class="btn btn--medium">취소</button>
+                            <p>Small button (H=40px) class="btn btn--small"</p>
+                            <button type="button" class="btn btn--small">취소</button>
+                        </fieldset>
+                        <fieldset name="button disabled">
+                            <legend>button disabled class="btn btn--disabled"</legend>                            
+                            <button type="button" class="btn btn--disabled">btn--disabled</button>
+                            <button type="button" class="btn" disabled>[disabled]</button>
                         </fieldset>
                         <fieldset name="button">
-                            <legend>color button</legend>
-                            <button type="button" class="btn btn--color-gray">color-Gray</button>
-                            <button type="button" class="btn btn--color-gray-700">color-Gray-700</button>
-                            <button type="button" class="btn btn--color-gray-600">color-Gray-600</button>
-                            <button type="button" class="btn btn--color-gray-400">color-Gray-400</button>
-                            <button type="button" class="btn btn--color-gray-200">color-Gray-200</button>
-                            <button type="button" class="btn btn--color-red">color-Red</button>
-                            <button type="button" class="btn btn--color-white">color-White</button>
-                            <button type="button" class="btn btn--color-black">color-Black</button>
-                            <button type="button" class="btn btn--color-blue">color-Blue</button>  
-                            <button type="button" class="btn btn--color-blue2">color-Blue2</button>  
-                            <button type="button" class="btn btn--color-light">color-light</button>
-                            <button type="button" class="btn btn--color-dark">color-dark</button>
+                            <legend>color</legend>
+                            <button type="button" class="btn">btn</button>
+                            <button type="button" class="btn btn--primary">btn--primary</button>
+                            <button type="button" class="btn btn--secondary">btn--secondary</button>
+                            <button type="button" class="btn btn--tertiary">btn--tertiary</button>
+                            <button type="button" class="btn btn--negative">btn--negative</button>
+                            <button type="button" class="btn btn--warning">btn--warning</button>
+                            <button type="button" class="btn btn--positive">btn--positive</button>
+                            <button type="button" class="btn btn--neutral">btn--neutral</button>
+                            <button type="button" class="btn btn--gray">btn--Gray</button>
+                            <button type="button" class="btn btn--gray-700">btn--Gray-700</button>
+                            <button type="button" class="btn btn--gray-600">btn--Gray-600</button>
+                            <button type="button" class="btn btn--gray-400">btn--Gray-400</button>
+                            <button type="button" class="btn btn--gray-200">btn--Gray-200</button>
+                            <button type="button" class="btn btn--red">btn--Red</button>
+                            <button type="button" class="btn btn--white">btn--White</button>
+                            <button type="button" class="btn btn--black">btn--Black</button>
+                            <button type="button" class="btn btn--blue">btn--Blue</button>  
+                            <button type="button" class="btn btn--blue2">btn--Blue2</button>  
+                            <button type="button" class="btn btn--light">btn--light</button>
+                            <button type="button" class="btn btn--dark">btn--dark</button>
                         </fieldset>
                         <fieldset>
-                            <legend>outline button</legend>
-                            <button type="button" class="btn btn-outline">default-outline</button>
-                            <button type="button" class="btn btn--primary-outline">primary-outline</button>
-                            <button type="button" class="btn btn--secondary-outline">secondary-outline</button>
-                            <button type="button" class="btn btn--tertiary-outline">tertiary-outline</button>
-                            <button type="button" class="btn btn--negative-outline">negative-outline</button>
-                            <button type="button" class="btn btn--warning-outline">warning-outline</button>
-                            <button type="button" class="btn btn--positive-outline">positive-outline</button>
-                            <button type="button" class="btn btn--neutral-outline">neutral-outline</button>
+                            <legend>color outline button</legend>
+                            <button type="button" class="btn btn-outline">btn--outline</button>
+                            <button type="button" class="btn btn--primary-outline">btn--primary-outline</button>
+                            <button type="button" class="btn btn--secondary-outline">btn--secondary-outline</button>
+                            <button type="button" class="btn btn--tertiary-outline">btn--tertiary-outline</button>
+                            <button type="button" class="btn btn--negative-outline">btn--negative-outline</button>
+                            <button type="button" class="btn btn--warning-outline">btn--warning-outline</button>
+                            <button type="button" class="btn btn--positive-outline">btn--positive-outline</button>
+                            <button type="button" class="btn btn--neutral-outline">btn--neutral-outline</button>
     
-                            <button type="button" class="btn btn--color-gray-outline">color-Gray-outlin</button>
-                            <button type="button" class="btn btn--color-gray-700-outline">color-Gray-700-outlin</button>
-                            <button type="button" class="btn btn--color-gray-600-outline">color-Gray-600-outlin</button>
-                            <button type="button" class="btn btn--color-gray-400-outline">color-Gray-400-outlin</button>
-                            <button type="button" class="btn btn--color-gray-200-outline">color-Gray-200-outlin</button>
-                            <button type="button" class="btn btn--color-red-outline">color-red-outlin</button>
-                            <button type="button" class="btn btn--color-black-outline">color-black-outlin</button>
-                            <button type="button" class="btn btn--color-blue-outline">color-blue-outlin</button>
-                            <button type="button" class="btn btn--color-blue2-outline">color-blue2-outlin</button>
-                            <button type="button" class="btn btn--color-light-outline">color-light-outlin</button>
-                            <button type="button" class="btn btn--color-dark-outline">color-dark-outlin</button>
+                            <button type="button" class="btn btn--gray-outline">btn--Gray-outlin</button>
+                            <button type="button" class="btn btn--gray-700-outline">btn--Gray-700-outlin</button>
+                            <button type="button" class="btn btn--gray-600-outline">btn--Gray-600-outlin</button>
+                            <button type="button" class="btn btn--gray-400-outline">btn--Gray-400-outlin</button>
+                            <button type="button" class="btn btn--gray-200-outline">btn--Gray-200-outlin</button>
+                            <button type="button" class="btn btn--red-outline">btn--red-outlin</button>
+                            <button type="button" class="btn btn--black-outline">btn--black-outlin</button>
+                            <button type="button" class="btn btn--blue-outline">btn--blue-outlin</button>
+                            <button type="button" class="btn btn--blue2-outline">btn--blue2-outlin</button>
+                            <button type="button" class="btn btn--light-outline">btn--light-outlin</button>
+                            <button type="button" class="btn btn--dark-outline">btn--dark-outlin</button>
                         </fieldset>
-                        <fieldset>
-                            <legend>fixed button</legend>
-                            <button type="button" class="btn btn--small btn--color-list">개인코칭</button>
-                            <button type="button" class="btn btn--fixed btn--color-light">중복체크</button>
-                            <button type="button" class="btn btn--fixed btn--color-dark">주소검색</button>
-                            <button type="button" class="btn btn--fixed btn--primary">선택</button>
-                            <button type="button" class="btn btn--fixed btn--color-dark">스케줄등록</button>
-                            <button type="button" class="btn btn--fixed btn--color-dark">학원관리자 권한변경</button>
-                            <button type="button" class="btn btn--fixed btn--color-dark">비밀번호 초기화</button>
-                            <button type="button" class="btn btn--fixed btn--color-dark">휴대폰 인증</button>
-                            <p class="input__box">
-                                <label for="input-file" class="btn btn--fixed btn--color-light">파일첨부</label>
-                                <input type="file" id="input-file" class="input-file">
-                            </p>
+
+                        <fieldset name="gray button">
+                            <legend>Gray Button class="btn btn--medium btn--gray"</legend>
+                            <button type="button" class="btn btn--medium btn--gray">버전 등록</button>
+                            <button type="button" class="btn btn--medium btn--gray">학원관리자 권한변경</button>
+                            <button type="button" class="btn btn--medium btn--gray">학생등록</button>
+                            <button type="button" class="btn btn--medium btn--gray">스케줄 관리</button>
+                            <button type="button" class="btn btn--medium btn--gray">선생님등록</button>
+                            <button type="button" class="btn btn--medium btn--gray">진도수정</button>
+                            <button type="button" class="btn btn--medium btn--gray">추천학습 배정</button>
+                            <button type="button" class="btn btn--medium btn--gray">1:1 문의하기</button>
                         </fieldset>
-                        <fieldset>
-                            <legend>Large button (H=72px)</legend>
-                            <button type="button" class="btn btn--color-gray-600-outline btn--large">취소</button>
-                            <button type="button" class="btn btn--primary btn--large">확인</button>
+                        <fieldset name="bottom button">
+                            <legend>Bottom Button (w=176px) class="btn btn--btm"</legend>
+                            <button type="button" class="btn btn--btm btn--primary">저장</button>
+                            <button type="button" class="btn btn--btm">취소</button>
+                            <button type="button" class="btn btn--btm">삭제</button>
+                            <button type="button" class="btn btn--btm btn--secondary">수정</button>
+                            <button type="button" class="btn btn--btm btn-outline">목록</button>
+                            <button type="button" class="btn btn--btm btn-outline">홈</button>
                         </fieldset>
-                        <fieldset>
-                            <legend>Medium button (H=48px)</legend>
-                            <button type="button" class="btn btn--color-gray-600-outline btn--medium">스케줄 관리</button>
-                            <button type="button" class="btn btn--primary btn--medium">선생님등록</button>
+                        <fieldset name="list button">
+                            <legend>List Button (style fixed, size 별도) class="btn btn--small btn--list"</legend>
+                            <button type="button" class="btn btn--small btn--list">개인코칭</button>
+                            <button type="button" class="btn btn--small btn--list">상세보기</button>
+                            <button type="button" class="btn btn--small btn--list">수정</button>
+                            <button type="button" class="btn btn--small btn--list">등록</button>
                         </fieldset>
-                        <fieldset>
-                            <legend>Small button (H=40px)</legend>
-                            <button type="button" class="btn btn--color-gray-600-outline btn--small">다음에 변경</button>
-                            <button type="button" class="btn btn--primary btn--small">비밀번호 변경</button>
+                        <fieldset name="contents button">
+                            <legend>Contents Button (w=142px) class="btn btn--medium btn--contents"</legend>
+                            <button type="button" class="btn btn--medium btn--contents btn--light">파일첨부</button>
+                            <button type="button" class="btn btn--medium btn--contents btn--light">중복체크</button>
+                            <button type="button" class="btn btn--medium btn--contents btn--gray">주소검색</button>
+                            <button type="button" class="btn btn--medium btn--contents btn--primary">선택</button>
+                            <button type="button" class="btn btn--medium btn--contents btn--gray">스케줄 등록</button>
+                            <button type="button" class="btn btn--medium btn--contents btn--gray">비밀번호 초기화</button>
                         </fieldset>
-                    </div> 
+                        <fieldset name="login button">
+                            <legend>Login Button (w=253px) class="btn btn--large btn--login"</legend>
+                            <button type="button" class="btn btn--large btn--login btn--primary-outline">취소</button>
+                            <button type="button" class="btn btn--large btn--login btn--primary">확인</button>
+                        </fieldset>
+                        <fieldset name="popup button">
+                            <legend>Popup Button (w=203px) class="btn btn--popup"</legend>
+                            <button type="button" class="btn btn--popup btn--primary-outline">다음에 변경</button>
+                            <button type="button" class="btn btn--popup btn--primary">비밀번호 변경</button>
+                        </fieldset>
+                    </div>
+                    <hr>
                     
                     <div class="check_box">
                         <h2>Controls</h2>
                         <fieldset name="Check box">
                             <legend>Check box</legend>
-                            <div class="input__field">
                                 <h3 class="input__title">Check box</h3>
-                                <p class="input__box">
+                                <p class="input__field">
+                                    <input class="check__input" type="checkbox" id="check" checked>
+                                    <label class="check__label label--hidden" for="check">라벨히든</label>
                                     <input class="check__input" type="checkbox" id="check1">
-                                    <label class="check__label" for="check1">
-                                    체크박스
-                                    </label>
+                                    <label class="check__label label--hidden" for="check1">라벨히든</label>
+                                </p>
+                                <p class="input__field">
+                                    <input class="check__input" type="checkbox" id="all" checked>
+                                    <label class="check__label" for="all">전체</label>
                                     <input class="check__input" type="checkbox" id="check2">
-                                    <label class="check__label label--hidden" for="check2">라벨히든</label>
+                                    <label class="check__label" for="check2">재직</label>
+                                    <input class="check__input" type="checkbox" id="check3">
+                                    <label class="check__label" for="check3">재직</label>
+                                    <input class="check__input" type="checkbox" id="check4">
+                                    <label class="check__label" for="check4">재직</label>
                                 </p>
                             </div>
-                        </fieldset>        
+                        </fieldset>  
+                        <hr>      
                         <fieldset name="Radio Button">
                             <legend>Radio Button</legend>
-                            <input type="radio" id="radio1" name="radio" value="radio1" class="radio__input">
-                            <label for="radio1" class="radio__label">오늘</label>
-                            <input type="radio" id="radio2" name="radio" value="radio2" class="radio__input">
-                            <label for="radio2" class="radio__label">7일간</label>
-                            <input type="radio" id="radio3" name="radio" value="radio3" class="radio__input">
-                            <label for="radio3" class="radio__label label--hidden">7일간</label>
+                            <p class="input__field">
+                                <input type="radio" id="radio" name="radio" value="radio" class="radio__input" checked>
+                                <label for="radio" class="radio__label label--hidden">라벨히든</label>
+                                <input type="radio" id="radio1" name="radio" value="radio1" class="radio__input">
+                                <label for="radio1" class="radio__label label--hidden">라벨히든</label>
+                            </p>
+                            <p class="input__field">
+                                <input type="radio" id="radio2" name="radio2" value="radio2" class="radio__input" checked>
+                                <label for="radio2" class="radio__label">오늘</label>
+                                <input type="radio" id="radio3" name="radio2" value="radio3" class="radio__input">
+                                <label for="radio3" class="radio__label">7일</label>
+                                <input type="radio" id="radio4" name="radio2" value="radio4" class="radio__input">
+                                <label for="radio4" class="radio__label">7일</label>
+                                <input type="radio" id="radio5" name="radio2" value="radio5" class="radio__input">
+                                <label for="radio5" class="radio__label">7일</label>
+                                <input type="radio" id="radio6" name="radio2" value="radio6" class="radio__input">
+                                <label for="radio6" class="radio__label">기간선택</label>
+                            </p>                            
                         </fieldset>
                     </div>
+                    <hr>
 
                     <div class="select_box">
                         <fieldset name="select box">
                             <legend>Select box</legend>
                             <div class="input__field">
-                                <select class="select">
-                                    <option selected>선택</option>
+                                <select name="" class="select">
+                                    <option value="all" selected>전체</option>
+                                    <option value="1">1레슨</option>
+                                    <option value="2">2레슨</option>
+                                    <option value="3">3레슨</option>
+                                    <option value="4">4레슨</option>
+                                    <option value="5">5레슨</option>
+                                    <option value="6">6레슨</option>
+                                    <option value="7">7레슨</option>
+                                    <option value="8">8레슨</option>
+                                    <option value="9">9레슨</option>
+                                    <option value="10">10레슨</option>
+                                    <option value="1">1레슨</option>
+                                    <option value="2">2레슨</option>
+                                    <option value="3">3레슨</option>
+                                    <option value="4">4레슨</option>
+                                    <option value="5">5레슨</option>
+                                    <option value="6">6레슨</option>
+                                    <option value="7">7레슨</option>
+                                    <option value="8">8레슨</option>
+                                    <option value="9">9레슨</option>
+                                    <option value="10">10레슨</option>
+                                    <option value="1">1레슨</option>
+                                    <option value="2">2레슨</option>
+                                    <option value="3">3레슨</option>
+                                    <option value="4">4레슨</option>
+                                    <option value="5">5레슨</option>
+                                    <option value="6">6레슨</option>
+                                    <option value="7">7레슨</option>
+                                    <option value="8">8레슨</option>
+                                    <option value="9">9레슨</option>
+                                    <option value="10">10레슨</option>
+                                </select>
+                                <select name="" class="select select--disabled">
+                                    <option selected>전체</option>
                                     <option value="1">1레슨</option>
                                     <option value="2">2레슨</option>
                                     <option value="3">3레슨</option>
                                 </select>
-                                <select class="select select--disabled">
-                                    <option selected>선택</option>
-                                    <option value="1">1레슨</option>
-                                    <option value="2">2레슨</option>
-                                    <option value="3">3레슨</option>
-                                </select>
-                                <select class="select" disabled>
-                                    <option selected>선택</option>
+                                <select name="" class="select" disabled>
+                                    <option selected>전체</option>
                                     <option value="1">1레슨</option>
                                     <option value="2">2레슨</option>
                                     <option value="3">3레슨</option>
@@ -176,6 +254,7 @@
                             </div>
                         </fieldset>
                     </div>
+                    <hr>
 
                     <div class="input_text">
                         <fieldset>
@@ -249,16 +328,16 @@
                             <div class="input__field">
                                 <p class="input__box">
                                     <input type="text" id="text_base" class="input" placeholder="아이디" autocomplete="off">
-                                    <button type="button" class="btn btn--color-gray-200-outline">중복체크</button>
+                                    <button type="button" class="btn btn--gray-200-outline">중복체크</button>
                                 </p>
                                 <p class="input__box">
                                     <input type="text" id="text_base" class="input" placeholder="아이디" autocomplete="off">
-                                    <button type="button" class="btn btn--color-gray-200-outline">중복체크</button>
+                                    <button type="button" class="btn btn--gray-200-outline">중복체크</button>
                                     <span class="input-message input-message--valid">이메일주소 규격에 맞게 입력해 주세요..</span>
                                 </p>
                                 <p class="input__box">
                                     <input type="text" id="text_base" class="input" placeholder="아이디" autocomplete="off">
-                                    <button type="button" class="btn btn--color-gray-200-outline">중복체크</button>
+                                    <button type="button" class="btn btn--gray-200-outline">중복체크</button>
                                     <span class="input-message input-message--invalid">이메일주소 규격에 맞게 입력해 주세요..</span>
                                 </p>                      
                             </div>
@@ -271,9 +350,49 @@
                             </div>
                         </fieldset>
                     </div>
+                    <hr>
+                    <fieldset name="input file">
+                        <legend>file box</legend>
+                        <div class="file">
+                            <div class="file__content">
+                                <p class="file__btn">
+                                    <label for="file-add" class="btn btn--medium btn--contents btn--light">파일첨부</label>
+                                    <input type="file" id="file-add" class="file--add" multiple>
+                                    
+                                    <span class="file-notice">
+                                        ※ 파일 1개당 5MB, 최대 5개까지 등록 가능합니다. ※ doc, hwp, pdf, gif, jpg, png, txt, xls파일만 등록 가능합니다.
+                                    </span>
+                                </p>
+                                <ul class="file__list">
+                                    <li class="file__item">
+                                        <span class="file__tilte">asdffsdf.hwp</span>
+                                        <button type="button" class="file--delete">파일삭제</button>
+                                    </li>
+                                    <li class="file__item">
+                                        <span class="file__tilte">asdffsdf.hwp</span>
+                                        <button type="button" class="file--delete">파일삭제</button>
+                                    </li>
+                                    <li class="file__item">
+                                        <span class="file__tilte">asdffsdf.hwp</span>
+                                        <button type="button" class="file--delete">파일삭제</button>
+                                    </li>                                    
+                                    <li class="file__item">
+                                        <span class="file__tilte">asdffsdf.hwp</span>
+                                        <button type="button" class="file--delete">파일삭제</button>
+                                    </li>
+                                                                        
+                                    <li class="file__item">
+                                        <span class="file__tilte">asdffsdf.hwp</span>
+                                        <button type="button" class="file--delete">파일삭제</button>
+                                    </li>
+                                </ul>  
+                            </div>
+                        </div>
+                    </fieldset>
                 </form>
             </section>
-            
+            <hr>
+
             <section>
                 <h2>Pagenation</h2>
                 <ul class="pagenation__list">
@@ -286,6 +405,7 @@
                     <li class="pagenation__item pagenation--last"><a href="javascript:void(0);" class="pagenation__link">last</a></li>
                 </ul>
             </section>
+            <hr>
 
             <section>
                 <h2>Date</h2>
@@ -299,6 +419,7 @@
                     <li class="date__item date--next"><a href="javascript:void(0);" class="date__link">next</a></li>
                 </ul>
             </section>
+            <hr>
 
             <section>    
                 <h2>Dropdown</h2>
@@ -335,7 +456,7 @@
 
                     <div class="dropdown">
                         <p class="dropdown__select">
-                            <span class="dropdown__title">선택</span>
+                            <span class="dropdown__title">전체</span>
                             <span class="dropdown__arrow">
                                 <img src="/lms/assets/images/ico_dropdown_chevron.svg" alt="dropdown arrow">
                             </span>
@@ -349,7 +470,7 @@
                     </div>
                     <div class="dropdown">
                         <p class="dropdown__select">
-                            <span class="dropdown__title">선택</span>
+                            <span class="dropdown__title">전체</span>
                             <span class="dropdown__arrow">
                                 <img src="/lms/assets/images/ico_dropdown_chevron.svg" alt="dropdown arrow">
                             </span>

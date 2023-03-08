@@ -18,22 +18,18 @@
     }
 
     .txt {
-        &--color {
-            &-green {
-                font-size: 18px;
-                font-weight: 700;
-                color: #00B828;
-            }
+        &--green {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00B828;
         }
     }
 
     .btn {
-        &__content {
-            &--half {
-                margin-top: 36px;
-                padding-bottom: 24px;
-                border-bottom: 1px solid $color_gray_400;
-            }
+        &--half {
+            margin-top: 36px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid $color_gray_400;
         }
     }
 

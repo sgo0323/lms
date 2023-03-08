@@ -1,12 +1,5 @@
 @import '_global';
 
-
-// input type text
-    // Firefox input number css
-input[type='number'] {
-    -moz-appearance: textfield;
-}
-
 .input {
     width: 100%;
     padding: 11.5px 12px 10.5px;
@@ -47,6 +40,11 @@ input[type='number'] {
 
     &[type=password] {
         font-family: 'Noto Sans KR';
+    }
+
+    // input type text Firefox input number css
+    &[type='number'] {
+        appearance: textfield;
     }
 
     &:not(:placeholder-shown) {
@@ -120,37 +118,6 @@ input[type='number'] {
             }
         }
 
-        &--inside {
-            label {
-                position: absolute;
-                top: 50%;
-                left: 0;
-                line-height: ceil(($font_size_base * 1.25)); // 20px
-                padding: 0 .625rem;
-                margin:-10px 0 0;
-                @include transition(all .25s ease-out);
-            }
-
-            .input {
-                padding:0 5px 0 60px;
-
-                &:focus,
-                &.focus {
-                    label {
-                        color: $color_primary;
-                    }
-                }
-
-                &--disabled,
-                &[disabled],
-                &:disabled {
-                    & + label {
-                        opacity: .65;
-                    }
-                }
-            }
-        }
-
         .input {
             width: auto;
 
@@ -209,16 +176,12 @@ input[type='number'] {
             color: $color_negative;
         }
     }
-
-    // 파일첨부
-    &-file {
-        display: none;
-    }
-
+    
     &--date {
         position: relative;
         padding: 9.5px 12px 10.5px 43px;
         background: url('/lms/assets/images/ico_dropdown_calendar.svg') no-repeat center left 11px/ 20px auto;
+        color: $color_gray_700;
 
         &::before {
             content: attr(data-placeholder);
@@ -319,6 +282,47 @@ input[type='number'] {
         }
     }
     */
+
+    // 파일첨부
+    @at-root .file {
+        &-notice {
+            display: inline-block;
+            margin-left: 20px;
+            font-weight: 500;
+            color: $color_gray_800;
+            line-height: 1.5;
+        }
+
+        &--add {
+            display: none;
+        }
+
+        &__list {
+            margin-top: 12px;
+        }
+        
+        &__item {
+            &:nth-of-type(n+2) {
+                margin-top: 16px;
+            }
+        }
+
+        &__tilte {
+            font-weight: 500;
+            color: $color_positive;
+            line-height: 1.5;
+            text-decoration: underline;
+        }
+
+        &--delete {
+            margin-left: 8px;
+            width: 24px;
+            height: 24px;
+            background: url('/lms/assets/images/ico_Bin.svg') no-repeat center/ 24px auto;
+            text-indent: -9999rem;
+            
+        }
+    }
         
     // checkbox
     @at-root .check {
@@ -482,7 +486,8 @@ input[type='number'] {
 
 
     option {
-        padding: 11px;
+        overflow-y:scroll;
+        font-weight: 400;
     }
 }
 
@@ -550,7 +555,7 @@ $button_text : $color_white;
 
             &:hover {
                 border-color: #602EA0;
-                background: $color_white;
+                background: $color_gray_200;
                 color: #602EA0;
             }
         }
@@ -676,254 +681,254 @@ $button_text : $color_white;
         }
     }
  
-    &--color {
-        &-gray {
-            background: $color_gray_700;
     
-            &:hover {
-                background: $color_gray_800;
-            }
-            
-            &-outline { 
-                border-color: $color_gray_700;
-                background: transparent; 
-                color: $color_gray_900;
-    
-                &:hover {
-                    border-color: $color_gray_700;
-                    background: $color_gray_200;
-                    color: $color_gray_900;
-                }
-            }
+    &--gray {
+        background: $color_gray_700;
+
+        &:hover {
+            background: $color_gray_800;
         }
         
-        &-list {
-            border-color: $color_gray_600;
-            background: $color_white; 
-            color: $color_gray_600;
-    
+        &-outline { 
+            border-color: $color_gray_700;
+            background: transparent; 
+            color: $color_gray_900;
+
             &:hover {
                 border-color: $color_gray_700;
                 background: $color_gray_200;
                 color: $color_gray_900;
             }
         }
+    }
     
-        &-light {
-            border-color: $color_gray_400;
+    &--list {
+        border-color: $color_gray_600;
+        background: $color_white; 
+        color: $color_gray_600;
+
+        &:hover {
+            border-color: $color_gray_700;
+            background: $color_gray_200;
+            color: $color_gray_900;
+        }
+    }
+
+    &--light {
+        border-color: $color_gray_600;
+        background: $color_gray_200;
+        color: $color_gray_700;
+
+        &:hover {
+            border-color: $color_gray_700;
             background: $color_gray_300;
-            color: $color_gray_700;
-    
-            &:hover {
-                border-color: darken($color_gray_400, 10%);
-                background: darken($color_gray_300, 10%);
-            }
-            
-            &-outline {
-                border-color: $color_gray_400;
-                background: $color_white;
-                color: $color_gray_700;
-    
-                &:hover {
-                    border-color: $color_gray_500;
-                    background: $color_white;
-                    color: $color_gray_800;
-                }
-            }
+            color: $color_gray_800;
         }
-    
-        &-dark {
-            background: $color_gray_700;
-    
-            &:hover {
-                background: $color_gray_800;
-            }
-            
-            &-outline {
-                border-color: $color_gray_700;
-                background: $color_white;
-                color: $color_gray_700;
-    
-                &:hover {
-                    border-color: $color_gray_800;
-                    background: $color_white;
-                    color: $color_gray_800;
-                }
-            }
-        }
-
-        &-gray-700 {
-            background: $color_gray_700;
-
-            &:hover {
-                background: $color_gray_800;
-            }
-            
-            &-outline { 
-                border-color: $color_gray_700;
-                background: transparent; 
-                color: $color_gray_900;
-
-                &:hover {
-                    border-color: $color_gray_700;
-                    background: $color_gray_200;
-                    color: $color_gray_900;
-                }
-            }
-        }
-
-        &-gray-600 {
-            background: $color_gray_600;
-
-            &:hover {
-                background: $color_gray_700;
-            }
-            
-            &-outline { 
-                border-color: $color_gray_600;
-                background: transparent; 
-                color: $color_gray_600;
-
-                &:hover {
-                    border-color: $color_gray_700;
-                    background: $color_gray_200;
-                    color: $color_gray_900;
-                }
-            }
-        }
-
-        &-gray-400 {
-            background: $color_gray_400;
+        
+        &-outline {
+            border-color: $color_gray_600;
+            background: $color_white;
             color: $color_gray_700;
 
             &:hover {
-                background: $color_gray_700;
-                color: $button_text;
+                border-color: $color_gray_700;
+                background: $color_white;
+                color: $color_gray_800;
             }
-            
-            &-outline { 
-                border-color: $color_gray_400;
+        }
+    }
+
+    &--dark {
+        background: $color_gray_700;
+
+        &:hover {
+            background: $color_gray_800;
+        }
+        
+        &-outline {
+            border-color: $color_gray_700;
+            background: $color_white;
+            color: $color_gray_700;
+
+            &:hover {
+                border-color: $color_gray_800;
+                background: $color_white;
+                color: $color_gray_800;
+            }
+        }
+    }
+
+    &--gray-700 {
+        background: $color_gray_700;
+
+        &:hover {
+            background: $color_gray_800;
+        }
+        
+        &-outline { 
+            border-color: $color_gray_700;
+            background: transparent; 
+            color: $color_gray_900;
+
+            &:hover {
+                border-color: $color_gray_700;
                 background: $color_gray_200;
-                color: $color_gray_600;
-
-                &:hover {
-                    border-color: $color_gray_700;
-                    background: $color_gray_200;
-                    color: $color_gray_900;
-                }
+                color: $color_gray_900;
             }
         }
+    }
 
-        &-gray-200 {
+    &--gray-600 {
+        background: $color_gray_600;
+
+        &:hover {
+            background: $color_gray_700;
+        }
+        
+        &-outline { 
+            border-color: $color_gray_600;
+            background: transparent; 
+            color: $color_gray_600;
+
+            &:hover {
+                border-color: $color_gray_700;
+                background: $color_gray_200;
+                color: $color_gray_900;
+            }
+        }
+    }
+
+    &--gray-400 {
+        background: $color_gray_400;
+        color: $color_gray_700;
+
+        &:hover {
+            background: $color_gray_700;
+            color: $button_text;
+        }
+        
+        &-outline { 
+            border-color: $color_gray_400;
             background: $color_gray_200;
             color: $color_gray_600;
-    
-            &:hover {
-                background: $color_gray_400;
-            }
-    
-            &-outline {
-                border-color: $color_gray_400;
-                background: $color_gray_200;
-                color: $color_gray_600;
-    
-                &:hover {
-                    border-color: $color_gray_700;
-                    background: $color_gray_200;
-                    color: $color_gray_900;
-                }
-            }
-        }        
 
-        &-black {
-            background: $color_black;
-    
             &:hover {
-                background: $color_gray_800;
-            }
-            
-            &-outline { 
-                border-color: $color_black;
-                background: $color_white; 
-                color: $color_black;
-    
-                &:hover {
-                    border-color: $color_gray_800;
-                    background: $color_white;
-                    color: $color_gray_800;
-                }
-            }
-        }        
-
-        &-white {
-            border-color: $color_black;
-            background: $color_white;
-            color: $color_gray_900;
-    
-            &:hover {
-                border-color: $color_black;
+                border-color: $color_gray_700;
                 background: $color_gray_200;
                 color: $color_gray_900;
             }
         }
+    }
 
-        &-red {
-            background: $color_negative;
-    
-            &:hover {
-                background: #9E1A1A;
-            }
+    &--gray-200 {
+        background: $color_gray_200;
+        color: $color_gray_600;
 
-            &-outline { 
-                border-color: $color_negative;
-                background: $color_white; 
-                color: $color_negative;
-
-                &:hover {
-                    border-color: #9E1A1A;
-                    background: $color_white;
-                    color: #9E1A1A;
-                }
-            }
+        &:hover {
+            background: $color_gray_400;
         }
 
-        &-blue {
-            background: $color_positive;
+        &-outline {
+            border-color: $color_gray_400;
+            background: $color_gray_200;
+            color: $color_gray_600;
 
             &:hover {
-                background: #3240BB;
+                border-color: $color_gray_700;
+                background: $color_gray_200;
+                color: $color_gray_900;
             }
-            
-            &-outline { 
-                border-color: $color_positive;
-                background: $color_white; 
-                color: $color_positive;
+        }
+    }        
 
-                &:hover {
-                    border-color: #3240BB;
-                    background: $color_white;
-                    color: #3240BB;
-                }
-            }
-        }        
+    &--black {
+        background: $color_black;
 
-        &-blue2 {
-            background: $color_neutral;
+        &:hover {
+            background: $color_gray_800;
+        }
+        
+        &-outline { 
+            border-color: $color_black;
+            background: $color_white; 
+            color: $color_black;
 
             &:hover {
-                background: #0F68B4;
+                border-color: $color_gray_800;
+                background: $color_white;
+                color: $color_gray_800;
             }
-            
-            &-outline { 
-                border-color: $color_neutral;
-                background: $color_white; 
-                color: $color_neutral;
+        }
+    }        
 
-                &:hover {
-                    border-color: #0F68B4;
-                    background: $color_white;
-                    color: #0F68B4;
-                }
+    &--white {
+        border-color: $color_black;
+        background: $color_white;
+        color: $color_gray_900;
+
+        &:hover {
+            border-color: $color_black;
+            background: $color_gray_200;
+            color: $color_gray_900;
+        }
+    }
+
+    &--red {
+        background: $color_negative;
+
+        &:hover {
+            background: #9E1A1A;
+        }
+
+        &-outline { 
+            border-color: $color_negative;
+            background: $color_white; 
+            color: $color_negative;
+
+            &:hover {
+                border-color: #9E1A1A;
+                background: $color_white;
+                color: #9E1A1A;
+            }
+        }
+    }
+
+    &--blue {
+        background: $color_positive;
+
+        &:hover {
+            background: #3240BB;
+        }
+        
+        &-outline { 
+            border-color: $color_positive;
+            background: $color_white; 
+            color: $color_positive;
+
+            &:hover {
+                border-color: #3240BB;
+                background: $color_white;
+                color: #3240BB;
+            }
+        }
+    }        
+
+    &--blue2 {
+        background: $color_neutral;
+
+        &:hover {
+            background: #0F68B4;
+        }
+        
+        &-outline { 
+            border-color: $color_neutral;
+            background: $color_white; 
+            color: $color_neutral;
+
+            &:hover {
+                border-color: #0F68B4;
+                background: $color_white;
+                color: #0F68B4;
             }
         }
     }
@@ -965,21 +970,29 @@ $button_text : $color_white;
         width: 100%;
     }
 
+    /*
     &--half {
         float: left;
         width: 50%;
         margin: 0;
         @include border-radius(0);
     }
+    */
 
-    &--fixed {
-        min-width: 142px;
-        padding: 11px 16px;
+    &--btm {
+        min-width: 176px;
     }
 
-    // rounded button
-    &--round {
-        @include border-radius(2.5rem);
+    &--contents {
+        min-width: 142px;
+    }
+
+    &--login {
+        min-width: 253px;
+    }
+
+    &--popup {
+        min-width: 203px;
     }
 }
 
