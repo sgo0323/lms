@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/lms/scss/reset.css" rel="stylesheet">
+        <link href="/lms/scss/common.css" rel="stylesheet">
+        <link href="/lms/scss/header.css" rel="stylesheet">
+        <link href="/lms/scss/form.css" rel="stylesheet">
+        <link href="/lms/scss/modal.css" rel="stylesheet">
+        <link href="/lms/scss/recommendation.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/lms/js/jquery-2.2.4.min.js"></script>
+        <script src="/lms/js/includeHtml.js"></script>
+        <script src="/lms/js/dropdowns.js"></script>   
+        <script src="/lms/js/modal.js"></script>  
+        <script src="/lms/js/tab.js"></script>
+        <script src="/lms/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/lms/html/common/layouts/header.html"></header>
+        <main class="page recommendation">
+            <section class="recommendation__header">
+                <div class="menu">
+                    <div class="menu__content">
+                        <h2 class="menu__title">추천학습 배정</h2>
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="/lms/html/pages/learning/learning_list.html" class="menu__link">학습관리</a></li>
+                            <li class="menu__item"><a href="/lms/html/pages/learning/learning_list.html" class="menu__link">학생현황</a></li>
+                            <li class="menu__item"><a href="/lms/html/pages/learning/personal_coaching.html" class="menu__link">개인코칭</a></li>
+                            <li class="menu__item">추천학습 배정</li>
+                        </ul>
+                    </div>
+                </div>                
+                <div class="data__search">
+                    <form action="" method="">
+                        <p class="input__field">
+                            <input type="search" id="reset" class="input input--reset input--search" placeholder="지문명을 입력해주세요." autocomplete="off">
+                            <button type="button" class="search__btn">search</button>
+                        </p>                        
+                    </form>
+                </div>
+            </section>
+            <section class="recommendation__body">
+                <p class="recommendation__btn">
+                    <button type="button" class="btn btn--medium btn--gray">추천학습 배정</button>
+                </p>                
+                <div class="tab">
+                    <ul class="tab__nav">
+                        <li class="tab__item tab__item--on">
+                            <a href="javascript:void(0);" class="tab__link">1레벨</a>
+                        </li>
+                        <li class="tab__item">
+                            <a href="javascript:void(0);" class="tab__link">2레벨</a>
+                        </li>
+                        <li class="tab__item">
+                            <a href="javascript:void(0);" class="tab__link">3레벨</a>
+                        </li>                        
+                        <li class="tab__item">
+                            <a href="javascript:void(0);" class="tab__link">4레벨</a>
+                        </li>
+                        <li class="tab__item">
+                            <a href="javascript:void(0);" class="tab__link">5레벨</a>
+                        </li>
+                        <li class="tab__item">
+                            <a href="javascript:void(0);" class="tab__link">6레벨</a>
+                        </li>
+                    </ul>
+                    <div class="tab__content" style="display: block;">
+                        <div class="panel">
+                            <div class="accordion">
+                                <div class="accordion__item accordion__item--on">
+                                    <ul class="accordion__title">
+                                        <li class="level">
+                                            <input class="check__input" type="checkbox" id="level1-1" checked>
+                                            <label class="check__label" for="level1-1">1레벨 1레슨</label>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="accordion__btn">열기</button>
+                                        </li>
+                                    </ul>
+                                    <div class="accordion__content">
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                            <li class="subject__item">[지문 3. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion__item">
+                                    <ul class="accordion__title">
+                                        <li class="level">
+                                            <input class="check__input" type="checkbox" id="level1-2" checked>
+                                            <label class="check__label" for="level1-2">1레벨 1레슨</label>
+                                            <span class="tag tag--black-outline">현재 학습중</span>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="accordion__btn">열기</button>
+                                        </li>
+                                    </ul>
+                                    <div class="accordion__content">
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="tab__content">
+                        <div class="panel">
+                            <div class="accordion">
+                                <div class="accordion__item accordion__item--on">
+                                    <ul class="accordion__title">
+                                        <li class="level">
+                                            <input class="check__input" type="checkbox" id="level2-1" checked>
+                                            <label class="check__label" for="level2-1">2레벨 1레슨</label>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="accordion__btn">열기</button>
+                                        </li>
+                                    </ul>
+                                    <div class="accordion__content">
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="tab__content">
+                        <div class="panel">
+                            <div class="accordion">
+                                <div class="accordion__item accordion__item--on">
+                                    <ul class="accordion__title">
+                                        <li class="level">
+                                            <input class="check__input" type="checkbox" id="level3-1" checked>
+                                            <label class="check__label" for="level3-1">3레벨 1레슨</label>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="accordion__btn">열기</button>
+                                        </li>
+                                    </ul>
+                                    <div class="accordion__content">
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="tab__content">
+                        <div class="panel">
+                            <div class="accordion">
+                                <div class="accordion__item accordion__item--on">
+                                    <ul class="accordion__title">
+                                        <li class="level">
+                                            <input class="check__input" type="checkbox" id="level4-1" checked>
+                                            <label class="check__label" for="level4-1">4레벨 1레슨</label>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="accordion__btn">열기</button>
+                                        </li>
+                                    </ul>
+                                    <div class="accordion__content">
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="tab__content">
+                        <div class="panel">
+                            <div class="accordion">
+                                <div class="accordion__item accordion__item--on">
+                                    <ul class="accordion__title">
+                                        <li class="level">
+                                            <input class="check__input" type="checkbox" id="level5-1" checked>
+                                            <label class="check__label" for="level5-1">5레벨 1레슨</label>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="accordion__btn">열기</button>
+                                        </li>
+                                    </ul>
+                                    <div class="accordion__content">
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion__item">
+                                    <ul class="accordion__title">
+                                        <li class="level">
+                                            <input class="check__input" type="checkbox" id="level5-2" checked>
+                                            <label class="check__label" for="level5-2">5레벨 1레슨</label>
+                                            <span class="tag tag--black-outline">현재 학습중</span>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="accordion__btn">열기</button>
+                                        </li>
+                                    </ul>
+                                    <div class="accordion__content">
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="tab__content">
+                        <div class="panel">
+                            <div class="accordion">
+                                <div class="accordion__item accordion__item--on">
+                                    <ul class="accordion__title">
+                                        <li class="level">
+                                            <input class="check__input" type="checkbox" id="level6-1" checked>
+                                            <label class="check__label" for="level6-1">6레벨 1레슨</label>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="accordion__btn">열기</button>
+                                        </li>
+                                    </ul>
+                                    <div class="accordion__content">
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                        <ul class="subject__list">
+                                            <li class="subject__title">
+                                                <input class="check__input" type="checkbox" id="literature">
+                                                <label class="check__label" for="literature">문학</label>
+                                            </li>
+                                            <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
+                                            <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

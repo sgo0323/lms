@@ -358,6 +358,7 @@
                 margin-right: 8px;
                 border: 2px solid $color_gray_500;
                 @include border-radius(6px);
+                background: $color_white;
                 vertical-align: top;
             }            
         }

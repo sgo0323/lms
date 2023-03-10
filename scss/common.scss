@@ -551,7 +551,7 @@ table, thead, tbody, tr, th, td {
             line-height: 1.5;
             background: url('/lms/assets/images/ico_warning.svg') no-repeat top center/ 56px auto;
             @include transform(translateY(-50%));
-        }   
+        }
     }
 
     &--striped {
@@ -639,6 +639,22 @@ table, thead, tbody, tr, th, td {
     }
 }
 
+// accordion tab
+.accordion {
+    &__content {
+        display: none;
+    }
+
+    &__item {        
+        &--on {
+            .accordion {
+                &__content {
+                    display: block;
+                }
+            }
+        }
+    }
+}
 
 /*
     common layouts

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+        <link href="/scss/recommendation.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>  
+        <script src="/js/tab.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/html/common/layouts/header.html"></header>
+        <main class="page recommendation">
+            <section class="recommendation__header">
+                <div class="menu">
+                    <div class="menu__content">
+                        <h2 class="menu__title">추천학습 배정</h2>
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="/html/pages/learning/learning_list.html" class="menu__link">학습관리</a></li>
+                            <li class="menu__item"><a href="/html/pages/learning/learning_list.html" class="menu__link">학생현황</a></li>
+                            <li class="menu__item"><a href="/html/pages/learning/personal_coaching.html" class="menu__link">개인코칭</a></li>
+                            <li class="menu__item">추천학습 배정</li>
+                        </ul>
+                    </div>
+                </div>                
+                <div class="data__search">
+                    <form action="" method="">
+                        <p class="input__field">
+                            <input type="search" id="reset" class="input input--reset input--search" placeholder="지문명을 입력해주세요." autocomplete="off">
+                            <button type="button" class="search__btn">search</button>
+                        </p>                        
+                    </form>
+                </div>
+            </section>
+            <section class="recommendation__body">
+                <p class="recommendation__btn">
+                    <button type="button" class="btn btn--medium btn--gray">추천학습 배정</button>
+                </p>                
+                <div class="tab">
+                    <ul class="tab__nav">
+                        <li class="tab__item tab__item--on">
+                            <a href="javascript:void(0);" class="tab__link">1레벨</a>
+                        </li>
+                        <li class="tab__item">
+                            <a href="javascript:void(0);" class="tab__link">2레벨</a>
+                        </li>
+                        <li class="tab__item">
+                            <a href="javascript:void(0);" class="tab__link">3레벨</a>
+                        </li>                        
+                        <li class="tab__item">
+                            <a href="javascript:void(0);" class="tab__link">4레벨</a>
+                        </li>
+                        <li class="tab__item">
+                            <a href="javascript:void(0);" class="tab__link">5레벨</a>
+                        </li>
+                        <li class="tab__item">
+                            <a href="javascript:void(0);" class="tab__link">6레벨</a>
+                        </li>
+                    </ul>
+                    <div class="tab__content" style="display: block;">
+                        <div class="panel">
+                            <p class="error">검색결과가 없습니다.</p>
+                        </div>
+                    </div>
+                    <div class="tab__content">
+                        <div class="panel">
+                            <p class="error">검색결과가 없습니다.</p>
+                        </div> 
+                    </div>
+                    <div class="tab__content">
+                        <div class="panel">
+                            <p class="error">검색결과가 없습니다.</p>
+                        </div> 
+                    </div>
+                    <div class="tab__content">
+                        <div class="panel">
+                            <p class="error">검색결과가 없습니다.</p>
+                        </div> 
+                    </div>
+                    <div class="tab__content">
+                        <div class="panel">
+                            <p class="error">검색결과가 없습니다.</p>
+                        </div> 
+                    </div>
+                    <div class="tab__content">
+                        <div class="panel">
+                            <p class="error">검색결과가 없습니다.</p>
+                        </div> 
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
