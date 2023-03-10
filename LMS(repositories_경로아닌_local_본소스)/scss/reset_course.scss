@@ -1,0 +1,57 @@
+@import '_global';
+
+.reset-course {
+    &__txt {
+        margin-top: 16px;
+        font-weight: 500;
+        color: $color_gray_600;
+        line-height: 1.6;
+    }
+
+    &--error {
+        margin: 48px 0 24px;
+        font-size: $font_size_large;
+        font-weight: 500;
+        color: $color_gray_600;
+        text-align: center;
+        line-height: ceil(($font_size_large * 1.4));
+    }
+
+    .txt {
+        &--green {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00B828;
+        }
+    }
+
+    .btn {
+        &--half {
+            margin-top: 36px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid $color_gray_400;
+        }
+    }
+
+    .table {        
+        &__box {
+            height: 304px;
+            margin-top: 16px;
+            padding: 0 6px 0;
+        }
+        
+        // th & td
+        > :not(caption) > * > * {
+            padding: 19px 10px;
+
+            &:first-of-type,
+            &:last-of-type {
+                text-align: center;
+            }
+        }
+
+        > :not(caption) > * > th {
+            padding: 15px 10px;
+        }
+    }
+}

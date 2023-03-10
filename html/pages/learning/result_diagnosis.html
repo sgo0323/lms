@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/lms/scss/reset.css" rel="stylesheet">
+        <link href="/lms/scss/common.css" rel="stylesheet">
+        <link href="/lms/scss/header.css" rel="stylesheet">
+        <link href="/lms/scss/form.css" rel="stylesheet">
+        <link href="/lms/scss/modal.css" rel="stylesheet">
+        <link href="/lms/scss/reset_course.css" rel="stylesheet">
+        <link href="/lms/scss/personal_coaching.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/lms/js/jquery-2.2.4.min.js"></script>
+        <script src="/lms/js/includeHtml.js"></script>
+        <script src="/lms/js/dropdowns.js"></script>   
+        <script src="/lms/js/modal.js"></script>   
+        <script src="/lms/js/tab.js"></script>
+        <script src="/lms/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/lms/html/common/layouts/header.html"></header>
+        <main class="page personal-coaching">
+            <!--
+                개발시 result_customized.html (맞춤/추천/리셋 학습결과 리스트)의 style="display: block;" 만남겨 주시고 
+                하기의 style="display: block;" 는 지워주세요.
+            -->
+            <div class="tab__content result-diagnosis" style="display: block;">
+                <div class="table__box">
+                    <table class="table table--striped table-header--sticky">
+                        <thead>
+                            <tr>
+                                <th>회차</th>
+                                <th>맞힌 문항수</th>
+                                <th>소요시간</th>
+                                <th>독해력</th>
+                                <th>분석리포트</th>
+                                <th>학습완료일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>최초 sp</td>
+                                <td>27/34</td>
+                                <td>64분 45초</td>
+                                <td>80%</td>
+                                <td class="txt--bold">
+                                    <button type="button" class="table__link" data-type="modal" data-target="#modal-report">보기</button>
+                                </td>
+                                <td>150</td>
+                            </tr>
+                            <tr>
+                                <td>재평가 1회</td>
+                                <td>27/34</td>
+                                <td>64분 45초</td>
+                                <td>80%</td>
+                                <td class="txt--bold">
+                                    <button type="button" class="table__link" data-type="modal" data-target="#modal-report">보기</button>
+                                </td>
+                                <td>150</td>
+                            </tr>
+                            <tr>
+                                <td>재평가 2회</td>
+                                <td>27/34</td>
+                                <td>64분 45초</td>
+                                <td>80%</td>
+                                <td class="txt--bold">
+                                    <button type="button" class="table__link" data-type="modal" data-target="#modal-report">보기</button>
+                                </td>
+                                <td>150</td>
+                            </tr>
+                            <tr>
+                                <td>재평가 3회</td>
+                                <td>27/34</td>
+                                <td>64분 45초</td>
+                                <td>80%</td>
+                                <td class="txt--bold">
+                                    <button type="button" class="table__link" data-type="modal" data-target="#modal-report">보기</button>
+                                </td>
+                                <td>150</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+
+        <!--
+            /lms/html/common/layer/modal.html의 내용과 같습니다.
+            확인용 popup으로 추가해 둔 것입니다.
+            개발시 삭제해주세요.
+        -->
+        <!-- 지문별 성취율 상세 popup -->
+        <div id="modal-attainment" class="modal attainment">
+            <div class="modal__dialog modal--small modal--center">
+                <div class="modal__content">
+                    <div class="modal__header modal__header--close">
+                        <h5 class="modal__title">지문별 성취율 상세</h5>
+                        <button class="modal--close" data-dismiss="modal">취소</button>
+                    </div>
+                    <div class="modal__body">
+                        <h6 class="attainment__title">문항 난이도별 정답 수</h6>
+                        <div class="attainment__content">
+                            <div class="panel panel__bg-gray">
+                                <p class="question__title">코어</p>
+                                <p class="question__content">
+                                    <span class="question-score">4</span>
+                                    /
+                                    <span class="question-all">4</span>
+                                </p>
+                            </div>
+                            <div class="panel">
+                                <ul class="question__list">
+                                    <li class="question__item panel__bg-gray">
+                                        <span class="question__title">본격</span>
+                                        <span class="question__content">
+                                            <span class="question-score">4</span>
+                                            /
+                                            <span class="question-all">4</span>
+                                        </span>
+                                    </li>
+                                    <li class="question__item">
+                                        <span class="question__title">킬러</span>
+                                        <span class="question__content">
+                                            <span class="question-score">4</span>
+                                            /
+                                            <span class="question-all">4</span>
+                                        </span>
+                                    </li>
+                                    <li class="question__item">
+                                        <span class="question__title">핵심</span>
+                                        <span class="question__content">
+                                            <span class="question-score">2</span>
+                                            /
+                                            <span class="question-all">7</span>
+                                        </span>
+                                    </li>
+                                    <li class="question__item">
+                                        <span class="question__title">기초</span>
+                                        <span class="question__content">
+                                            <span class="question-score">4</span>
+                                            /
+                                            <span class="question-all">8</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="panel panel__bg-gray">
+                                <p class="question__title">어휘</p>
+                                <p class="question__content">
+                                    <span class="question-score">4</span>
+                                    /
+                                    <span class="question-all">4</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 학습시간 상세 popup -->
+        <div id="modal-learning-time" class="modal learning-time">
+            <div class="modal__dialog modal--small modal--center">
+                <div class="modal__content">
+                    <div class="modal__header modal__header--close">
+                        <h5 class="modal__title">학습시간 상세</h5>
+                        <button class="modal--close" data-dismiss="modal">취소</button>
+                    </div>
+                    <div class="modal__body">
+                        <div class="learning-time__content">
+                            <ul class="panel">
+                                <li class="panel__bg-gray learning-time__title">
+                                    지문 읽은 시간
+                                    <span class="recommend">(권장시간)</span>
+                                </li>
+                                <li class="learning-time__txt">
+                                    <span class="time">2분 30초</span>
+                                    <span class="recommend">(2분)</span>
+                                </li>
+                            </ul>
+                            <ul class="panel">
+                                <li class="panel__bg-gray learning-time__title">
+                                    문제풀이 시간
+                                    <span class="recommend">(권장시간)</span>
+                                </li>
+                                <li class="learning-time__txt">
+                                    <span class="time">2분 30초</span>
+                                    <span class="recommend">(4분)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+            /lms/html/common/layer/reset_course.html의 내용과 같습니다.
+            확인용 popup으로 추가해 둔 것입니다.
+            개발시 삭제해 주세요.
+        -->
+        <div id="modal-reset-course-none" class="modal reset-course">           
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">진도 리셋</h5>
+                        <p class="modal__txt">
+                            <span class="txt--green">[10레벨 1레슨] 비문학-기술 > 지문 1</span>을 리셋합니다.<br>
+                            리셋 후에는 이전 학습 결과를 복원할 수 없습니다.<br>
+                            진행하시겠습니까?
+                        </p>                        
+                        <p class="btn--half">
+                            <button type="button" class="btn btn--popup btn--primary-outline" data-dismiss="modal">취소</button>
+                            <button type="submit" class="btn btn--popup btn--primary">확인</button>
+                        </p>
+                        <p class="reset-course--error">이력없음</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-reset-course" class="modal reset-course">           
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">진도 리셋</h5>
+                        <p class="modal__txt">
+                            <span class="txt--green">[10레벨 1레슨] 비문학-기술 > 지문 1</span>을 리셋합니다.<br>
+                            리셋 후에는 이전 학습 결과를 복원할 수 없습니다.<br>
+                            진행하시겠습니까?
+                        </p>                        
+                        <p class="btn--half">
+                            <button type="button" class="btn btn--popup btn--primary-outline" data-dismiss="modal">취소</button>
+                            <button type="submit" class="btn btn--popup btn--primary">확인</button>
+                        </p>
+                        <p class="reset-course__txt">
+                            리셋 이력 <span class="txt--green">2</span>회
+                        </p>
+                        <div class="table__box">
+                            <table class="table table--striped table-header--sticky">
+                                <thead>
+                                    <tr>
+                                        <th>횟수</th>
+                                        <th>학습완료일</th>
+                                        <th>지문성취율</th>
+                                        <th>리셋등록일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>300회</td>
+                                        <td>2023.11.25</td>
+                                        <td>40%</td>
+                                        <td>2023.12.14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1회</td>
+                                        <td>2023.1.2</td>
+                                        <td>40%</td>
+                                        <td>2023.1.4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1회</td>
+                                        <td>2023.1.2</td>
+                                        <td>40%</td>
+                                        <td>2023.1.4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1회</td>
+                                        <td>2023.1.2</td>
+                                        <td>40%</td>
+                                        <td>2023.1.4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1회</td>
+                                        <td>2023.1.2</td>
+                                        <td>40%</td>
+                                        <td>2023.1.4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1회</td>
+                                        <td>2023.1.2</td>
+                                        <td>40%</td>
+                                        <td>2023.1.4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1회</td>
+                                        <td>2023.1.2</td>
+                                        <td>40%</td>
+                                        <td>2023.1.4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

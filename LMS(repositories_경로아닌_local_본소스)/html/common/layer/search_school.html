@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">        
+        <link href="/scss/search_school.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/html/common/layouts/header.html"></header>
+        <main class="page">
+            <button type="button" class="btn" data-type="modal" data-target="#modal-search-school-before">학교 검색 검색 팝업_검색 전</button>
+            <button type="button" class="btn" data-type="modal" data-target="#modal-search-school-after">학교 검색 검색 팝업_검색 후</button>
+            <button type="button" class="btn" data-type="modal" data-target="#modal-search-school-none">학교 검색 검색 팝업_결과 없는 경우</button>
+            
+        
+            <!-- 학교 검색 검색 팝업_검색 전 -->
+            <div id="modal-search-school-before" class="modal search-school">
+                <div class="modal__dialog modal--large modal--center">
+                    <div class="modal__content">
+                        <div class="modal__header modal__header--close">
+                            <h5 class="modal__title">학교검색</h5>
+                            <button class="modal--close" data-dismiss="modal">취소</button>
+                        </div>
+                        <div class="modal__body">
+                            <form action="" method="get">
+                                <div class="input__field">
+                                    <p class="input__label">지역 교육청 선택</p>
+                                    <select name="" class="select">
+                                        <option value="선택" selected>선택</option>
+                                        <option value="서울시교육청">서울시교육청</option>                                        
+                                        <option value="경기도교육청">경기도교육청</option>
+                                    </select>
+                                </div>
+                                <p class="input__field">
+                                    <label for="school" class="input__label">학교명 입력</label>
+                                    <input type="text" id="school" class="input" placeholder="2글자 이상 입력해주세요." autocomplete="off">
+                                    <button type="button" class="btn btn--primary btn--medium" disabled>조회</button>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 학교 검색 검색 팝업_검색 후 -->
+            <div id="modal-search-school-after" class="modal search-school">
+                <div class="modal__dialog modal--large modal--center">
+                    <div class="modal__content">
+                        <div class="modal__header modal__header--close">
+                            <h5 class="modal__title">학교검색</h5>
+                            <button class="modal--close" data-dismiss="modal">취소</button>
+                        </div>
+                        <div class="modal__body">
+                            <form action="" method="get">
+                                <div class="input__field">
+                                    <p class="input__label">지역 교육청 선택</p>
+                                    <select name="" class="select">
+                                        <option value="선택" selected>선택</option>
+                                        <option value="서울시교육청">서울시교육청</option>                                        
+                                        <option value="경기도교육청">경기도교육청</option>
+                                    </select>                                    
+                                </div>
+                                <p class="input__field">
+                                    <label for="school" class="input__label">학교명 입력</label>
+                                    <input type="text" id="school" class="input" placeholder="2글자 이상 입력해주세요." autocomplete="off">
+                                    <button type="button" class="btn btn--primary btn--medium" disabled>조회</button>
+                                </p>
+                            </form>
+                            <div class="table__box">
+                                <table class="table table--striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>한국영등포화교소학교</td>
+                                            <td>서울특별시 영등포구 경인로88길 9</td>
+                                        </tr>
+                                        <tr>
+                                            <td>한국영등포화교소학교</td>
+                                            <td>서울특별시 영등포구 경인로88길 9</td>
+                                        </tr>
+                                        <tr>
+                                            <td>한국영등포화교소학교</td>
+                                            <td>서울특별시 영등포구 경인로88길 9</td>
+                                        </tr>
+                                        <tr>
+                                            <td>한국영등포화교소학교</td>
+                                            <td>서울특별시 영등포구 경인로88길 9</td>
+                                        </tr>
+                                        <tr>
+                                            <td>한국영등포화교소학교</td>
+                                            <td>서울특별시 영등포구 경인로88길 9</td>
+                                        </tr>
+                                        <tr>
+                                            <td>한국영등포화교소학교</td>
+                                            <td>서울특별시 영등포구 경인로88길 9</td>
+                                        </tr>
+                                        <tr>
+                                            <td>한국영등포화교소학교</td>
+                                            <td>서울특별시 영등포구 경인로88길 9</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 학교 검색 검색 팝업_결과 없는 경우 -->
+            <div id="modal-search-school-none" class="modal search-school">
+                <div class="modal__dialog modal--large modal--center">
+                    <div class="modal__content">
+                        <div class="modal__header modal__header--close">
+                            <h5 class="modal__title">학교검색</h5>
+                            <button class="modal--close" data-dismiss="modal">취소</button>
+                        </div>
+                        <div class="modal__body">
+                            <form action="" method="get">
+                                <div class="input__field">
+                                    <p class="input__label">지역 교육청 선택</p>
+                                    <select name="" class="select">
+                                        <option value="선택" selected>선택</option>
+                                        <option value="서울시교육청">서울시교육청</option>                                        
+                                        <option value="경기도교육청">경기도교육청</option>
+                                    </select>                                    
+                                </div>
+                                <p class="input__field">
+                                    <label for="school" class="input__label">학교명 입력</label>
+                                    <input type="text" id="school" class="input" placeholder="2글자 이상 입력해주세요." autocomplete="off">
+                                    <button type="button" class="btn btn--primary btn--medium" disabled>조회</button>
+                                </p>
+                            </form>
+                            <div class="search-school--error">
+                                <h6 class="error__title">조회결과가 없습니다.</h6>
+                                <p class="error__txt">교육청과 학교명을 다시한번 확인해주세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,144 @@
+@import '_global';
+
+.schedule {    
+    &-calendar {
+        .modal {
+            &__dialog {
+                max-width: 1380px;
+            }
+
+            &--close {
+                top: 5px;
+                right: 10px;
+                width: 28px;
+                height: 28px;
+                @include transform(inherit);
+                z-index: 2;
+
+                &:before, &:after {
+                    width: 36.55px;
+                    height: 3.05px;
+                }
+            }
+        }
+
+        .subject {
+            &__list {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                align-items: center;
+                position: absolute;
+                bottom: 0;
+                left: 126px;
+            }
+
+            &__item {
+                position: relative;
+                font-size: $font_size_h3;
+                font-weight: 700;
+                color: $color_gray_800;
+                line-height: ceil(($font_size_base * 1.45));
+
+                &:nth-of-type(n+2) {
+                    margin-left: 18px;
+                    padding-left: 20px;             
+                    font-weight: 500;
+                    color: $color_gray_600;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        width: 2px;
+                        height: 16px;
+                        background: #D9D9D9;
+                        @include transform(translateY(-50%));
+                    }
+                }
+            }
+        }
+
+        .date {
+            &__list {
+                width: 344px;
+                margin: 0 auto;
+            }
+        }
+
+        .calendar {
+            .day, .date {
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                margin: 4px;      
+                text-align: center;
+                line-height: 32px;
+            }
+
+            .day { // 요일
+                font-weight: 700;
+                color: #9A9FA5;
+            }
+
+            .date { // 날짜
+                font-size: $font_size_h4;
+                font-weight: 500;
+                color: #1A1D1F;
+                
+                &-focus {
+                    @include border-radius(50%);
+                    background: $color_positive;
+                    color: $color_white;
+                }
+            }
+        }
+
+        .table {
+            // th & td
+            > :not(caption) > * > * {
+                display: inline-block;
+                width: 160px;
+                padding: 0;
+                text-align: left;
+                vertical-align: top;
+
+                &:first-of-type {
+                    margin-left: 120px;
+                }
+        
+                &:last-of-type {
+                    text-align: left;
+                }
+            }
+
+            > :not(caption) > * > th {
+                margin-bottom: 26px;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            > :not(caption) > * > td {                
+                //min-height: 145px;
+                min-height: 125px;
+            }
+        }
+
+        .tag {
+            &__item {
+                &:nth-of-type(n+2) {
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+
+    &-date {
+        position: relative;
+        margin-bottom: 14px;
+        padding-top: 48px;
+    }
+}

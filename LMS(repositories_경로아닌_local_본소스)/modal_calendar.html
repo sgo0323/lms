@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body class="modal--on">
+        <header data-include="/html/common/layouts/header.html"></header>
+        <main class="page">
+            <div id="modal-schedule-calendar" class="modal modal-calendar modal--fade modal--showed" style="display: block;">                
+                <div class="modal__dialog modal--center">
+                    <div class="modal__content">
+                        <div class="modal__header modal__header--close">
+                            <h5 class="modal__title">날짜선택</h5>
+                            <button class="modal--close" data-dismiss="modal">취소</button>
+                        </div>
+                        <div class="modal__body">
+                            <ul class="date__list">
+                                <li class="date__item date--prev--disabled"><a href="javascript:void(0);" class="date__link">prev</a></li>
+                                <li class="date__item">
+                                    <a href="javascript:void(0);" class="date__link date-year">2023</a>
+                                    <span>-</span>
+                                    <a href="javascript:void(0);" class="date__link date-day">01</a>
+                                </a></li>
+                                <li class="date__item date--next"><a href="javascript:void(0);" class="date__link">next</a></li>
+                            </ul>
+                            <div class="calendar">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>일</th>
+                                            <th>월</th>
+                                            <th>화</th>
+                                            <th>수</th>
+                                            <th>목</th>
+                                            <th>금</th>
+                                            <th>토</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                            <td>18</td>
+                                            <td>19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td class="calendar-focus">22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                            <td>25</td>
+                                            <td>26</td>
+                                        </tr>
+                                        <tr>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                            <td>30</td>
+                                            <td>31</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__bg"></div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/html/common/layouts/header.html"></header>
+        <main class="page">
+            <section class="change change-teacher">
+                <p class="change__txt">현재 학원관리자로 접속하셨습니다.</p>
+                <h2 class="change__title">선생님으로 변경하시겠습니까?</h2>
+                <ul class="change__list">
+                    <li class="change__item change--gray">학원관리자</li>
+                    <li class="change__item change-arrow">
+                        <img src="/assets/images/img_change_arrow.svg" alt="change arrow">
+                    </li>
+                    <li class="change__item change--color">선생님</li>
+                </ul>
+                <button type="button" class="btn btn--primary">전환하기</button>
+            </section>
+        </main>
+    </body>
+</html>

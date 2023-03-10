@@ -2,18 +2,20 @@
 
 header {
     background: $color_white;
-    
-    
 
     @at-root .header {
+        &__area {
+            width: 100%;
+            border-bottom: 1px solid $color_gray_400;
+        }
+
         &__inner {
             display: -webkit-box;
             display: -ms-flexbox;
-            display: flex;
+            display: flex;            
             justify-content: space-between;
             align-items: center;
-            padding: 32px 120px 26px;
-            border-bottom: 1px solid $color_gray_400;
+            padding: 32px 6.25vw 26px; // 32px 120px 26px;
         }
 
         &__content {
@@ -175,15 +177,17 @@ header {
     }
 
     @at-root .gnb {
-        height: 80px;
-        border-bottom: 1px solid $color_gray_400;
+        &__area {
+            height: 80px;
+            border-bottom: 1px solid $color_gray_400;
+        }
 
         &__list {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
             align-items: center;
-            padding: 0 120px;
+            padding: 0 6.25vw; // 0 120px;
         }
 
         &__item {
@@ -267,6 +271,19 @@ header {
     }
 }
 
+@include pc_wide {
+    .header { 
+        &__inner {
+            max-width: 1920px;
+            margin: 0 auto;
 
+        }
+    }
+
+    .gnb {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+}
 
 

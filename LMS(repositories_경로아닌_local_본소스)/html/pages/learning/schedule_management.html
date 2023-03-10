@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+        <link href="/scss/schedule_management.css" rel="stylesheet">        
+        <link href="/scss/schedule_calendar.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/html/common/layouts/header.html"></header>
+        <main class="page schedule-management">
+            <section class="menu">
+                <div class="menu__content">
+                    <h2 class="menu__title">스케줄관리</h2>
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="" class="menu__link">학습관리</a></li>
+                        <li class="menu__item">스케줄관리</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="panel">
+                <ul class="date__list">
+                    <li class="date__item date--prev"><a href="javascript:void(0);" class="date__link">prev</a></li>
+                    <li class="date__item">2023.03.06 월요일</li>
+                    <li class="date__item date--next--disabled"><a href="javascript:void(0);" class="date__link">next</a></li>
+                </ul>
+                <div class="management__content">
+                    <div class="panel">
+                        <h3 class="management__title">입회 회원</h3>
+                        <ul class="management__list">
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel">
+                        <h3 class="management__title">출석 회원</h3>
+                        <ul class="management__list">
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel">
+                        <h3 class="management__title">미출석 회원</h3>
+                        <ul class="management__list">
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <!-- 
+            popup 확인용 스케줄 확인 캘린더.
+            /html/common/layer/schedule_calendar.html 와 동일합니다.
+            개발 진행시 하단의 modal은 삭제해 주시고 
+            /html/common/layer/schedule_calendar.html 써주세요.
+        -->
+        <div id="modal-schedule-calendar" class="modal schedule-calendar">                
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__header modal__header--close">
+                        <button class="modal--close" data-dismiss="modal">취소</button>
+                        <div class="schedule-date">
+                            <ul class="subject__list">
+                                <li class="subject__item">김학생</li>
+                                <li class="subject__item">매주 화,목</li>
+                            </ul>
+                            <ul class="date__list">
+                                <li class="date__item date--prev"><a href="javascript:void(0);" class="date__link">prev</a></li>
+                                <li class="date__item">2023<span>-</span>01</li>
+                                <li class="date__item date--next--disabled"><a href="javascript:void(0);" class="date__link">next</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal__body">                            
+                        <div class="calendar">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th><span class="day">일</span></th>
+                                        <th><span class="day">월</span></th>
+                                        <th><span class="day">화</span></th>
+                                        <th><span class="day">수</span></th>
+                                        <th><span class="day">목</span></th>
+                                        <th><span class="day">금</span></th>
+                                        <th><span class="day">토</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="date">1</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">2</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">3</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">4</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">5</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">6</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">7</span>
+                                            <ul class="tag__list">
+                                                <li class="tag__item">
+                                                    <span class="tag tag--small tag--green">00레벨 00레슨 비문학</span>
+                                                </li>
+                                                <li class="tag__item">
+                                                    <span class="tag tag--small tag--purple">1레벨 1레슨 문학</span>
+                                                </li>
+                                                <li class="tag__item">
+                                                    <span class="tag tag--small tag--warning">수업예정</span>
+                                                </li>
+                                                <li class="tag__item">
+                                                    <span class="tag tag--small">결석</span>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="date date-focus">8</span>
+                                            <ul class="tag__list">
+                                                <li class="tag__item">
+                                                    <span class="tag tag--small tag--green">00레벨 00레슨 비문학</span>
+                                                </li>
+                                                <li class="tag__item">
+                                                    <span class="tag tag--small tag--purple">1레벨 1레슨 문학</span>
+                                                </li>
+                                                <li class="tag__item">
+                                                    <span class="tag tag--small tag--warning">수업예정</span>
+                                                </li>
+                                                <li class="tag__item">
+                                                    <span class="tag tag--small">결석</span>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <span class="date">9</span>
+                                        </td>
+                                        <td>
+
+                                            <span class="date">10</span>
+                                        </td>
+                                        <td>
+
+                                            <span class="date">11</span>
+                                        </td>
+                                        <td>
+
+                                            <span class="date">12</span>
+                                        </td>
+                                        <td>
+
+                                            <span class="date">13</span>
+                                        </td>
+                                        <td>
+
+                                            <span class="date">14</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="date">15</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">16</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">17</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">18</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">19</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">20</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">21</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="date">22</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">23</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">24</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">25</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">26</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">27</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">28</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="date">29</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">30</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">31</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">&nbsp;</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">&nbsp;</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">&nbsp;</span>
+                                        </td>
+                                        <td>
+                                            <span class="date">&nbsp;</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
