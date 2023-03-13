@@ -600,19 +600,8 @@ table, thead, tbody, tr, th, td {
         }
     }
     */
-    .txt {
-        &--medium {
-            font-weight: 500;
-        }
 
-        &--bold {
-            font-weight: 700;
-        }
-    
-        &--red {
-            color: $color_negative;
-        }
-    
+    .txt {    
         &--left {
             text-align: left;
         }
@@ -620,7 +609,7 @@ table, thead, tbody, tr, th, td {
         &--right {
             text-align: right;
         }
-    }    
+    }   
 }
 
 @include tablet_s {
@@ -672,6 +661,20 @@ table, thead, tbody, tr, th, td {
 /*
     common layouts
 */
+
+.txt {
+    &--medium {
+        font-weight: 500;
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+
+    &--red {
+        color: $color_negative;
+    }
+}    
 // page
 .page {
     position: relative;
