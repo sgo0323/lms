@@ -114,16 +114,6 @@
                         color: $color_neutral;
                     }
 
-                    .txt {
-                        &--bold {
-                            font-weight: 500;
-                        }
-    
-                        &--red {
-                            color: $color_negative;
-                        }
-                    }
-
                     .btn {
                         &--reset {
                             display: inline-block;

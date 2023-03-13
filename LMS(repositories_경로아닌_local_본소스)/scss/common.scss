@@ -600,14 +600,27 @@ table, thead, tbody, tr, th, td {
         }
     }
     */
+    .txt {
+        &--medium {
+            font-weight: 500;
+        }
 
-    .txt--left {
-        text-align: left;
-    }
-
-    .txt--right {
-        text-align: right;
-    }
+        &--bold {
+            font-weight: 700;
+        }
+    
+        &--red {
+            color: $color_negative;
+        }
+    
+        &--left {
+            text-align: left;
+        }
+    
+        &--right {
+            text-align: right;
+        }
+    }    
 }
 
 @include tablet_s {

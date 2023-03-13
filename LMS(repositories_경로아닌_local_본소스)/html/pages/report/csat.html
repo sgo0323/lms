@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/html/common/layouts/header.html"></header>
+        <main class="page component">
+            <section class="menu">
+                <div class="menu__content">
+                    <h2 class="menu__title">응시 현황</h2>
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="/" class="menu__link">홈</a></li>
+                        <li class="menu__item"><a href="/html/pages/report/customized.html" class="menu__link">진단평가</a></li>
+                        <li class="menu__item">응시현황</li>
+                    </ul>
+                </div>  
+            </section>
+            <section class="panel">
+                <form action="" method="">
+                    <div class="input__field">
+                        <p class="input__title">기간</p>
+                        <p class="input__box">
+                            <input type="date" id="date" class="input input--date" data-placeholder="날짜 선택" required aria-required="true">
+                        </p>
+                        <p class="duration">~</p>
+                        <p class="input__box">
+                            <input type="date" id="date" class="input input--date" data-placeholder="날짜 선택" required aria-required="true">
+                        </p>                        
+                        <div class="radio__content">
+                            <p class="radio__box">
+                                <input type="radio" id="today" name="radio" value="오늘" class="radio__input" checked>
+                                <label for="today" class="radio__label">오늘</label>
+                            </p>
+                            <p class="radio__box">
+                                <input type="radio" id="7day" name="radio" value="7일간" class="radio__input">
+                                <label for="7day" class="radio__label">7일간</label>
+                            </p>
+                            <p class="radio__box">
+                                <input type="radio" id="1month" name="radio" value="1개월" class="radio__input">
+                                <label for="1month" class="radio__label">1개월</label>
+                            </p>
+                            <p class="radio__box">
+                                <input type="radio" id="6month" name="radio" value="6개월" class="radio__input">
+                                <label for="6month" class="radio__label">6개월</label>
+                            </p>
+                            <p class="radio__box">
+                                <input type="radio" id="duration" name="radio" value="기간선택" class="radio__input">
+                                <label for="duration" class="radio__label">기간선택</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="input__field">
+                        <p class="input__title">학년</p>
+                        <select name="state" class="select">
+                            <option value="전체" selected>전체</option>
+                            <option value="초등학교 5">초등학교 5</option>
+                            <option value="초등학교 6">초등학교 6</option>
+                            <option value="중학교 1">중학교 1</option>
+                            <option value="중학교 2">중학교 2</option>
+                            <option value="중학교 3">중학교 3</option>
+                            <option value="고등학교 1">고등학교 1</option>
+                            <option value="고등학교 2">고등학교 2</option>
+                            <option value="고등학교 3">고등학교 3</option>
+                        </select>
+                    </div>
+                    <div class="input__field">
+                        <p class="input__title">출발점</p>
+                        <select name="progress" class="select">
+                            <option value="전체" selected>전체</option>
+                            <option value="1레벨">1레벨</option>
+                            <option value="2레벨">2레벨</option>
+                            <option value="3레벨">3레벨</option>
+                            <option value="4레벨">4레벨</option>
+                            <option value="5레벨">5레벨</option>
+                            <option value="6레벨">6레벨</option>
+                        </select>
+                        <select name="lesson" class="select select--disabled">
+                            <option value="전체" selected>전체</option>
+                            <option value="1레슨">1레슨</option>
+                            <option value="2레슨">2레슨</option>
+                            <option value="3레슨">3레슨</option>
+                            <option value="4레슨">4레슨</option>
+                            <option value="5레슨">5레슨</option>
+                            <option value="6레슨">6레슨</option>
+                        </select>
+                    </div>                    
+                    <div class="input__field">
+                        <p class="input__title">검색</p>
+                        <select name="" class="select">
+                            <option value="all" selected>전체</option>
+                            <option value="nickname">닉네임</option>
+                            <option value="examination code">응시코드</option>
+                        </select>                        
+                        <p class="input__box">
+                            <input type="search" class="input input--reset" placeholder="검색어를 입력해 주세요.">
+                        </p>
+                    </div>
+                    <p class="btn__box">
+                        <button type="reset" class="btn">초기화</button>
+                        <button type="submit" class="btn btn--primary">조회</button>
+                    </p>
+                </form>
+            </section>
+            <section class="search-result">
+                <div class="table__box">
+                    <table class="table table--striped table-header--sticky">
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>닉네임</th>
+                                <th>학년</th>
+                                <th>응시코드</th>
+                                <th>출발점</th>
+                                <th>응시일</th>
+                                <th>결과화면</th>
+                                <th>회원등록</th>
+                            </tr>
+                          </thead>
+                    </table>                    
+                    <p class="error">검색결과가 없습니다.</p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
