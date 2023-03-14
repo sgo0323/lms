@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+        <link href="/scss/login.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body>
+        <main class="login">
+            <section class="account enter-account">
+                <h1 class="logo">솔루니 독해트레이닝</h1>
+                <div class="enter__content">
+                    <form action="" method="">
+                        <p class="input__box">
+                            <input type="text" id="article" class="input" placeholder="아이디" autocomplete="off">
+                            <!-- <span class="input-message input-message--invalid">아이디를 입력해 주세요.</span> -->
+                        </p>
+                        <p class="input__box">
+                            <input type="password" id="password_base" class="input" placeholder="비밀번호">
+                            <!-- <span class="input-message input-message--invalid">비밀번호를 입력해주세요.</span> -->
+                        </p> 
+                        <div class="input__field">
+                            <p class="input__box">
+                                <input class="check__input" type="checkbox" id="save">
+                                <label class="check__label" for="save">아이디 저장</label>
+                            </p>
+                            <ul class="search__list">
+                                <li class="search__item"><a href="/html/pages/login/search_account.html">아이디찾기</a></li>
+                                <li class="search__item"><a href="/html/pages/login/search_account_pw.html">비밀번호찾기</a></li>
+                            </ul>
+                        </div>
+                        <p class="login__btn">
+                            <button type="submit" onclick="location.href='/'" class="btn btn--large btn--primary">로그인</button>
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
