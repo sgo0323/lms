@@ -33,7 +33,9 @@
 
     &[disabled],
     &:disabled,
-    &--disabled {
+    &--disabled,
+    &[readonly],
+    &:read-only {
         background: $color_gray_200;
         pointer-events: none;
     }
@@ -863,13 +865,13 @@ $button_text : $color_white;
     }        
 
     &--white {
-        border-color: $color_black;
+        border-color: $color_gray_700;
         background: $color_white;
         color: $color_gray_900;
 
         &:hover {
-            border-color: $color_black;
-            background: $color_gray_200;
+            border-color: $color_gray_800;
+            background: $color_white;
             color: $color_gray_900;
         }
     }

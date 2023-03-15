@@ -308,8 +308,8 @@ $scrollbar_color : #D9D9D9;
     }
 }
 
-// tag
-.tag {
+// chip
+.chip {
     display: inline-block;
     padding: 5.5px 15px 4.5px;
     border: 1px solid transparent;
@@ -402,7 +402,39 @@ $scrollbar_color : #D9D9D9;
         }
     }
 
-   
+    &--green {
+        background: rgba($color: #37C16C, $alpha: 0.12);
+        color: #37C16C;
+
+        &-outline {
+            border-color: #37C16C;
+            background: $color_white;
+            color: #37C16C;
+        }
+    }    
+
+    &--cyan {
+        background: rgba($color: #70B6C1, $alpha: 0.12);
+        color: #70B6C1;
+
+        &-outline {
+            border-color: #70B6C1;
+            background: $color_white;
+            color: #70B6C1;
+        }
+    }
+
+    &--blue {
+        background: rgba($color_positive, $alpha: 0.12);
+        color: $color_positive;
+
+        &-outline {
+            border-color: $color_positive;
+            background: $color_white;
+            color: $color_positive;
+        }
+    }
+
     &--purple {
         background: rgba($color: #775DA6, $alpha: 0.12);
         color: #775DA6;
@@ -414,36 +446,58 @@ $scrollbar_color : #D9D9D9;
         }
     }
 
-    &--green {
-        background: rgba($color: #70B6C1, $alpha: 0.12);
-        color: #70B6C1;
+    &--pink {
+        background: rgba($color_secondary, $alpha: 0.12);
+        color: $color_secondary;
 
         &-outline {
-            border-color: #70B6C1;
+            border-color: $color_secondary;
             background: $color_white;
-            color: #70B6C1;
+            color: $color_secondary;
+        }
+    }
+    
+    &--red {
+        background: rgba($color_negative, $alpha: 0.12);
+        color: $color_negative;
+
+        &-outline {
+            border-color: $color_negative;
+            background: $color_white;
+            color: $color_negative;
         }
     }
 
-    &--lightGreen {
-        background: rgba($color: #37C16C, $alpha: 0.12);
-        color: #37C16C;
+    &--orange {
+        background: rgba($color_warning, $alpha: 0.12);
+        color: $color_warning;
 
         &-outline {
-            border-color: #37C16C;
+            border-color: $color_warning;
             background: $color_white;
-            color: #37C16C;
+            color: $color_warning;
+        }
+    }
+
+    &--grey {
+        background: rgba($color_gray_600, $alpha: 0.12);
+        color: $color_gray_600;
+
+        &-outline {
+            border-color: $color_gray_600;
+            background: $color_white;
+            color: $color_gray_600;
         }
     }
 
     &--black {
-        background: rgba($color_black, $alpha: 0.12);
-        color: $color_black;
+        background: rgba($color_gray_900, $alpha: 0.12);
+        color: $color_gray_900;
 
         &-outline {
-            border-color: $color_black;
+            border-color: $color_gray_900;
             background: $color_white;
-            color: $color_black;
+            color: $color_gray_900;
         }
 
     }
@@ -464,7 +518,7 @@ $table_cell_stripe_bg : $color_gray_100;
 $table_cell_dark_bg : $color_gray_300;
 //$table_cell_light_bg : #fafafa;
 $table_cell_padding_y : ceil(($font_size_base * 1.16)); // 19px
-$table_cell_padding_x : ceil(($font_size_base * 0.9)); // 15px
+$table_cell_padding_x : ceil(($font_size_base * 0.75)); // 12px
 
 table, thead, tbody, tr, th, td {
     border-width: 0;
@@ -473,7 +527,7 @@ table, thead, tbody, tr, th, td {
 }
 
 .table {
-    width:100%;    
+    width:100%;
     vertical-align: middle;
 
     // th & td
@@ -486,6 +540,7 @@ table, thead, tbody, tr, th, td {
         word-break: keep-all;
         vertical-align: middle;
 
+        /*
         &:first-of-type {
             text-align: left;
         }
@@ -493,6 +548,7 @@ table, thead, tbody, tr, th, td {
         &:last-of-type {
             text-align: right;
         }
+        */
     }
 
     > :not(caption) > tr {
@@ -505,6 +561,7 @@ table, thead, tbody, tr, th, td {
         background: $color_white;
         color: $color_gray_700;
         
+        /*
         &::after {
             content: '';
             position: absolute;
@@ -514,6 +571,7 @@ table, thead, tbody, tr, th, td {
             height: 1px;
             background: $color_gray_400;
         }
+        */
     }
 
     &-header {
@@ -554,9 +612,16 @@ table, thead, tbody, tr, th, td {
         }
     }
 
-    &--striped {
+    &--zebra {
         > tbody > tr:nth-child(odd) {
             background: $table_cell_stripe_bg;
+        }
+    }
+
+    &--line {
+        // th & td
+        > :not(caption) > * > * {
+            border-bottom: 1px solid $color_gray_400;
         }
     }
 
@@ -681,7 +746,7 @@ table, thead, tbody, tr, th, td {
     //background: $color_gray_100;
     //height: calc(100vh - 195px);
     min-height: 774px;
-    padding:  48px 6.25vw;// 48px 120px
+    padding:  38px 6.25vw;// 38px 120px
     box-sizing: border-box;
 
     .filter {
@@ -851,11 +916,11 @@ table, thead, tbody, tr, th, td {
     &-teacher {
         .change {
             &--color {
-                background-image: url('/assets/images/img_change_teacher.svg');                
+                background-image: url('/assets/images/img_teacher_on.svg');                
             }
 
             &--gray {
-                background-image: url('/assets/images/img_change_manager.svg');
+                background-image: url('/assets/images/img_student_off.svg');
             }
         }
     }
@@ -863,11 +928,11 @@ table, thead, tbody, tr, th, td {
     &-manager {
         .change {
             &--color {
-                background-image: url('/assets/images/img_change_manager_2.svg');                
+                background-image: url('/assets/images/img_student_on.svg');                
             }
 
             &--gray {
-                background-image: url('/assets/images/img_change_teacher_2.svg');
+                background-image: url('/assets/images/img_teacher_off.svg');
             }
         }
     }
@@ -1017,15 +1082,19 @@ table, thead, tbody, tr, th, td {
     &-result {    
         .table {
             // th & td
+            /*
             > :not(caption) > * > * {
                 &:first-of-type, &:last-of-type {
                     text-align: center;
                 }
             }
+            */
 
             > :not(caption) > * > th {
-                padding: 29px 8px 19px;
+                //padding: 29px 8px 19px;
+                padding: 24px 12px;
 
+                /*
                 &:first-of-type {
                     padding: 29px 8px 19px 35px;
                 } 
@@ -1033,11 +1102,13 @@ table, thead, tbody, tr, th, td {
                 &:last-of-type {
                     padding: 29px 35px 19px 8px;
                 }
+                */
             }
 
             > :not(caption) > * > td {
-                padding: 11px 8px;
+                padding: 12px 24px;
                 
+                /*
                 &:first-of-type {
                     padding: 11px 8px 11px 35px;
                 } 
@@ -1045,11 +1116,15 @@ table, thead, tbody, tr, th, td {
                 &:last-of-type {
                     padding: 11px 35px 11px 8px;
                 }
+                */
             }
 
             &__box {
+                /*
                 min-height: 576px;
                 max-height: 716px;
+                */
+                height: 420px;
             }
         }
     }

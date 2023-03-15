@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/lms/scss/reset.css" rel="stylesheet">
+        <link href="/lms/scss/common.css" rel="stylesheet">
+        <link href="/lms/scss/header.css" rel="stylesheet">
+        <link href="/lms/scss/form.css" rel="stylesheet">
+        <link href="/lms/scss/modal.css" rel="stylesheet">
+        <link href="/lms/scss/mypage.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/lms/js/jquery-2.2.4.min.js"></script>
+        <script src="/lms/js/includeHtml.js"></script>
+        <script src="/lms/js/dropdowns.js"></script>   
+        <script src="/lms/js/modal.js"></script>
+        <script src="/lms/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/lms/html/common/layouts/header.html"></header>
+        <main class="page mypage">
+            <section class="menu">
+                <div class="menu__content">
+                    <h2 class="menu__title">마이페이지</h2>
+                    <button type="button" class="btn btn--medium btn--gray-700" data-type="modal" data-target="#modal-permission-change">학원관리자 권한변경</button>
+                </div>
+            </section>
+            <section class="mypage__content">
+                <div class="panel">
+                    <form action="" method="">
+                        <p class="input__field">
+                            <span class="input__title">아이디<span class="input__sup">*</span></span>
+                            <span class="input__result">kteacher</span>
+                        </p>
+                        <p class="input__field">
+                            <span class="input__title">이름<span class="input__sup">*</span></span>
+                            <span class="input__result">선생님</span>
+                        </p>
+                        <p class="input__field">
+                            <span class="input__title">비밀번호</span>
+                            <input type="password" class="input" value="1234567">
+                            <span class="input-message input-message--invalid">비밀번호가 동일하지 않습니다. 재입력 해 주세요.</span>
+                        </p>
+                        <p class="input__field">
+                            <span class="input__title">비밀번호 확인</span>
+                            <input type="password" class="input" placeholder="비밀번호를 다시 한번 입력해 주세요" autocomplete="off"> 
+                            <span class="input-message input-message--invalid">비밀번호는 5~20자 의 영문,숫자,특수문자 조합으로 입력해주세요.<br>
+                                입력 가능 특수문자 : !@#$%^&*)(-+=~`{}|\";':>_<],.[?/</span> 
+                        </p>
+                        <p class="input__field">
+                            <span class="input__title">생년월일</span>
+                            <input type="text" class="input" value="19991213" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
+                            <span class="input-message input-message--invalid">생년월일은 8자리 숫자로 입력해 주세요.</span>
+                        </p>
+                        <p class="input__field">
+                            <span class="input__title">휴대폰번호<span class="input__sup">*</span></span>
+                            <input type="text" class="input" value="01012341234" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
+                            <span class="input-message input-message--invalid">휴대폰번호는 10~11자리 숫자로 입력해 주세요.</span>
+                        </p>
+                        <p class="input__field">
+                            <span class="input__title">이메일<span class="input__sup">*</span></span>
+                            <span class="input__result">asdfgh@naver.com</span>
+                        </p>
+                        <p class="input__field">
+                            <span class="input__title">최초가입일</span>
+                            <span class="input__result">2023.02.02</span>
+                        </p>
+                        <p class="input__field">
+                            <span class="input__title">최근접속일</span>
+                            <span class="input__result">2023.03.12</span>
+                        </p>
+                    </form>
+                </div>                
+                <p class="mypage__btn">
+                    <button type="button" class="btn btn--secondary">수정</button>
+                </p>
+            </section>
+        </main>
+
+        <!-- 
+            popup 확인용 학원관리자 권한 변경 검색.
+            /lms/html/common/layer/modal.html 와 동일합니다.
+            개발 진행시 하단의 modal은 삭제해 주시고 
+            /lms/html/common/layer/modal.html 써주세요.
+        -->
+        <div id="modal-permission-change" class="modal permission-change">
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__header modal__header--close">
+                        <h5 class="modal__title">학원 관리자 권한 변경</h5>
+                        <button class="modal--close" data-dismiss="modal">취소</button>
+                    </div>
+                    <div class="modal__body">
+                        <form action="" method="get">
+                            <div class="input__field">
+                                <P class="input__title">검색조건</P>
+                                <p class="input__box">
+                                    <input type="radio" id="name" name="radio" value="name" class="radio__input" checked>
+                                    <label for="name" class="radio__label">이름</label>
+                                    <input type="radio" id="id" name="radio" value="id" class="radio__input">
+                                    <label for="id" class="radio__label">아이디</label>
+                                </p>
+                            </div>
+                            <div class="input__field">
+                                <label for="reset" class="input__label">검색어</label>
+                                <input type="search" id="reset" class="input input--reset" placeholder="2글자 이상 입력해주세요." autocomplete="off">
+                                <button type="button" class="btn btn--primary btn--medium" disabled>조회</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

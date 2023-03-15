@@ -185,19 +185,19 @@ $report_title_size    : 36px;
 
             &.reading {
                 &::after {
-                    background-image: url('/assets/images/ico_reading.svg');
+                    background-image: url('/assets/images/img_reading.svg');
                 }
             }
 
             &.solve {
                 &::after {
-                    background-image: url('/assets/images/ico_solve.svg');
+                    background-image: url('/assets/images/img_questions.svg');
                 }
             }
 
             &.time {
                 &::after {
-                    background-image: url('/assets/images/ico_run_time.svg');
+                    background-image: url('/assets/images/img_flag.svg');
                 }
             }
         }
@@ -407,9 +407,11 @@ $report_title_size    : 36px;
             color: $color_gray_900;
             line-height: ceil((26px * 1.61));
 
+            /*
             &:first-of-type, &:last-of-type {
                 text-align: center;
             }
+            */
         }
 
         > :not(caption) > * > th {
@@ -428,9 +430,11 @@ $report_title_size    : 36px;
                 width: 22%;
             }
 
+            /*
             &::after {
                 display: none;
             }
+            */
         }
 
         .subject {

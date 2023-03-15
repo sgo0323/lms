@@ -295,13 +295,6 @@ $madal_font_size : $font_size_large;
     &__content {
         position: relative;
         margin: 50px 31px 0;
-        padding-bottom: 36px;
-    }
-
-    .modal {
-        &__footer {
-            margin-top: 0;
-        }
     }
 
     .input {
@@ -311,14 +304,9 @@ $madal_font_size : $font_size_large;
         }
 
         &-message {
-            position: absolute;
-            top: auto; 
-            left: 50%;
             width: 100%;
-            margin-top: 8px;
+            margin-top: 16px;
             text-align: center;
-            line-height: ceil(($font_size_small * 1.4)); // 20px
-            @include transform(translateX(-50%));
         }
     }
 
@@ -403,12 +391,14 @@ $madal_font_size : $font_size_large;
         > :not(caption) > * > * {
             &:first-of-type {
                 min-width: 120px;
-                text-align: center;
+                //text-align: center;
             }
 
+            /*
             &:last-of-type {
                 text-align: center;
             }
+            */
         }
 
         > :not(caption) > * > th {
@@ -580,9 +570,11 @@ $madal_font_size : $font_size_large;
             @include border-radius(8px);
             line-height: 24px;
 
-            &:first-of-type , &:last-of-type {
+            /*
+            &:first-of-type, &:last-of-type {
                 text-align: center;
             }
+            */
             
             &:nth-of-type(n+2) {
                 margin-left: 8px;
@@ -601,9 +593,11 @@ $madal_font_size : $font_size_large;
             font-weight: 500;
             color: $color_gray_600;
 
+            /*
             &::after {
                 display: none;
             }
+            */
         }
         
         > :not(caption) > * > td {

@@ -44,10 +44,12 @@
         > :not(caption) > * > * {
             padding: 19px 10px;
 
+            /*
             &:first-of-type,
             &:last-of-type {
                 text-align: center;
             }
+            */
         }
 
         > :not(caption) > * > th {

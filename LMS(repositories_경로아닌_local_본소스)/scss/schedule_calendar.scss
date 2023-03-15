@@ -106,8 +106,8 @@
 
                 &:first-of-type {
                     margin-left: 120px;
-                }
-        
+                }        
+
                 &:last-of-type {
                     text-align: left;
                 }
@@ -116,9 +116,11 @@
             > :not(caption) > * > th {
                 margin-bottom: 26px;
 
+                /*
                 &::after {
                     display: none;
                 }
+                */
             }
 
             > :not(caption) > * > td {                
@@ -127,7 +129,7 @@
             }
         }
 
-        .tag {
+        .chip {
             &__item {
                 &:nth-of-type(n+2) {
                     margin-top: 4px;

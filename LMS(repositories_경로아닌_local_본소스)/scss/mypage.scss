@@ -1,0 +1,100 @@
+@import '_global';
+
+.mypage {
+    &__content {
+        .input {
+            max-width: 472px;
+
+            &-message {
+                margin-top: 0;
+                margin-left: 16px;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 64px;
+        font-size: 46px;
+        font-weight: 700;
+        color: $color_gray_900;
+        text-align: center;
+        line-height: ceil((46px * 1.43));
+    }
+
+    &__btn {
+        margin-top: 48px;
+        text-align: center;
+
+        .btn {
+            min-width: 176px;
+        }
+    }
+
+    .input { 
+        &__field {
+            margin-bottom: 0;
+            padding: 32px 0;
+            border-bottom: 1px solid $color_gray_400;
+
+            &:last-of-type {
+                border-bottom: 0;
+            }
+        }
+
+        &__title {
+            flex: 0 0 auto;
+            min-width: 148px;
+            margin-right: 70px;
+            padding-left: 8px;
+            line-height: 48px;
+        }
+
+        &__result {
+            font-size: $font_size_large;
+            font-weight: 500;
+            color: $color_gray_900;
+            line-height: ceil(($font_size_base * 1.44));
+        }
+    }
+
+    .panel {
+        padding: 0 32px;
+    }
+
+    .btn {
+        &__box {
+            margin-top: 32px;
+
+            .btn {
+                min-width: 253px;
+
+                &:nth-of-type(n+2) {
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+
+    .menu {
+        &__content {
+            justify-content: space-between;
+        }
+    }
+}
+
+.enter {
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+
+        .input {
+            width: 100%;
+            min-width: 522px;
+            padding: 20px 31px 18px;
+            font-size: $font_size_h3;
+            line-height: ceil(($font_size_h3 * 1.45));
+        }
+    }
+}
