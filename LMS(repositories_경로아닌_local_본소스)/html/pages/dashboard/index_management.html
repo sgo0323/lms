@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+        <link href="/scss/dashboard.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/html/common/layouts/header.html"></header>
+        <main class="page dashboard">
+            <section class="menu">
+                <div class="menu__content">
+                    <h2 class="menu__title">홈</h2>
+                    <ul class="menu__list">
+                        <li class="menu__item">대시보드</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="notice">
+                <div class="notice__content">
+                    <p class="notice__title">공지사항</p>
+                    <p class="notice__txt">제목을 출력합니다.제목을 출력합니다.제목을 출력합니다.</p>
+                </div>
+                <p class="notice-date">2023.02.23</p>
+            </section>
+            <section class="panel management">
+                <div class="management__header">
+                    <p class="management-date">2023.03.06 월요일</p>
+                    <!-- <p class="management__link">
+                        <a href="/html/pages/learning/schedule_management.html" class="more">더보기</a>
+                    </p> -->
+                </div>
+                <div class="management__content">
+                    <div class="management-dashboard">
+                        <div class="dashboard__header">
+                            <h3 class="dashboard__title">이번주 입회 (<span>55</span>명)</h3>
+                            <p class="dashboard-date"><span>2023.01.02</span>~<span>2023.01.08</span></p>
+                        </div>
+                        <div class="table__box">
+                            <table class="table table-header--sticky">
+                                <thead>
+                                    <tr>
+                                        <th>이름</th>
+                                        <th>학년</th>
+                                        <th>레벨</th>
+                                        <th>교사</th>
+                                        <th>입회일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>1레벨</td>
+                                        <td>김선생</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>1레벨</td>
+                                        <td>김선생</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>1레벨</td>
+                                        <td>김선생</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>1레벨</td>
+                                        <td>김선생</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>1레벨</td>
+                                        <td>김선생</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>1레벨</td>
+                                        <td>김선생</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>1레벨</td>
+                                        <td>김선생</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>1레벨</td>
+                                        <td>김선생</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>1레벨</td>
+                                        <td>김선생</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>1레벨</td>
+                                        <td>김선생</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="management-dashboard">
+                        <div class="dashboard__header">
+                            <h3 class="dashboard__title">체험 진행중 (<span>55</span>명)</h3>
+                            <p class="dashboard-date"><span>2023.01.02</span>~<span>2023.01.08</span></p>
+                        </div>
+                        <div class="table__box">
+                            <table class="table table-header--sticky">
+                                <thead>
+                                    <tr>
+                                        <th>이름</th>
+                                        <th>학년</th>
+                                        <th>학교</th>
+                                        <th>교사</th>
+                                        <th>체험시작일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>보라매초</td>
+                                        <td>김선생</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>보라매초</td>
+                                        <td>김선생</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>보라매초</td>
+                                        <td>김선생</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="management-dashboard">
+                        <div class="dashboard__header">
+                            <h3 class="dashboard__title">진단평가 완료 (<span>55</span>명)</h3>
+                            <p class="dashboard-date"><span>2023.01.02</span>~<span>2023.01.08</span></p>
+                        </div>
+                        <div class="table__box">
+                            <table class="table table-header--sticky">
+                                <thead>
+                                    <tr>
+                                        <th>이름(닉네임)</th>
+                                        <th>학년</th>
+                                        <th>응시일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>20.03.12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김학생</td>
+                                        <td>초3</td>
+                                        <td>20.03.12</td>
+                                    </tr>                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="panel learning learning-management">
+                <div class="learning__header">
+                    <p class="learning__title">독해 학습 현황</p>
+                    <p class="learning-date"><span>2023.1.2</span> ~ <span>2023. 1. 8</span></p>
+                </div>
+                <div class="learning__content">
+                    <div class="panel ranking">
+                        <p class="panel__title">학원 독해 랭킹</p>
+                        <div class="ranking__table">
+                            <table class="table table--line">
+                                <thead>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th>1레벨</th>
+                                        <th>2레벨</th>
+                                        <th>3레벨</th>
+                                        <th>4레벨</th>
+                                        <th>5레벨</th>
+                                        <th>6레벨</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>TOP 1</td>
+                                        <td>1. 홍길동</td>
+                                        <td>1. 홍길동</td>
+                                        <td>1. 홍길동</td>
+                                        <td>1. 홍길동</td>
+                                        <td>1. 홍길동</td>
+                                        <td>1. 홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TOP 2</td>
+                                        <td>2. 홍길동</td>
+                                        <td>2. 홍길동</td>
+                                        <td>2. 홍길동</td>
+                                        <td>2. 홍길동</td>
+                                        <td>2. 홍길동</td>
+                                        <td>2. 홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TOP 3</td>
+                                        <td>3. 홍길동</td>
+                                        <td>3. 홍길동</td>
+                                        <td>3. 홍길동</td>
+                                        <td>3. 홍길동</td>
+                                        <td>3. 홍길동</td>
+                                        <td>3. 홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TOP 4</td>
+                                        <td>4. 홍길동</td>
+                                        <td>4. 홍길동</td>
+                                        <td>4. 홍길동</td>
+                                        <td>4. 홍길동</td>
+                                        <td>4. 홍길동</td>
+                                        <td>4. 홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TOP 5</td>
+                                        <td>5. 홍길동</td>
+                                        <td>5. 홍길동</td>
+                                        <td>5. 홍길동</td>
+                                        <td>5. 홍길동</td>
+                                        <td>5. 홍길동</td>
+                                        <td>5. 홍길동</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="panel attainment">
+                        <p class="panel__title">클래스 독해 성취율</p>
+                        <div class="attainment__table">
+                            <table class="table table--line table-header--sticky">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">교사</th>
+                                        <th rowspan="2">총 학생수</th>
+                                        <th colspan="3">성취율별 학생 수</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="percentage">100~80%</th>
+                                        <th class="percentage">79~50%</th>
+                                        <th class="percentage">50% 미만</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>김선생</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김선생</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김선생</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김선생</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김선생</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김선생</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김선생</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                    </tr>
+                                </tbody>
+                            </table>                    
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

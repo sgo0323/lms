@@ -577,12 +577,16 @@ table, thead, tbody, tr, th, td {
     &-header {
         &--sticky {
             thead {
+                position: sticky; 
+                top: 0;
+                /*
                 tr {
                     th {
                         position: sticky; 
                         top: 0;
                     }
                 }
+                */
             }
         }
     }
@@ -783,7 +787,7 @@ table, thead, tbody, tr, th, td {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        align-items: baseline;
     }
 
     &__title {
@@ -806,6 +810,10 @@ table, thead, tbody, tr, th, td {
         font-weight: 500;
         color: $color_gray_600;
         line-height: ceil(($font_size_large * 1.44));
+
+        &:first-of-type {
+            color: $color_gray_900;
+        }
 
         &:nth-of-type(n+2) {
             margin-left: 4px;

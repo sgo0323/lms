@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/lms/scss/reset.css" rel="stylesheet">
+        <link href="/lms/scss/common.css" rel="stylesheet">
+        <link href="/lms/scss/header.css" rel="stylesheet">
+        <link href="/lms/scss/form.css" rel="stylesheet">
+        <link href="/lms/scss/modal.css" rel="stylesheet">
+        <link href="/lms/scss/dashboard.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/lms/js/jquery-2.2.4.min.js"></script>
+        <script src="/lms/js/includeHtml.js"></script>
+        <script src="/lms/js/dropdowns.js"></script>   
+        <script src="/lms/js/modal.js"></script>
+        <script src="/lms/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/lms/html/common/layouts/header.html"></header>
+        <main class="page dashboard">
+            <section class="menu">
+                <div class="menu__content">
+                    <h2 class="menu__title">홈</h2>
+                    <ul class="menu__list">
+                        <li class="menu__item">대시보드</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="notice">
+                <div class="notice__content">
+                    <p class="notice__title">공지사항</p>
+                    <p class="notice__txt">제목을 출력합니다.제목을 출력합니다.제목을 출력합니다.</p>
+                </div>
+                <p class="notice-date">2023.02.23</p>
+            </section>
+            <section class="panel management">
+                <div class="management__header">
+                    <p class="management-date">2023.03.06 월요일</p>
+                    <p class="management__link">
+                        <a href="/lms/html/pages/learning/schedule_management.html" class="more">더보기</a>
+                    </p>
+                </div>
+                <div class="management__content">
+                    <div class="panel">
+                        <h3 class="management__title">지금 학습중 (<span>55</span>명)</h3>
+                        <ul class="management__list">
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel">
+                        <h3 class="management__title">오늘 학습 완료 (<span>55</span>명)</h3>
+                        <ul class="management__list">
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel">
+                        <h3 class="management__title">오늘 방문 예정 (<span>55</span>명)</h3>
+                        <ul class="management__list">
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" class="management__btn" data-type="modal" data-target="#modal-schedule-calendar">김학생(초5)</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="panel learning">
+                <div class="learning__header">
+                    <p class="learning__title">독해 학습 현황</p>
+                    <p class="learning-date"><span>2023.1.2</span> ~ <span>2023. 1. 8</span></p>
+                </div>
+                <div class="learning__content">
+                    <div class="panel ranking">
+                        <p class="panel__title">학원 독해 랭킹</p>
+                        <div class="ranking__table">
+                            <table class="table table--line">
+                                <thead>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th>1레벨</th>
+                                        <th>2레벨</th>
+                                        <th>3레벨</th>
+                                        <th>4레벨</th>
+                                        <th>5레벨</th>
+                                        <th>6레벨</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>TOP 1</td>
+                                        <td>1. 홍길동</td>
+                                        <td>1. 홍길동</td>
+                                        <td>1. 홍길동</td>
+                                        <td>1. 홍길동</td>
+                                        <td>1. 홍길동</td>
+                                        <td>1. 홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TOP 2</td>
+                                        <td>2. 홍길동</td>
+                                        <td>2. 홍길동</td>
+                                        <td>2. 홍길동</td>
+                                        <td>2. 홍길동</td>
+                                        <td>2. 홍길동</td>
+                                        <td>2. 홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TOP 3</td>
+                                        <td>3. 홍길동</td>
+                                        <td>3. 홍길동</td>
+                                        <td>3. 홍길동</td>
+                                        <td>3. 홍길동</td>
+                                        <td>3. 홍길동</td>
+                                        <td>3. 홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TOP 4</td>
+                                        <td>4. 홍길동</td>
+                                        <td>4. 홍길동</td>
+                                        <td>4. 홍길동</td>
+                                        <td>4. 홍길동</td>
+                                        <td>4. 홍길동</td>
+                                        <td>4. 홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TOP 5</td>
+                                        <td>5. 홍길동</td>
+                                        <td>5. 홍길동</td>
+                                        <td>5. 홍길동</td>
+                                        <td>5. 홍길동</td>
+                                        <td>5. 홍길동</td>
+                                        <td>5. 홍길동</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="panel attainment">
+                        <p class="panel__title">클래스 독해 성취율</p>
+                        <div class="attainment__content">
+                            <div class="attainment-graph">
+                                <!-- 그래프 넣어주세요. -->
+                                <img src="http://placehold.it/112X276">
+                            </div>
+                            <ul class="attainment__list">
+                                <li class="attainment__item">
+                                    독해력 80%이상
+                                    <a href="javascript:void(0);" class="attainment__link">(10명)</a>
+                                </li>
+                                <li class="attainment__item">
+                                    독해력 50%~80 미만
+                                    <a href="javascript:void(0);" class="attainment__link">(15명)</a>
+                                </li>
+                                <li class="attainment__item">
+                                    독해력 50%미만
+                                    <a href="javascript:void(0);" class="attainment__link">(30명)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 클래스 독해 성취율 popup -->
+        <div class="attainment__modal">
+            <div class="modal__dialog">
+                <div class="modal__content">
+                    <div class="modal__header modal__header--close">
+                        <h5 class="modal__title">클래스 독해 성취율</h5>
+                        <button class="modal--close" data-dismiss="modal">취소</button>
+                    </div>
+                    <div class="modal__body">
+                        <ul class="name__list">
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                            <li class="name__item">김대교</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
