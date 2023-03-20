@@ -115,8 +115,8 @@ $madal_font_size : $font_size_large;
         position: absolute;
         top: calc(50% - 8px);
         right: 0;
-        width: 24px;
-        height: 24px;
+        width: 28px;
+        height: 28px;
         text-indent: -9999px;
         @include transform(translateY(-50%));
 
@@ -124,11 +124,11 @@ $madal_font_size : $font_size_large;
             content:'';
             position: absolute;
             top: 50%; 
-            right: -3px;
-            width: 31.33px; 
-            height: 2.61px;
+            right: 0;
+            width: 28.2px; 
+            height: 2.5px;
             margin-top: -1px;
-            background: $color_gray_500;
+            background: $color_gray_700;
             @include transform(rotate(45deg));
             @include transition(opacity .15s);
         }
@@ -138,7 +138,7 @@ $madal_font_size : $font_size_large;
         }
 
         &:hover::before, &:hover::after {
-            background: darken($color_gray_600, 20%);
+            background: darken($color_gray_800, 20%);
         }
 
         &.modal {
@@ -294,7 +294,15 @@ $madal_font_size : $font_size_large;
 .schedule-register {
     &__content {
         position: relative;
-        margin: 50px 31px 0;
+        width: 100%;
+        max-width: 362px;
+        margin: 50px auto 0;
+    }
+
+    .modal {
+        &__dialog {
+            max-width: 533px;
+        }
     }
 
     .input {
@@ -308,6 +316,10 @@ $madal_font_size : $font_size_large;
             margin-top: 16px;
             text-align: center;
         }
+    }
+
+    .select {
+        margin-left: 12px;
     }
 
     .check {
@@ -333,10 +345,9 @@ $madal_font_size : $font_size_large;
             top: 50%;
             left: 0;
             width: 100%;
-            font-size: $font_size_large;
-            font-weight: 500;
-            color: $color_gray_600;
-            line-height: ceil(($font_size_base * 1.44));
+            padding: 0;
+            background: inherit;
+            font-size: $font_size_base;
         }
         
         .btn {
@@ -353,21 +364,22 @@ $madal_font_size : $font_size_large;
                 border-top: 1px solid $color_gray_400;
 
                 .input__label {
-                    width: 87px;
+                    width: 80px;
                 }
             }
             
             
             .input {
                 &__title {
-                    width: 87px;
+                    //width: 80px;
                     margin-right: 12px;
                 }
 
                 &__label {    
                     & + .input {
                         & + .btn {
-                            margin-left: 12px;    
+                            flex: 0 0 auto;
+                            margin-left: 8px;
                         }
                     }
                 }
@@ -381,10 +393,9 @@ $madal_font_size : $font_size_large;
 
     .table {
         &__box {
-            position: relative;
-            height: 428px;
+            min-height: 312px;
+            max-height: 382px;
             margin-top: 36px;
-            padding: 0 6px;
         }
 
         // th & td
@@ -535,7 +546,7 @@ $madal_font_size : $font_size_large;
                 right: -5px;
                 width: 36.55px;
                 height: 3.05px;
-                background: $color_gray_600;
+                background: $color_gray_700;
             }
         }
     }

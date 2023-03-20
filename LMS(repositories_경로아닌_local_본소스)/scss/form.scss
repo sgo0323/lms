@@ -37,6 +37,7 @@
     &[readonly],
     &:read-only {
         background: $color_gray_200;
+        color: $color_gray_500;
         pointer-events: none;
     }
 
@@ -49,10 +50,12 @@
         appearance: textfield;
     }
 
+    /*
     &:not(:placeholder-shown) {
         border-color: $color_gray_500;
         //background: $color_white;
     }
+    */
 
     &__label {
         display: inline-block;
@@ -73,7 +76,7 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        align-items: center;        
+        align-items: center;
         position: relative;
         margin-bottom: 20px;
 
@@ -415,14 +418,6 @@
         }
     }
 
-    // textarea 
-    textarea.input {
-        min-height: calc( 6em + .75rem + 2px);
-        line-height: 1.8;
-        padding: .375rem .75rem;
-        resize: none;
-    }
-
     // file
     .file_input {
         @include blind;
@@ -480,7 +475,7 @@
     &--disabled {
         pointer-events: none;
         background-color: $color_gray_200;
-        color: $color_gray_900;
+        color: $color_gray_500;
     }
 
     &:nth-of-type(n+2) {
@@ -499,8 +494,8 @@ $button_text : $color_white;
 
 .btn {
     display: inline-block;
-    padding: 13px 24px;
-    min-width: 136px;
+    padding: 13px 39px;
+    //min-width: 136px;
     border: 1px solid transparent;
     @include border-radius(8px);
     background: $color_gray_600;
@@ -520,6 +515,7 @@ $button_text : $color_white;
     &--disabled,
     &:disabled {
         pointer-events: none;
+        border: 1px solid transparent;
         background: $color_gray_400;
         color: $color_gray_500;
     }
@@ -536,7 +532,8 @@ $button_text : $color_white;
         color: $color_gray_900;
 
         &:hover {
-            background: $color_gray_200;
+            border-color: $color_gray_800;
+            background: $color_white;
         }
     }
 
@@ -711,8 +708,8 @@ $button_text : $color_white;
         color: $color_gray_600;
 
         &:hover {
-            border-color: $color_gray_700;
-            background: $color_gray_200;
+            border-color: $color_gray_900;
+            background: $color_white;
             color: $color_gray_900;
         }
     }
@@ -955,17 +952,17 @@ $button_text : $color_white;
     
     /* Sizes */
     &--large {
-        padding: 19px 34px;
+        padding: 19px 39px;
         font-size: $font_size_h3;
         line-height: $font_size_h1;
     }
 
     &--medium {
-        padding: 11px 16px;
+        padding: 11px 39px;
     }
 
     &--small {
-        padding: 7.5px 10px 6.5px;
+        padding: 7.5px 39px 6.5px;
     }
 
     &--full {
@@ -986,11 +983,13 @@ $button_text : $color_white;
         min-width: 176px;
     }
 
+    /*
     &--contents {
-        min-width: 142px;
+        padding: 11px 39px;
     }
+    */
 
-    &--login {
+    &--login { 
         min-width: 253px;
     }
 
@@ -1087,6 +1086,26 @@ $button_text : $color_white;
     }
 }
 
+// textarea 
+.textarea {
+    resize: none;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid $color_gray_600;
+    @include border-radius(8px);
+    background: $color_white url('/assets/images/ico_triangle.svg') no-repeat bottom right/ 24px auto;
+    font-weight: 500;
+    color: $color_gray_900;
+    line-height: 1.5;
+
+    &-length {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        color: $color_gray_700;
+        line-height: 1.5;
+    }
+}
 
 @include mobile {
     .btn {

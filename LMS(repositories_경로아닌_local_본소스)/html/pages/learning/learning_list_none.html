@@ -40,7 +40,7 @@
         <main class="page component">
             <section class="menu">
                 <div class="menu__content">
-                    <h2 class="menu__title">학생 현황</h2>
+                    <h2 class="menu__title">학생현황</h2>
                     <ul class="menu__list">
                         <li class="menu__item"><a href="/html/pages/learning/learning_list.html" class="menu__link">학습관리</a></li>
                         <li class="menu__item">학생현황</li>
@@ -76,8 +76,8 @@
                                 <label for="6month" class="radio__label">6개월</label>
                             </p>
                             <p class="radio__box">
-                                <input type="radio" id="duration" name="radio" value="기간선택" class="radio__input">
-                                <label for="duration" class="radio__label">기간선택</label>
+                                <input type="radio" id="duration" name="radio" value="기간 선택" class="radio__input">
+                                <label for="duration" class="radio__label">기간 선택</label>
                             </p>
                         </div>
                     </div>
@@ -96,9 +96,9 @@
                             <option value="퇴회">퇴회</option>
                         </select>
                     </div>
-                    <div class="input__field">
-                        <p class="input__title">학년</p>
-                        <select name="state" class="select">
+                    <p class="input__field">
+                        <label for="grade" class="input__title">학년</label>
+                        <select id="grade" name="grade" class="select">
                             <option value="전체" selected>전체</option>
                             <option value="초등학교 5">초등학교 5</option>
                             <option value="초등학교 6">초등학교 6</option>
@@ -109,7 +109,7 @@
                             <option value="고등학교 2">고등학교 2</option>
                             <option value="고등학교 3">고등학교 3</option>
                         </select>
-                    </div>
+                    </p>
                     <div class="input__field">
                         <p class="input__title">현재진도(맞춤)</p>
                         <select name="progress" class="select">
@@ -131,15 +131,15 @@
                             <option value="6레슨">6레슨</option>
                         </select>
                     </div>
-                    <div class="input__field">
-                        <p class="input__title">선생님</p>
-                        <select name="teacher" class="select">
+                    <p class="input__field">
+                        <label for="teacher" class="input__title">선생님</label>
+                        <select id="teacher" name="teacher" class="select">
                             <option value="전체" selected>전체</option>
                             <option value="김선생">김선생</option>
                             <option value="이선생">이선생</option>
                             <option value="박선생">박선생</option>
                         </select>                        
-                    </div>
+                    </p>
                     <div class="input__field">
                         <p class="input__title">검색</p>
                         <select name="search" class="select">
@@ -180,7 +180,7 @@
                             </tr>
                           </thead>
                     </table>
-                    <p class="error">확인 가능한 데이터가 없습니다</p>
+                    <p class="error">확인 가능한 데이터가 없습니다.</p>
                 </div>
             </section>
         </main>

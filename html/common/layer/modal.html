@@ -61,16 +61,16 @@
                     </div>
                     <div class="modal__body">
                         <form action="" method="get">
-                            <div class="input__field">
-                                <p class="input__label">학습상품</p>
-                                <select class="select">
+                            <p class="input__field">
+                                <label for="lesson" class="input__label">학습상품</label>
+                                <select id="lesson" class="select">
                                     <option value="솔루니상품/주3회 학습" selected>솔루니상품/주3회 학습</option>
                                     <option value="2레슨">2레슨</option>
                                     <option value="3레슨">3레슨</option>
                                     <option value="4레슨">4레슨</option>
                                     <option value="5레슨">5레슨</option>
                                 </select>
-                            </div>
+                            </p>
                             <div class="schedule-register__content">
                                 <fieldset name="schedule-register" class="input__field">
                                     <input class="check__input" type="checkbox" id="mon" checked>
@@ -88,10 +88,10 @@
                         </form>
                     </div>
                     <div class="modal__footer">
-                        <button type="submit" class="btn btn--popup btn--primary">확인</button>
-                        <p class="input-message input-message--invalid">
-                            학습상품의 주학습횟수를 초과했습니다. 
-                        </p>
+                        <button type="submit" class="btn btn--popup btn--primary">등록</button>
+                        <!-- 유효성 메세지
+                            <p class="input-message input-message--invalid">학습상품의 주 학습 횟수를 초과했습니다.</p> 
+                        -->
                     </div>
                 </div>
             </div>
@@ -168,7 +168,7 @@
                                         </tr>
                                         <tr>
                                             <td>김선생</td>
-                                            <td>아이디출력아이디출력아이디출력아이디출력</td>
+                                            <td>아이디출력</td>
                                         </tr>
                                         <tr>
                                             <td>김선생</td>

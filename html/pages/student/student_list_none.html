@@ -42,7 +42,7 @@
                 <div class="menu__content">
                     <h2 class="menu__title">학생현황</h2>
                     <ul class="menu__list">
-                        <li class="menu__item"><a href="/lms/html/pages/learning/learning_list.html" class="menu__link">학습관리</a></li>
+                        <li class="menu__item"><a href="/lms/html/pages/student/student_list.html" class="menu__link">학생관리</a></li>
                         <li class="menu__item">학생현황</li>
                     </ul>
                 </div>
@@ -52,11 +52,11 @@
                     <div class="input__field">
                         <p class="input__title">기간</p>
                         <p class="input__box">
-                            <input type="date" id="date" class="input input--date" data-placeholder="2022.02.12" required aria-required="true">
+                            <input type="date" id="date" class="input input--date" data-placeholder="2023.01.22" required aria-required="true">
                         </p>
                         <p class="duration">~</p>
                         <p class="input__box">
-                            <input type="date" id="date" class="input input--date" data-placeholder="2022.02.12" required aria-required="true">
+                            <input type="date" id="date" class="input input--date" data-placeholder="2023.01.22" required aria-required="true">
                         </p>                        
                         <div class="radio__content">
                             <p class="radio__box">
@@ -79,6 +79,10 @@
                                 <input type="radio" id="duration" name="radio" value="기간 선택" class="radio__input">
                                 <label for="duration" class="radio__label">기간 선택</label>
                             </p>
+                            <p class="radio__box">
+                                <input type="radio" id="duration2" name="radio" value="기간 선택 없음" class="radio__input">
+                                <label for="duration2" class="radio__label">기간 선택 없음</label>
+                            </p>
                         </div>
                     </div>
                     <div class="input__field">
@@ -98,7 +102,7 @@
                     </div>
                     <p class="input__field">
                         <label for="grade" class="input__title">학년</label>
-                        <select id="grade" name="grade" class="select">
+                        <select name="grade" id="grade" class="select">
                             <option value="전체" selected>전체</option>
                             <option value="초등학교 5">초등학교 5</option>
                             <option value="초등학교 6">초등학교 6</option>
@@ -110,35 +114,14 @@
                             <option value="고등학교 3">고등학교 3</option>
                         </select>
                     </p>
-                    <div class="input__field">
-                        <p class="input__title">현재진도(맞춤)</p>
-                        <select name="progress" class="select">
-                            <option value="전체" selected>전체</option>
-                            <option value="1레벨">1레벨</option>
-                            <option value="2레벨">2레벨</option>
-                            <option value="3레벨">3레벨</option>
-                            <option value="4레벨">4레벨</option>
-                            <option value="5레벨">5레벨</option>
-                            <option value="6레벨">6레벨</option>
-                        </select>
-                        <select name="lesson" class="select select--disabled">
-                            <option value="전체" selected>전체</option>
-                            <option value="1레슨">1레슨</option>
-                            <option value="2레슨">2레슨</option>
-                            <option value="3레슨">3레슨</option>
-                            <option value="4레슨">4레슨</option>
-                            <option value="5레슨">5레슨</option>
-                            <option value="6레슨">6레슨</option>
-                        </select>
-                    </div>
                     <p class="input__field">
-                        <label for="teacher" class="input__title">선생님</label>
-                        <select id="teacher" name="teacher" class="select">
+                        <label for="teacher" class="input__title">선생님 배정</label>
+                        <select name="teacher" id="teacher" class="select"> 
                             <option value="전체" selected>전체</option>
                             <option value="김선생">김선생</option>
                             <option value="이선생">이선생</option>
                             <option value="박선생">박선생</option>
-                        </select>                        
+                        </select>
                     </p>
                     <div class="input__field">
                         <p class="input__title">검색</p>
@@ -160,7 +143,7 @@
             <section class="search-result">
                 <div class="filter__content">
                     <p class="filter__txt">총<span class="filter-result">00</span>건</p>
-                    <a href="/lms/html/pages/learning/schedule_management.html" class="btn btn--medium btn--gray">스케줄 관리</a>
+                    <a href="/lms/html/pages/student/student_registration.html" class="btn btn--medium btn--gray">학생등록</a>
                 </div>
                 <div class="table__box">
                     <table class="table table--zebra table-header--sticky">
@@ -170,17 +153,15 @@
                                 <th>분류</th>
                                 <th>상태</th>
                                 <th>이름</th>
-                                <th>학교명</th>
                                 <th>학년</th>
-                                <th colspan="2">최근학습이력</th>
+                                <th>학교명</th>
                                 <th>선생님</th>
-                                <th>최근 학습 완료일</th>
+                                <th>최종접속일</th>
                                 <th>관리</th>
-                                <th>상세</th>
                             </tr>
-                          </thead>
+                        </thead>
                     </table>
-                    <p class="error">확인 가능한 데이터가 없습니다.</p>
+                    <p class="error">검색결과가 없습니다.</p>
                 </div>
             </section>
         </main>

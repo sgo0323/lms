@@ -65,6 +65,26 @@ function attainmentModal() {
     });
 }
 
+// textarea length
+function textareaLength() {
+    $('.textarea').keyup(function (e) {
+        let content = $(this).val();
+        
+        // 글자수 세기
+        if (content.length == 0 || content == '') {
+            $('.textarea-count').text('0자');
+        } else {
+            $('.textarea-count').text(content.length + '자');
+        }
+        
+        // 글자수 제한
+        if (content.length > 2000) {
+            // 2000자 부터는 타이핑 되지 않도록
+            $(this).val($(this).val().substring(0, 2000));
+        };
+    });
+}
+
 $(function() {
     setTimeout(function() {
         // header shortcut
@@ -78,5 +98,8 @@ $(function() {
 
        // dashboard/index.html 클래스 독해 성취율 popup
        attainmentModal();
+
+       // textarea length
+       textareaLength();
     }, 200);
 });

@@ -595,7 +595,8 @@ table, thead, tbody, tr, th, td {
         overflow-y: auto;
         position: relative;
         width: 100%;
-        padding: 0 ceil(($font_size_base * 1.43)) ceil(($font_size_base * 1.43)); // 0 23px 23px
+        //padding: 0 ceil(($font_size_base * 1.43)) ceil(($font_size_base * 1.43)); // 0 23px 23px
+        padding: 0 ceil(($font_size_base * 1.43)); // 0 23px 23px
         border: 1px solid $color_gray_300;
         @include border-radius(16px);
         background: $color_white;        
@@ -618,7 +619,7 @@ table, thead, tbody, tr, th, td {
 
     &--zebra {
         > tbody > tr:nth-child(odd) {
-            background: $table_cell_stripe_bg;
+            background: $color_gray_200;
         }
     }
 
@@ -762,9 +763,11 @@ table, thead, tbody, tr, th, td {
             align-items: flex-end;
             margin-bottom: 18px;
 
+            /*
             .btn {
                 min-width: 154px;
             }
+            */
         }
 
         &__txt {
@@ -1013,6 +1016,10 @@ table, thead, tbody, tr, th, td {
     }
 
     .input {
+        &-teacher {
+            max-width: 142px;
+        }
+
         &__field {
             margin-bottom: 24px;
             padding-bottom: 24px;
@@ -1022,6 +1029,14 @@ table, thead, tbody, tr, th, td {
                 &__box {
                     &:nth-of-type(n+2) {
                         margin-left: 12px;
+                    }
+                }
+                
+                &__title {
+                    &+ .input  {
+                        &__box {
+                            margin-left: 0;
+                        }
                     }
                 }
             }
@@ -1114,7 +1129,7 @@ table, thead, tbody, tr, th, td {
             }
 
             > :not(caption) > * > td {
-                padding: 12px 24px;
+                padding: 11px 12px;
                 
                 /*
                 &:first-of-type {
@@ -1133,6 +1148,12 @@ table, thead, tbody, tr, th, td {
                 max-height: 716px;
                 */
                 height: 420px;
+            }
+
+            .btn {
+                &--list {                    
+                    min-width: 160px;
+                }
             }
         }
     }

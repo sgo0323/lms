@@ -37,7 +37,7 @@
         <script src="/lms/js/common.js"></script>
     </head>
     <body>
-        <header data-include="/lms/html/common/layouts/header.html"></header>
+        <header data-include="/lms/lms/html/tml/common/layouts/header.html"></header>
         <main class="page mypage">
             <section class="menu">
                 <h2 class="menu__title">마이페이지</h2>
@@ -46,44 +46,44 @@
                 <div class="panel">
                     <form action="" method="">
                         <p class="input__field">
-                            <span class="input__title">아이디<span class="input__sup">*</span></span>
+                            <span class="input__label">아이디<span class="input__sup">*</span></span>
                             <span class="input__result">kteacher</span>
                         </p>
                         <p class="input__field">
-                            <span class="input__title">이름<span class="input__sup">*</span></span>
+                            <span class="input__label">이름<span class="input__sup">*</span></span>
                             <span class="input__result">선생님</span>
                         </p>
                         <p class="input__field">
-                            <span class="input__title">비밀번호</span>
-                            <input type="password" class="input" value="1234567" readonly>
+                            <label for="password" class="input__label">비밀번호</label>
+                            <input type="password" id="password" class="input" value="1234567" readonly>
                             <span class="input-message input-message--invalid">비밀번호가 동일하지 않습니다. 재입력 해 주세요.</span>
                         </p>
                         <p class="input__field">
-                            <span class="input__title">비밀번호 확인</span>
-                            <input type="password" class="input" placeholder="비밀번호를 다시 한번 입력해 주세요" autocomplete="off">
+                            <label for="password-check" class="input__label">비밀번호 확인</label>
+                            <input type="password" id="password-check" class="input" placeholder="비밀번호를 다시 한번 입력해 주세요" autocomplete="off">
                             <span class="input-message input-message--invalid">비밀번호는 5~20자 의 영문,숫자,특수문자 조합으로 입력해주세요.<br>
                                 입력 가능 특수문자 : !@#$%^&*)(-+=~`{}|\";':>_<],.[?/</span> 
                         </p> 
                         <p class="input__field">
-                            <span class="input__title">생년월일</span>
-                            <input type="text" class="input" value="19991213" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
+                            <label for="birthday" class="input__label">생년월일</label>
+                            <input type="text" id="birthday" class="input" value="19991213" maxlength='8' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
                             <span class="input-message input-message--invalid">생년월일은 8자리 숫자로 입력해 주세요.</span>
                         </p>
                         <p class="input__field">
-                            <span class="input__title">휴대폰번호<span class="input__sup">*</span></span>
-                            <input type="text" class="input" value="01012341234" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
+                            <label for="cellphone" class="input__label">휴대폰번호<span class="input__sup">*</span></label>
+                            <input type="text" id="cellphone" class="input" value="01012341234" maxlength='11' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
                             <span class="input-message input-message--invalid">휴대폰번호는 10~11자리 숫자로 입력해 주세요.</span>
                         </p>
                         <p class="input__field">
-                            <span class="input__title">이메일<span class="input__sup">*</span></span>
+                            <span class="input__label">이메일<span class="input__sup">*</span></span>
                             <span class="input__result">asdfgh@naver.com</span>
                         </p>
                         <p class="input__field">
-                            <span class="input__title">최초가입일</span>
+                            <span class="input__label">최초가입일</span>
                             <span class="input__result">2023.02.02</span>
                         </p>
                         <p class="input__field">
-                            <span class="input__title">최근접속일</span>
+                            <span class="input__label">최근접속일</span>
                             <span class="input__result">2023.03.12</span>
                         </p>
                     </form>

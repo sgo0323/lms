@@ -24,10 +24,6 @@
     &__btn {
         margin-top: 48px;
         text-align: center;
-
-        .btn {
-            min-width: 176px;
-        }
     }
 
     .input { 
@@ -41,11 +37,11 @@
             }
         }
 
-        &__title {
-            flex: 0 0 auto;
+        &__label {
+            //flex: 0 0 auto;
             min-width: 148px;
             margin-right: 70px;
-            padding-left: 8px;
+            //padding-left: 8px;
             line-height: 48px;
         }
 
@@ -58,7 +54,8 @@
     }
 
     .panel {
-        padding: 0 32px;
+        //padding: 0 32px;
+        padding: 0 40px;
     }
 
     .btn {
