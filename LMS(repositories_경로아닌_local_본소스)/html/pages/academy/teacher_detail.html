@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+        <link href="/scss/academy.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/html/common/layouts/header.html"></header>
+        <main class="page academy">
+            <section class="academy__header">
+                <div class="menu">
+                    <div class="menu__content">
+                        <h2 class="menu__title">선생님 현황</h2>
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="/html/pages/academy/teacher_list.html" class="menu__link">학원관리</a></li>
+                            <li class="menu__item"><a href="/html/pages/academy/teacher_list.html" class="menu__link">선생님 현황</a></li>
+                            <li class="menu__item">선생님 상세&수정</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="required__txt"><span class="input__sup">*</span>필수입력</p>
+            </section>
+            <section class="academy__content">
+                <div class="panel">
+                    <h3 class="registration__title">선생님 상세&수정</h3>
+                    <div class="registration__content">
+                        <form action="" method="">
+                            <p class="input__field">
+                                <span class="input__label">회원분류</span>
+                                <span class="input__result">선생님</span>
+                            </p>
+                            <p class="input__field">
+                                <span class="input__label">학원코드</span>
+                                <span class="input__result">12343243</span>
+                            </p>
+                            <p class="input__field">
+                                <span class="input__label">아이디</span>
+                                <span class="input__result">A학원</span>
+                            </p>
+                            <p class="input__field">
+                                <span class="input__label">비밀번호</span>                                
+                                <button type="button" class="btn btn--medium btn--gray" data-type="modal" data-target="#modal-password-reset">비밀번호 초기화</button>
+                            </p>
+                            <p class="input__field">
+                                <label for="name" class="input__label">이름<span class="input__sup">*</span></label>
+                                <input type="text" id="name" class="input" placeholder="이름을 입력해 주세요." value="김대교">
+                                <!-- 유효성 메세지
+                                <span class="input-message input-message--invalid">이름을 입력해 주세요.</span>
+                                <span class="input-message input-message--invalid">이름은 2~20자 한글/영문으로 입력해주세요.</span>
+                                -->
+                            </p>
+                            <p class="input__field">
+                                <label for="cellphone" class="input__label">휴대폰번호<span class="input__sup">*</span></label>
+                                <input type="text" id="cellphone" class="input" placeholder="휴대폰번호를 입력해 주세요." value="01023431234" maxlength='11' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
+                                <!-- 유효성 메세지
+                                <span class="input-message input-message--invalid">휴대폰번호는 10~11자리 숫자로 입력해 주세요.</span>
+                                -->
+                            </p>
+                            <p class="input__field">                                 
+                                <label for="birthday" class="input__label">생년월일<span class="input__sup">*</span></label>
+                                <input type="text" id="birthday" class="input" placeholder="8자리 숫자만 입력" value="19871233" maxlength='8' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
+                                <!-- 유효성 메세지 
+                                <span class="input-message input-message--invalid">생년월일을 입력해 주세요.</span>
+                                <span class="input-message input-message--invalid">생년월일은 8자리 숫자로 입력해 주세요.</span>
+                                -->
+                            </p>
+                            <p class="input__field">
+                                <label for="email" class="input__label">이메일<span class="input__sup">*</span></label>
+                                <span class="input__box">
+                                    <input type="email" id="email" class="input" placeholder="이메일 주소를 입력해 주세요." value="adsfdf@naver.com">
+                                    <button type="button" class="btn btn--medium btn--gray">중복체크</button>
+                                </span>
+                                <!-- 유효성 메세지
+                                <span class="input-message">사용가능합니다.</span>
+                                <span class="input-message input-message--invalid">사용이 불가능합니다.</span>
+                                <span class="input-message input-message--invalid">중복체크를 진행해 주세요.</span>
+                                 -->
+                            </p>
+                            <p class="input__field">
+                                <span class="input__label">최초가입일</span>
+                                <span class="input__result">2022.06.31</span>
+                            </p>
+                            <p class="input__field">
+                                <span class="input__label">최종접속일</span>
+                                <span class="input__result">2022.06.31</span>
+                            </p>
+                            <p class="input__field">
+                                <label for="status" class="input__label">상태</label>
+                                <select name="status" id="status" class="select"> 
+                                    <option value="선택">선택</option>
+                                    <option value="재직" selected>재직</option>
+                                    <option value="대기">대기</option>
+                                    <option value="퇴직">퇴직</option>
+                                </select>
+                            </p>
+                        </form>
+                    </div>
+                </div>                
+                <p class="registration__btn">
+                    <button type="button" class="btn btn--btm btn--secondary" data-type="modal" data-target="#modal-modify">수정</button>
+                    <button type="button" class="btn btn--btm btn-outline" onclick="location.href='/html/pages/academy/teacher_list.html'">목록</button>
+                </p>
+            </section>
+        </main>
+
+        <!-- 비밀번호 변경 초기화 -->
+        <div id="modal-password-reset" class="modal alert">
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">
+                            임시 비밀번호가 이메일로 발송 됩니다.<br>
+                            비밀번호를 초기화 하시겠어요?
+                        </h5>
+                    </div>
+                    <div class="modal__footer">
+                        <p class="btn--half">
+                            <button type="button" class="btn btn--popup btn--primary-outline" data-dismiss="modal">취소</button>
+                            <button type="submit" class="btn btn--popup btn--primary" data-type="modal" data-target="#modal-confirm">확인</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-confirm" class="modal alert">
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">비밀번호가 초기화 되었습니다.</h5>
+                    </div>
+                    <div class="modal__footer">
+                        <button type="submit" class="btn btn--popup btn--primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- 상태를 퇴직으로 변경하고 [수정]버튼 선택 시 -->
+        <div id="modal-modify" class="modal alert">
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">해당 계정을 탈퇴 처리 하시겠어요?</h5>
+                    </div>
+                    <div class="modal__footer">
+                        <p class="btn--half">
+                            <button type="button" class="btn btn--popup btn--primary-outline" data-dismiss="modal">취소</button>
+                            <button type="submit" class="btn btn--popup btn--primary" data-type="modal" data-target="#modal-withdraw">확인</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-withdraw" class="modal alert">
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">정말 탈퇴하시겠습니까?</h5>
+                    </div>
+                    <div class="modal__footer">
+                        <p class="btn--half">
+                            <button type="button" class="btn btn--popup btn--primary-outline" data-dismiss="modal">취소</button>
+                            <button type="submit" class="btn btn--popup btn--primary" data-type="modal" data-target="#modal-complete">확인</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div id="modal-complete" class="modal alert">
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">정말 탈퇴하시겠습니까?</h5>
+                    </div>
+                    <div class="modal__footer">
+                        <button type="submit" class="btn btn--popup btn--primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script class="text/javascript">
+            $(function(){
+                // 비밀번호 변경 초기화
+                $('[data-target="#modal-confirm"]').on('click', function(){
+                    $('#modal-password-reset').hide();
+                });
+
+                // 탈퇴처리
+                $('[data-target="#modal-withdraw"]').on('click', function(){
+                    $('#modal-modify').hide();
+                });
+                $('[data-target="#modal-complete"]').on('click', function(){
+                    $('#modal-withdraw').hide();
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -76,6 +76,10 @@
             padding: 31px 0;
             border-bottom: 1px solid $color_gray_400;
 
+            &:last-of-type {
+                border-bottom: 0;
+            }
+
             .btn {
                 flex: 0 0 auto;
             }

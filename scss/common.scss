@@ -671,7 +671,19 @@ table, thead, tbody, tr, th, td {
     }
     */
 
-    .txt {    
+    .txt {
+        &--medium {
+            font-weight: 500;
+        }
+    
+        &--bold {
+            font-weight: 700;
+        }
+    
+        &--red {
+            color: $color_negative;
+        }
+
         &--left {
             text-align: left;
         }
@@ -679,7 +691,7 @@ table, thead, tbody, tr, th, td {
         &--right {
             text-align: right;
         }
-    }   
+    }
 }
 
 @include tablet_s {
@@ -761,7 +773,7 @@ table, thead, tbody, tr, th, td {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            margin-bottom: 18px;
+            margin-bottom: 12px;
 
             /*
             .btn {
@@ -797,7 +809,7 @@ table, thead, tbody, tr, th, td {
         font-size: $font_size_h1;
         font-weight: 700;
         color: $color_gray_900;
-        line-height: ceil(($font_size_h1 * 1.56));
+        line-height: ceil(($font_size_h1 * 1.43));
     }
 
     &__list {

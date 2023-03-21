@@ -255,19 +255,19 @@
                                     <button type="button" class="btn btn--medium btn--gray" data-type="modal" data-target="#modal-schedule-register">스케줄 등록/변경</button>
                                 </p>
                             </div>
-                            <p class="input__field">
+                            <div class="input__field">
                                 <label for="administration" class="input__label">관리메세지</label>
                                 <textarea name="administration" id="administration" class="textarea" maxlength="2000"></textarea>
-                                <span class="textarea-length">
+                                <p class="textarea-length">
                                     <span class="textarea-count">0자</span> / <span class="textarea-total">2,000자</span>
-                                </span>
-                            </p>
+                                </p>
+                            </div>
                         </form>
                     </div>
                 </div>                
                 <p class="registration__btn">
-                    <button type="button" class="btn btn--btm btn--primary">저장</button>
-                    <button type="button" class="btn btn--btm btn-outline">목록</button>
+                    <button type="button" class="btn btn--btm btn--primary" data-type="modal" data-target="#modal-save">저장</button>
+                    <button type="button" class="btn btn--btm btn-outline" onclick="location.href='/html/pages/student/student_list.html'">목록</button>
                 </p>
             </section>
         </main>
@@ -299,16 +299,16 @@
                             </p>
                             <div class="schedule-register__content">
                                 <fieldset name="schedule-register" class="input__field">
-                                    <input class="check__input" type="checkbox" id="mon" checked>
-                                    <label class="check__label" for="mon">월</label>
-                                    <input class="check__input" type="checkbox" id="tue">
-                                    <label class="check__label" for="tue">화</label>
-                                    <input class="check__input" type="checkbox" id="wed">
-                                    <label class="check__label" for="wed">수</label>
-                                    <input class="check__input" type="checkbox" id="thur">
-                                    <label class="check__label" for="thur">목</label>
-                                    <input class="check__input" type="checkbox" id="fri">
-                                    <label class="check__label" for="fri">금</label>
+                                    <input type="checkbox" id="mon" class="check__input" checked>
+                                    <label for="mon" class="check__label">월</label>
+                                    <input type="checkbox" id="tue" class="check__input">
+                                    <label for="tue" class="check__label">화</label>
+                                    <input type="checkbox" id="wed" class="check__input">
+                                    <label for="wed" class="check__label">수</label>
+                                    <input type="checkbox" id="thur" class="check__input">
+                                    <label for="thur" class="check__label">목</label>
+                                    <input type="checkbox" id="fri" class="check__input">
+                                    <label for="fri" class="check__label">금</label>
                                 </fieldset>
                             </div>
                         </form>
@@ -318,6 +318,28 @@
                         <!-- 유효성 메세지
                             <p class="input-message input-message--invalid">학습상품의 주 학습 횟수를 초과했습니다.</p> 
                         -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+            alert 확인용.
+            /html/common/dialog/alert.html 와 동일합니다.
+            개발 진행시 하단의 modal은 삭제해 주시고 
+            /html/common/dialog/alert.html 써주세요.
+        -->
+        <div id="modal-save" class="modal alert">
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">입력한 내용을 저장하시겠습니까?</h5>
+                    </div>
+                    <div class="modal__footer">
+                        <p class="btn--half">
+                            <button type="button" class="btn btn--popup btn--primary-outline" data-dismiss="modal">취소</button>
+                            <button type="submit" class="btn btn--popup btn--primary">확인</button>
+                        </p>
                     </div>
                 </div>
             </div>

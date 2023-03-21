@@ -1,6 +1,6 @@
 @import '_global';
 
-.student {
+.academy {
     &__header {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -45,6 +45,7 @@
 
     .input {
         width: 100%;
+        max-width: 472px;
 
         &-address {
             .input {
@@ -60,9 +61,8 @@
         }
 
         &-message {
-            position: absolute;
-            bottom: -28px;
-            left: 0;
+            margin-top: 0;
+            margin-left: 24px;
         }
 
         &-postcode {
@@ -70,7 +70,7 @@
         }
 
         &__field {
-            justify-content: space-between;
+            //justify-content: space-between;
             min-height: 112px;
             margin: 0;
             padding: 31px 0;
@@ -84,15 +84,7 @@
                 flex: 0 0 auto;
             }
         }
-
-        &__content {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            align-items: center;
-            width: calc((100% - 11.25vw)/ 2);
-        }
-
+        
         &__box {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -127,33 +119,17 @@
         }
     }
 
-    .radio {
-        &__box {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            position: relative;
-        }
-
-        &__label {
-            margin-right: 28px;
-
-            &:last-of-type {
-                margin-right: 0;
-            }
-        }
-    }
-
     .select {
         max-width: 145px;
     }
 
-    .textarea {
-        height: 144px;
+    .file {
+        &__item {
+            margin-left: 24px;
 
-        &-length {
-            flex: 0 0 auto;
-            margin: 120px 18px 0;
+            &:nth-of-type(n+2) {
+                margin-top: 0;
+            }
         }
     }
 }

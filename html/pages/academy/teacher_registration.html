@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/lms/scss/reset.css" rel="stylesheet">
+        <link href="/lms/scss/common.css" rel="stylesheet">
+        <link href="/lms/scss/header.css" rel="stylesheet">
+        <link href="/lms/scss/form.css" rel="stylesheet">
+        <link href="/lms/scss/modal.css" rel="stylesheet">
+        <link href="/lms/scss/academy.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/lms/js/jquery-2.2.4.min.js"></script>
+        <script src="/lms/js/includeHtml.js"></script>
+        <script src="/lms/js/dropdowns.js"></script>   
+        <script src="/lms/js/modal.js"></script>
+        <script src="/lms/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/lms/html/common/layouts/header.html"></header>
+        <main class="page academy">
+            <section class="academy__header">
+                <div class="menu">
+                    <div class="menu__content">
+                        <h2 class="menu__title">선생님 현황</h2>
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="/lms/html/pages/academy/teacher_list.html" class="menu__link">학원관리</a></li>
+                            <li class="menu__item"><a href="/lms/html/pages/academy/teacher_list.html" class="menu__link">선생님 현황</a></li>
+                            <li class="menu__item">선생님 등록</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="required__txt"><span class="input__sup">*</span>필수입력</p>
+            </section>
+            <section class="academy__content">
+                <div class="panel">
+                    <h3 class="registration__title">선생님 등록</h3>
+                    <div class="registration__content">
+                        <form action="" method="">
+                            <p class="input__field">
+                                <span class="input__label">학원코드</span>
+                                <span class="input__result">12343243</span>
+                            </p>
+                            <p class="input__field">
+                                <label for="ID" class="input__label">아이디<span class="input__sup">*</span></label>
+                                <span class="input__box">
+                                    <input type="text" id="ID" class="input" placeholder="아이디를 입력해 주세요.">
+                                    <button type="button" class="btn btn--medium btn--gray">중복체크</button>
+                                </span>
+                                <!-- 유효성 메세지 
+                                <span class="input-message">사용가능합니다.</span>
+                                <span class="input-message input-message--invalid">사용이 불가능합니다.</span>
+                                <span class="input-message input-message--invalid">중복체크를 진행해 주세요.</span>
+                                -->
+                            </p>
+                            <p class="input__field">
+                                <span class="input__label">비밀번호</span>
+                                <span class="input__result">공통 초기 비밀번호</span>
+                            </p>
+                            <p class="input__field">
+                                <label for="name" class="input__label">이름<span class="input__sup">*</span></label>
+                                <input type="text" id="name" class="input" placeholder="이름을 입력해 주세요.">
+                                <!-- 유효성 메세지
+                                <span class="input-message input-message--invalid">이름을 입력해 주세요.</span>
+                                <span class="input-message input-message--invalid">이름은 2~20자 한글/영문으로 입력해주세요.</span>
+                                -->
+                            </p>
+                            <p class="input__field">
+                                <label for="cellphone" class="input__label">휴대폰번호<span class="input__sup">*</span></label>
+                                <input type="text" id="cellphone" class="input" placeholder="휴대폰번호를 입력해 주세요." maxlength='11' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
+                                <!-- 유효성 메세지
+                                <span class="input-message input-message--invalid">휴대폰번호는 10~11자리 숫자로 입력해 주세요.</span>
+                                -->
+                            </p>
+                            <p class="input__field">                                 
+                                <label for="birthday" class="input__label">생년월일</label>
+                                <input type="text" id="birthday" class="input" placeholder="8자리 숫자만 입력" maxlength='8' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
+                                <!-- 유효성 메세지 
+                                <span class="input-message input-message--invalid">생년월일을 입력해 주세요.</span>
+                                <span class="input-message input-message--invalid">생년월일은 8자리 숫자로 입력해 주세요.</span>
+                                -->
+                            </p>
+                            <p class="input__field">
+                                <label for="email" class="input__label">이메일<span class="input__sup">*</span></label>
+                                <span class="input__box">
+                                    <input type="email" id="email" class="input" placeholder="이메일 주소를 입력해 주세요.">
+                                    <button type="button" class="btn btn--medium btn--gray">중복체크</button>
+                                </span>
+                                <!-- 유효성 메세지
+                                <span class="input-message">사용가능합니다.</span>
+                                <span class="input-message input-message--invalid">사용이 불가능합니다.</span>
+                                <span class="input-message input-message--invalid">중복체크를 진행해 주세요.</span>
+                                 -->
+                            </p>
+                        </form>
+                    </div>
+                </div>                
+                <p class="registration__btn">
+                    <button type="button" class="btn btn--btm btn--primary" data-type="modal" data-target="#modal-save">저장</button>
+                    <button type="button" class="btn btn--btm btn-outline" onclick="location.href='/lms/html/pages/academy/teacher_list.html'">목록</button>
+                </p>
+            </section>
+        </main>
+
+        <!-- 
+            alert 확인용.
+            /lms/html/common/dialog/alert.html 와 동일합니다.
+            개발 진행시 하단의 modal은 삭제해 주시고 
+            /lms/html/common/dialog/alert.html 써주세요.
+        -->
+        <div id="modal-save" class="modal alert">
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">입력한 내용을 저장하시겠습니까?</h5>
+                    </div>
+                    <div class="modal__footer">
+                        <p class="btn--half">
+                            <button type="button" class="btn btn--popup btn--primary-outline" data-dismiss="modal">취소</button>
+                            <button type="submit" class="btn btn--popup btn--primary">확인</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

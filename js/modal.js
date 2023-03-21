@@ -7,7 +7,12 @@ function modal() {
 
         if(document.querySelector(target)){ 
 
-            $('body').addClass('modal--on').append(modal__bg);
+            
+            if($('body').hasClass('modal--on') !== true){
+                $('body').addClass('modal--on').append(modal__bg);
+            } 
+            
+            // $('body').addClass('modal--on').append(modal__bg);
             
             $('.modal__bg').fadeIn(300);
             $(target).show().addClass('modal--fade');

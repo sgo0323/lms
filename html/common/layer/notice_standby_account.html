@@ -36,7 +36,7 @@
         <script src="/lms/js/modal.js"></script>
         <script src="/lms/js/common.js"></script>
     </head>
-    <body>
+    <body class="modal--on">
         <header data-include="/lms/html/common/layouts/header.html"></header>
         <main class="page">
             <div class="standby-account">
@@ -90,7 +90,6 @@
             $(function(){
                 $('[data-target="#modal-standby-success"]').on('click', function(){
                     $('#modal-standby-account').hide();
-                    $(this).parents('.page').find('.modal__bg').removeClass('modal__bg');
                 });
             });
         </script>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+        <link href="/scss/academy.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/html/common/layouts/header.html"></header>
+        <main class="page academy">
+            <section class="academy__header">
+                <div class="menu">
+                    <div class="menu__content">
+                        <h2 class="menu__title">학원정보</h2>
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="/html/pages/academy/teacher_list.html" class="menu__link">학원관리</a></li>
+                            <li class="menu__item"><a href="/html/pages/academy/academy_info.html" class="menu__link">학원정보</a></li>
+                            <li class="menu__item">학원정보 상세&수정</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="required__txt"><span class="input__sup">*</span>필수입력</p>
+            </section>
+            <section class="academy__content">
+                <div class="panel">
+                    <div class="registration__content">
+                        <form action="" method="">
+                            <p class="input__field">
+                                <span class="input__label">학원코드</span>
+                                <span class="input__result">12343243</span>
+                            </p>
+                            <p class="input__field">
+                                <label for="academy" class="input__label">학원명<span class="input__sup">*</span></label>
+                                <input type="text" id="academy" class="input" placeholder="학원명을 입력해 주세요." value="청담어학원">
+                                <!-- 유효성 메세지
+                                <span class="input-message input-message--invalid">학원명을 입력해 주세요.</span>
+                                -->
+                            </p>
+                            <p class="input__field">
+                                <label for="academy-type" class="input__label">학원유형</label>
+                                <select name="academy-type" id="academy-type" class="select"> 
+                                    <option value="과외">과외</option>
+                                    <option value="공부방">공부방</option>
+                                    <option value="학원" selected>학원</option>
+                                    <option value="기타">기타</option>
+                                </select>
+                            </p>
+                            <p class="input__field">
+                                <label for="academy" class="input__label">대표자명<span class="input__sup">*</span></label>
+                                <input type="text" id="academy" class="input" placeholder="대표자명을 입력해 주세요." value="김대표">
+                                <!-- 유효성 메세지 -->
+                                <span class="input-message input-message--invalid">대표자명을 입력해 주세요.</span>
+                            </p>
+                            <p class="input__field">
+                                <span class="input__label">사업자등록번호</span>
+                                <span class="input__box">
+                                    <input type="text" id="academy" class="input" placeholder="사업자등록번호를 입력해 주세요." value="123-11-12345">
+                                    <label for="file-add" class="btn btn--medium btn--list">파일첨부</label>
+                                    <input type="file" id="file-add" class="file--add">
+                                </span>
+                                <span class="file__item">
+                                    <span class="file__tilte">사업자등록번호.jpg</span>
+                                    <button type="button" class="file--delete">파일삭제</button>
+                                </span>
+                            </p>
+                            <p class="input__field">
+                                <label for="email" class="input__label">이메일<span class="input__sup">*</span></label>
+                                <input type="email" id="email" class="input" placeholder="이메일 주소를 입력해 주세요." value="asdfgh@naver.com">
+                            </p>
+                            <p class="input__field input-address">
+                                <span class="input__label">주소</span>
+                                <span class="input__box">
+                                    <input type="text" class="input input-postcode" value="062">
+                                    <button type="button" class="btn btn--medium btn--gray">주소검색</button>
+                                    <input type="text" class="input" value="서울시 마포구 공덕로12길">
+                                    <input type="text" class="input" value="123-12">
+                                </span>
+                            </p>
+                            <p class="input__field">
+                                <label for="cellphone" class="input__label">휴대폰번호<span class="input__sup">*</span></label>
+                                <input type="text" id="cellphone" class="input" placeholder="휴대폰번호를 입력해 주세요." value="01023431234" maxlength='11' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
+                                <!-- 유효성 메세지
+                                <span class="input-message input-message--invalid">휴대폰번호는 10~11자리 숫자로 입력해 주세요.</span>
+                                -->
+                            </p>                            
+                            <p class="input__field">
+                                <label for="cellphone" class="input__label">전화번호</label>
+                                <input type="text" id="cellphone" class="input" placeholder="전화번호를 입력해 주세요." value="0223431234" maxlength='11' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
+                                <!-- 유효성 메세지
+                                <span class="input-message input-message--invalid">전화번호는 9~11자리 숫자로 입력해 주세요.</span>
+                                -->
+                            </p>                            
+                        </form>
+                    </div>
+                </div>                
+                <p class="registration__btn">
+                    <button type="button" class="btn btn--btm btn--secondary" data-type="modal" data-target="#modal-modify">수정</button>
+                </p>
+            </section>
+        </main> 
+        
+        <!-- 모든 조건 만족 시 -->
+        <div id="modal-modify" class="modal alert">
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">입력한 내용을 저장하시겠습니까?</h5>
+                    </div>
+                    <div class="modal__footer">
+                        <p class="btn--half">
+                            <button type="button" class="btn btn--popup btn--primary-outline" data-dismiss="modal">취소</button>
+                            <button type="submit" class="btn btn--popup btn--primary">확인</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

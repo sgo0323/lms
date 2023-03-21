@@ -171,20 +171,20 @@
                             <legend>Check box</legend>
                                 <h3 class="input__title">Check box</h3>
                                 <p class="input__field">
-                                    <input class="check__input" type="checkbox" id="check" checked>
-                                    <label class="check__label label--hidden" for="check">라벨히든</label>
-                                    <input class="check__input" type="checkbox" id="check1">
-                                    <label class="check__label label--hidden" for="check1">라벨히든</label>
+                                    <input type="checkbox" id="check" class="check__input" checked>
+                                    <label for="check" class="check__label label--hidden">라벨히든</label>
+                                    <input type="checkbox" id="check1" class="check__input">
+                                    <label for="check1" class="check__label label--hidden">라벨히든</label>
                                 </p>
                                 <p class="input__field">
-                                    <input class="check__input" type="checkbox" id="all" checked>
-                                    <label class="check__label" for="all">전체</label>
-                                    <input class="check__input" type="checkbox" id="check2">
-                                    <label class="check__label" for="check2">재직</label>
-                                    <input class="check__input" type="checkbox" id="check3">
-                                    <label class="check__label" for="check3">재직</label>
-                                    <input class="check__input" type="checkbox" id="check4">
-                                    <label class="check__label" for="check4">재직</label>
+                                    <input type="checkbox" id="all" class="check__input" checked>
+                                    <label for="all" class="check__label">전체</label>
+                                    <input type="checkbox" id="check2" class="check__input">
+                                    <label for="check2" class="check__label">재직</label>
+                                    <input type="checkbox" id="check3" class="check__input">
+                                    <label for="check3" class="check__label">재직</label>
+                                    <input type="checkbox" id="check4" class="check__input">
+                                    <label for="check4" class="check__label">재직</label>
                                 </p>
                             </div>
                         </fieldset>  
@@ -365,39 +365,37 @@
                     <fieldset name="input file">
                         <legend>file box</legend>
                         <div class="file">
-                            <div class="file__content">
-                                <p class="file__btn">
-                                    <label for="file-add" class="btn btn--medium btn--contents btn--light">파일첨부</label>
-                                    <input type="file" id="file-add" class="file--add" multiple>
-                                    
-                                    <span class="file-notice">
-                                        ※ 파일 1개당 5MB, 최대 5개까지 등록 가능합니다. ※ doc, hwp, pdf, gif, jpg, png, txt, xls파일만 등록 가능합니다.
-                                    </span>
-                                </p>
-                                <ul class="file__list">
-                                    <li class="file__item">
-                                        <span class="file__tilte">asdffsdf.hwp</span>
-                                        <button type="button" class="file--delete">파일삭제</button>
-                                    </li>
-                                    <li class="file__item">
-                                        <span class="file__tilte">asdffsdf.hwp</span>
-                                        <button type="button" class="file--delete">파일삭제</button>
-                                    </li>
-                                    <li class="file__item">
-                                        <span class="file__tilte">asdffsdf.hwp</span>
-                                        <button type="button" class="file--delete">파일삭제</button>
-                                    </li>                                    
-                                    <li class="file__item">
-                                        <span class="file__tilte">asdffsdf.hwp</span>
-                                        <button type="button" class="file--delete">파일삭제</button>
-                                    </li>
-                                                                        
-                                    <li class="file__item">
-                                        <span class="file__tilte">asdffsdf.hwp</span>
-                                        <button type="button" class="file--delete">파일삭제</button>
-                                    </li>
-                                </ul>  
-                            </div>
+                            <p class="file__btn">
+                                <label for="file-add" class="btn btn--medium btn--contents btn--light">파일첨부</label>
+                                <input type="file" id="file-add" class="file--add" multiple>
+                                
+                                <span class="file-notice">
+                                    ※ 파일 1개당 5MB, 최대 5개까지 등록 가능합니다. ※ doc, hwp, pdf, gif, jpg, png, txt, xls파일만 등록 가능합니다.
+                                </span>
+                            </p>
+                            <ul class="file__list">
+                                <li class="file__item">
+                                    <span class="file__tilte">asdffsdf.hwp</span>
+                                    <button type="button" class="file--delete">파일삭제</button>
+                                </li>
+                                <li class="file__item">
+                                    <span class="file__tilte">asdffsdf.hwp</span>
+                                    <button type="button" class="file--delete">파일삭제</button>
+                                </li>
+                                <li class="file__item">
+                                    <span class="file__tilte">asdffsdf.hwp</span>
+                                    <button type="button" class="file--delete">파일삭제</button>
+                                </li>                                    
+                                <li class="file__item">
+                                    <span class="file__tilte">asdffsdf.hwp</span>
+                                    <button type="button" class="file--delete">파일삭제</button>
+                                </li>
+                                                                    
+                                <li class="file__item">
+                                    <span class="file__tilte">asdffsdf.hwp</span>
+                                    <button type="button" class="file--delete">파일삭제</button>
+                                </li>
+                            </ul>
                         </div>
                     </fieldset>
                 </form>

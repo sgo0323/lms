@@ -254,19 +254,19 @@
                                 </p>
                                 <p class="input__content">&nbsp;</p>
                             </div>
-                            <p class="input__field">
+                            <div class="input__field">
                                 <label for="administration" class="input__label">관리메세지</label>
                                 <textarea name="administration" id="administration" class="textarea" maxlength="2000">현 학생은 blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah..</textarea>
-                                <span class="textarea-length">
+                                <p class="textarea-length">
                                     <span class="textarea-count">0자</span> / <span class="textarea-total">2,000자</span>
-                                </span>
-                            </p>
+                                </p>
+                            </div>
                         </form>
                     </div>
                 </div>                
                 <p class="registration__btn">
                     <button type="button" class="btn btn--btm btn--secondary">수정</button>
-                    <button type="button" class="btn btn--btm btn-outline">목록</button>
+                    <button type="button" class="btn btn--btm btn-outline" onclick="location.href='/html/pages/student/student_list.html'">목록</button>
                 </p>
             </section>
         </main>
@@ -298,16 +298,16 @@
                             </p>
                             <div class="schedule-register__content">
                                 <fieldset name="schedule-register" class="input__field">
-                                    <input class="check__input" type="checkbox" id="mon" checked>
-                                    <label class="check__label" for="mon">월</label>
-                                    <input class="check__input" type="checkbox" id="tue">
-                                    <label class="check__label" for="tue">화</label>
-                                    <input class="check__input" type="checkbox" id="wed">
-                                    <label class="check__label" for="wed">수</label>
-                                    <input class="check__input" type="checkbox" id="thur">
-                                    <label class="check__label" for="thur">목</label>
-                                    <input class="check__input" type="checkbox" id="fri">
-                                    <label class="check__label" for="fri">금</label>
+                                    <input type="checkbox" id="mon" class="check__input" checked>
+                                    <label for="mon" class="check__label">월</label>
+                                    <input type="checkbox" id="tue" class="check__input">
+                                    <label for="tue" class="check__label">화</label>
+                                    <input type="checkbox" id="wed" class="check__input">
+                                    <label for="wed" class="check__label">수</label>
+                                    <input type="checkbox" id="thur" class="check__input">
+                                    <label for="thur" class="check__label">목</label>
+                                    <input type="checkbox" id="fri" class="check__input">
+                                    <label for="fri" class="check__label">금</label>
                                 </fieldset>
                             </div>
                         </form>
