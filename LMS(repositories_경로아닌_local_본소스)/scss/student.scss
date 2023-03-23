@@ -2,9 +2,7 @@
 
 .student {
     &__header {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         justify-content: space-between;
         align-items: baseline;
     }    
@@ -86,17 +84,13 @@
         }
 
         &__content {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             align-items: center;
             width: calc((100% - 11.25vw)/ 2);
         }
 
         &__box {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
@@ -129,9 +123,7 @@
 
     .radio {
         &__box {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             position: relative;
         }
 

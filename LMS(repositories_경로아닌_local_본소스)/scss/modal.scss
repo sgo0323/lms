@@ -44,7 +44,7 @@ $madal_font_size : $font_size_large;
         
                 .modal {
                     &__content {
-                        display: flex;
+                        @include display-flex;
                         flex-direction: column;
                         overflow: hidden;
                         max-height: 100%;
@@ -85,9 +85,7 @@ $madal_font_size : $font_size_large;
         border-bottom:1px solid $color_gray_400;
 
         &--close {
-            // display: -webkit-box;
-            // display: -ms-flexbox;
-            // display: flex;
+            // @include display-flex;
             // justify-content: space-between;
             // align-items: center;
             position: relative;
@@ -258,9 +256,7 @@ $madal_font_size : $font_size_large;
         }     
         
         &--half {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             justify-content: space-between;
 
             /*
@@ -394,26 +390,8 @@ $madal_font_size : $font_size_large;
     .table {
         &__box {
             min-height: 312px;
-            max-height: 382px;
+            max-height: 320px;
             margin-top: 36px;
-        }
-
-        // th & td
-        > :not(caption) > * > * {
-            &:first-of-type {
-                min-width: 120px;
-                //text-align: center;
-            }
-
-            /*
-            &:last-of-type {
-                text-align: center;
-            }
-            */
-        }
-
-        > :not(caption) > * > th {
-            padding: 16px 15px;
         }
     }
 }
@@ -461,9 +439,7 @@ $madal_font_size : $font_size_large;
         }
 
         &__list {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             align-items: center;
         }
 
@@ -476,9 +452,7 @@ $madal_font_size : $font_size_large;
 // #modal-learning-time 학습시간 상세 popup
 .learning-time {
     &__content {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         justify-content: space-between;
         text-align: center;
     }
@@ -603,12 +577,6 @@ $madal_font_size : $font_size_large;
         > :not(caption) > * > th {            
             font-weight: 500;
             color: $color_gray_600;
-
-            /*
-            &::after {
-                display: none;
-            }
-            */
         }
         
         > :not(caption) > * > td {

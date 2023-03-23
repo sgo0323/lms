@@ -50,6 +50,12 @@
     margin: auto;
 }
 
+@mixin display-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 /*
 * text-ellipsis 한 줄 말줄임
 * @include text-ellipsis;

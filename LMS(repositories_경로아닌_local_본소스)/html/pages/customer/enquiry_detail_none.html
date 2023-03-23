@@ -44,7 +44,7 @@
                     <h2 class="menu__title">1:1문의내역</h2>
                     <ul class="menu__list">
                         <li class="menu__item"><a href="/html/pages/customer/enquiry_list.html" class="menu__link">1:1문의내역</a></li>
-                        <li class="menu__item">1:1문의등록</li>
+                        <li class="menu__item">1:1문의상세</li>
                     </ul>
                 </div>
             </section>
@@ -53,8 +53,16 @@
                     <div class="registration__header">
                         <h3 class="enquiry__title">1:1문의내용</h3>
                         <!-- <p class="required__txt"><span class="input__sup">*</span>필수입력</p> -->
-                    </div>                    
+                    </div>
                     <div class="panel registration__body">
+                        <div class="input__field">
+                            <p class="registration__title">
+                                <span class="input__label">문의 등록일시</span>
+                            </p>                            
+                            <p class="input__box">
+                                <span class="input__result">2023.05.01 13:40:55</span>
+                            </p>                            
+                        </div>
                         <div class="input__field">
                             <p class="registration__title">
                                 <label for="enquiry-title" class="input__label">제목<span class="input__sup">*</span></label>
@@ -135,11 +143,38 @@
                             </div>
                         </div>
                     </div>
-                    <p class="customer__btn">
-                        <button type="submit" class="btn btn--btm btn--primary">저장</button>
-                        <button type="button" class="btn btn--btm btn-outline" onclick="location.href='/html/pages/customer/enquiry_list.html'">목록</button>
-                    </p>
                 </form>
+            </section>
+            <section class="enquiry__content answer__content">
+                <div class="registration__header">
+                    <h3 class="enquiry__title">1:1 문의답변</h3>
+                </div>                    
+                <div class="panel registration__body">
+                    <div class="input__field">
+                        <p class="registration__title">
+                            <span class="input__label">답변</span>
+                        </p>
+                        <p class="input__box">
+                            <span class="input__result">답변 대기중입니다.</span>
+                        </p>                            
+                    </div>
+                    <div class="input__field">
+                        <p class="registration__title">
+                            <span class="input__label">첨부파일</span> 
+                        </p>
+                        <div class="input__box">
+                            <ul class="file__list">
+                                <li class="file__item"></li>
+                                <li class="file__item"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p class="customer__btn">
+                    <button type="button" class="btn btn--btm btn--gray">삭제</button>
+                    <button type="button" class="btn btn--btm btn--secondary">수정</button>
+                    <button type="button" class="btn btn--btm btn-outline" onclick="location.href='/html/pages/customer/enquiry_list.html'">목록</button>
+                </p>
             </section>
         </main>
     </body>

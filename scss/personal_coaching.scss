@@ -14,9 +14,7 @@
             }
 
             &__list {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
+                @include display-flex;
                 align-items: center;
             }
 
@@ -151,20 +149,7 @@
                                 }
                             }
                         }
-                    }
-
-                    &-diagnosis {
-                        .table {
-                            // th & td
-                            > :not(caption) > * > * {
-                                padding: 19px 18px;
-                            }
-                            
-                            > :not(caption) > * > th {
-                                padding: 28px 18px 20px;
-                            }
-                        }
-                    }                    
+                    }          
                 }
             }
         }
@@ -202,16 +187,12 @@
     }
 
     &-dashboard {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         align-items: stretch;
         margin-top: 32px;
 
         .panel {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             flex-direction: column;
             justify-content: space-between;
             padding: 19px 32px 32px 32px;
@@ -241,9 +222,7 @@
             }
 
             &--top {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
+                @include display-flex;
                 align-items: center;
                 justify-content: space-between;
             }
@@ -251,9 +230,7 @@
 
         @at-root .graph {
             &-strength {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
+                @include display-flex;
                 justify-content: space-between;
                 margin-top: 22px;
 
@@ -296,8 +273,7 @@
                             min-width: 118px;
                         }
                     }
-
-                    /*
+                    
                     > :not(caption) > tr {
                         &:last-of-type {
                             td {
@@ -305,7 +281,6 @@
                             }
                         }
                     }
-                    */
 
                     > :not(caption) > * > th {
                         padding: 0;
@@ -313,12 +288,6 @@
                         line-height: 1.5;
                         color: $color_gray_600;
                         letter-spacing: 0.4px;
-
-                        /*
-                        &::after {
-                            display: none;
-                        }
-                        */
                     }
                         
                     .ratio {
@@ -332,9 +301,7 @@
     }
 
     &__list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         align-items: center;
 
         &:nth-of-type(2) {

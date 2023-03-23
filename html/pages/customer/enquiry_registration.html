@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/lms/scss/reset.css" rel="stylesheet">
+        <link href="/lms/scss/common.css" rel="stylesheet">
+        <link href="/lms/scss/header.css" rel="stylesheet">
+        <link href="/lms/scss/form.css" rel="stylesheet">
+        <link href="/lms/scss/modal.css" rel="stylesheet">        
+        <link href="/lms/scss/customer.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/lms/js/jquery-2.2.4.min.js"></script>
+        <script src="/lms/js/includeHtml.js"></script>
+        <script src="/lms/js/dropdowns.js"></script>   
+        <script src="/lms/js/modal.js"></script>
+        <script src="/lms/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/lms/html/common/layouts/header.html"></header>
+        <main class="page customer">
+            <section class="menu">
+                <div class="menu__content">
+                    <h2 class="menu__title">1:1문의내역</h2>
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="/lms/html/pages/customer/enquiry_list.html" class="menu__link">1:1문의내역</a></li>
+                        <li class="menu__item">1:1문의등록</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="enquiry__content">
+                <form action="" method="">
+                    <div class="registration__header">
+                        <h3 class="enquiry__title">1:1문의내용</h3>
+                        <!-- <p class="required__txt"><span class="input__sup">*</span>필수입력</p> -->
+                    </div>                    
+                    <div class="panel registration__body">
+                        <div class="input__field">
+                            <p class="registration__title">
+                                <label for="enquiry-title" class="input__label">제목<span class="input__sup">*</span></label>
+                            </p>                            
+                            <p class="input__box">
+                                <input type="text" id="enquiry-title" class="input" placeholder="제목을 입력해 주세요.">
+                                <!-- 유효성 메세지 -->
+                                <span class="input-message input-message--invalid">제목을 입력해 주세요</span>
+                            </p>                            
+                        </div>
+                        <div class="input__field">
+                            <p class="registration__title">
+                                <label for="enquiry-type" class="input__label">문의유형<span class="input__sup">*</span></label>
+                            </p>
+                            <p class="input__box">
+                                <select name="type" id="enquiry-type" class="select">
+                                    <option value="문의유형 선택" selected>문의유형 선택</option>
+                                    <option value="문의유형1">문의유형1</option>
+                                    <option value="문의유형2">문의유형2</option>
+                                    <option value="문의유형3">문의유형3</option>
+                                    <option value="문의유형4">문의유형4</option>
+                                    <option value="문의유형5">문의유형5</option>
+                                    <option value="문의유형6">문의유형6</option>
+                                </select>
+                                <!-- 유효성 메세지 -->
+                                <span class="input-message input-message--invalid">문의유형을 선택해 주세요</span>
+                            </p>
+                        </div>
+                        <div class="input__field">
+                            <p class="registration__title">
+                                <label for="administration" class="input__label">문의내용<span class="input__sup">*</span></label>
+                            </p>
+                            <div class="input__box">
+                                <p class="input__content">
+                                    <textarea name="administration" id="administration" class="textarea" maxlength="2000"></textarea>
+                                    <span class="textarea-length">
+                                        <span class="textarea-count">0자</span> / <span class="textarea-total">2,000자</span>
+                                    </span>
+                                </p>
+                                <!-- 유효성 메세지 -->
+                                <p class="input-message input-message--invalid">문의내용을 입력해 주세요</p>
+                            </div>
+                        </div>
+                        <div class="input__field">
+                            <p class="registration__title">
+                                <span class="input__label">첨부파일</span>
+                            </p>
+                            <div class="file">
+                                <p class="file__btn">
+                                    <label for="file-add" class="btn btn--medium btn--list">파일첨부</label>
+                                    <input type="file" id="file-add" class="file--add" multiple>
+                                    
+                                    <span class="file-notice">※ 파일 1개당 5MB, 최대 5개까지 등록 가능합니다.</span>
+                                    <span class="file-notice">※ doc, hwp, pdf, gif, jpg, png, txt, xls파일만 등록 가능합니다.</span>
+                                </p>
+                                <ul class="file__list">
+                                    <li class="file__item">
+                                        <a href="#" download="" class="file__link">asdffsdf.hwp</a>
+                                        <button type="button" class="file--delete">파일삭제</button>
+                                    </li>
+                                    <li class="file__item">
+                                        <a href="#" download="" class="file__link">asdffsdf.hwp</a>
+                                        <button type="button" class="file--delete">파일삭제</button>
+                                    </li>
+                                    <li class="file__item">
+                                        <a href="#" download="" class="file__link">asdffsdf.hwp</a>
+                                        <button type="button" class="file--delete">파일삭제</button>
+                                    </li>                                    
+                                    <li class="file__item">
+                                        <a href="#" download="" class="file__link">asdffsdf.hwp</a>
+                                        <button type="button" class="file--delete">파일삭제</button>
+                                    </li>                                                                        
+                                    <li class="file__item">
+                                        <a href="#" download="" class="file__link">asdffsdf.hwp</a>
+                                        <button type="button" class="file--delete">파일삭제</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="customer__btn">
+                        <button type="submit" class="btn btn--btm btn--primary">저장</button>
+                        <button type="button" class="btn btn--btm btn-outline" onclick="location.href='/lms/html/pages/customer/enquiry_list.html'">목록</button>
+                    </p>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

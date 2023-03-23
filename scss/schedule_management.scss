@@ -15,9 +15,7 @@
 
         .management {
             &__content {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
+                @include display-flex;
                 justify-content: space-between;
 
                 .panel {

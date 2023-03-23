@@ -2,20 +2,9 @@
 
 .academy {
     &__header {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         justify-content: space-between;
         align-items: baseline;
-    }    
-
-    .required {
-        &__txt {
-            font-weight: 500;
-            color: $color_negative;
-            line-height: 1.5;
-            letter-spacing: -0.01em;
-        }
     }
 
     .registration {
@@ -86,9 +75,7 @@
         }
         
         &__box {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;

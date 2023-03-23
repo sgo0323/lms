@@ -73,9 +73,7 @@
     }
 
     &__field {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         align-items: center;
         position: relative;
         margin-bottom: 20px;
@@ -296,23 +294,31 @@
             font-weight: 500;
             color: $color_gray_800;
             line-height: 1.5;
+
+            &:nth-of-type(n+2) {
+                margin-left: 5px;
+            }
         }
 
         &--add {
             display: none;
         }
 
-        &__list {
-            margin-top: 12px;
-        }
-        
-        &__item {
-            &:nth-of-type(n+2) {
-                margin-top: 16px;
+        &__btn {
+            + .file__list {
+                margin-top: 12px;
             }
         }
 
-        &__tilte {
+        
+        // &__item {
+        //     &:nth-of-type(n+2) {
+        //         margin-top: 16px;
+        //     }
+        // }
+
+        &__link {
+            display: inline-block;
             font-weight: 500;
             color: $color_positive;
             line-height: 1.5;
@@ -321,7 +327,7 @@
 
         &--delete {
             width: 48px;
-            height: 48px;
+            height: 40px;
             background: url('/lms/assets/images/ico_Bin.svg') no-repeat center/ 24px auto;
             text-indent: -9999rem;
             
@@ -711,6 +717,18 @@ $button_text : $color_white;
             background: $color_white;
             color: $color_gray_900;
         }
+    }    
+
+    &--file {
+        border-color: $color_gray_400;
+        background: $color_gray_300;
+        color: $color_gray_700;
+
+        &:hover {
+            border-color: $color_gray_500;
+            background: $color_gray_300;
+            color: $color_gray_800;
+        }
     }
 
     &--light {
@@ -1098,9 +1116,7 @@ $button_text : $color_white;
     line-height: 1.5;
 
     &-length {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         color: $color_gray_700;
         line-height: 1.5;
     }

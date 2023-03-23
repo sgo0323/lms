@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/lms/scss/reset.css" rel="stylesheet">
+        <link href="/lms/scss/common.css" rel="stylesheet">
+        <link href="/lms/scss/header.css" rel="stylesheet">
+        <link href="/lms/scss/form.css" rel="stylesheet">
+        <link href="/lms/scss/modal.css" rel="stylesheet">        
+        <link href="/lms/scss/customer.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/lms/js/jquery-2.2.4.min.js"></script>
+        <script src="/lms/js/includeHtml.js"></script>
+        <script src="/lms/js/dropdowns.js"></script>   
+        <script src="/lms/js/modal.js"></script>
+        <script src="/lms/js/common.js"></script>
+    </head>
+    <body>
+        <header data-include="/lms/html/common/layouts/header.html"></header>
+        <main class="page customer">
+            <section class="menu">
+                <div class="menu__content">
+                    <h2 class="menu__title">공지사항</h2>
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="/lms/html/pages/customer/notice_list.html" class="menu__link">공지사항</a></li>
+                        <li class="menu__item">공지사항 상세</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="panel notice__content">
+                <div class="notice__header">
+                    <h3 class="notice__title">공지사항 제목</h3>
+                    <ul class="detail__list">
+                        <li class="detail__item">2022.06.03</li>
+                        <li class="detail__item">50회</li>
+                    </ul>
+                </div>
+                <div class="notice__body">
+                    <p class="notice__txt">안녕하세요, 대교 독해 트레이닝 플랫폼 서비스가 새로 오픈하였습니다.
+                        좀 더 쉽고 편하게 이용하실 수 있도록<br>
+                        플랫폼 매뉴얼을 전달 드립니다.<br>
+                        <br>
+                        관련하여 궁금하신 내용이나 불편한 점이 있으신 경우,<br>
+                        1:1 문의를 이용해주시면 신속하게 답변 드리도록 하겠습니다.<br>
+                        <br>
+                        감사합니다.
+                    </p>
+                </div>
+            </section>
+            <section class="notice__file">
+                <h4 class="file__title">파일다운로드</h4>
+                <div class="panel">
+                    <ul class="file__list">
+                        <li class="file__item"><a href="/lms/assets/images/ico_download.svg" download="" class="file__link">이용 가이드_v1.0_20200603.pdf</a></li>
+                        <li class="file__item"><a href="/lms/assets/images/ico_download.svg" download="" class="file__link">이용 가이드_v1.0_20200603.pdf</a></li>
+                    </ul>
+                </div>                
+                <p class="customer__btn">
+                    <button type="button" class="btn btn--btm btn-outline" onclick="location.href='/lms/html/pages/customer/notice_list.html'">목록</button>
+                </p>
+            </section>
+        </main>
+    </body>
+</html>

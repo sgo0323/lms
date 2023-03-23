@@ -24,9 +24,7 @@
 
         .subject {
             &__list {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
+                @include display-flex;
                 align-items: center;
                 position: absolute;
                 bottom: 0;
@@ -115,16 +113,9 @@
 
             > :not(caption) > * > th {
                 margin-bottom: 26px;
-
-                /*
-                &::after {
-                    display: none;
-                }
-                */
             }
 
-            > :not(caption) > * > td {                
-                //min-height: 145px;
+            > :not(caption) > * > td {
                 min-height: 125px;
             }
         }

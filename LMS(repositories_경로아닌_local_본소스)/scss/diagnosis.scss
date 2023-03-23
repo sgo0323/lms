@@ -156,9 +156,7 @@ $report_title_size    : 36px;
 
     .result {
         &__list {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             justify-content: space-between;
             margin-top: 24px;
         }
@@ -269,9 +267,7 @@ $report_title_size    : 36px;
         }
 
         &-graph {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             justify-content: space-between;
         }
 
@@ -280,9 +276,7 @@ $report_title_size    : 36px;
         }
 
         &__header {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             justify-content: space-between;
             align-items: center;
         }
@@ -336,9 +330,7 @@ $report_title_size    : 36px;
 
     .kread {
         &-data {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;            
+            @include display-flex;            
             align-items: center;
             padding: 18px 32px;
             @include border-radius(100px);
@@ -406,12 +398,6 @@ $report_title_size    : 36px;
             font-size: 26px;
             color: $color_gray_900;
             line-height: ceil((26px * 1.61));
-
-            /*
-            &:first-of-type, &:last-of-type {
-                text-align: center;
-            }
-            */
         }
 
         > :not(caption) > * > th {
@@ -421,6 +407,7 @@ $report_title_size    : 36px;
             font-size: $font_size_h2;
             font-weight: 700;
             color: $color_gray_900;
+            line-height: ceil(($font_size_h2 * 1.33));
 
             &:nth-of-type(4) {
                 width: 12%;
@@ -429,12 +416,6 @@ $report_title_size    : 36px;
             &:nth-of-type(6) {
                 width: 22%;
             }
-
-            /*
-            &::after {
-                display: none;
-            }
-            */
         }
 
         .subject {
@@ -486,9 +467,7 @@ $report_title_size    : 36px;
         }
 
         .panel {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             justify-content: space-between;
             align-items: center;
             flex: 0 0 auto;
@@ -497,9 +476,7 @@ $report_title_size    : 36px;
 
         .report {
             &__inner {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
+                @include display-flex;
                 justify-content: space-between;
                 align-items: center;
             }

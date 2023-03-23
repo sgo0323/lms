@@ -10,18 +10,14 @@ header {
         }
 
         &__inner {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;            
+            @include display-flex;
             justify-content: space-between;
             align-items: center;
             padding: 32px 6.25vw 26px; // 32px 120px 26px;
         }
 
         &__content {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             justify-content: space-between;
             align-items: center;
         }
@@ -183,9 +179,7 @@ header {
         }
 
         &__list {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             align-items: center;
             padding: 0 6.25vw; // 0 120px;
         }

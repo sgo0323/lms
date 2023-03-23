@@ -2,9 +2,7 @@
 
 .change-course {
     &__header {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         justify-content: space-between;
         align-items: center;
     }
@@ -76,17 +74,13 @@
         }
 
         &__title {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             justify-content: space-between;
             align-items: center;
             padding: 12px 0 12px 16px;
 
             .level {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
+                @include display-flex;
                 align-items: center;
             }
 

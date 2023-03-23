@@ -28,7 +28,7 @@ $scrollbar_color : #D9D9D9;
         }
 
         &-track {
-            margin: 15px 0 15px;   
+            margin: 10px 0 10px;   
             //@include border-radius(10px);
             background: transparent;    
         }
@@ -49,9 +49,7 @@ $scrollbar_color : #D9D9D9;
 // Controls Pagenation
 .pagenation {
     &__list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         align-items: center;
     }
 
@@ -109,9 +107,7 @@ $scrollbar_color : #D9D9D9;
 // Controls date
 .date {
     &__list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         justify-content: space-between;
         align-items: center;
     }
@@ -180,9 +176,7 @@ $scrollbar_color : #D9D9D9;
     }
 
     &__select {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         justify-content: space-between;
         align-items: center;
         height: 48px;
@@ -533,22 +527,11 @@ table, thead, tbody, tr, th, td {
     // th & td
     > :not(caption) > * > * {
         padding: $table-cell-padding-y $table-cell-padding-x;
-        font-size: $font_size_base;
         color: $color_gray_900;        
         text-align: center;
         line-height: 1.5;
         word-break: keep-all;
         vertical-align: middle;
-
-        /*
-        &:first-of-type {
-            text-align: left;
-        }
-
-        &:last-of-type {
-            text-align: right;
-        }
-        */
     }
 
     > :not(caption) > tr {
@@ -557,21 +540,9 @@ table, thead, tbody, tr, th, td {
 
     > :not(caption) > * > th {
         position: relative;
-        padding: ceil(($font_size_base * 1.68)) $table-cell-padding-x ceil(($font_size_base * 1.25)); // 27px 34px 20px
+        padding: ceil(($font_size_base * 1.5)) $table-cell-padding-x; // 24px 12px
         background: $color_white;
         color: $color_gray_700;
-        
-        /*
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: $color_gray_400;
-        }
-        */
     }
 
     &-header {
@@ -579,14 +550,7 @@ table, thead, tbody, tr, th, td {
             thead {
                 position: sticky; 
                 top: 0;
-                /*
-                tr {
-                    th {
-                        position: sticky; 
-                        top: 0;
-                    }
-                }
-                */
+                z-index: 1;
             }
         }
     }
@@ -595,11 +559,14 @@ table, thead, tbody, tr, th, td {
         overflow-y: auto;
         position: relative;
         width: 100%;
-        //padding: 0 ceil(($font_size_base * 1.43)) ceil(($font_size_base * 1.43)); // 0 23px 23px
-        padding: 0 ceil(($font_size_base * 1.43)); // 0 23px 23px
+        padding: 0 ceil(($font_size_base * 1.43)); // 0 23px 
         border: 1px solid $color_gray_300;
-        @include border-radius(16px);
-        background: $color_white;        
+        @include border-radius(8px);
+        background: $color_white;
+
+        &::-webkit-scrollbar-track {
+            margin: 72px 0 15px;
+        }
 
         // 데이터 없음
         .error {
@@ -624,6 +591,29 @@ table, thead, tbody, tr, th, td {
     }
 
     &--line {
+        &.table-header--sticky {
+            > :not(caption) > * > th {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background: $color_gray_400;
+                }
+            }
+        }
+
+        > :not(caption) > tr {
+            &:last-of-type {
+                // th & td
+                > * {
+                    border-bottom: 0;
+                }
+            }
+        }
+        
         // th & td
         > :not(caption) > * > * {
             border-bottom: 1px solid $color_gray_400;
@@ -713,9 +703,7 @@ table, thead, tbody, tr, th, td {
 // tab
 .tab {
     &__nav {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
     }
 
     &__content {
@@ -756,7 +744,17 @@ table, thead, tbody, tr, th, td {
     &--red {
         color: $color_negative;
     }
-}    
+}
+
+.required {
+    &__txt {
+        font-weight: 500;
+        color: $color_negative;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+    }
+}
+
 // page
 .page {
     position: relative;
@@ -768,11 +766,9 @@ table, thead, tbody, tr, th, td {
 
     .filter {
         &__content {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: center;
             margin-bottom: 12px;
 
             /*
@@ -784,7 +780,7 @@ table, thead, tbody, tr, th, td {
 
         &__txt {
             flex: 0 0 auto;
-            margin: 0 32px 6px 0;
+            margin-right: 32px;
             font-size: $font_size_large;
             font-weight: 500;
             color: $color_dark;
@@ -799,9 +795,7 @@ table, thead, tbody, tr, th, td {
     margin-bottom: 25px;
 
     &__content{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         align-items: baseline;
     }
 
@@ -813,9 +807,7 @@ table, thead, tbody, tr, th, td {
     }
 
     &__list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         margin-left: 20px;
     }
 
@@ -826,9 +818,9 @@ table, thead, tbody, tr, th, td {
         color: $color_gray_600;
         line-height: ceil(($font_size_large * 1.44));
 
-        &:first-of-type {
-            color: $color_gray_900;
-        }
+        // &:first-of-type {
+        //     color: $color_gray_900;
+        // }
 
         &:nth-of-type(n+2) {
             margin-left: 4px;
@@ -895,9 +887,7 @@ table, thead, tbody, tr, th, td {
     }
 
     &__list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @include display-flex;
         justify-content: center;
         align-items: center;
         margin-top: 79px;
@@ -964,22 +954,19 @@ table, thead, tbody, tr, th, td {
 // 데이터 테이블 공통
 .data {
     &__search {
-        width: 338px;
+        position: relative;
+        width: 339px;
     }
     
     &-table {
         &__header {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             justify-content: space-between;
             align-items: flex-start;
         }
 
         &__filter {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             justify-content: space-between;
             align-items: flex-start;
 
@@ -998,9 +985,11 @@ table, thead, tbody, tr, th, td {
 
         .table {
             // th & td
+            /*
             > :not(caption) > * > * {
                 padding: 19px 34px;
             }
+            */
 
             &__box {
                 min-height: 576px;
@@ -1090,9 +1079,7 @@ table, thead, tbody, tr, th, td {
 
     .radio {
         &__content {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+            @include display-flex;
             margin-left: 28px;
         }
 
@@ -1116,42 +1103,8 @@ table, thead, tbody, tr, th, td {
 .search {
     &-result {    
         .table {
-            // th & td
-            /*
-            > :not(caption) > * > * {
-                &:first-of-type, &:last-of-type {
-                    text-align: center;
-                }
-            }
-            */
-
-            > :not(caption) > * > th {
-                //padding: 29px 8px 19px;
-                padding: 24px 12px;
-
-                /*
-                &:first-of-type {
-                    padding: 29px 8px 19px 35px;
-                } 
-                
-                &:last-of-type {
-                    padding: 29px 35px 19px 8px;
-                }
-                */
-            }
-
             > :not(caption) > * > td {
                 padding: 11px 12px;
-                
-                /*
-                &:first-of-type {
-                    padding: 11px 8px 11px 35px;
-                } 
-                
-                &:last-of-type {
-                    padding: 11px 35px 11px 8px;
-                }
-                */
             }
 
             &__box {
