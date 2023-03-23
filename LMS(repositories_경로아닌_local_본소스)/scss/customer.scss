@@ -358,13 +358,15 @@
                     }
                 }
             }
-        }
-
-        &__title {
-            font-size: $font_size_h4;
-            font-weight: 500;
-            color: $color_gray_700;
-            line-height: 1.45;
+            
+            .enquiry {
+                &__title {
+                    font-size: $font_size_h4;
+                    font-weight: 500;
+                    color: $color_gray_700;
+                    line-height: 1.45;
+                }
+            }
         }
     }
 
