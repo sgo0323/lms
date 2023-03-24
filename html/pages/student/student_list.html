@@ -51,54 +51,58 @@
                 <form action="" method="">
                     <div class="input__field">
                         <p class="input__title">기간</p>
-                        <p class="input__box">
-                            <input type="date" id="date" class="input input--date" data-placeholder="2023.01.22" required aria-required="true">
-                        </p>
-                        <p class="duration">~</p>
-                        <p class="input__box">
-                            <input type="date" id="date" class="input input--date" data-placeholder="2023.01.22" required aria-required="true">
-                        </p>                        
-                        <div class="radio__content">
-                            <p class="radio__box">
-                                <input type="radio" id="today" name="radio" value="오늘" class="radio__input" checked>
-                                <label for="today" class="radio__label">오늘</label>
+                        <div class="input__content">
+                            <p class="input__box">
+                                <input type="date" id="date" class="input input--date" data-placeholder="2023.01.22" required aria-required="true">
                             </p>
-                            <p class="radio__box">
-                                <input type="radio" id="7day" name="radio" value="7일간" class="radio__input">
-                                <label for="7day" class="radio__label">7일간</label>
-                            </p>
-                            <p class="radio__box">
-                                <input type="radio" id="1month" name="radio" value="1개월" class="radio__input">
-                                <label for="1month" class="radio__label">1개월</label>
-                            </p>
-                            <p class="radio__box">
-                                <input type="radio" id="6month" name="radio" value="6개월" class="radio__input">
-                                <label for="6month" class="radio__label">6개월</label>
-                            </p>
-                            <p class="radio__box">
-                                <input type="radio" id="duration" name="radio" value="기간 선택" class="radio__input">
-                                <label for="duration" class="radio__label">기간 선택</label>
-                            </p>
-                            <p class="radio__box">
-                                <input type="radio" id="duration2" name="radio" value="기간 선택 없음" class="radio__input">
-                                <label for="duration2" class="radio__label">기간 선택 없음</label>
-                            </p>
+                            <p class="duration">~</p>
+                            <p class="input__box">
+                                <input type="date" id="date" class="input input--date" data-placeholder="2023.01.22" required aria-required="true">
+                            </p>                        
+                            <div class="radio__content">
+                                <p class="radio__box">
+                                    <input type="radio" id="today" name="radio" value="오늘" class="radio__input" checked>
+                                    <label for="today" class="radio__label">오늘</label>
+                                </p>
+                                <p class="radio__box">
+                                    <input type="radio" id="7day" name="radio" value="7일간" class="radio__input">
+                                    <label for="7day" class="radio__label">7일간</label>
+                                </p>
+                                <p class="radio__box">
+                                    <input type="radio" id="1month" name="radio" value="1개월" class="radio__input">
+                                    <label for="1month" class="radio__label">1개월</label>
+                                </p>
+                                <p class="radio__box">
+                                    <input type="radio" id="6month" name="radio" value="6개월" class="radio__input">
+                                    <label for="6month" class="radio__label">6개월</label>
+                                </p>
+                                <p class="radio__box">
+                                    <input type="radio" id="duration" name="radio" value="기간 선택" class="radio__input">
+                                    <label for="duration" class="radio__label">기간 선택</label>
+                                </p>
+                                <p class="radio__box">
+                                    <input type="radio" id="duration2" name="radio" value="기간 선택 없음" class="radio__input">
+                                    <label for="duration2" class="radio__label">기간 선택 없음</label>
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="input__field">
                         <p class="input__title">분류 및 상태</p>
-                        <select name="sort" class="select">
-                            <option value="전체" selected>전체</option>
-                            <option value="정회원(학습)">정회원(학습)</option>
-                            <option value="체험회원">체험회원</option>
-                        </select>
-                        <select name="state" class="select select--disabled">
-                            <option value="전체" selected>전체</option>
-                            <option value="학습">학습</option>
-                            <option value="학습중단">학습중단</option>
-                            <option value="휴면">휴면</option>
-                            <option value="퇴회">퇴회</option>
-                        </select>
+                        <p class="input__content">
+                            <select name="sort" class="select">
+                                <option value="전체" selected>전체</option>
+                                <option value="정회원(학습)">정회원(학습)</option>
+                                <option value="체험회원">체험회원</option>
+                            </select>
+                            <select name="state" class="select select--disabled">
+                                <option value="전체" selected>전체</option>
+                                <option value="학습">학습</option>
+                                <option value="학습중단">학습중단</option>
+                                <option value="휴면">휴면</option>
+                                <option value="퇴회">퇴회</option>
+                            </select>
+                        </p>
                     </div>
                     <p class="input__field">
                         <label for="grade" class="input__title">학년</label>
@@ -120,12 +124,12 @@
                     </p>
                     <div class="input__field">
                         <p class="input__title">검색</p>
-                        <select name="search" class="select">
-                            <option value="전체" selected>전체</option>
-                            <option value="이름">이름</option>
-                            <option value="학교">학교</option>
-                        </select>
-                        <p class="input__box">
+                        <p class="input__content">
+                            <select name="search" class="select">
+                                <option value="전체" selected>전체</option>
+                                <option value="이름">이름</option>
+                                <option value="학교">학교</option>
+                            </select>
                             <input type="search" class="input input--reset" placeholder="검색어를 입력해 주세요.">
                         </p>
                     </div>

@@ -96,7 +96,8 @@ header {
         }
     }
 
-    .shortcut {
+    @at-root .shortcut {
+        position: relative;
         margin-left: 32px;
 
         &__btn {
@@ -123,8 +124,10 @@ header {
             display: none;            
             overflow: auto;
             position: absolute;        
-            top: calc(32px + 56px + 36px); //header padding + icon height + icon padding
-            right: 206px;
+            //top: calc(32px + 56px + 36px); //header padding + icon height + icon padding
+            //right: 206px;
+            top: 65px;
+            right: -6.25vw;
             padding: 18px 40px;
             border: 1px solid $color_gray_500;
             @include border-radius(16px);
@@ -280,4 +283,48 @@ header {
     }
 }
 
+@include tablet_l {
+    .header {
+        &__inner {
+            padding: 32px 5% 26px;
+        }
+    }
 
+    .gnb {
+        &-sub {
+            &__list {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &__list {
+            padding: 0 5%;
+        }
+
+        &__item {
+            //padding: 0 20px;
+            margin: 0 10px;
+
+            // &:first-of-type {
+            //     padding-left: 20px;
+            //     margin-left: 10px;
+            // }
+
+            // &:last-of-type {
+            //     padding-right: 20px;
+            //     margin-right: 10px;
+            // }
+        }
+    }
+
+    .shortcut {
+        &__content {
+            right: -20px;
+        }
+    }
+}
+
+@include tablet_s {
+    
+}

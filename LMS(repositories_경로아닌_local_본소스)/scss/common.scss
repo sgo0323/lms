@@ -800,6 +800,7 @@ table, thead, tbody, tr, th, td {
     }
 
     &__title {
+        flex: 0 0 auto;
         font-size: $font_size_h1;
         font-weight: 700;
         color: $color_gray_900;
@@ -1049,16 +1050,30 @@ table, thead, tbody, tr, th, td {
             margin-right: 6px;
         }
 
+        &__content {
+            @include display-flex;
+            align-items: center;
+            width: 100%;
+
+            .select {
+                flex: 0 0 auto;
+
+                &+ .input {
+                    margin-left: 12px;
+                }
+            }
+        }
+
         &__box {
             .input {
                 &--date {
-                    width: 190px;
-                }
-
-                &--reset {
-                    width: 472px;
+                    max-width: 190px;
                 }
             }
+        }
+
+        &--reset {
+            max-width: 472px;
         }
     }
 
@@ -1128,11 +1143,23 @@ table, thead, tbody, tr, th, td {
     }
 }
 
-
-
 @include pc_wide {
-    .page {        
+    .page {
         max-width: 1920px;
         margin: 0 auto;
+    }
+}
+
+@include tablet_l {
+    .page {
+        padding: 38px 5%;
+    }
+
+    .data {
+        &-table {
+            &__header {
+                flex-wrap: wrap;
+            }
+        }
     }
 }
