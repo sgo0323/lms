@@ -1122,6 +1122,15 @@ $button_text : $color_white;
     }
 }
 
+@include tablet_l {
+    .btn {
+        &--btm {
+            min-width: 160px;
+        }
+    }
+}
+
+/*
 @include mobile {
     .btn {
         line-height: 1.25;
@@ -1130,3 +1139,4 @@ $button_text : $color_white;
         @include border-radius(2px);
     }
 }
+*/

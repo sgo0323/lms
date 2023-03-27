@@ -47,6 +47,7 @@ header {
             max-width: none;            
         }
         &__select {
+            overflow: hidden;
             height: 56px;
             padding: 15px 23px;
             border: 1px solid $color_gray_500;

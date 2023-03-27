@@ -684,22 +684,6 @@ table, thead, tbody, tr, th, td {
     }
 }
 
-@include tablet_s {
-    .table__scroll {        
-        .table {
-            min-width: 800px;
-        }
-    }
-}
-
-@include mobile_l {
-    .table__scroll {        
-        .table {
-            min-width: 600px;
-        }
-    }
-}
-
 // tab
 .tab {
     &__nav {
@@ -1057,23 +1041,21 @@ table, thead, tbody, tr, th, td {
 
             .select {
                 flex: 0 0 auto;
-
-                &+ .input {
-                    margin-left: 12px;
-                }
             }
         }
 
         &__box {
             .input {
                 &--date {
-                    max-width: 190px;
+                    width: 190px;
                 }
             }
         }
 
         &--reset {
+            width: calc(100% - 190px);
             max-width: 472px;
+            margin-left: 12px;
         }
     }
 
@@ -1095,7 +1077,20 @@ table, thead, tbody, tr, th, td {
     .radio {
         &__content {
             @include display-flex;
+            flex-wrap: wrap;
+            align-items: center;
+            min-height: 48px;
             margin-left: 28px;
+        }
+
+        &__box {
+            &:last-of-type {
+                .radio {
+                    &__label {
+                        margin-right: 0;
+                    }
+                }
+            }
         }
 
         &__label {
@@ -1150,6 +1145,31 @@ table, thead, tbody, tr, th, td {
     }
 }
 
+@include pc_full {
+    .component {
+        .input {
+            &__content {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@include pc_size_l {
+    .component {
+        .radio {
+            &__content {
+                min-height: auto;
+                margin-left: 0;
+            }
+
+            &__box {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
 @include tablet_l {
     .page {
         padding: 38px 5%;
@@ -1160,6 +1180,36 @@ table, thead, tbody, tr, th, td {
             &__header {
                 flex-wrap: wrap;
             }
+
+            .btn {
+                &:nth-of-type(n+2) {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    .search {
+        &-result {
+            .table {
+
+            }
+        }
+    }
+}
+
+@include tablet_s {
+    .table__scroll {        
+        .table {
+            min-width: 800px;
+        }
+    }
+}
+
+@include mobile_l {
+    .table__scroll {        
+        .table {
+            min-width: 600px;
         }
     }
 }
