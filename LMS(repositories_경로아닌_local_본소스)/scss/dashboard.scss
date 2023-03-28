@@ -19,7 +19,7 @@ body {
         justify-content: space-between;
         align-items: baseline;
         margin-bottom: 7px;
-        padding: 0 16px;
+        // /padding: 0 16px;
     }
 
     &__title {
@@ -87,12 +87,12 @@ body {
         }
 
         &-dashboard {
-            width: calc((100% - 88px)/ 3);
+            width: calc((100% - 3.95vw)/ 3);
+            max-width: 498px;
 
             .table {
                 &__box {
-                    height: 559px;
-                    padding: 0 23px;
+                    height: 558px;
                 }
             }
         }
@@ -107,7 +107,7 @@ body {
             margin-top: 63px;
 
             .panel {
-                width: calc((100% - 104px)/ 3);
+                width: calc((100% - 3.63vw)/ 3);
                 padding: 22px 16px 27px;
                 @include border-radius(16px);
             }
@@ -121,6 +121,7 @@ body {
             color: $color_gray_800;
             text-align: center;
             line-height: ceil(($font_size_h2 * 1.45));
+            word-break: keep-all;
         }
 
         &__link {
@@ -160,10 +161,11 @@ body {
         &__btn {
             position: relative;
             width: 100%;
-            padding: 22px 40px 20px 22px;
+            padding: 22px 36px 20px 22px;
             font-weight: 500;
             text-align: left;
             line-height: ceil(($font_size_base * 1.43));
+            word-break: keep-all;
 
             &:hover {
                 background: $color_gray_300;
@@ -173,7 +175,7 @@ body {
                 content: '';
                 position: absolute;
                 top: 50%;
-                right: 16px;
+                right: 12px;
                 width: 24px;
                 height: 24px;
                 background: url('/assets/images/ico_chevron_next.svg') no-repeat center/ contain;
@@ -197,6 +199,7 @@ body {
             }
 
             .attainment {
+                justify-content: normal;
                 width: 39%;
                 max-width: 614px;
             }
@@ -206,13 +209,13 @@ body {
             @include display-flex;
             justify-content: space-between;
             align-items: flex-end;
-            padding: 24px 32px 18px 32px;
+            padding: 24px 32px 18px;
             border-bottom: 1px solid $color_gray_400;
         }
 
         &__content {
             @include display-flex;
-            justify-content: space-between;
+            //justify-content: space-between;
             padding: 34px 32px;
         }
 
@@ -266,7 +269,7 @@ body {
                 padding: 16px 12px;
                 font-weight: 500;
                 color: $color_gray_800;
-                text-align: left;
+                //text-align: left;
                 line-height: 1.5;
 
                 &:first-of-type {
@@ -282,11 +285,13 @@ body {
 
     @at-root .attainment {
         @include display-flex;
+        flex: 0 0 auto;
         flex-direction: column;
         justify-content: space-between;
-        width: 36%;
+        width: 35%;
         max-width: 554px;
         padding: 32px 42px 12px;
+        margin-left: 32px;
         @include border-radius(16px);
 
         &__content {
@@ -312,7 +317,7 @@ body {
 
         &__link {
             display: inline-block;
-            margin-left: 11px;
+            margin-left: 10px;
             font-size: $font_size_base;
             font-weight: 700;
             color: $color_positive;
@@ -321,7 +326,8 @@ body {
 
         &__modal {
             position: absolute;
-            right: calc(6.25vw + 70px);
+            //right: calc(6.25vw + 70px);
+            right: 6.25vw;
             bottom: 2vh;
             width: 370px;
 
@@ -346,6 +352,7 @@ body {
         &__table {
             overflow-y: auto;
             max-height: 340px;
+            margin-top: 27px;
             //padding: 0 10px;
 
             .table {
@@ -403,4 +410,244 @@ body {
             }
         }
     }
+}
+
+@include pc_size_l {
+    .dashboard {
+        &__header {
+            flex-wrap: wrap;
+        }
+    }
+
+    .ranking {
+        .table {
+            > :not(caption) > * > th {
+                padding: 11px 8px;
+            }
+
+            > :not(caption) > * > td {
+                padding: 16px 8px;
+
+                &:first-of-type {
+                    padding: 16px 8px;
+                }
+            }
+        }
+    }
+
+    .attainment {
+        &__table {
+            .table {
+                > :not(caption) > tr {
+                    &:first-of-type {
+                        td {
+                            padding: 16px 8px 21px;
+                        }
+                    }
+                    &:nth-of-type(n+2) {
+                        th {
+                            padding: 2px 8px 9px;
+                        }
+                    }
+                }
+
+                > :not(caption) > * > th {
+                    padding: 12px 8px;
+
+                    &[colspan="3"] {
+                        padding: 12px 8px 0;
+                    }
+                }
+
+                > :not(caption) > * > td {
+                    padding: 21px 8px;
+                }
+            }
+        }
+    }
+}
+
+@include pc_size_s {
+    .dashboard {
+        .management {
+            &-dashboard {
+                width: calc((100% - 3.95vw)/ 2);
+
+                &:nth-of-type(n+3) {
+                    margin-top: 2.5vw;
+                }
+
+                .table {
+                    &__box {
+                        height: 330px;
+                    }
+                }
+            }
+
+            &__content {
+                flex-wrap: wrap;
+            }
+        }
+
+        .learning {
+            &-management {
+                .learning {
+                    &__content {
+                        flex-wrap: wrap;
+                    }
+                }
+
+                .ranking {
+                    width: 100%;
+                }
+
+                .attainment {
+                    width: 100%;
+                    max-width: inherit;
+                    margin-top: 2.5vw;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@include tablet_l {
+    .dashboard {
+        .management {
+            padding: 44px 3% 36px;
+
+            &-dashboard {
+                width: calc((100% - 3%)/ 2);
+
+                &:nth-of-type(n+3) {
+                    margin-top: 3%;
+                }
+            }
+        }
+
+        .learning {
+            &__header {
+                padding: 24px 2.5% 18px;
+            }
+
+            &__content {
+                flex-wrap: wrap;
+                padding: 34px 2.5%;
+            }
+        }
+    }
+
+    .ranking {
+        width: calc(65% - 22px);
+        padding: 30px 3% 18px;
+
+        .table {
+            > :not(caption) > * > th {
+                font-size: $font_size_base;
+            }
+
+            > :not(caption) > * > td {
+                font-size: $font_size_small;
+
+                &:first-of-type {
+                    font-size: $font_size_base;
+                }
+            }
+        }
+    }
+
+    .attainment {
+        margin-left: 2.5%;
+        padding: 32px 3% 12px;
+
+        &__list {
+            margin-left: 10px;
+        }
+
+        &__item {
+            //font-size: $font_size_base;
+
+            &:nth-of-type(n+2) {
+                margin-top: 40px;
+            }
+        }
+
+        &__link {
+            margin-left: 0;
+            //font-size: $font_size_small;
+        }
+        
+        &__modal {
+            right: 5%;
+        }
+    }
+}
+
+@include tablet_s {
+    .dashboard {
+        &-date {
+            font-size: $font_size_caption2;
+        }
+
+        &__title {
+            font-size: $font_size_large;
+        }
+
+        .management {
+            &-date {
+                font-size: 30px;
+            }
+
+            &__title {
+                font-size: $font_size_large;
+            }
+            
+
+            &__link {
+                .more {
+                    font-size: $font_size_base;
+                }
+            }
+
+            &__btn {
+                padding: 22px 34px 20px 12px;
+                font-size: $font_size_small;
+            }
+        }
+    }
+
+    .ranking {
+        width: 100%;
+    }
+
+    .attainment {
+        width: 100%;
+        max-width: inherit;
+        margin-top: 2.5vw;
+        margin-left: 0;
+
+        &__content {
+            margin-top: 27px;
+        }
+
+        &__item {
+            &:nth-of-type(n+2) {
+                margin-top: 61px;
+            }
+        }
+
+        &__table {
+            .table {
+                > :not(caption) > * > th {
+                    font-size: 15px;
+                }
+
+                > :not(caption) > * > td {
+                    font-size: $font_size_base;
+                }
+            }
+        }
+    }
+    
 }

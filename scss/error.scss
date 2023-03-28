@@ -6,8 +6,9 @@
     &__content {
         position: absolute;
         top: 50%;
-        left: 50%;
-        @include transform(translate(-50%, -50%));
+        left: 0;
+        width: 100%;
+        @include transform(translateY(-50%));
     }
 
     &__title {
@@ -23,6 +24,7 @@
     &__txt {
         font-size: $font_size_h3;
         color: $color_gray_700;
+        text-align: center;
         line-height: 1.5;
     }
 }

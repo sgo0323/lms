@@ -28,7 +28,7 @@
                 align-items: center;
                 position: absolute;
                 bottom: 0;
-                left: 126px;
+                left: 6.56vw;
             }
 
             &__item {
@@ -60,7 +60,8 @@
 
         .date {
             &__list {
-                width: 344px;
+                width: 30%;
+                max-width: 344px;
                 margin: 0 auto;
             }
         }
@@ -97,13 +98,14 @@
             // th & td
             > :not(caption) > * > * {
                 display: inline-block;
-                width: 160px;
+                width: calc((100% - 6.25vw)/ 7);
+                max-width: 160px;
                 padding: 0;
                 text-align: left;
                 vertical-align: top;
 
                 &:first-of-type {
-                    margin-left: 120px;
+                    margin-left: 6.25vw;
                 }        
 
                 &:last-of-type {
@@ -133,5 +135,64 @@
         position: relative;
         margin-bottom: 14px;
         padding-top: 48px;
+    }
+}
+
+@include pc_size_s {
+    .schedule {
+        &-calendar {
+            .subject {
+                &__list {
+                    left: 4vw;
+                }
+            }
+
+            .table {
+                > :not(caption) > * > * {
+                    width: calc((100% - 3.5vw)/ 7);
+
+                    &:first-of-type {
+                        margin-left: 3.5vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet_s {
+    .schedule {
+        &-calendar {
+            .subject {
+                &__item {
+                    font-size: $font_size_h4;
+                }
+            }
+
+            .calendar {
+                .day, .date {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .date {
+                    font-size: $font_size_large;
+                }
+            }
+
+            .table {
+                > :not(caption) > * > * {
+                    width: calc((100% - 2.5vw)/ 7);
+
+                    &:first-of-type {
+                        margin-left: 2.5vw;
+                    }
+                }
+                
+                > :not(caption) > * > td {
+                    min-height: 110px;
+                }
+            }
+        }
     }
 }

@@ -486,7 +486,17 @@
     &:nth-of-type(n+2) {
         margin-left: 11px;
     }
+    
+    &__box {
+        @include display-flex;
+        align-items: center;
 
+        .duration {
+            & + .select {
+                margin-left: 12px;
+            }
+        }
+    }
 
     option {
         overflow-y:scroll;
@@ -1122,10 +1132,10 @@ $button_text : $color_white;
     }
 }
 
-@include tablet_l {
+@include tablet_s {
     .btn {
         &--btm {
-            min-width: 160px;
+            min-width: 156px;
         }
     }
 }

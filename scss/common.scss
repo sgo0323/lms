@@ -1061,7 +1061,8 @@ table, thead, tbody, tr, th, td {
 
     .btn {
         &--primary {
-            min-width: 433px;
+            width: 70%;
+            max-width: 433px;
             margin-left: 13px;
         }
     }
@@ -1170,6 +1171,44 @@ table, thead, tbody, tr, th, td {
     }
 }
 
+@include pc_size_s {
+    .chip {
+        padding: 5.5px 8px 4.5px;
+
+        &--small {
+            padding: 4px 3px 3px;
+        }
+    }
+    
+    .table {
+        // th & td
+        > :not(caption) > * > * {
+            padding: 19px 8px;
+        }
+
+        > :not(caption) > * > th {
+            padding: 24px 8px;
+        }
+    }
+
+    .search {
+        &-result {
+            .table {
+                > :not(caption) > * > td {
+                    padding: 11px 8px;
+                }
+
+                .btn {
+                    &--list {
+                        min-width: auto;
+                        padding: 7.5px 30px 6.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @include tablet_l {
     .page {
         padding: 38px 5%;
@@ -1183,33 +1222,60 @@ table, thead, tbody, tr, th, td {
 
             .btn {
                 &:nth-of-type(n+2) {
-                    margin-left: 5px;
+                    margin-left: 9px;
                 }
             }
         }
     }
 
-    .search {
-        &-result {
-            .table {
+    .component {
+        .select {
+            &__box {
+                margin-top: 10px;
 
+                .duration {
+                    margin-left: 0;
+                }
             }
         }
     }
 }
 
 @include tablet_s {
-    .table__scroll {        
-        .table {
-            min-width: 800px;
+    .chip {
+        font-size: $font_size_small;
+
+        &--small {
+            font-size: 12px;
         }
     }
-}
 
-@include mobile_l {
-    .table__scroll {        
-        .table {
-            min-width: 600px;
+    .table {
+        &__box {
+            padding: 0 12px;
+
+            .error {
+                font-size: $font_size_h4;
+            }
+        }
+
+        // th & td
+        > :not(caption) > * > * {
+            padding: 19px 5px;
+            font-size: $font_size_small;
+        }
+    }
+
+    .search {
+        &-result {
+            .table {
+                .btn {
+                    &--list {
+                        padding: 7.5px 15px 6.5px;
+                        font-size: $font_size_small;
+                    }
+                }
+            }
         }
     }
 }

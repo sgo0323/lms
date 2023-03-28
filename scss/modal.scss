@@ -553,6 +553,7 @@ $madal_font_size : $font_size_large;
             width: 36px;
             //height: 36px;
             @include border-radius(8px);
+            font-size: $font_size_base;
             line-height: 24px;
 
             /*
@@ -592,36 +593,6 @@ $madal_font_size : $font_size_large;
             > tr:hover {
                 background: none;
             }
-        }
-    }
-}
-
-@include tablet {
-    .modal__dialog {
-        width:84%;
-        max-width:500px;
-    }
-}
-
-
-@include mobile {
-    .modal {
-        &__dialog {
-            width: 84%;
-            max-width:360px;
-            margin: 1rem auto;
-
-            &.centered {
-                min-height: calc(100% - 2rem);
-            }
-
-            &.scrollable {
-                height: calc(100% - 2rem);
-            }
-        }
-
-        &__content.mini {
-            max-width:280px;
         }
     }
 }

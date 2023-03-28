@@ -1,10 +1,17 @@
 @import '_global';
 
 header {
-    background: $color_white;
+    height: 195px;
 
     @at-root .header {
         &__area {
+            position: fixed;
+            width: 100%;
+            background: $color_white;
+            z-index: 10;
+        }
+
+        &__wrap {
             width: 100%;
             border-bottom: 1px solid $color_gray_400;
         }
@@ -75,7 +82,7 @@ header {
             background: $color_white;       
 
             &::-webkit-scrollbar-track {
-                margin: 6px 7px 25px 0;
+                margin: 15px 7px 25px 0;
             }
 
             &--on {
