@@ -1,0 +1,363 @@
+@import '_global';
+
+// Print common
+.print {
+    background: $color_white;
+    color: $color_black;
+
+    &-btn {
+        &__box {
+            height: 7.26vw;
+            min-height: 50px;
+        }
+    }
+
+    &__inner {
+        padding: 0 4.84vw;
+    }
+    
+    &__btn {
+        width: 2.90vw;
+        min-width: 30px;
+        height: 2.90vw;
+        min-height: 30px;
+    }
+
+    &__header {
+        @include display-flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__body {
+        margin-top: 1.61vw;
+    }
+
+    &__section {
+        &:first-of-type {
+            margin-top: 2.42vw;
+        }
+
+        &:last-of-type {
+            margin-bottom: 5.44vw;
+        }
+    }
+
+    &__content {
+        padding: 0 3.23vw;
+        margin-top: 2.42vw;
+    }
+
+    &__title {
+        font-size: 2.02vw;
+        font-weight: 700;
+        line-height: 1.76;
+    }
+
+    &__info {
+        @include display-flex;
+        align-items: center;
+
+        .date, .code {
+            font-size: 1.37vw;
+            font-weight: 500;
+            line-height: 1.69vw;
+        }
+
+        .date {
+            position: relative;
+            padding-left: 2.7vw;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 2.1vw;
+                height: 2.1vw;
+                background: url('/assets/images/ico_calender_black.svg') no-repeat center/ contain;
+                @include transform(translateY(-50%));
+            }
+        }
+
+        .code {
+            margin-left: 1.61vw;
+        }
+    }
+
+    &--top {
+        padding: 2.42vw;
+        @include border-radius(0.65vw);
+        background: $color_gray_400;
+
+        .title {
+            margin-top: 0.97vw;
+            font-size: 2.42vw;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .txt {
+            font-size: 1.37vw;
+            font-weight: 500;
+        }
+
+        .level {
+            color: $color_primary;
+        }
+    }
+
+    main {
+        width: 100%;
+        max-width: 2480px;
+        margin: 0 auto;
+    }
+
+    .required {
+        color: $color_primary;
+    }
+
+    .content {
+        &__header {
+            @include display-flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & + .content{
+                &__body {
+                    .detail {
+                        &__txt {
+                            margin-top: 0.65vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__title {
+            font-size: 1.85vw;
+            font-weight: 700;
+            line-height: 2.90vw;
+        }
+    }
+
+    .detail {
+        &__section {
+            margin-top: 2.02vw;
+
+            &:first-of-type {
+                margin-top: 1.29vw;
+            }
+        }
+
+        &__title {
+            position: relative;
+            padding-left: 1.37vw;
+            font-size: 1.69vw;
+            font-weight: 700;
+            line-height: 2.66vw;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 0.56vw;
+                height: 0.56vw;
+                @include border-radius(100%);
+                background: $color_gray_900;
+                @include transform(translateY(-50%));
+            }
+
+            & + .detail {
+                &__txt {
+                    margin-top: 0.32vw;
+                }
+
+                &__table {
+                    margin-top: 0.97vw;
+                }
+            }
+        }
+
+        &__txt {
+            font-size: 1.53vw;
+            line-height: 2.74vw;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        &__graph {
+            @include display-flex;
+            justify-content: space-between;
+            margin-top: 0.97vw;
+
+            & + .reference {
+                margin-top: 0.97vw;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__table {
+            width: 100%;
+            vertical-align: middle;
+
+            th {
+                padding: 0.65vw 0.48vw;
+                border-top: 1px solid $color_black;
+                border-bottom: 1px solid $color_black;
+                background: $color_gray_400;
+                font-size: 1.37vw;
+                font-weight: 500;
+                text-align: center;
+                line-height: 2.1vw;
+            }
+
+            td {
+                padding: 0.65vw 0.60vw;
+                border-bottom: 1px solid $color_black;
+                font-size: 1.45vw;
+                text-align: center;
+                line-height: 2.26vw;
+            }
+
+            .subject {
+                display: block;
+                margin-bottom: 0.16vw;
+                font-size: 1.29vw;
+                line-height: 2.10vw;
+            }
+
+            .txt {
+                &--left {
+                    text-align: left;
+                }
+            }
+
+            .over-time {
+                color: $color_negative;
+            }
+
+            .correct, .wrong {
+                display: inline-block;
+                width: 2.26vw;
+                height: 2.26vw;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                text-indent: -9999rem;
+            }
+
+            .correct {
+                background-image: url('/assets/images/ico_correct.svg');
+            }
+
+            .wrong {
+                background-image: url('/assets/images/ico_wrong.svg');
+            }
+        }
+    }
+
+    .reference {
+        @include display-flex;
+        @include border-radius(0.65vw);
+        padding: 1.29vw 1.61vw;
+        background: $color_gray_400;
+
+        &__title {
+            flex: 0 0 auto;
+            margin-right: 1.29vw;
+            font-size: 1.29vw;
+            font-weight: 700;
+            line-height: 2.10vw;
+        }
+
+        &__txt {
+            font-size: 1.29vw;
+            line-height: 2.10vw;
+        }
+    }
+
+    .graph {
+        &__content {
+            width: calc((100% - 1.61vw)/ 2);
+        }
+
+        &__title {
+            padding: 0.65vw;
+            @include border-radius(0.65vw);
+            background: $color_gray_400;
+            font-size: 1.53vw;
+            font-weight: 700;
+            text-align: center;
+            line-height: 2.74vw;
+        }
+    }
+}
+
+
+/* Print Media Query */
+@page {
+    size: auto;
+    // size: 210mm 297mm; /*A4*/
+    margin: 0;
+}
+
+@media print {
+	* {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact; // 크롬 배경화면 프린트
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        page-break-after: avoid;
+        page-break-before: avoid;        
+    }
+
+    body, main {
+        margin-top: -1px;
+    }
+
+    body{
+        overflow: hidden;
+        position: relative;
+        width: 210mm;
+        height: 297mm; /*서브픽셀 해결1 사용시*/
+        height: calc(297mm - 1px); /*서브픽셀 해결2 - IE는 미지원*/
+        margin: auto auto; /* margin: auto auto; 로 자동 여백 설정도 가능 */
+       
+    } 
+    
+    .print {
+        &-btn {
+            &__area {
+                display: none;
+            }
+        }
+
+        section {
+            height: 0; 
+            margin: 0; 
+            border: 0; 
+            page-break-before: always;
+
+            &:first-of-type {
+                page-break-before: auto;
+                page-break-inside: avoid;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}

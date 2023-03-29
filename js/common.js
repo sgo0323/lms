@@ -51,7 +51,7 @@ function inputBtn() {
     });
 }
 
-// dashboard/index.html 클래스 독해 성취율 popup
+// dashboard/index.html 클래스 독해력 분포 popup
 function attainmentModal() {
     $('.attainment__link').click(function() {
         $('.attainment__modal').show().addClass('modal--fade');
@@ -96,7 +96,7 @@ $(function() {
         // input field button 활성
        inputBtn();
 
-       // dashboard/index.html 클래스 독해 성취율 popup
+       // dashboard/index.html 클래스 독해력 분포 popup
        attainmentModal();
 
        // textarea length

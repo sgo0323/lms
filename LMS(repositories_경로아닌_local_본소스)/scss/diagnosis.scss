@@ -32,10 +32,6 @@ $report_title_size    : 36px;
     &__btn {
         padding: 48px 0 72px;
         text-align: center;
-
-        .btn {
-            min-width: 396px;
-        }
     }
 
     .dashboard {
@@ -56,7 +52,7 @@ $report_title_size    : 36px;
             }
 
             .kread {
-                color: $color_neutral;
+                color: $color_primary;
             }
 
             .level {
@@ -200,7 +196,7 @@ $report_title_size    : 36px;
             }
         }
 
-        &__titel {
+        &__title {
             display: block;
             font-size: $font_size_h2;
             font-weight: 500;
@@ -217,16 +213,17 @@ $report_title_size    : 36px;
             font-weight: 700;
             color: $color_gray_900;
 
-            .score {
+            .score, .standard {
                 font-size: $dashboard_title_size;
-                color: $color_primary;
                 line-height: ceil(($dashboard_title_size * 1.43));
+            }
+
+            .score {
+                color: $color_primary;
             }
 
             .standard {
                 margin-right: 5px;
-                font-size: $dashboard_title_size;
-                line-height: ceil(($dashboard_title_size * 1.43));
 
                 &::before {
                     content: '/';
@@ -264,11 +261,6 @@ $report_title_size    : 36px;
             .detail__body {
                 margin-top: 34px;
             }
-        }
-
-        &-graph {
-            @include display-flex;
-            justify-content: space-between;
         }
 
         &-learning {
@@ -325,6 +317,11 @@ $report_title_size    : 36px;
             padding: 0 20px;
             font-size: $report_font_size;
             line-height: ceil(($report_font_size * 1.6));
+        }
+
+        &__graph {
+            @include display-flex;
+            justify-content: space-between;
         }
     }
 
@@ -460,7 +457,7 @@ $report_title_size    : 36px;
 
 .diagnosis {
     &-dashboard {
-        padding: 55px 0;
+        padding: 52px 0;
 
         img {
             width: 100%;
@@ -491,5 +488,113 @@ $report_title_size    : 36px;
     &-detail {
         margin-top: 32px;
         background: $color_white;
+    }
+}
+
+.print {
+    &-report {
+        .result {
+            &__list {
+                @include display-flex;
+                justify-content: space-between;
+                margin-top: 0.97vw;
+
+                & + .detail {
+                    &__txt {
+                        padding: 0 2.42vw;
+                        margin: 1.61vw 0;
+                    }
+                }
+            }
+
+            &__item {
+                @include display-flex;
+                justify-content: space-between;
+                align-items: center;
+                width: calc((100% - 1.61vw)/ 3);
+                padding: 1.61vw 2.42vw;
+                @include border-radius(0.65vw);
+                background: #E4E4FF;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            &__title {
+                font-size: 1.37vw;
+                font-weight: 500;
+                line-height: 1.94vw;
+            }
+
+            &__txt {
+                font-size: 1.61vw;
+                font-weight: 700;
+
+                .score, .standard {
+                    font-size: 2.26vw;
+                    line-height: 3.06vw;
+                }
+
+                .standard {
+                    margin-right: 5px;
+    
+                    &::before {
+                        content: '/';
+                    }
+                }
+            }
+        }
+    }
+
+    .kread {
+        &-data {
+            @include display-flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 15%;
+            max-width: 296px;
+            padding: 0.97vw 1.45vw;
+            @include border-radius(100px);
+            background: $color_primary;
+
+            img {
+                width: 52%;
+                max-width: 116px;
+            }
+        }
+
+        &-number {
+            display: inline-block;
+            padding: 0.40vw 0.89vw 0.32vw 0.65vw;
+            @include border-radius(100%);
+            background: $color_white;
+            font-size: 1.13vw;
+            font-weight: 700;
+            color: $color_primary;
+            line-height: 1.21vw;
+        }
+    }
+
+    .learning {
+        &-data {
+            padding: 1.13vw 1.45vw;
+            @include border-radius(100px);
+            background: $color_primary;
+            font-size: 1.37vw;
+            font-weight: 700;
+            color: $color_white;
+            line-height: 1.94vw;
+        }
+    }
+
+    .detail {
+        &__table {
+            .txt {
+                &--left {
+                    font-weight: 500;
+                }
+            }
+        }
     }
 }

@@ -39,6 +39,11 @@
     <body>
         <header data-include="/lms/html/common/layouts/header.html"></header>
         <main class="report">
+            <section class="print-btn__area">
+                <div class="report__inner">
+                    <p class="print-btn__box"><a href="/lms/html/pages/report/diagnosis_print.html" class="print__btn">프린트</a></p>
+                </div>
+            </section>
             <section class="diagnosis-dashboard">
                 <div class="report__inner">
                     <div class="dashboard__title">
@@ -51,7 +56,7 @@
                         </p>
                     </div>
                     <div class="panel">
-                        <div class="dashboard-graph">
+                        <div class="dashboard__graph">
                             <!-- 그래프 넣어주세요. -->
                             <img src="http://placehold.it/313X249">
                         </div>
@@ -74,7 +79,7 @@
                     <h3 class="report__title">진단평가 결과</h3>
                     <ul class="result__list">
                         <li class="result__item reading">
-                            <span class="result__titel">
+                            <span class="result__title">
                                 독해력
                                 <button type="button" class="tip">팁</button>
                             </span>
@@ -83,13 +88,13 @@
                             </span>
                         </li>
                         <li class="result__item solve">
-                            <span class="result__titel">맞힌 문항수</span>
+                            <span class="result__title">맞힌 문항수</span>
                             <span class="result__txt">
                                 <span class="score">27</span><span class="standard">36</span>문항
                             </span>
                         </li>
                         <li class="result__item time">
-                            <span class="result__titel">소요 시간</span>
+                            <span class="result__title">소요 시간</span>
                             <span class="result__txt">
                                 <span class="score">68</span><span class="standard">60</span>분
                             </span>
@@ -119,7 +124,7 @@
                                 <span>(1)김제니</span> 학생의 <span class="txt--medium">KReaD 지수는 <span>(2)1350</span>으로, <span>(3)중학교 1학년 수준</span></span>의 글을 능숙하게 읽을 수 있는 정도입니다. <br>
                                 이는 <span class="txt--medium">동일 연령 평균 지수인 <span>(4)1320</span>에 비해 <span>(5)높은 편</span>입니다.</span> KReaD 역량을 키우려면 자신의 KReaD지수에 맞는 글만 골라 읽는 것보다는, KReaD 지수가 조금 낮거나  높은 수준에서 다양한 분야의 글을 골고루 접하는 것이 중요합니다.
                             </p>
-                            <div class="detail-graph">
+                            <div class="detail__graph">
                                 <!-- 그래프 넣어주세요. -->
                                 <img src="http://placehold.it/1540X225">
                             </div>
@@ -135,7 +140,7 @@
                                 <span class="txt--medium"><span>(1)김제니</span> 학생의 학습 출발점은 <span>(2)2레벨 1레슨</span>입니다.</span><br>
                                 <span>(3)다만 지문별 성취도의 격차를 줄이고, 부족한 문항 영역</span>을 트레이닝하기 위해 <span class="txt--medium"><span>(3-1)문학의 운문, 비문학의 과학 지문</span> <span>(3-2)12개 레슨</span>을 먼저학습하는 것을 추천합니다.</span> 추천 학습대로 학습 시 문제 풀이에 대한 자신감이 생기고, 지문별 실력 편차가 줄어들어 차후 균형 있는 학습이 가능해집니다.
                             </p>
-                            <div class="detail-graph">
+                            <div class="detail__graph">
                                 <!-- 그래프 넣어주세요. -->
                                 <img src="http://placehold.it/1540X396">
                             </div>
@@ -152,7 +157,7 @@
                                     문학에서는 (4)현대소설의 성취가 가장 뛰어났고, (5)현대시, 고전시가에서 성취가 가장 낮았습니다.<br>
                                     비문학에서는 (6)인문 영역의 성취가 가장 뛰어났으며, (7)과학 영역의 성취가 가장 낮았습니다.
                                 </p>
-                                <div class="detail-graph">
+                                <div class="detail__graph">
                                     <div class="graph__content">
                                         <p class="graph__title">문학</p>
                                         <div class="graph">
@@ -175,8 +180,7 @@
                                     <button type="button" class="tip">팁</button>
                                 </h4>
                                 <p class="detail__txt">(1)사실적독해, 감상적독해, 개념의 성취도가 낮게 나타났습니다.</p>
-                                <div class="detail-graph">
-                                    
+                                <div class="detail__graph">
                                     <!-- 그래프 넣어주세요. -->
                                     <img src="http://placehold.it/1540X597">
                                 </div>
@@ -184,8 +188,7 @@
                             <div class="detail__section">
                                 <h4 class="detail__title">질문 유형별 정답률</h4>
                                 <p class="detail__txt">(1)글 전체를 묻는 문항, 부정형 문항을 어려워한 것으로 나타났습니다.</p>
-                                <div class="detail-graph">
-                                    
+                                <div class="detail__graph">
                                     <!-- 그래프 넣어주세요. -->
                                     <img src="http://placehold.it/1540X597">
                                 </div>
@@ -654,7 +657,7 @@
                         </div>
                     </div>
                     <p class="report__btn">
-                        <button type="button" class="btn btn--large btn--black">진단평가 완료</button>
+                        <button type="button" class="btn btn--btm btn-outline" onclick="location.href='/lms/html/pages/report/customized.html'">목록</button>
                     </p>
                 </div>
             </section>

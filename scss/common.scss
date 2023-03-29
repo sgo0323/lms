@@ -1139,6 +1139,33 @@ table, thead, tbody, tr, th, td {
     }
 }
 
+// Print button common
+.print {
+    &-btn {
+        &__area {
+            background: $color_white;
+        }
+
+        &__box {
+            position: relative;
+            height: 80px;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 48px;
+        height: 48px;
+        background: url('/lms/assets/images/ico_print.svg') no-repeat center/ contain;
+        text-indent: -9999rem;
+        @include transform(translateY(-50%));
+    }
+}
+
+
+/* Media Query */
 @include pc_wide {
     .page {
         max-width: 1920px;
