@@ -393,6 +393,22 @@ $madal_font_size : $font_size_large;
             max-height: 320px;
             margin-top: 36px;
         }
+
+        tr {
+            &:hover {
+                background: $color_gray_500;
+            }
+        }
+
+        td {
+            a {
+                display: block;
+            }
+        }
+
+        .on {
+            background: $color_gray_500;
+        }
     }
 }
 

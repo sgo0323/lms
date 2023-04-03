@@ -732,6 +732,107 @@
     }
 }
 
+// 맞춤 분석 리포트
+.csat {
+    .print {
+        &__section {
+            margin-top: 3.23vw;
+        }
+    }
+    .result {
+        &__list {
+            @include display-flex;
+            justify-content: space-between;
+            margin-top: 0.97vw;
+
+            & + .detail {
+                &__txt {
+                    padding: 0 2.42vw;
+                    margin: 1.61vw 0;
+                }
+            }
+        }
+
+        &__item {
+            @include display-flex;
+            justify-content: space-between;
+            align-items: center;
+            width: calc((100% - 1.61vw)/ 3);
+            padding: 1.61vw 2.42vw;
+            @include border-radius(0.65vw);
+            background: #E4E4FF;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &__title {
+            font-size: 1.37vw;
+            font-weight: 500;
+            line-height: 1.94vw;
+        }
+
+        &__txt {
+            font-size: 1.61vw;
+            font-weight: 700;
+
+            .score, .standard {
+                font-size: 2.26vw;
+                line-height: 3.06vw;
+            }
+
+            .standard {
+                margin-right: 5px;
+
+                &::before {
+                    content: '/';
+                }
+            }
+        }
+    }
+
+    .detail {
+        &__table {
+            margin-top: 0.97vw;
+        }
+    }
+
+    .analysis {
+        &__table {
+            th {
+                &:nth-of-type(4) {
+                    width: 31%;
+                    max-width: 630px;
+                }
+            }
+
+            td {
+                &.content {
+                    padding: 0.65vw 1.61vw;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .item-analysis {
+        &__table {
+            th {
+                &:nth-of-type(3) {
+                    width: 22%;
+                    max-width: 450px;
+                }
+
+                &:nth-of-type(4) {
+                    width: 31%;
+                    max-width: 630px;
+                }
+            }
+        }
+    }
+}
+
 /* Print Media Query */
 @page {
     size: auto;
