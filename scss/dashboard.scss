@@ -75,7 +75,7 @@ body {
     }
 
 
-    .management {
+    @at-root .management {
         margin-top: 24px;
         padding: 44px 48px 36px;
 
@@ -469,38 +469,13 @@ body {
 
 @include pc_size_s {
     .dashboard {
-        .management {
-            &-dashboard {
-                width: calc((100% - 3.95vw)/ 2);
-
-                &:nth-of-type(n+3) {
-                    margin-top: 2.5vw;
-                }
-
-                .table {
-                    &__box {
-                        height: 330px;
-                    }
-                }
-            }
-
-            &__content {
-                flex-wrap: wrap;
-            }
-        }
-
         .learning {
             &-management {
-                .learning {
-                    &__content {
-                        flex-wrap: wrap;
-                    }
-                }
-
                 .ranking {
                     width: 100%;
+                    max-width: inherit;
                 }
-
+                
                 .attainment {
                     width: 100%;
                     max-width: inherit;
@@ -508,10 +483,120 @@ body {
                     margin-left: 0;
                 }
             }
+
+            &__content {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    .management {
+        &-dashboard {
+            width: calc((100% - 3.95vw)/ 2);
+
+            &:nth-of-type(n+3) {
+                margin-top: 2.5vw;
+            }
+
+            .table {
+                &__box {
+                    height: 330px;
+                }
+            }
+        }
+
+        &__content {
+            flex-wrap: wrap;
+
+            .panel {
+                width: calc((100% - 3.63vw)/ 2);
+
+                &:nth-of-type(n+3) {
+                    margin-top: 2.5vw;
+                }
+            }
+        }
+
+        &__list {
+            max-height: 260px;
+        }
+    }
+
+    .ranking {
+        width: 100%;
+        max-width: inherit;
+    }
+
+    .attainment {
+        width: 100%;
+        max-width: inherit;
+        margin-top: 2.5vw;
+        margin-left: 0;
+
+        &__content {
+            margin-top: 27px;
+        }
+
+        &__modal {
+            left: 62%;
+            right: auto;
+            @include transform(translateX(-50%));
         }
     }
 }
 
+@include tablet_s {
+    .dashboard {
+        &-date {
+            font-size: $font_size_caption2;
+        }
+
+        &__title {
+            font-size: $font_size_large;
+        }
+
+        .management {
+            &-date {
+                font-size: 30px;
+            }
+
+            &__title {
+                font-size: $font_size_large;
+            }
+            
+
+            &__link {
+                .more {
+                    font-size: $font_size_base;
+                }
+            }
+
+            &__btn {
+                padding: 22px 34px 20px 12px;
+                font-size: $font_size_small;
+            }
+        }
+    }
+
+    
+
+    .attainment {
+        &__table {
+            .table {
+                th {
+                    font-size: 15px;
+                }
+
+                td {
+                    font-size: $font_size_base;
+                }
+            }
+        }
+    }
+    
+}
+
+/*
 @include tablet_l {
     .dashboard {
         .management {
@@ -539,8 +624,8 @@ body {
     }
 
     .ranking {
-        width: calc(65% - 22px);
-        padding: 30px 3% 18px;
+        //width: calc(65% - 22px);
+        //padding: 30px 3% 18px;
 
         .table {
             th {
@@ -579,75 +664,10 @@ body {
         }
         
         &__modal {
-            right: 5%;
+            //right: 5%;
         }
     }
 }
 
-@include tablet_s {
-    .dashboard {
-        &-date {
-            font-size: $font_size_caption2;
-        }
 
-        &__title {
-            font-size: $font_size_large;
-        }
-
-        .management {
-            &-date {
-                font-size: 30px;
-            }
-
-            &__title {
-                font-size: $font_size_large;
-            }
-            
-
-            &__link {
-                .more {
-                    font-size: $font_size_base;
-                }
-            }
-
-            &__btn {
-                padding: 22px 34px 20px 12px;
-                font-size: $font_size_small;
-            }
-        }
-    }
-
-    .ranking {
-        width: 100%;
-    }
-
-    .attainment {
-        width: 100%;
-        max-width: inherit;
-        margin-top: 2.5vw;
-        margin-left: 0;
-
-        &__content {
-            margin-top: 27px;
-        }
-
-        &__item {
-            &:nth-of-type(n+2) {
-                margin-top: 61px;
-            }
-        }
-
-        &__table {
-            .table {
-                th {
-                    font-size: 15px;
-                }
-
-                td {
-                    font-size: $font_size_base;
-                }
-            }
-        }
-    }
-    
-}
+*/
