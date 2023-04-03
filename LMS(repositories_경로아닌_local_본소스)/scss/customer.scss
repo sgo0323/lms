@@ -39,7 +39,7 @@
     .notice {
         &__table {
             .table {                
-                > :not(caption) > * > td {
+                td {
                     &:nth-of-type(2) {
                         position: relative;
                         width: 73%;
@@ -261,7 +261,7 @@
     .enquiry {
         &__table {
             .table {                
-                > :not(caption) > * > td {
+                td {
                     &:nth-of-type(3) {
                         position: relative;
                         width: 64%;

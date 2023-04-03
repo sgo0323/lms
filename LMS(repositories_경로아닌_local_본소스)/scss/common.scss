@@ -524,25 +524,28 @@ table, thead, tbody, tr, th, td {
     width:100%;
     vertical-align: middle;
 
+    tr {
+        background: $color_white;
+    }
+
     // th & td
-    > :not(caption) > * > * {
-        padding: $table-cell-padding-y $table-cell-padding-x;
-        color: $color_gray_900;        
+    th, td {
         text-align: center;
         line-height: 1.5;
         word-break: keep-all;
         vertical-align: middle;
     }
 
-    > :not(caption) > tr {
-        background: $color_white;
-    }
-
-    > :not(caption) > * > th {
+    th {
         position: relative;
         padding: ceil(($font_size_base * 1.5)) $table-cell-padding-x; // 24px 12px
         background: $color_white;
         color: $color_gray_700;
+    }
+
+    td {
+        padding: $table-cell-padding-y $table-cell-padding-x;
+        color: $color_gray_900;
     }
 
     &-header {
@@ -592,7 +595,7 @@ table, thead, tbody, tr, th, td {
 
     &--line {
         &.table-header--sticky {
-            > :not(caption) > * > th {
+            th {
                 &::after {
                     content: '';
                     position: absolute;
@@ -605,23 +608,21 @@ table, thead, tbody, tr, th, td {
             }
         }
 
-        > :not(caption) > tr {
+        tr {
             &:last-of-type {
-                // th & td
-                > * {
+                th, td {
                     border-bottom: 0;
                 }
             }
         }
-        
-        // th & td
-        > :not(caption) > * > * {
+
+        th, td {
             border-bottom: 1px solid $color_gray_400;
         }
     }
 
     &--small {
-        > :not(caption) > * > * {
+        th, td {
             font-size: ceil(($font_size_base * .85));
             padding: abs($table_cell_padding_y / 2) abs($table_cell_padding_x / 2);
         }
@@ -969,13 +970,6 @@ table, thead, tbody, tr, th, td {
         }
 
         .table {
-            // th & td
-            /*
-            > :not(caption) > * > * {
-                padding: 19px 34px;
-            }
-            */
-
             &__box {
                 min-height: 576px;
                 max-height: 716px;
@@ -1114,7 +1108,7 @@ table, thead, tbody, tr, th, td {
 .search {
     &-result {    
         .table {
-            > :not(caption) > * > td {
+            td {
                 padding: 11px 12px;
             }
 
@@ -1139,6 +1133,14 @@ table, thead, tbody, tr, th, td {
     }
 }
 
+// report common
+.report {
+    width: 100%;
+
+
+}
+
+
 // Print button common
 .print {
     &-btn {
@@ -1156,8 +1158,10 @@ table, thead, tbody, tr, th, td {
         position: absolute;
         top: 50%;
         right: 0;
-        width: 48px;
-        height: 48px;
+        width: 2.5vw;
+        min-width: 30px;
+        height: 2.5vw;
+        min-height: 30px;
         background: url('/assets/images/ico_print.svg') no-repeat center/ contain;
         text-indent: -9999rem;
         @include transform(translateY(-50%));
@@ -1167,8 +1171,13 @@ table, thead, tbody, tr, th, td {
 
 /* Media Query */
 @include pc_wide {
-    .page {
+    .page, .report {
         max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    .print {
+        max-width: 2480px;
         margin: 0 auto;
     }
 }
@@ -1208,20 +1217,19 @@ table, thead, tbody, tr, th, td {
     }
     
     .table {
-        // th & td
-        > :not(caption) > * > * {
-            padding: 19px 8px;
+        th {
+            padding: 24px 8px;
         }
 
-        > :not(caption) > * > th {
-            padding: 24px 8px;
+        td {
+            padding: 19px 8px;
         }
     }
 
     .search {
         &-result {
             .table {
-                > :not(caption) > * > td {
+                td {
                     padding: 11px 8px;
                 }
 
@@ -1286,9 +1294,7 @@ table, thead, tbody, tr, th, td {
             }
         }
 
-        // th & td
-        > :not(caption) > * > * {
-            padding: 19px 5px;
+        th, td {
             font-size: $font_size_small;
         }
     }

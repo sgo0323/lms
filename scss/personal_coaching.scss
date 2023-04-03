@@ -94,19 +94,12 @@
                         padding: 0 24px 18px;
                     }
 
-                    // th & td
-                    > :not(caption) > * > * {
-                        padding: 8px 18px;
-
-                        /*
-                        &:first-of-type, &:last-of-type {
-                            text-align: center;
-                        }
-                        */
+                    th {
+                        padding: 15px 18px 9px;
                     }
 
-                    > :not(caption) > * > th {
-                        padding: 15px 18px 9px;
+                    td {
+                        padding: 8px 18px;
                     }
 
                     .kread {
@@ -131,7 +124,7 @@
                 &.result {
                     &-customized {
                         .table {
-                            > :not(caption) > * > th {
+                            th {
                                 // 진도리셋
                                 &:nth-of-type(11) {
                                     width: 10%;
@@ -143,7 +136,7 @@
                     &-csat {
                         .table {
                             // 진도리셋
-                            > :not(caption) > * > th {
+                            th {
                                 &:nth-of-type(9) {
                                     width: 10%;
                                 }
@@ -260,8 +253,8 @@
 
                 .table {
                     width: calc((100% - 64px) / 2);
-                    // th & td
-                    > :not(caption) > * > * {
+                    
+                    th, td {
                         padding: 8px 0;
                         font-size: $font_size_large;
                         font-weight: 500;
@@ -274,7 +267,7 @@
                         }
                     }
                     
-                    > :not(caption) > tr {
+                    tr {
                         &:last-of-type {
                             td {
                                 padding: 8px 0 0;
@@ -282,7 +275,7 @@
                         }
                     }
 
-                    > :not(caption) > * > th {
+                    th {
                         padding: 0;
                         font-size: $font_size_small;
                         line-height: 1.5;

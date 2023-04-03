@@ -546,28 +546,20 @@ $madal_font_size : $font_size_large;
     }
 
     .table {
-        // th & td
-        > :not(caption) > * > * {
+        th, td {
             display: inline-block;
             padding: 6px;
             width: 36px;
-            //height: 36px;
             @include border-radius(8px);
             font-size: $font_size_base;
             line-height: 24px;
-
-            /*
-            &:first-of-type, &:last-of-type {
-                text-align: center;
-            }
-            */
             
             &:nth-of-type(n+2) {
                 margin-left: 8px;
             }
         }
 
-        > :not(caption) > tr {            
+        tr {            
             display: inline-block;
             
             &:nth-of-type(n+2) {
@@ -575,12 +567,12 @@ $madal_font_size : $font_size_large;
             }
         }
 
-        > :not(caption) > * > th {            
+        th {            
             font-weight: 500;
             color: $color_gray_600;
         }
         
-        > :not(caption) > * > td {
+        td {
             font-weight: 600;
             cursor: pointer;
 

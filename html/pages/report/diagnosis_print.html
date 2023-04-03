@@ -27,7 +27,6 @@
         <link href="/lms/scss/header.css" rel="stylesheet">
         <link href="/lms/scss/form.css" rel="stylesheet">
         <link href="/lms/scss/modal.css" rel="stylesheet">
-        <link href="/lms/scss/diagnosis.css" rel="stylesheet">
         <link href="/lms/scss/print.css" rel="stylesheet">
 
         <!--- Js -->
@@ -38,7 +37,7 @@
         <script src="/lms/js/common.js"></script>
     </head>
     <body class="print">
-        <main class="print-report">
+        <main class="print-report diagnosis">
             <div class="print-btn__area">
                 <div class="print__inner">
                     <p class="print-btn__box"><a href="javascript:void(0);" class="print__btn" onclick="window.print();">프린트</a></p>
@@ -58,10 +57,10 @@
                     <div class="print__body">
                         <div class="print--top">
                             <p class="txt">대교중학교 2학년</p>
-                            <h2 class="title">김대교님의 <span class="level">KReaD지수는 1350으로중학교 1학년 수준입니다.</span></h2>
+                            <h3 class="title">김대교님의 <span class="level">KReaD지수는 1350으로중학교 1학년 수준입니다.</span></h3>
                         </div>
                         <div class="print__content">
-                            <h3 class="content__title">진단평가 결과</h3>
+                            <h4 class="content__title">진단평가 결과</h4>
                             <div class="content__body">
                                 <ul class="result__list">
                                     <li class="result__item reading">
@@ -97,7 +96,7 @@
                         </div>
                         <div class="print__content">
                             <div class="content__header">
-                                <h3 class="content__title">나의 KReaD<span class="required">*</span></h3>
+                                <h4 class="content__title">나의 KReaD<span class="required">*</span></h4>
                                 <p class="kread-data">
                                     <img src="/lms/assets/images/logo_KRead_white.svg" class="kread-logo" alt="KRead logo">
                                     <span class="kread-number">1350</span>
@@ -120,7 +119,7 @@
                         </div>
                         <div class="print__content">
                             <div class="content__header">
-                                <h3 class="content__title">학습 출발점</h3>
+                                <h4 class="content__title">학습 출발점</h4>
                                 <p class="learning-data">2레벨 1레슨</p>
                             </div>
                             <div class="content__body">
@@ -138,10 +137,10 @@
                 </section>
                 <section class="print__section">
                     <div class="print__content">
-                        <h3 class="content__title">학습 상세분석</h3>
+                        <h4 class="content__title">학습 상세분석</h4>
                         <div class="content__body">
-                            <div class="detail__section">
-                                <h4 class="detail__title">주제/갈래별 독해력 분석</h4>
+                            <div class="content__section">
+                                <h5 class="detail__title">주제/갈래별 독해력 분석</h5>
                                 <p class="detail__txt">
                                     문학에서는 (4)현대소설의 성취가 가장 뛰어났고, (5)현대시, 고전시가에서 성취가 가장 낮았습니다.<br>
                                     비문학에서는 (6)인문 영역의 성취가 가장 뛰어났으며, (7)과학 영역의 성취가 가장 낮았습니다.
@@ -163,10 +162,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="detail__section">
-                                <h4 class="detail__title">
+                            <div class="content__section">
+                                <h5 class="detail__title">
                                     사고 유형별<span class="required">*</span> 정답률
-                                </h4>
+                                </h5>
                                 <p class="detail__txt">(1)사실적독해, 감상적독해, 개념의 성취도가 낮게 나타났습니다.</p>
                                 <div class="detail__graph">
                                     <!-- 그래프 넣어주세요. -->
@@ -182,8 +181,8 @@
                                         어휘 : 글에 나온 어휘의 의미를 알고 문맥에 맞게 사용하며 적용할 수 있는 능력</p>
                                 </div>
                             </div>
-                            <div class="detail__section">
-                                <h4 class="detail__title">질문 유형별 정답률</h4>
+                            <div class="content__section">
+                                <h5 class="detail__title">질문 유형별 정답률</h5>
                                 <p class="detail__txt"><span>(1)글 전체이해, 글부분이해, 긍정형질문, 부정형질문, <보기>있는질문, <보기>없는질문</span> 을 어려워한 것으로 나타났습니다.</p>
                                 <div class="detail__graph">
                                     <!-- 그래프 넣어주세요. -->
@@ -195,10 +194,10 @@
                 </section>
                 <section class="print__section">
                     <div class="print__content">
-                        <h3 class="content__title">문항별 풀이 결과</h3>
+                        <h4 class="content__title">문항별 풀이 결과</h4>
                         <div class="content__body">
-                            <div class="detail__section">
-                                <h4 class="detail__title">문학</h4>
+                            <div class="content__section">
+                                <h5 class="detail__title">문학</h5>
                                 <table class="detail__table">
                                     <!-- 
                                         table 디자인 규칙을 만들 수가 없어서 td에 디자인별 class 개별로 들어가 있습니다.
@@ -389,8 +388,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="detail__section">
-                                <h4 class="detail__title">비문학</h4>
+                            <div class="content__section">
+                                <h5 class="detail__title">비문학</h5>
                                 <table class="detail__table">
                                     <!-- 
                                         table 디자인 규칙을 만들 수가 없어서 td에 디자인별 class 개별로 들어가 있습니다.

@@ -27,130 +27,119 @@
         <link href="/lms/scss/header.css" rel="stylesheet">
         <link href="/lms/scss/form.css" rel="stylesheet">
         <link href="/lms/scss/modal.css" rel="stylesheet">
-        <link href="/lms/scss/report.css" rel="stylesheet">
+        <link href="/lms/scss/diagnosis.css" rel="stylesheet">
+        <link href="/lms/scss/print.css" rel="stylesheet">
 
         <!--- Js -->
         <script src="/lms/js/jquery-2.2.4.min.js"></script>
         <script src="/lms/js/includeHtml.js"></script>
-        <script src="/lms/js/dropdowns.js"></script>
+        <script src="/lms/js/dropdowns.js"></script>   
         <script src="/lms/js/modal.js"></script>
         <script src="/lms/js/common.js"></script>
     </head>
-    <body>
-        <header data-include="/lms/html/common/layouts/header.html"></header>
-        <main class="report">
-            <section class="print-btn__area">
-                <div class="report__inner">
-                    <p class="print-btn__box"><a href="/lms/html/pages/report/diagnosis_print.html" class="print__btn">프린트</a></p>
+    <body class="print">
+        <main class="print-report">
+            <div class="print-btn__area">
+                <div class="print__inner">
+                    <p class="print-btn__box"><a href="javascript:void(0);" class="print__btn" onclick="window.print();">프린트</a></p>
                 </div>
-            </section>
-            <section class="diagnosis-dashboard">
-                <div class="report__inner">
-                    <div class="dashboard__title">
-                        <p class="txt">대교중학교 2학년</p>
-                        <h2 class="title">김대교님의 KReaD지수는 <span class="kread">1350</span>으로<br>
-                            <span class="level">중학교 1학년 수준</span>입니다.</h2>
-                        <p class="enter__info date">2022-10-25</p>
-                        <p class="enter__info code">
-                            응시코드:<span class="number">2343243</span>
-                        </p>
-                    </div>
-                    <div class="panel">
-                        <div class="dashboard__graph">
-                            <!-- 그래프 넣어주세요. -->
-                            <img src="http://placehold.it/313X249">
-                        </div>
-                        <div class="dashboard__content">
-                            <p class="dashboard__txt">학습 출발점</p>
-                            <ul class="dashboard__info">
-                                <li class="dashboard__item">
-                                    레벨<span>2</span>
-                                </li>
-                                <li class="dashboard__item">
-                                    레슨<span>36</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="diagnosis-result">
-                <div class="report__inner">
-                    <h3 class="report__title">진단평가 결과</h3>
-                    <ul class="result__list">
-                        <li class="result__item reading">
-                            <span class="result__title">
-                                독해력
-                                <button type="button" class="tip">팁</button>
-                            </span>
-                            <span class="result__txt">
-                                <span class="score">78</span><span class="standard">100</span>점
-                            </span>
-                        </li>
-                        <li class="result__item solve">
-                            <span class="result__title">맞힌 문항수</span>
-                            <span class="result__txt">
-                                <span class="score">27</span><span class="standard">36</span>문항
-                            </span>
-                        </li>
-                        <li class="result__item time">
-                            <span class="result__title">소요 시간</span>
-                            <span class="result__txt">
-                                <span class="score">68</span><span class="standard">60</span>분
-                            </span>
-                        </li>
-                    </ul>
-                    <p class="report__txt">
-                        <span>(1)김대교</span> 학생의 독해 능력은 <span>(2)78%</span>이며, <span>(3)문학</span>의 성취가 전반적으로 높게 나타났습니다. 지문별로 살펴보면, 문학에서는 <span>(4)현대소설</span>의 성취가 가장 뛰어났고, <span>(5)현대시, 고전시가</span>에서 성취가 가장 낮았습니다. 비문학에서는 <span>(6)인문</span> 영역의 성취가 가장 뛰어났으며, <span>(7)과학</span> 영역의 성취가 가장 낮았습니다. <br>
-                        문항별로 살펴보면, <span>(8)사실적독해, 비판적독해, <보기>가 없는 문항</span>의 문제해결력은 우수하나, <span>(9)글 부분에 대한 이해, 부정형 질문</span> 유형에 취약합니다. 자신의 강점을 살리고 약점을 보완하는 체계적인 독해 트레이닝 학습을 통해 독해 자신감과 수능 실전 감각을 키워 보세요. 
-                    </p>
-                </div>
-            </section>
-            <section class="diagnosis-detail">
-                <div class="report__inner">
-                    <div class="detail-kread">
-                        <div class="detail__header">
-                            <h3 class="report__title">
-                                나의 KReaD
-                                <button type="button" class="tip">팁</button>
-                            </h3>
-                            <p class="kread-data">
-                                <img src="/lms/assets/images/logo_KRead.svg" class="kread-logo" alt="KRead logo">
-                                <span class="kread-number">1350</span>
+            </div>
+            <div class="print__inner">
+                <section class="print__section">
+                    <div class="print__header">
+                        <h2 class="print__title">KReaD 진단평가 분석 리포트</h2>
+                        <div class="print__info">
+                            <p class="date">2022-10-25</p>
+                            <p class="code">
+                                응시코드: <span class="number">2343243</span>
                             </p>
                         </div>
-                        <div class="detail__body">
-                            <p class="detail__txt">
-                                <span>(1)김제니</span> 학생의 <span class="txt--medium">KReaD 지수는 <span>(2)1350</span>으로, <span>(3)중학교 1학년 수준</span></span>의 글을 능숙하게 읽을 수 있는 정도입니다. <br>
-                                이는 <span class="txt--medium">동일 연령 평균 지수인 <span>(4)1320</span>에 비해 <span>(5)높은 편</span>입니다.</span> KReaD 역량을 키우려면 자신의 KReaD지수에 맞는 글만 골라 읽는 것보다는, KReaD 지수가 조금 낮거나  높은 수준에서 다양한 분야의 글을 골고루 접하는 것이 중요합니다.
-                            </p>
-                            <div class="detail__graph">
-                                <!-- 그래프 넣어주세요. -->
-                                <img src="http://placehold.it/1540X225">
+                    </div>
+                    <div class="print__body">
+                        <div class="print--top">
+                            <p class="txt">대교중학교 2학년</p>
+                            <h2 class="title">김대교님의 <span class="level">KReaD지수는 1350으로중학교 1학년 수준입니다.</span></h2>
+                        </div>
+                        <div class="print__content">
+                            <h3 class="content__title">진단평가 결과</h3>
+                            <div class="content__body">
+                                <ul class="result__list">
+                                    <li class="result__item reading">
+                                        <span class="result__title">
+                                            독해력 <span class="required">*</span>
+                                        </span>
+                                        <span class="result__txt">
+                                            <span class="score">78</span><span class="standard">100</span>%
+                                        </span>
+                                    </li>
+                                    <li class="result__item solve">
+                                        <span class="result__title">맞힌 문항수</span>
+                                        <span class="result__txt">
+                                            <span class="score">27</span><span class="standard">36</span>문항
+                                        </span>
+                                    </li>
+                                    <li class="result__item time">
+                                        <span class="result__title">소요 시간</span>
+                                        <span class="result__txt">
+                                            <span class="score">68</span>분
+                                        </span>
+                                    </li>
+                                </ul>
+                                <p class="detail__txt">
+                                    <span>(1)김대교</span> 학생의 독해 능력은 <span>(2)78%</span>이며, <span>(3)문학</span>의 성취가 전반적으로 높게 나타났습니다. 지문별로 살펴보면, 문학에서는 <span>(4)현대소설</span>의 성취가 가장 뛰어났고, <span>(5)현대시, 고전시가</span>에서 성취가 가장 낮았습니다. 비문학에서는 <span>(6)인문</span> 영역의 성취가 가장 뛰어났으며, <span>(7)과학</span> 영역의 성취가 가장 낮았습니다. <br>
+                                    문항별로 살펴보면, <span>(8)사실적독해, 비판적독해, <보기>가 없는 문항</span>의 문제해결력은 우수하나, <span>(9)글 부분에 대한 이해, 부정형 질문</span> 유형에 취약합니다. 자신의 강점을 살리고 약점을 보완하는 체계적인 독해 트레이닝 학습을 통해 독해 자신감과 수능 실전 감각을 키워 보세요. 
+                                </p>
+                                <div class="reference">
+                                    <p class="reference__title"><span class="required">*</span>독해력</p>
+                                    <p class="reference__txt">학습자마다 상이하게 출제되는 문항 수 및 난이도를 모두 고려하여 레슨학습 전체 문항의 난이도별 환산 점수 합계를 100% 대비 도달 비율로 나타낸 것​</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="print__content">
+                            <div class="content__header">
+                                <h3 class="content__title">나의 KReaD<span class="required">*</span></h3>
+                                <p class="kread-data">
+                                    <img src="/lms/assets/images/logo_KRead_white.svg" class="kread-logo" alt="KRead logo">
+                                    <span class="kread-number">1350</span>
+                                </p>
+                            </div>
+                            <div class="content__body">
+                                <p class="detail__txt">
+                                    <span>(1)김제니</span> 학생의 <span class="txt--medium">KReaD 지수는 <span>(2)1350</span>으로, <span>(3)중학교 1학년 수준</span></span>의 글을 능숙하게 읽을 수 있는 정도입니다. <br>
+                                    이는 <span class="txt--medium">동일 연령 평균 지수인 <span>(4)1320</span>에 비해 <span>(5)높은 편</span>입니다.</span> KReaD 역량을 키우려면 자신의 KReaD지수에 맞는 글만 골라 읽는 것보다는, KReaD 지수가 조금 낮거나  높은 수준에서 다양한 분야의 글을 골고루 접하는 것이 중요합니다.
+                                </p>
+                                <div class="detail__graph">
+                                    <!-- 그래프 넣어주세요. -->
+                                    <img src="http://placehold.it/2080X400">
+                                </div>
+                                <div class="reference">
+                                    <p class="reference__title"><span class="required">*</span>KReaD</p>
+                                    <p class="reference__txt">KReaD는 학습자가 능숙하게 읽을 수 있는 지문의 수준을 객관적 수치로 나타낸 것입니다. 숫자가 클수록 학습자의 독해 수준이 높음을 의미하며, 연령별 평균 KReaD는 연령*100으로 계산할 수 있습니다. (예: 중등 1학년 평균 KReaD는 1400)​</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="print__content">
+                            <div class="content__header">
+                                <h3 class="content__title">학습 출발점</h3>
+                                <p class="learning-data">2레벨 1레슨</p>
+                            </div>
+                            <div class="content__body">
+                                <p class="detail__txt">
+                                    <span class="txt--medium"><span>(1)김제니</span> 학생의 학습 출발점은 <span>(2)2레벨 1레슨</span>입니다.</span><br>
+                                    <span>(3)다만 지문별 성취도의 격차를 줄이고, 부족한 문항 영역</span>을 트레이닝하기 위해 <span class="txt--medium"><span>(3-1)문학의 운문, 비문학의 과학 지문</span> <span>(3-2)12개 레슨</span>을 먼저학습하는 것을 추천합니다.</span> 추천 학습대로 학습 시 문제 풀이에 대한 자신감이 생기고, 지문별 실력 편차가 줄어들어 차후 균형 있는 학습이 가능해집니다.
+                                </p>
+                                <div class="detail__graph">
+                                    <!-- 그래프 넣어주세요. -->
+                                    <img src="http://placehold.it/2080X400">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="detail-start">
-                        <div class="detail__header">
-                            <h3 class="report__title">학습 출발점</h3>
-                            <p class="learning-data">2레벨 1레슨</p>
-                        </div>
-                        <div class="detail__body">
-                            <p class="detail__txt">
-                                <span class="txt--medium"><span>(1)김제니</span> 학생의 학습 출발점은 <span>(2)2레벨 1레슨</span>입니다.</span><br>
-                                <span>(3)다만 지문별 성취도의 격차를 줄이고, 부족한 문항 영역</span>을 트레이닝하기 위해 <span class="txt--medium"><span>(3-1)문학의 운문, 비문학의 과학 지문</span> <span>(3-2)12개 레슨</span>을 먼저학습하는 것을 추천합니다.</span> 추천 학습대로 학습 시 문제 풀이에 대한 자신감이 생기고, 지문별 실력 편차가 줄어들어 차후 균형 있는 학습이 가능해집니다.
-                            </p>
-                            <div class="detail__graph">
-                                <!-- 그래프 넣어주세요. -->
-                                <img src="http://placehold.it/1540X396">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail-learning">
-                        <div class="detail__header">
-                            <h3 class="report__title">학습 상세분석</h3>
-                        </div>
-                        <div class="detail__body">
+                </section>
+                <section class="print__section">
+                    <div class="print__content">
+                        <h3 class="content__title">학습 상세분석</h3>
+                        <div class="content__body">
                             <div class="detail__section">
                                 <h4 class="detail__title">주제/갈래별 독해력 분석</h4>
                                 <p class="detail__txt">
@@ -162,47 +151,55 @@
                                         <p class="graph__title">문학</p>
                                         <div class="graph">
                                             <!-- 그래프 넣어주세요. -->
-                                            <img src="http://placehold.it/520X416">
+                                            <img src="http://placehold.it/1020X650">
                                         </div>
                                     </div>
                                     <div class="graph__content">
                                         <p class="graph__title">비문학</p>
                                         <div class="graph">
                                             <!-- 그래프 넣어주세요. -->
-                                            <img src="http://placehold.it/520X416">
+                                            <img src="http://placehold.it/1020X650">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="detail__section">
                                 <h4 class="detail__title">
-                                    사고 유형별 정답률
-                                    <button type="button" class="tip">팁</button>
+                                    사고 유형별<span class="required">*</span> 정답률
                                 </h4>
                                 <p class="detail__txt">(1)사실적독해, 감상적독해, 개념의 성취도가 낮게 나타났습니다.</p>
                                 <div class="detail__graph">
                                     <!-- 그래프 넣어주세요. -->
-                                    <img src="http://placehold.it/1540X597">
+                                    <img src="http://placehold.it/2080X650">
+                                </div>                                
+                                <div class="reference">
+                                    <p class="reference__title"><span class="required">*</span>사고유형</p>
+                                    <p class="reference__txt">사실적독해 : 글에 표면적으로 드러난 정보를 파악하여 글의 내용을 체계적으로 이해하는 능력​<br>
+                                        추론적독해 : 생략된 정보를 추론하고, 글에 드러난 단서를 근거로 글쓴이의 의도나 목적을 추측하는 능력​​<br>
+                                        비판적독해 : 글에 사용된 자료가 정확한지, 글쓴이의 주장이나 의견이 타당한지 점검하며 글을 읽는 능력​​<br>
+                                        감상적독해 : 글에서 공감하거나 감동적인 부분을 읽고 글에 담긴 가치를 종합적으로 이해하는 능력​​<br>
+                                        개념 : 개념을 적용하여 글을 이해하고 판단하는 능력​​<br>
+                                        어휘 : 글에 나온 어휘의 의미를 알고 문맥에 맞게 사용하며 적용할 수 있는 능력</p>
                                 </div>
                             </div>
                             <div class="detail__section">
                                 <h4 class="detail__title">질문 유형별 정답률</h4>
-                                <p class="detail__txt">(1)글 전체를 묻는 문항, 부정형 문항을 어려워한 것으로 나타났습니다.</p>
+                                <p class="detail__txt"><span>(1)글 전체이해, 글부분이해, 긍정형질문, 부정형질문, <보기>있는질문, <보기>없는질문</span> 을 어려워한 것으로 나타났습니다.</p>
                                 <div class="detail__graph">
                                     <!-- 그래프 넣어주세요. -->
-                                    <img src="http://placehold.it/1540X597">
+                                    <img src="http://placehold.it/2080X650">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="detail-learning">
-                        <div class="detail__header">
-                            <h3 class="report__title">문항별 풀이 결과</h3>
-                        </div>
-                        <div class="detail__body">
+                </section>
+                <section class="print__section">
+                    <div class="print__content">
+                        <h3 class="content__title">문항별 풀이 결과</h3>
+                        <div class="content__body">
                             <div class="detail__section">
                                 <h4 class="detail__title">문학</h4>
-                                <table class="table">
+                                <table class="detail__table">
                                     <!-- 
                                         table 디자인 규칙을 만들 수가 없어서 td에 디자인별 class 개별로 들어가 있습니다.
                                     -->
@@ -211,32 +208,31 @@
                                             <th>번호</th>
                                             <th>주제/갈래 및 지문</th>
                                             <th>KReaD</th>
-                                            <th>풀이/목표시간</th>
-                                            <th>사고유형</th>
+                                            <th>목표시간</th>
+                                            <th>풀이시간</th>
+                                            <th>사고유형</th> 
                                             <th>학습개념</th>
                                             <th>정답여부</th>
-                                            <th>풀이화면</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td rowspan="3">1~3</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
+                                            <td rowspan="3" class="txt--left">
                                                 <span class="subject">현대시</span>
                                                 청소년들의 휴대 전화 사용 실태와 문제점
                                             </td>
                                             <td rowspan="3">1432</td>
                                             <td rowspan="3">
-                                                <span class="run-time">1분 2초</span>
-                                                <span class="standard">2분</span>
+                                                <span class="standard">2분<br>30초</span>
+                                            </td>
+                                            <td rowspan="3">
+                                                <span class="run-time over-time">10분<br>30초</span>
                                             </td>
                                             <td>사실적독해</td>
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -244,9 +240,6 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -255,30 +248,26 @@
                                             <td>
                                                 <span class="wrong">오답</span>
                                             </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
-                                            </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">4~6</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
+                                            <td rowspan="3" class="txt--left">
                                                 <span class="subject">고전시가</span>
                                                 하여가<br>
                                                 단심가
                                             </td>
                                             <td rowspan="3">ㅡ</td>
                                             <td rowspan="3">
-                                                <span class="run-time">1분 2초</span>
-                                                <span class="standard">1분 30초</span>
+                                                <span class="standard">2분<br>30초</span>
+                                            </td>
+                                            <td rowspan="3">
+                                                <span class="run-time">10분<br>30초</span>
                                             </td>
                                             <td>사실적독해</td>
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -286,9 +275,6 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -296,30 +282,26 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="wrong">오답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">7~9</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
+                                            <td rowspan="3" class="txt--left">
                                                 <span class="subject">인문</span>
                                                 윤리와기원
                                             </td>
                                             <td rowspan="3">1432</td>
                                             <td rowspan="3">
-                                                <span class="run-time over-time">3분 20초</span>
-                                                <span class="standard">2분</span>
+                                                <span class="standard">2분<br>30초</span>
+                                            </td>
+                                            <td rowspan="3">
+                                                <span class="run-time">10분<br>30초</span>
                                             </td>
                                             <td>사실적독해</td>
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -327,9 +309,6 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -337,30 +316,26 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="wrong">오답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">10~12</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
+                                            <td rowspan="3" class="txt--left">
                                                 <span class="subject">현대시</span>
                                                 청소년들의 휴대 전화 사용 실태와 문제점
                                             </td>
                                             <td rowspan="3">1432</td>
                                             <td rowspan="3">
-                                                <span class="run-time">1분 05초</span>
-                                                <span class="standard">1분 10초</span>
+                                                <span class="standard">2분<br>30초</span>
+                                            </td>
+                                            <td rowspan="3">
+                                                <span class="run-time">10분<br>30초</span>
                                             </td>
                                             <td>사실적독해</td>
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -368,9 +343,6 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -378,9 +350,6 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="wrong">오답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
@@ -392,16 +361,15 @@
                                             </td>
                                             <td rowspan="3">1432</td>
                                             <td rowspan="3">
-                                                <span class="run-time">1분 05초</span>
-                                                <span class="standard">1분 10초</span>
+                                                <span class="standard">2분<br>30초</span>
+                                            </td>
+                                            <td rowspan="3">
+                                                <span class="run-time over-time">10분<br>30초</span>
                                             </td>
                                             <td>사실적독해</td>
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -409,9 +377,6 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -420,16 +385,13 @@
                                             <td>
                                                 <span class="wrong">오답</span>
                                             </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
-                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                             <div class="detail__section">
                                 <h4 class="detail__title">비문학</h4>
-                                <table class="table">
+                                <table class="detail__table">
                                     <!-- 
                                         table 디자인 규칙을 만들 수가 없어서 td에 디자인별 class 개별로 들어가 있습니다.
                                     -->
@@ -448,22 +410,21 @@
                                     <tbody>
                                         <tr>
                                             <td rowspan="3">16~18</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
+                                            <td rowspan="3" class="txt--left">
                                                 <span class="subject">현대시</span>
                                                 고래를 위하여
                                             </td>
                                             <td rowspan="3">1432</td>
                                             <td rowspan="3">
-                                                <span class="run-time">1분 2초</span>
-                                                <span class="standard">2분</span>
+                                                <span class="standard">2분<br>30초</span>
+                                            </td>
+                                            <td rowspan="3">
+                                                <span class="run-time over-time">10분<br>30초</span>
                                             </td>
                                             <td>사실적독해</td>
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -471,9 +432,6 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -482,30 +440,26 @@
                                             <td>
                                                 <span class="wrong">오답</span>
                                             </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
-                                            </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">19~21</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
+                                            <td rowspan="3" class="txt--left">
                                                 <span class="subject">고전시가</span>
                                                 하여가<br>
                                                 단심가
                                             </td>
                                             <td rowspan="3">ㅡ</td>
                                             <td rowspan="3">
-                                                <span class="run-time">1분 2초</span>
-                                                <span class="standard">1분 30초</span>
+                                                <span class="standard">2분<br>30초</span>
+                                            </td>
+                                            <td rowspan="3">
+                                                <span class="run-time">10분<br>30초</span>
                                             </td>
                                             <td>사실적독해</td>
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -513,9 +467,6 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -523,30 +474,26 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="wrong">오답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">22~24</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
+                                            <td rowspan="3" class="txt--left">
                                                 <span class="subject">인문</span>
                                                 윤리와기원
                                             </td>
                                             <td rowspan="3">1432</td>
                                             <td rowspan="3">
-                                                <span class="run-time over-time">3분 20초</span>
-                                                <span class="standard">2분</span>
+                                                <span class="standard">2분<br>30초</span>
+                                            </td>
+                                            <td rowspan="3">
+                                                <span class="run-time">10분<br>30초</span>
                                             </td>
                                             <td>사실적독해</td>
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -554,9 +501,6 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -564,30 +508,26 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="wrong">오답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">25~27</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
+                                            <td rowspan="3" class="txt--left">
                                                 <span class="subject">현대시</span>
                                                 청소년들의 휴대 전화 사용 실태와 문제점
                                             </td>
                                             <td rowspan="3">1432</td>
                                             <td rowspan="3">
-                                                <span class="run-time">1분 05초</span>
-                                                <span class="standard">1분 10초</span>
+                                                <span class="standard">2분<br>30초</span>
+                                            </td>
+                                            <td rowspan="3">
+                                                <span class="run-time">10분<br>30초</span>
                                             </td>
                                             <td>사실적독해</td>
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -595,9 +535,6 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -605,9 +542,6 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="wrong">오답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
@@ -619,16 +553,15 @@
                                             </td>
                                             <td rowspan="3">1432</td>
                                             <td rowspan="3">
-                                                <span class="run-time">1분 05초</span>
-                                                <span class="standard">1분 10초</span>
+                                                <span class="standard">2분<br>30초</span>
+                                            </td>
+                                            <td rowspan="3">
+                                                <span class="run-time">10분<br>30초</span>
                                             </td>
                                             <td>사실적독해</td>
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -636,9 +569,6 @@
                                             <td>외적/내적 준거에 따른 감상</td>
                                             <td>
                                                 <span class="correct">정답</span>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -647,20 +577,14 @@
                                             <td>
                                                 <span class="wrong">오답</span>
                                             </td>
-                                            <td>
-                                                <a href="#" class="search__link">보기</a>
-                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <p class="report__btn">
-                        <button type="button" class="btn btn--btm btn-outline" onclick="location.href='/lms/html/pages/report/customized.html'">목록</button>
-                    </p>
-                </div>
-            </section>
+                </section>
+            </div>
         </main>
     </body>
 </html>

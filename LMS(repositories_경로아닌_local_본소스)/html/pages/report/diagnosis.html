@@ -27,21 +27,21 @@
         <link href="/scss/header.css" rel="stylesheet">
         <link href="/scss/form.css" rel="stylesheet">
         <link href="/scss/modal.css" rel="stylesheet">
-        <link href="/scss/diagnosis.css" rel="stylesheet">
+        <link href="/scss/report.css" rel="stylesheet">
 
         <!--- Js -->
         <script src="/js/jquery-2.2.4.min.js"></script>
         <script src="/js/includeHtml.js"></script>
-        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/dropdowns.js"></script>
         <script src="/js/modal.js"></script>
         <script src="/js/common.js"></script>
     </head>
     <body>
         <header data-include="/html/common/layouts/header.html"></header>
-        <main class="report">
+        <main class="report diagnosis">
             <section class="print-btn__area">
                 <div class="report__inner">
-                    <p class="print-btn__box"><a href="/html/pages/report/diagnosis_print.html" class="print__btn">프린트</a></p>
+                    <p class="print-btn__box"><a href="/html/pages/report/diagnosis_print.html" target="_blank" class="print__btn">프린트</a></p>
                 </div>
             </section>
             <section class="diagnosis-dashboard">
@@ -58,16 +58,16 @@
                     <div class="panel">
                         <div class="dashboard__graph">
                             <!-- 그래프 넣어주세요. -->
-                            <img src="http://placehold.it/313X249">
+                            <img src="http://placehold.it/300X239">
                         </div>
                         <div class="dashboard__content">
                             <p class="dashboard__txt">학습 출발점</p>
                             <ul class="dashboard__info">
                                 <li class="dashboard__item">
-                                    레벨<span>2</span>
+                                    <span>2</span>레벨
                                 </li>
                                 <li class="dashboard__item">
-                                    레슨<span>36</span>
+                                    <span>36</span>레슨
                                 </li>
                             </ul>
                         </div>
@@ -221,174 +221,168 @@
                                     <tbody>
                                         <tr>
                                             <td rowspan="3">1~3</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
-                                                <span class="subject">현대시</span>
-                                                청소년들의 휴대 전화 사용 실태와 문제점
+                                            <td rowspan="3">
+                                                <span class="subject">[현대시] 청소년들의 휴대 전화 사용 실태와 문제점</span>
                                             </td>
-                                            <td rowspan="3" class="table__border-btm">1432</td>
-                                            <td rowspan="3" class="table__border-btm">
+                                            <td rowspan="3">1432</td>
+                                            <td rowspan="3">
                                                 <span class="run-time">1분 2초</span>
                                                 <span class="standard">2분</span>
                                             </td>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="wrong">오답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">4~6</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
-                                                <span class="subject">고전시가</span>
-                                                하여가<br>
-                                                단심가
+                                            <td rowspan="3">
+                                                <span class="subject">[고전시가] 하여가, 단심가</span>
                                             </td>
-                                            <td rowspan="3" class="table__border-btm">ㅡ</td>
-                                            <td rowspan="3" class="table__border-btm">
+                                            <td rowspan="3">ㅡ</td>
+                                            <td rowspan="3">
                                                 <span class="run-time">1분 2초</span>
                                                 <span class="standard">1분 30초</span>
                                             </td>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="wrong">오답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">7~9</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
-                                                <span class="subject">인문</span>
-                                                윤리와기원
+                                            <td rowspan="3">
+                                                <span class="subject">[인문] 윤리와기원</span>
                                             </td>
-                                            <td rowspan="3" class="table__border-btm">1432</td>
-                                            <td rowspan="3" class="table__border-btm">
+                                            <td rowspan="3">1432</td>
+                                            <td rowspan="3">
                                                 <span class="run-time over-time">3분 20초</span>
                                                 <span class="standard">2분</span>
                                             </td>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="wrong">오답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">10~12</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
-                                                <span class="subject">현대시</span>
-                                                청소년들의 휴대 전화 사용 실태와 문제점
+                                            <td rowspan="3">
+                                                <span class="subject">[현대시] 청소년들의 휴대 전화 사용 실태와 문제점</span>
                                             </td>
-                                            <td rowspan="3" class="table__border-btm">1432</td>
-                                            <td rowspan="3" class="table__border-btm">
+                                            <td rowspan="3">1432</td>
+                                            <td rowspan="3">
                                                 <span class="run-time">1분 05초</span>
                                                 <span class="standard">1분 10초</span>
                                             </td>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="wrong">오답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">13~15</td>
-                                            <td rowspan="3" class="txt--left">
-                                                <span class="subject">현대시</span>
-                                                청소년들의 휴대 전화 사용 실태와 문제점
+                                            <td rowspan="3">
+                                                <span class="subject">[현대시] 봄은 고양이로소이다</span>
                                             </td>
                                             <td rowspan="3">1432</td>
                                             <td rowspan="3">
@@ -448,174 +442,168 @@
                                     <tbody>
                                         <tr>
                                             <td rowspan="3">16~18</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
-                                                <span class="subject">현대시</span>
-                                                고래를 위하여
+                                            <td rowspan="3">
+                                                <span class="subject">[현대시] 청소년들의 휴대 전화 사용 실태와 문제점</span>
                                             </td>
-                                            <td rowspan="3" class="table__border-btm">1432</td>
-                                            <td rowspan="3" class="table__border-btm">
+                                            <td rowspan="3">1432</td>
+                                            <td rowspan="3">
                                                 <span class="run-time">1분 2초</span>
                                                 <span class="standard">2분</span>
                                             </td>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="wrong">오답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">19~21</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
-                                                <span class="subject">고전시가</span>
-                                                하여가<br>
-                                                단심가
+                                            <td rowspan="3">
+                                                <span class="subject">[고전시가] 하여가, 단심가</span>
                                             </td>
-                                            <td rowspan="3" class="table__border-btm">ㅡ</td>
-                                            <td rowspan="3" class="table__border-btm">
+                                            <td rowspan="3">ㅡ</td>
+                                            <td rowspan="3">
                                                 <span class="run-time">1분 2초</span>
                                                 <span class="standard">1분 30초</span>
                                             </td>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="wrong">오답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">22~24</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
-                                                <span class="subject">인문</span>
-                                                윤리와기원
+                                            <td rowspan="3">
+                                                <span class="subject">[인문] 윤리와기원</span>
                                             </td>
-                                            <td rowspan="3" class="table__border-btm">1432</td>
-                                            <td rowspan="3" class="table__border-btm">
+                                            <td rowspan="3">1432</td>
+                                            <td rowspan="3">
                                                 <span class="run-time over-time">3분 20초</span>
                                                 <span class="standard">2분</span>
                                             </td>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="wrong">오답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">25~27</td>
-                                            <td rowspan="3" class="table__border-btm txt--left">
-                                                <span class="subject">현대시</span>
-                                                청소년들의 휴대 전화 사용 실태와 문제점
+                                            <td rowspan="3">
+                                                <span class="subject">[현대시] 청소년들의 휴대 전화 사용 실태와 문제점</span>
                                             </td>
-                                            <td rowspan="3" class="table__border-btm">1432</td>
-                                            <td rowspan="3" class="table__border-btm">
+                                            <td rowspan="3">1432</td>
+                                            <td rowspan="3">
                                                 <span class="run-time">1분 05초</span>
                                                 <span class="standard">1분 10초</span>
                                             </td>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="correct">정답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table__border-btm">사실적독해</td>
-                                            <td class="table__border-btm">외적/내적 준거에 따른 감상</td>
-                                            <td class="table__border-btm">
+                                            <td>사실적독해</td>
+                                            <td>외적/내적 준거에 따른 감상</td>
+                                            <td>
                                                 <span class="wrong">오답</span>
                                             </td>
-                                            <td class="table__border-btm">
+                                            <td>
                                                 <a href="#" class="search__link">보기</a>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td rowspan="3">28~30</td>
-                                            <td rowspan="3" class="txt--left">
-                                                <span class="subject">현대시</span>
-                                                청소년들의 휴대 전화 사용 실태와 문제점
+                                            <td rowspan="3">
+                                                <span class="subject">[현대시] 청소년들의 휴대 전화 사용 실태와 문제점</span>
                                             </td>
                                             <td rowspan="3">1432</td>
                                             <td rowspan="3">
@@ -657,7 +645,7 @@
                         </div>
                     </div>
                     <p class="report__btn">
-                        <button type="button" class="btn btn--btm btn-outline" onclick="location.href='/html/pages/report/customized.html'">목록</button>
+                        <button type="button" class="btn btn--btm btn-outline" onclick="location.href='/html/pages/report/report_list.html'">목록</button>
                     </p>
                 </div>
             </section>

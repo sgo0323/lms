@@ -95,8 +95,7 @@
         }
 
         .table {
-            // th & td
-            > :not(caption) > * > * {
+            th, td {
                 display: inline-block;
                 width: calc((100% - 6.25vw)/ 7);
                 max-width: 160px;
@@ -113,11 +112,11 @@
                 }
             }
 
-            > :not(caption) > * > th {
+            th {
                 margin-bottom: 26px;
             }
 
-            > :not(caption) > * > td {
+            td {
                 min-height: 125px;
             }
         }
@@ -148,7 +147,7 @@
             }
 
             .table {
-                > :not(caption) > * > * {
+                th, td {
                     width: calc((100% - 3.5vw)/ 7);
 
                     &:first-of-type {
@@ -181,7 +180,7 @@
             }
 
             .table {
-                > :not(caption) > * > * {
+                th, td {
                     width: calc((100% - 2.5vw)/ 7);
 
                     &:first-of-type {
@@ -189,7 +188,7 @@
                     }
                 }
                 
-                > :not(caption) > * > td {
+                td {
                     min-height: 110px;
                 }
             }

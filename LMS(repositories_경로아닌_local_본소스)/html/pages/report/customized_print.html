@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+        <title>LMS Kread</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+
+        <meta property="og:type" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-startup-image" href="">
+        
+        <!--- css -->
+        <link href="/scss/reset.css" rel="stylesheet">
+        <link href="/scss/common.css" rel="stylesheet">
+        <link href="/scss/header.css" rel="stylesheet">
+        <link href="/scss/form.css" rel="stylesheet">
+        <link href="/scss/modal.css" rel="stylesheet">
+        <link href="/scss/print.css" rel="stylesheet">
+
+        <!--- Js -->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        <script src="/js/includeHtml.js"></script>
+        <script src="/js/dropdowns.js"></script>   
+        <script src="/js/modal.js"></script>
+        <script src="/js/common.js"></script>
+    </head>
+    <body class="print">
+        <main class="print-report customized">
+            <div class="print-btn__area">
+                <div class="print__inner">
+                    <p class="print-btn__box"><a href="javascript:void(0);" class="print__btn" onclick="window.print();">프린트</a></p>
+                </div>
+            </div>
+            <div class="print__inner">
+                <section class="print__section">
+                    <div class="print__header">
+                        <h2 class="print__title">학습 분석 리포트 - 추천학습 1레벨 1레슨
+                            <span class="subject">비문학</span>
+                        </h2>
+                        <div class="print__info">
+                            <p class="date">2022-10-25</p>
+                        </div>
+                    </div>
+                    <div class="print__body">
+                        <div class="print--top">
+                            <div class="dashboard__content">
+                                <div class="dashboard__title">
+                                    <p class="txt">대교중학교 2학년</p>
+                                    <h3 class="title">김대교님의 독해력은 <span class="level">보통 수준 입니다!</span></h3>
+                                </div>
+                                <div class="dashboard__graph">
+                                    <!-- 그래프 넣어주세요. -->
+                                    <img src="http://placehold.it/420X252 ">
+                                </div>
+                            </div>
+                            <div class="panel dashboard__content">
+                                <div class="customized__graph">
+                                    <p class="dashboard__info">
+                                        <span class="subject">코어독해</span>
+                                        <span class="percent">50%</span>
+                                    </p>
+                                    <div class="bar__graph">
+                                        <!-- 그래프 넣어주세요. -->
+                                        <img src="http://placehold.it/364X15">
+                                    </div>
+                                </div>
+                                <div class="customized__graph">
+                                    <p class="dashboard__info">
+                                        <span class="subject">본격독해</span>
+                                        <span class="percent">20%</span>
+                                    </p>
+                                    <div class="bar__graph">
+                                        <!-- 그래프 넣어주세요. -->
+                                        <img src="http://placehold.it/364X15">
+                                    </div>
+                                </div>
+                                <div class="customized__graph">
+                                    <p class="dashboard__info">
+                                        <span class="subject">어휘학습</span>
+                                        <span class="percent">70%</span>
+                                    </p>
+                                    <div class="bar__graph">
+                                        <!-- 그래프 넣어주세요. -->
+                                        <img src="http://placehold.it/364X15">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="reference__title"><span class="required">*</span>독해력이란?</p>
+                            <p class="reference__txt">학습자마다 상이하게 출제되는 문항 수 및 난이도를 모두 고려하여 레슨학습 전체 문항의 난이도별 환산 점수 합계를 100% 대비 도달 비율로 나타낸 것​</p>
+                        </div>
+                        <div class="print__content">
+                            <h4 class="content__title">비문학 학습 분석 결과</h4>
+                            <div class="content__body">
+                                <div class="result__content">
+                                    <div class="result__item">
+                                        <p class="result__title">
+                                            사고 유형별<span class="required">*</span> 강약점 분석
+                                        </p>
+                                        <div class="panel">
+                                            <p class="result-detail">
+                                                <span class="grade">우수</span>
+                                                <span class="subject">사실적독해</span>
+                                            </p>
+                                            <p class="result-detail">
+                                                <span class="grade">취약</span>
+                                                <span class="subject">비판적독해</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="result__item">
+                                        <p class="result__title">질문 유형별 강약점 분석</p>
+                                        <div class="panel">
+                                            <p class="result-detail">
+                                                <span class="grade">우수</span>
+                                                <span class="subject"><보기>가 있는 문항</span>
+                                            </p>
+                                            <p class="result-detail">
+                                                <span class="grade">취약</span>
+                                                <span class="subject">부정형 질문</span>
+                                            </p>
+                                        </div>
+                                    </div>  
+                                </div>
+                                <p class="detail__txt">
+                                    지문 읽기 활동에서 <span>(4. '윤리의 이해' 지문 읽기 시간은 권장 읽기 시간을 초과하였습니다. 지문을 집중하면서 읽으면서 시간을 단축시키는 연습이 필요합니다. 지문을 여러 번 읽으며 처음 지문 읽을 때 걸린 시간과 다회독 때 읽은 시간을 비교해 보면서 지문 읽기 시간을 줄이는 훈련을 해 보세요.)</span><br>
+                                    지문 이해 활동을 살펴보면, <span>(5. 핵심 소재를 파악하는 능력은 갖추었으나, 주제를 찾고 핵심 표현을 정리하는 훈련이 필요합니다. 주제를 잘 파악하기 위해서는 중심 내용을 구조화하여 단락별 핵심내용을 찾는 연습을 꾸준히 해 보세요.)</span><br>
+                                    본격독해에서 풀이한 문항 유형별 문제해결력을 살펴보면, (6. 사실적 독해, 비판적독해, <보기>가 없는 문항) 유형의 문제해결력은 우수하나, <span>(7. 글 부분에 대한 이해, 부정형질문) 유형에 약합니다. 반복해서 틀리는 문제의 유형을 명확히 파악하고, 유사한 형태의 문제를 매일 일정량 훈련하면 문제 해결력을 향상시킬 수 있습니다.</span>
+                                </p>
+                                <div class="reference">
+                                    <p class="reference__title"><span class="required">*</span>사고유형</p>
+                                    <p class="reference__txt">사실적독해 : 글에 표면적으로 드러난 정보를 파악하여 글의 내용을 체계적으로 이해하는 능력​<br>
+                                        추론적독해 : 생략된 정보를 추론하고, 글에 드러난 단서를 근거로 글쓴이의 의도나 목적을 추측하는 능력​<br>
+                                        비판적독해 : 글에 사용된 자료가 정확한지, 글쓴이의 주장이나 의견이 타당한지 점검하며 글을 읽는 능력​<br>
+                                        감상적독해 : 글에서 공감하거나 감동적인 부분을 읽고 글에 담긴 가치를 종합적으로 이해하는 능력​<br>
+                                        개념 : 개념을 적용하여 글을 이해하고 판단하는 능력​<br>
+                                        어휘 : 글에 나온 어휘의 의미를 알고 문맥에 맞게 사용하며 적용할 수 있는 능력​</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="print__section">
+                    <div class="print__content">
+                        <h4 class="content__title">학습 상세 내역</h4>
+                        <p class="subject-detail">
+                            <span class="chip">지문 1</span>
+                            인문 - 종교/윤리/인류
+                        </p>
+                        <div class="content__header">
+                            <h5 class="content__title">윤리의 기원윤리의 기원윤리의 기원윤리의 기원윤리의 기원</h5>
+                            <div class="date__content">
+                                <p class="kread-data">
+                                    <img src="/assets/images/logo_KRead.svg" class="kread-logo" alt="KRead logo">
+                                    <span class="kread-number">1350</span>
+                                </p>
+                                <p class="rate-data">성취율 80%</p>
+                            </div>
+                        </div>
+                        <div class="content__body">
+                            <div class="content__section">
+                                <div class="detail__header">
+                                    <h6 class="report__title">코어독해</h6>
+                                    <p class="run-time">학습 시간 : 10분 25초</p>
+                                </div>
+                                <div class="detail__body">
+                                    <div class="detail__section">
+                                        <h7 class="detail__title">지문 읽기 활동</h7>
+                                        <table class="detail__table my-reading__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>나의 읽기 시간</th>
+                                                    <th>결과</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span class="run-time">4분 30초</span>
+                                                        <span class="standard">권장 읽기 시간 : 4분</span>
+                                                    </td>
+                                                    <td class="over-time">시간 초과</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="detail__section">
+                                        <h7 class="detail__title">지문 이해 활동</h7>
+                                        <table class="detail__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>내용</th>
+                                                    <th>정답여부</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="content">핵심 소재 및 내용 파악</td>
+                                                    <td>
+                                                        <span class="correct">정답</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="content">중심 내용 파악 및 구조화</td>
+                                                    <td>
+                                                        <span class="complete">완료</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="content">주제 및 핵심 표현 정리</td>
+                                                    <td>
+                                                        <span class="wrong">오답</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__section">
+                                <div class="detail__header">
+                                    <h6 class="report__title">본격독해</h6>
+                                    <p class="run-time">학습 시간 : 10분 25초</p>
+                                </div>
+                                <div class="detail__body">
+                                    <table class="detail__table reading__table">
+                                        <thead>
+                                            <tr>
+                                                <th>유형</th>
+                                                <th>내용</th>
+                                                <th>문항난이도</th>
+                                                <th>정답여부</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="3">사실적독해</td>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="basic">기초</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">드릴문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="killer">킬러</span>
+                                                </td>
+                                                <td>
+                                                    <span class="wrong">오답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="core">핵심</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">비판적독해</td>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="basic">기초</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">드릴문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="killer">킬러</span>
+                                                </td>
+                                                <td>
+                                                    <span class="wrong">오답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="core">핵심</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">추론적독해</td>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="basic">기초</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">드릴문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="killer">킬러</span>
+                                                </td>
+                                                <td>
+                                                    <span class="wrong">오답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="core">핵심</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">사실적독해</td>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="basic">기초</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">드릴문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="killer">킬러</span>
+                                                </td>
+                                                <td>
+                                                    <span class="wrong">오답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="core">핵심</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="content__section">
+                                <div class="detail__header">
+                                    <h6 class="report__title">어휘학습</h6>
+                                    <p class="run-time">학습 시간 : 10분 25초</p>
+                                </div>
+                                <div class="detail__body">
+                                    <table class="detail__table">
+                                        <thead>
+                                            <tr>
+                                                <th>내용</th>
+                                                <th>정답여부</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="content">어휘의 사전적 의미 파악</td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">어휘의 사전적 의미 파악</td>
+                                                <td>
+                                                    <span class="wrong">오답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">어휘의 사전적 의미 파악</td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">어휘의 사전적 의미 파악</td>
+                                                <td>
+                                                    <span class="wrong">오답</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="print__section">
+                    <div class="print__content">
+                        <p class="subject-detail">
+                            <span class="chip">지문 2</span>
+                            인문 - 종교/윤리/인류</p>
+                        <div class="content__header">
+                            <h4 class="content__title">윤리의 기원윤리의 기원윤리의 기원윤리의 기원윤리의 기원</h4>
+                            <div class="date__content">
+                                <p class="kread-data">
+                                    <img src="/assets/images/logo_KRead.svg" class="kread-logo" alt="KRead logo">
+                                    <span class="kread-number">1350</span>
+                                </p>
+                                <p class="rate-data">성취율 80%</p>
+                            </div>
+                        </div>
+                        <div class="content__body">
+                            <div class="content__section">
+                                <div class="detail__header">
+                                    <h6 class="report__title">코어독해</h6>
+                                    <p class="run-time">학습 시간 : 10분 25초</p>
+                                </div>
+                                <div class="detail__body">
+                                    <div class="detail__section">
+                                        <h7 class="detail__title">지문 읽기 활동</h7>
+                                        <table class="detail__table my-reading__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>나의 읽기 시간</th>
+                                                    <th>결과</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span class="run-time">4분 30초</span>
+                                                        <span class="standard">권장 읽기 시간 : 4분</span>
+                                                    </td>
+                                                    <td class="over-time">시간 초과</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="detail__section">
+                                        <h7 class="detail__title">지문 이해 활동</h7>
+                                        <table class="detail__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>내용</th>
+                                                    <th>정답여부</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="content">핵심 소재 및 내용 파악</td>
+                                                    <td>
+                                                        <span class="correct">정답</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="content">중심 내용 파악 및 구조화</td>
+                                                    <td>
+                                                        <span class="complete">완료</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="content">주제 및 핵심 표현 정리</td>
+                                                    <td>
+                                                        <span class="wrong">오답</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__section">
+                                <div class="detail__header">
+                                    <h6 class="report__title">본격독해</h6>
+                                    <p class="run-time">학습 시간 : 10분 25초</p>
+                                </div>
+                                <div class="detail__body">
+                                    <table class="detail__table reading__table">
+                                        <thead>
+                                            <tr>
+                                                <th>유형</th>
+                                                <th>내용</th>
+                                                <th>문항난이도</th>
+                                                <th>정답여부</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="3">사실적독해</td>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="basic">기초</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">드릴문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="killer">킬러</span>
+                                                </td>
+                                                <td>
+                                                    <span class="wrong">오답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="core">핵심</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">비판적독해</td>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="basic">기초</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">드릴문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="killer">킬러</span>
+                                                </td>
+                                                <td>
+                                                    <span class="wrong">오답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="core">핵심</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">추론적독해</td>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="basic">기초</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">드릴문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="killer">킬러</span>
+                                                </td>
+                                                <td>
+                                                    <span class="wrong">오답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="core">핵심</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">사실적독해</td>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="basic">기초</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">드릴문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="killer">킬러</span>
+                                                </td>
+                                                <td>
+                                                    <span class="wrong">오답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">
+                                                    <span class="standard">기준문제</span>
+                                                    문맥을 통한 핵심 정보의 의미 추론
+                                                </td>
+                                                <td>
+                                                    <span class="core">핵심</span>
+                                                </td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="content__section">
+                                <div class="detail__header">
+                                    <h6 class="report__title">어휘학습</h6>
+                                    <p class="run-time">학습 시간 : 10분 25초</p>
+                                </div>
+                                <div class="detail__body">
+                                    <table class="detail__table">
+                                        <thead>
+                                            <tr>
+                                                <th>내용</th>
+                                                <th>정답여부</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="content">어휘의 사전적 의미 파악</td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">어휘의 사전적 의미 파악</td>
+                                                <td>
+                                                    <span class="wrong">오답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">어휘의 사전적 의미 파악</td>
+                                                <td>
+                                                    <span class="correct">정답</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content">어휘의 사전적 의미 파악</td>
+                                                <td>
+                                                    <span class="wrong">오답</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

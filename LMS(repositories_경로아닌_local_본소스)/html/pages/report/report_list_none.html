@@ -40,12 +40,12 @@
         <main class="page component">
             <section class="menu">
                 <div class="menu__content">
-                    <h2 class="menu__title">학생현황</h2>
+                    <h2 class="menu__title">응시 현황</h2>
                     <ul class="menu__list">
-                        <li class="menu__item"><a href="/html/pages/learning/learning_list.html" class="menu__link">학습관리</a></li>
-                        <li class="menu__item">학생현황</li>
+                        <li class="menu__item"><a href="/html/pages/report/report_list.html" class="menu__link">진단평가</a></li>
+                        <li class="menu__item">응시 현황</li>
                     </ul>
-                </div>
+                </div>  
             </section>
             <section class="panel">
                 <form action="" method="">
@@ -53,11 +53,11 @@
                         <p class="input__title">기간</p>
                         <div class="input__content">
                             <p class="input__box">
-                                <input type="date" id="date" class="input input--date" data-placeholder="2022.02.12" required aria-required="true">
+                                <input type="date" id="date" class="input input--date" data-placeholder="날짜 선택" required aria-required="true">
                             </p>
                             <p class="duration">~</p>
                             <p class="input__box">
-                                <input type="date" id="date" class="input input--date" data-placeholder="2022.02.12" required aria-required="true">
+                                <input type="date" id="date" class="input input--date" data-placeholder="날짜 선택" required aria-required="true">
                             </p>                        
                             <div class="radio__content">
                                 <p class="radio__box">
@@ -83,26 +83,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="input__field">
-                        <p class="input__title">분류 및 상태</p>
-                        <p class="input__content">
-                            <select name="sort" class="select">
-                                <option value="전체" selected>전체</option>
-                                <option value="정회원(학습)">정회원(학습)</option>
-                                <option value="체험회원">체험회원</option>
-                            </select>
-                            <select name="state" class="select select--disabled">
-                                <option value="전체" selected>전체</option>
-                                <option value="학습">학습</option>
-                                <option value="학습중단">학습중단</option>
-                                <option value="휴면">휴면</option>
-                                <option value="퇴회">퇴회</option>
-                            </select>
-                        </p>
-                    </div>
                     <p class="input__field">
                         <label for="grade" class="input__title">학년</label>
-                        <select id="grade" name="grade" class="select">
+                        <select name="grade" id="grade" class="select">
                             <option value="전체" selected>전체</option>
                             <option value="초등학교 5">초등학교 5</option>
                             <option value="초등학교 6">초등학교 6</option>
@@ -115,7 +98,7 @@
                         </select>
                     </p>
                     <div class="input__field">
-                        <p class="input__title">현재진도(맞춤)</p>
+                        <p class="input__title">출발점</p>
                         <p class="input__content">
                             <select name="progress" class="select">
                                 <option value="전체" selected>전체</option>
@@ -136,23 +119,14 @@
                                 <option value="6레슨">6레슨</option>
                             </select>
                         </p>
-                    </div>
-                    <p class="input__field">
-                        <label for="teacher" class="input__title">선생님</label>
-                        <select id="teacher" name="teacher" class="select">
-                            <option value="전체" selected>전체</option>
-                            <option value="김선생">김선생</option>
-                            <option value="이선생">이선생</option>
-                            <option value="박선생">박선생</option>
-                        </select>
-                    </p>
+                    </div>                    
                     <div class="input__field">
                         <p class="input__title">검색</p>
                         <p class="input__content">
-                            <select name="search" class="select">
-                                <option value="전체" selected>전체</option>
-                                <option value="이름">이름</option>
-                                <option value="학교">학교</option>
+                            <select name="" class="select">
+                                <option value="all" selected>전체</option>
+                                <option value="nickname">닉네임</option>
+                                <option value="examination code">응시코드</option>
                             </select>
                             <input type="search" class="input input--reset" placeholder="검색어를 입력해 주세요.">
                         </p>
@@ -164,90 +138,22 @@
                 </form>
             </section>
             <section class="search-result">
-                <div class="filter__content">
-                    <p class="filter__txt">총<span class="filter-result">00</span>건</p>
-                    <a href="/html/pages/learning/schedule_management.html" class="btn btn--medium btn--gray">스케줄 관리</a>
-                </div>
                 <div class="table__box">
                     <table class="table table--zebra table-header--sticky">
                         <thead>
                             <tr>
                                 <th>번호</th>
-                                <th>분류</th>
-                                <th>상태</th>
-                                <th>이름</th>
-                                <th>학교명</th>
+                                <th>닉네임</th>
                                 <th>학년</th>
-                                <th colspan="2">최근학습이력</th>
-                                <th>선생님</th>
-                                <th>최근 학습 완료일</th>
-                                <th>관리</th>
-                                <th>상세</th>
+                                <th>응시코드</th>
+                                <th>출발점</th>
+                                <th>응시일</th>
+                                <th>결과화면</th>
+                                <th>회원등록</th>
                             </tr>
                           </thead>
-                          <tbody>
-                            <tr>
-                                <td>01</td>
-                                <td>체험</td>
-                                <td>학습</td>
-                                <td>서학생</td>
-                                <td>남가을초등학교</td>
-                                <td>5</td>
-                                <td class="txt--right">
-                                    <span class="chip chip--blue-outline">추천</span>
-                                </td>
-                                <td class="txt--left">1레벨 5레슨 문학</td>
-                                <td>김선생님</td>
-                                <td>2023.06.31</td>
-                                <td><a href="/html/pages/learning/result_customized.html" class="btn btn--small btn--list">개인코칭</a></td>
-                                <td><a href="/html/pages/student/student_detail.html" class="search__link">보기</a></td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>체험</td>
-                                <td>휴면회원</td>
-                                <td>서학생</td>
-                                <td>남가을초등학교</td>
-                                <td>5</td>
-                                <td class="txt--right">
-                                    <span class="chip chip--red-outline">리셋</span>
-                                </td>
-                                <td class="txt--left">1레벨 2레슨 비문학</td>
-                                <td>김선생님</td>
-                                <td>2023.06.31</td>
-                                <td><a href="/html/pages/learning/result_customized.html" class="btn btn--small btn--list">개인코칭</a></td>
-                                <td><a href="/html/pages/student/student_detail.html" class="search__link">보기</a></td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>체험</td>
-                                <td>학습중단</td>
-                                <td>서학생</td>
-                                <td>남가을초등학교</td>
-                                <td>5</td>
-                                <td class="txt--right">&nbsp;</td>
-                                <td class="txt--left">1레벨 2레슨 비문학</td>
-                                <td>김선생님</td>
-                                <td>2023.06.31</td>
-                                <td><a href="/html/pages/learning/result_customized.html" class="btn btn--small btn--list">개인코칭</a></td>
-                                <td><a href="/html/pages/student/student_detail.html" class="search__link">보기</a></td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>체험</td>
-                                <td>학습중단</td>
-                                <td>서학생</td>
-                                <td>남가을초등학교</td>
-                                <td>5</td>
-                                <td class="txt--right">&nbsp;</td>
-                                <td class="txt--left">진단평가 추천학습 – 1</td>
-                                <td>김선생님</td>
-                                <td>2023.06.31</td>
-                                <td><a href="/html/pages/learning/result_customized.html" class="btn btn--small btn--list">개인코칭</a></td>
-                                <td><a href="/html/pages/student/student_detail.html" class="search__link">보기</a></td>
-                            </tr>
-                          </tbody>
-                    </table>
+                    </table>                    
+                    <p class="error">검색결과가 없습니다.</p>
                 </div>
             </section>
         </main>

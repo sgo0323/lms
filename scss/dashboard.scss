@@ -247,7 +247,7 @@ body {
         }
 
         .table {
-            > :not(caption) > tr {
+            tr {
                 &:last-of-type {
                     td {
                         border-bottom: 0;
@@ -255,7 +255,7 @@ body {
                 }
             }
 
-            > :not(caption) > * > th {
+            th {
                 padding: 11px 12px;
                 border-bottom: 0;
                 background: $color_gray_200;
@@ -265,7 +265,7 @@ body {
                 line-height: ceil(($font_size_large * 1.44));
             }
 
-            > :not(caption) > * > td {
+            td {
                 padding: 16px 12px;
                 font-weight: 500;
                 color: $color_gray_800;
@@ -356,7 +356,7 @@ body {
             //padding: 0 10px;
 
             .table {
-                > :not(caption) > tr {
+                tr {
                     &:first-of-type {
                         td {
                             padding: 16px 12px 21px;
@@ -376,7 +376,7 @@ body {
                     }
                 }
 
-                > :not(caption) > * > th {
+                th {
                     padding: 12px;
                     border-bottom: 0;
                     background: $color_gray_200;
@@ -400,7 +400,7 @@ body {
                     }
                 }
 
-                > :not(caption) > * > td {
+                td {
                     padding: 21px 12px;
                     font-size: $font_size_large;
                     font-weight: 500;
@@ -421,11 +421,11 @@ body {
 
     .ranking {
         .table {
-            > :not(caption) > * > th {
+            th {
                 padding: 11px 8px;
             }
 
-            > :not(caption) > * > td {
+            td {
                 padding: 16px 8px;
 
                 &:first-of-type {
@@ -438,7 +438,7 @@ body {
     .attainment {
         &__table {
             .table {
-                > :not(caption) > tr {
+                tr {
                     &:first-of-type {
                         td {
                             padding: 16px 8px 21px;
@@ -451,7 +451,7 @@ body {
                     }
                 }
 
-                > :not(caption) > * > th {
+                th {
                     padding: 12px 8px;
 
                     &[colspan="3"] {
@@ -459,7 +459,7 @@ body {
                     }
                 }
 
-                > :not(caption) > * > td {
+                td {
                     padding: 21px 8px;
                 }
             }
@@ -543,11 +543,11 @@ body {
         padding: 30px 3% 18px;
 
         .table {
-            > :not(caption) > * > th {
+            th {
                 font-size: $font_size_base;
             }
 
-            > :not(caption) > * > td {
+            td {
                 font-size: $font_size_small;
 
                 &:first-of-type {
@@ -639,11 +639,11 @@ body {
 
         &__table {
             .table {
-                > :not(caption) > * > th {
+                th {
                     font-size: 15px;
                 }
 
-                > :not(caption) > * > td {
+                td {
                     font-size: $font_size_base;
                 }
             }
