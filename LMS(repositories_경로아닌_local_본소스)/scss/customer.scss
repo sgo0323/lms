@@ -12,6 +12,13 @@
         }
     }
 
+    .data {
+        &__search {
+            width: 40%;
+            max-width: 339px;
+        }
+    }
+
     .table {
         .notice,
         .enquiry {
@@ -434,13 +441,16 @@
                 width: 17%;
             }
         }
-        /*
+    }
+}
+
+@include tablet_l {
+    .customer {
         .select {
             &:nth-of-type(n+2) {
                 margin-left: 6px;
             }
         }
-        */
     }
 }
 
@@ -458,29 +468,4 @@
             }
         }
     }
-
-    .customer {
-        .select {
-            &:nth-of-type(n+2) {
-                margin-left: 6px;
-            }
-        }
-
-        .data {
-            &__search {
-                width: 40%;
-            }
-        }
-    }
 }
-/*
-@include tablet_l {
-    .customer {
-        .select {
-            &:nth-of-type(n+2) {
-                margin-left: 6px;
-            }
-        }
-    }
-}
-*/
