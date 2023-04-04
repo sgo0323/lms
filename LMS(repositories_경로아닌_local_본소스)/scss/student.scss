@@ -161,7 +161,11 @@
     .student {
         .input {
             &__content {
-                width: calc((100% - 5.63vw)/ 2);
+                width: calc((100% - 3.44vw)/ 2);
+            }
+
+            &__label {
+                margin-right: 16px;
             }
         }
     }
@@ -182,6 +186,10 @@
                     padding-top: 31px;
                     border-top: 1px solid $color_gray_400;
                 }
+            }
+
+            &__label {
+                margin-right: 3.44vw;
             }
         }
 
