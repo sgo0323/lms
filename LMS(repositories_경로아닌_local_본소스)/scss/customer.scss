@@ -14,9 +14,8 @@
 
     .table {
         &__box {
-            height: 444px;
-            min-height: inherit;
-            max-height: inherit;
+            min-height: 565px;
+            max-height: calc(100vh - 410px);
         }
 
         .notice,
@@ -164,7 +163,8 @@
     
     .accordion {
         overflow-y: auto;
-        height: 453px;
+        min-height: 453px;
+        max-height: calc(100vh - 400px);
         padding: 0 24px;
 
         &::-webkit-scrollbar-track {
@@ -211,6 +211,7 @@
 
         &__inner {
             @include display-flex;
+            align-items: center;
             width: 100%;
         }
         
@@ -319,6 +320,7 @@
                     position: absolute;
                     top: 50%;
                     left: 50%;
+                    margin-right: 0;
                     font-size: $font_size_base;
                     font-weight: 500;
                     color: $color_gray_700;
@@ -435,6 +437,16 @@
 
             &:nth-of-type(n+2) {
                 margin-left: 0;
+            }
+        }
+    }
+}
+
+@include pc_size_s {
+    .customer {
+        .faq {
+            &__category {
+                width: 17%;
             }
         }
     }

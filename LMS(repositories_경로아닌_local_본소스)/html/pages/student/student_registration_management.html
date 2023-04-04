@@ -88,7 +88,6 @@
                                         -->
                                     </span>
                                 </p>
-                                <p class="input__content">&nbsp;</p>
                             </div>
                             <div class="input__field">
                                 <p class="input__content">
@@ -136,12 +135,10 @@
                                     <label for="cellphone" class="input__label">휴대폰번호</label>
                                     <span class="input__box">
                                         <input type="text" id="cellphone" class="input" placeholder="휴대폰번호를 입력해 주세요." maxlength='11' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
-                                        <!-- 유효성 메세지
+                                        <!-- 유효성 메세지 -->
                                             <span class="input-message input-message--invalid">휴대폰번호는 10~11자리 숫자로 입력해 주세요.</span>
-                                        -->
                                     </span>
                                 </p>
-                                <p class="input__content">&nbsp;</p>                                
                             </div>
                             <div class="input__field">
                                 <p class="input__content">
@@ -171,7 +168,6 @@
                                         -->
                                     </span>
                                 </p>
-                                <p class="input__content">&nbsp;</p>
                             </div>
                             <div class="input__field">
                                 <p class="input__content">                                    
@@ -184,7 +180,6 @@
                                         -->
                                     </span>
                                 </p>
-                                <p class="input__content">&nbsp;</p>
                             </div>
                             <div class="input__field">
                                 <div class="input__content">
@@ -227,7 +222,6 @@
                                         <input type="text" class="input" value="123-12">
                                     </p>
                                 </div>
-                                <p class="input__content">&nbsp;</p>
                             </div>
                             <div class="input__field">
                                 <div class="input__content">
@@ -262,9 +256,11 @@
                             </div>
                             <div class="input__field">
                                 <label for="administration" class="input__label">관리메세지</label>
-                                <textarea name="administration" id="administration" class="textarea" maxlength="2000"></textarea>
-                                <p class="textarea-length">
-                                    <span class="textarea-count">0자</span> / <span class="textarea-total">2,000자</span>
+                                <p class="textarea__box">
+                                    <textarea name="administration" id="administration" class="textarea" maxlength="2000"></textarea>
+                                    <span class="textarea-length">
+                                        <span class="textarea-count">0자</span> / <span class="textarea-total">2,000자</span>
+                                    </span>
                                 </p>
                             </div>
                         </div>

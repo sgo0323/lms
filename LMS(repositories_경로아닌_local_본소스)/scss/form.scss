@@ -188,6 +188,7 @@
         background: url('/assets/images/ico_dropdown_calendar.svg') no-repeat center left 11px/ 20px auto;
         color: $color_gray_700;
         -webkit-appearance: none;
+        appearance: none;
 
         &::before {
             content: attr(data-placeholder);

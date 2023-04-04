@@ -80,23 +80,22 @@
                                     <p class="input__label">진단평가 응시코드</p>
                                     <p class="input__result">12345</p>
                                 </div>
-                                <p class="input__content">&nbsp;</p>
                             </div>
                             <div class="input__field">
-                                <div class="input__content">
-                                    <p class="input__label">아이디<span class="input__sup">*</span></p>
-                                    <p class="input__result">A학원</p>
-                                </div>
+                                <p class="input__content">
+                                    <pspan class="input__label">아이디<span class="input__sup">*</span></pspan>
+                                    <span class="input__result">A학원</span>
+                                </p>
                                 <p class="input__content">
                                     <span class="input__label">비밀번호</span>
                                     <button type="button" class="btn btn--medium btn--gray">비밀번호 초기화</button>
                                 </p>
                             </div>
                             <div class="input__field">
-                                <div class="input__content">
-                                    <p class="input__label">이름<span class="input__sup">*</span></p>
-                                    <p class="input__result">김대교</p>
-                                </div>
+                                <p class="input__content">
+                                    <span class="input__label">이름<span class="input__sup">*</span></span>
+                                    <span class="input__result">김대교</span>
+                                </p>
                                 <p class="input__content">
                                     <label for="email" class="input__label">이메일<span class="input__sup">*</span></label>
                                     <span class="input__box">
@@ -119,13 +118,12 @@
                                         <span class="input-message input-message--invalid">휴대폰번호는 10~11자리 숫자로 입력해 주세요.</span>
                                     </span>
                                 </p>
-                                <p class="input__content">&nbsp;</p>                                
                             </div>
                             <div class="input__field">
-                                <div class="input__content">
-                                    <p class="input__label">보호자 성함<span class="input__sup">*</span></p>
-                                    <p class="input__result">김부모</p>
-                                </div>
+                                <p class="input__content">
+                                    <span class="input__label">보호자 성함<span class="input__sup">*</span></span>
+                                    <span class="input__result">김부모</span>
+                                </p>
                                 <p class="input__content">
                                     <label for="parent-email" class="input__label">보호자 이메일</label>
                                     <span class="input__box">
@@ -143,7 +141,6 @@
                                         -->
                                     </span>
                                 </p>
-                                <p class="input__content">&nbsp;</p>
                             </div>
                             <div class="input__field">
                                 <p class="input__content">                                    
@@ -156,19 +153,18 @@
                                         -->
                                     </span>
                                 </p>
-                                <p class="input__content">&nbsp;</p>
                             </div>
                             <div class="input__field">
-                                <div class="input__content">
-                                    <p class="input__label">학교<span class="input__sup">*</span></p>
-                                    <p class="input__box">
+                                <p class="input__content">
+                                    <span class="input__label">학교<span class="input__sup">*</span></span>
+                                    <span class="input__box">
                                         <span class="input__result">대교중학교</span>
                                         <button type="button" class="btn btn--medium btn--primary">선택</button>
                                         <!-- 유효성 메세지
                                             <span class="input-message input-message--invalid">학교를 선택해주세요.</span>
                                         -->
-                                    </p>
-                                </div>
+                                    </span>
+                                </p>
                                 <p class="input__content">
                                     <label for="grade" class="input__label">학년<span class="input__sup">*</span></label>
                                     <span class="input__box">
@@ -199,7 +195,6 @@
                                         <input type="text" class="input" value="123-12">
                                     </p>
                                 </div>
-                                <p class="input__content">&nbsp;</p>
                             </div>
                             <div class="input__field">
                                 <div class="input__content">
@@ -229,12 +224,14 @@
                             <div class="input__field">
                                 <p class="input__content">
                                     <label for="teacher" class="input__label">선생님 배정</label>
-                                    <input type="search" id="teacher" class="input" value="김선생" readonly>
+                                    <span class="input__box">
+                                        <input type="search" id="teacher" class="input" value="김선생" readonly>
+                                    </span>
                                 </p>
-                                <div class="input__content">
-                                    <p class="input__label">학습 스케줄</p>
-                                    <p class="input__result">주3회/월,수,금</p>
-                                </div>
+                                <p class="input__content">
+                                    <span class="input__label">학습 스케줄</span>
+                                    <span class="input__result">주3회/월,수,금</span>
+                                </p>
                             </div>
                             <div class="input__field">
                                 <p class="input__content">
@@ -246,13 +243,14 @@
                                         <option value="퇴회">퇴회</option>
                                     </select>
                                 </p>
-                                <p class="input__content">&nbsp;</p>
                             </div>
                             <div class="input__field">
                                 <label for="administration" class="input__label">관리메세지</label>
-                                <textarea name="administration" id="administration" class="textarea" maxlength="2000">현 학생은 blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah..</textarea>
-                                <p class="textarea-length">
-                                    <span class="textarea-count">0자</span> / <span class="textarea-total">2,000자</span>
+                                <p class="textarea__box">
+                                    <textarea name="administration" id="administration" class="textarea" maxlength="2000">현 학생은 blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah.. blah..</textarea>
+                                    <span class="textarea-length">
+                                        <span class="textarea-count">0자</span> / <span class="textarea-total">2,000자</span>
+                                    </span>
                                 </p>
                             </div>
                         </div>

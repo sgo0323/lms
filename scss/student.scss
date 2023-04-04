@@ -108,8 +108,8 @@
         }
 
         &__label {
-            width: 160px;
-            margin-right: 58px;
+            width: 155px;
+            margin-right: 3.44vw;
             font-weight: 500;
         }
 
@@ -145,7 +145,50 @@
 
         &-length {
             flex: 0 0 auto;
-            margin: 120px 18px 0;
+            margin: 0 18px 0 20px;
+        }
+
+        &__box {
+            @include display-flex;
+            align-items: flex-end;
+            width: 100%;
+
+        }
+    }
+}
+
+@include pc_size_l {
+    .student {
+        .input {
+            &__content {
+                width: calc((100% - 5.63vw)/ 2);
+            }
+        }
+    }
+}
+
+@include pc_size_s {
+    .student {
+        .input {
+            &__field {
+                flex-wrap: wrap;
+            }
+
+            &__content {
+                width: 100%;
+
+                &:nth-of-type(n+2) {
+                    margin-top: 31px;
+                    padding-top: 31px;
+                    border-top: 1px solid $color_gray_400;
+                }
+            }
+        }
+
+        .textarea {
+            &__box {
+                margin-top: 16px;
+            }
         }
     }
 }
