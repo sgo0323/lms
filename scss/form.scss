@@ -187,6 +187,7 @@
         padding: 9.5px 12px 10.5px 43px;
         background: url('/lms/assets/images/ico_dropdown_calendar.svg') no-repeat center left 11px/ 20px auto;
         color: $color_gray_700;
+        -webkit-appearance: none;
 
         &::before {
             content: attr(data-placeholder);
@@ -203,6 +204,10 @@
         &::-webkit-clear-button,
         &::-webkit-inner-spin-button {
             display: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            opacity:0;
         }
 
         &::-webkit-calendar-picker-indicator {

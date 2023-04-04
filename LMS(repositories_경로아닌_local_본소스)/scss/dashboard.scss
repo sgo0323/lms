@@ -326,9 +326,8 @@ body {
 
         &__modal {
             position: absolute;
-            //right: calc(6.25vw + 70px);
             right: 6.25vw;
-            bottom: 2vh;
+            bottom: -2vh;
             width: 370px;
 
             .name {
@@ -353,7 +352,6 @@ body {
             overflow-y: auto;
             max-height: 340px;
             margin-top: 27px;
-            //padding: 0 10px;
 
             .table {
                 tr {
@@ -545,6 +543,7 @@ body {
     }
 }
 
+/*
 @include tablet_s {
     .dashboard {
         &-date {
@@ -577,9 +576,7 @@ body {
             }
         }
     }
-
     
-
     .attainment {
         &__table {
             .table {
@@ -595,79 +592,4 @@ body {
     }
     
 }
-
-/*
-@include tablet_l {
-    .dashboard {
-        .management {
-            padding: 44px 3% 36px;
-
-            &-dashboard {
-                width: calc((100% - 3%)/ 2);
-
-                &:nth-of-type(n+3) {
-                    margin-top: 3%;
-                }
-            }
-        }
-
-        .learning {
-            &__header {
-                padding: 24px 2.5% 18px;
-            }
-
-            &__content {
-                flex-wrap: wrap;
-                padding: 34px 2.5%;
-            }
-        }
-    }
-
-    .ranking {
-        //width: calc(65% - 22px);
-        //padding: 30px 3% 18px;
-
-        .table {
-            th {
-                font-size: $font_size_base;
-            }
-
-            td {
-                font-size: $font_size_small;
-
-                &:first-of-type {
-                    font-size: $font_size_base;
-                }
-            }
-        }
-    }
-
-    .attainment {
-        margin-left: 2.5%;
-        padding: 32px 3% 12px;
-
-        &__list {
-            margin-left: 10px;
-        }
-
-        &__item {
-            //font-size: $font_size_base;
-
-            &:nth-of-type(n+2) {
-                margin-top: 40px;
-            }
-        }
-
-        &__link {
-            margin-left: 0;
-            //font-size: $font_size_small;
-        }
-        
-        &__modal {
-            //right: 5%;
-        }
-    }
-}
-
-
 */

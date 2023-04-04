@@ -68,11 +68,25 @@
     }
 }
 
-@include tablet_l {
+@include pc_size_s { 
     .schedule {
         &-management {
-            .panel {
-                padding: 48px 3% 35px;
+            .management {
+                &__content {
+                    flex-wrap: wrap;
+
+                    .panel {
+                        width: calc((100% - 5.42vw)/ 2);
+
+                        &:nth-of-type(n+3) {
+                            margin-top: 2.5vw;
+                        }
+                    }
+                }
+                
+                &__list {
+                    max-height: 260px;
+                }
             }
         }
     }
