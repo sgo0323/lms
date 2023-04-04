@@ -13,11 +13,6 @@
     }
 
     .table {
-        &__box {
-            min-height: 565px;
-            max-height: calc(100vh - 410px);
-        }
-
         .notice,
         .enquiry {
             &__title {
@@ -37,7 +32,10 @@
 
     .notice {
         &__table {
-            .table {                
+            min-height: 565px;
+            max-height: calc(100vh - 410px - 63px);
+
+            .table {
                 td {
                     &:nth-of-type(2) {
                         position: relative;
@@ -163,8 +161,8 @@
     
     .accordion {
         overflow-y: auto;
-        min-height: 453px;
-        max-height: calc(100vh - 400px);
+        min-height: 565px;
+        max-height: calc(100vh - 410px - 73px);
         padding: 0 24px;
 
         &::-webkit-scrollbar-track {
@@ -261,6 +259,9 @@
 
     .enquiry {
         &__table {
+            min-height: 505px;
+            max-height: calc(100vh - 462px);
+
             .table {                
                 td {
                     &:nth-of-type(3) {
@@ -447,6 +448,16 @@
         .faq {
             &__category {
                 width: 17%;
+            }
+        }
+    }
+}
+
+@include tablet_l {
+    .data-table {
+        .select {
+            &:nth-of-type(n+2) {
+                margin-left: 6px;
             }
         }
     }
