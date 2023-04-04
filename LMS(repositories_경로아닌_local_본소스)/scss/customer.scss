@@ -434,12 +434,13 @@
                 width: 17%;
             }
         }
-
+        /*
         .select {
             &:nth-of-type(n+2) {
                 margin-left: 6px;
             }
         }
+        */
     }
 }
 
@@ -454,6 +455,20 @@
 
             &:nth-of-type(n+2) {
                 margin-left: 0;
+            }
+        }
+    }
+
+    .customer {
+        .select {
+            &:nth-of-type(n+2) {
+                margin-left: 6px;
+            }
+        }
+
+        .data {
+            &__search {
+                width: 40%;
             }
         }
     }
