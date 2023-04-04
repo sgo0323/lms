@@ -260,7 +260,7 @@
     .enquiry {
         &__table {
             min-height: 505px;
-            max-height: calc(100vh - 462px);
+            max-height: calc(100vh - 462px - 95px);
 
             .table {                
                 td {
@@ -427,6 +427,22 @@
     }
 }
 
+@include pc_size_s {
+    .customer {
+        .faq {
+            &__category {
+                width: 17%;
+            }
+        }
+
+        .select {
+            &:nth-of-type(n+2) {
+                margin-left: 6px;
+            }
+        }
+    }
+}
+
 @include tablet_s {
     .file {
         &-notice {
@@ -442,19 +458,9 @@
         }
     }
 }
-
-@include pc_size_s {
-    .customer {
-        .faq {
-            &__category {
-                width: 17%;
-            }
-        }
-    }
-}
-
+/*
 @include tablet_l {
-    .data-table {
+    .customer {
         .select {
             &:nth-of-type(n+2) {
                 margin-left: 6px;
@@ -462,3 +468,4 @@
         }
     }
 }
+*/
