@@ -121,30 +121,6 @@
                         }
                     }
                 }
-
-                &.result {
-                    &-customized {
-                        .table {
-                            th {
-                                // 진도리셋
-                                &:nth-of-type(11) {
-                                    width: 10%;
-                                }
-                            }
-                        }
-                    }
-
-                    &-csat {
-                        .table {
-                            // 진도리셋
-                            th {
-                                &:nth-of-type(9) {
-                                    width: 10%;
-                                }
-                            }
-                        }
-                    }          
-                }
             }
         }
 
@@ -157,6 +133,17 @@
 
                     &:nth-of-type(n+2) {
                         margin-left: 16px;
+                    }
+
+                    &--on {
+                        border-color: $color_primary;
+                        color: $color_primary;
+                        
+                        &:hover {
+                            border-color: #602EA0;
+                            background: $color_gray_200;
+                            color: #602EA0;
+                        }
                     }
                 }
 
@@ -214,7 +201,8 @@
                 font-size: $font_size_h4;
                 font-weight: 700;
                 color: $color_gray_900;
-                line-height: 1.45;            
+                line-height: 1.45;
+                word-break: keep-all;
             }
 
             &__txt {
@@ -353,8 +341,49 @@
 
 @include pc_size_l {
     .personal {
+        &-coaching {
+            .result {
+                &-customized {
+                    .table {
+                        &__link {
+                            font-size: $font_size_small;
+                        }
+
+                        th, td {
+                            font-size: $font_size_small;
+                        }
+
+                        .btn {
+                            &--reset {
+                                font-size: $font_size_caption2;
+                            }
+                        }
+                    }
+
+                    .chip {
+                        font-size: $font_size_small;
+                    }
+                }
+            }
+
+            .tab {
+                &__content {
+                    .table {
+                        th {
+                            padding: 15px 12px 9px;
+                        }
+
+                        td {
+                            padding: 8px 12px;
+                        }
+                    }
+                }
+            }
+        }
+
         &-info {
-            padding: 2.08vw;
+            //padding: 2.08vw;
+            padding: 2.6vw;
 
             .panel {
                 &__bg {
@@ -366,7 +395,7 @@
         }
 
         &-dashboard {            
-            margin-top: 1.67vw;
+            //margin-top: 1.67vw;
 
             .panel {
                 padding: 0.99vw 1.67vw 1.67vw;
@@ -412,9 +441,78 @@
 
 @include pc_size_s {
     .personal {
+        &-coaching {
+            .tab {
+                &__content {
+                    .table {
+                        th {
+                            padding: 15px 8px 9px;
+                        }
+
+                        td {
+                            padding: 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-dashboard {
+            flex-wrap: wrap;
+
+            .panel {
+                &:first-of-type {
+                    width: auto;
+                }
+
+                &:nth-of-type(2) {
+                    margin-right: 0;
+                }
+
+                &:last-of-type {
+                    flex-direction: inherit;
+                    justify-content: inherit;
+                    width: 100%;
+                    max-width: inherit;
+                    margin-top: 2.08vw;
+
+                    .graph {
+                        &__content {
+                            flex: 1 1 auto;
+                            max-width: 382px;
+                            margin-left: 3.13vw;
+                        }
+                    }
+                }
+            }
+        }
+
         &__item {
             &:first-of-type {
                 width: 45%;
+            }
+        }
+    }
+    
+    .detail {
+        &__title {
+            margin-right: 2.08vw;
+        }
+
+        &__list {
+            flex-wrap: wrap;
+        }
+    }
+
+    .graph {
+        &__content {
+            .table {
+                td {
+                    &:first-of-type {
+                        width: 30%;
+                        min-width: 92px;
+                    }
+                }
             }
         }
     }
@@ -422,17 +520,52 @@
 
 @include tablet_l {
     .personal {
-        &-dashboard {
-            flex-wrap: wrap;
+        &-coaching {
+            .tab {
+                &__content {
+                    .table {
+                        &__box {
+                            padding: 0 12px 18px;
+                        }
 
+                        &__link {
+                            font-size: $font_size_small;
+                        }
+
+                        .btn {
+                            &--reset {
+                                font-size: $font_size_caption2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-info {
             .panel {
+                &__bg-gray {
+                    padding: 2.08vw 3.13vw 1.82vw;
+                }
+            }
+        }
+
+        &-dashboard {
+            .panel {
+                //padding: 0.99vw 2.6vw 1.67vw;
+                padding: 2.34vw 3.13vw;
+                
                 &:first-of-type {
+                    flex-direction: inherit;
+                    justify-content: inherit;
                     width: 100%;
                     max-width: inherit;
 
                     .graph {
                         &__content {
+                            flex: 1 1 auto;
                             max-width: 260px;
+                            margin-left: 3.13vw;
                         }
                     }
                 }
@@ -440,18 +573,8 @@
                 &:nth-of-type(2) {
                     width: 100%;
                     max-width: inherit;
-                    margin: 0;
-                }
-
-                &:last-of-type {
-                    width: 100%;
-                    max-width: inherit;
-
-                    .graph {
-                        &__content {
-                            max-width: 382px;
-                        }
-                    }
+                    margin-top: 2.08vw;
+                    margin-left: 0;
                 }
             }
         }
@@ -475,7 +598,7 @@
 
             &:last-of-type {
                 width: 100%;
-                margin-top: 1.25vw;
+                margin-top: 5px;
                 border-left: 0;
 
                 .detail {
@@ -492,17 +615,23 @@
     }
 
     .detail {
-        &__title {
-            margin-right: 2.08vw;
-        }
-
-        &__list {
-            flex-wrap: wrap;
-        }
-
         &__btn {
             margin-top: 1.25vw;
             margin-left: 0;
+        }
+    }
+
+    .dashboard {
+        &__title {
+            width: 30%;
+        }
+    }
+
+    .graph {
+        &__content {
+            .table {
+                width: calc((100% - 3.33vw) / 2);
+            }
         }
     }
 }

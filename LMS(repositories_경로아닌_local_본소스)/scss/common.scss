@@ -1274,9 +1274,7 @@ table, thead, tbody, tr, th, td {
             }
         }
     }
-}
-
-@include tablet_s {
+    
     .chip {
         font-size: $font_size_small;
 

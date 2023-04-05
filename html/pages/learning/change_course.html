@@ -40,16 +40,26 @@
     <body>
         <header data-include="/lms/html/common/layouts/header.html"></header>
         <main class="page change-course">
-            <section class="menu">
-                <div class="menu__content">
-                    <h2 class="menu__title">진도 수정</h2>
-                    <ul class="menu__list">
-                        <li class="menu__item"><a href="/lms/html/pages/learning/learning_list.html" class="menu__link">학습관리</a></li>
-                        <li class="menu__item"><a href="/lms/html/pages/learning/learning_list.html" class="menu__link">학생현황</a></li>
-                        <li class="menu__item"><a href="/lms/html/pages/learning/personal_coaching.html" class="menu__link">개인코칭</a></li>
-                        <li class="menu__item">진도 수정</li>
-                    </ul>
-                </div>  
+            <section class="change-course__header">
+                <div class="menu">
+                    <div class="menu__content">
+                        <h2 class="menu__title">진도 수정</h2>
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="/lms/html/pages/learning/learning_list.html" class="menu__link">학습관리</a></li>
+                            <li class="menu__item"><a href="/lms/html/pages/learning/learning_list.html" class="menu__link">학생현황</a></li>
+                            <li class="menu__item"><a href="/lms/html/pages/learning/personal_coaching.html" class="menu__link">개인코칭</a></li>
+                            <li class="menu__item">진도 수정</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="data__search">
+                    <form action="" method="">
+                        <p class="input__field">
+                            <input type="search" id="reset" class="input input--reset input--search" placeholder="지문명을 입력해주세요." autocomplete="off">
+                            <button type="button" class="search__btn">search</button>
+                        </p>                        
+                    </form>
+                </div>
             </section>
             <section class="change-course__body">
                 <p class="change-course__btn">
@@ -92,7 +102,8 @@
                                     <div class="accordion__content">
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
@@ -100,14 +111,16 @@
                                         </ul>
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
                                         </ul>
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
@@ -128,14 +141,16 @@
                                     <div class="accordion__content">
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
                                         </ul>
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
@@ -161,14 +176,16 @@
                                     <div class="accordion__content">
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
                                         </ul>
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
@@ -194,14 +211,16 @@
                                     <div class="accordion__content">
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
                                         </ul>
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
@@ -227,14 +246,16 @@
                                     <div class="accordion__content">
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
                                         </ul>
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
@@ -260,14 +281,16 @@
                                     <div class="accordion__content">
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
                                         </ul>
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
@@ -288,14 +311,16 @@
                                     <div class="accordion__content">
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
                                         </ul>
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
@@ -321,14 +346,16 @@
                                     <div class="accordion__content">
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>
                                         </ul>
                                         <ul class="subject__list">
                                             <li class="subject__title">
-                                                문학 > 작품비교
+                                                <input type="checkbox" id="literature" class="check__input">
+                                                <label for="literature" class="check__label">문학</label>
                                             </li>
                                             <li class="subject__item">[지문 1. 현대소설] 소나기 > 작품비교</li>
                                             <li class="subject__item">[지문 2. 현대시] 나는 고양이 로소이다. > 작품비교</li>

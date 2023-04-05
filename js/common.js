@@ -85,6 +85,20 @@ function textareaLength() {
     });
 }
 
+// learning/personal_coaching.html 맞춤, 추천 학습 필터 버튼 css
+function customizedBtn() {
+    let filter_btn = $('.result-customized .filter__content .btn');
+
+    filter_btn.click(function() {
+        if ($(this).hasClass('btn--on')) {
+            $(this).removeClass('btn--on');
+        } else {
+            filter_btn.removeClass('btn--on');
+            $(this).addClass('btn--on');
+        }
+    });
+}
+
 $(function() {
     setTimeout(function() {
         // header shortcut
@@ -101,5 +115,8 @@ $(function() {
 
        // textarea length
        textareaLength();
+
+       // learning/personal_coaching.html 맞춤, 추천 학습 필터 버튼 css
+       customizedBtn();
     }, 200);
 });
