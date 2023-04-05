@@ -1193,6 +1193,10 @@ table, thead, tbody, tr, th, td {
 }
 
 @include pc_size_l {
+    .page {
+        padding: 38px 5%;
+    }
+
     .component {
         .radio {
             &__content {
@@ -1245,10 +1249,6 @@ table, thead, tbody, tr, th, td {
 }
 
 @include tablet_l {
-    .page {
-        padding: 38px 5%;
-    }
-
     .data {
         &-table {
             &__header {

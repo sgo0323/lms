@@ -291,7 +291,7 @@ header {
     }
 }
 
-@include tablet_l {
+@include pc_size_l {
     .header {
         &__inner {
             padding: 32px 5% 26px;
@@ -331,8 +331,4 @@ header {
             right: -20px;
         }
     }
-}
-
-@include tablet_s {
-    
 }
