@@ -1200,6 +1200,7 @@ table, thead, tbody, tr, th, td {
     .component {
         .radio {
             &__content {
+                width: 100%;
                 min-height: auto;
                 margin-left: 0;
             }
@@ -1302,7 +1303,7 @@ table, thead, tbody, tr, th, td {
             .table {
                 .btn {
                     &--list {
-                        padding: 7.5px 15px 6.5px;
+                        padding: 7.5px 20px 6.5px;
                         font-size: $font_size_small;
                     }
                 }

@@ -963,3 +963,11 @@ $dashboard_title_height   : 3.28vw;
         }
     }
 }
+
+@include pc_size_l {
+    .report {
+        &__inner {
+            padding: 0 5%;
+        }
+    }
+}

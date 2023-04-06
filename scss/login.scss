@@ -2,8 +2,9 @@
 
 .login {
     position: relative;
-    min-height: 774px;
-    height: 100vh;
+    //min-height: 774px;
+    min-height: 950px;
+    //height: 100vh;
     background: $color_white;
 
     &__btn {
@@ -30,6 +31,7 @@
         & + .search {
             &__content {
                 margin-top: 44px;
+                max-width: 552px;
 
                 form {
                     margin-top: 94px;
@@ -146,3 +148,4 @@
         }
     }
 }
+

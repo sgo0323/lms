@@ -913,3 +913,12 @@
         }
     }
 }
+
+/*  Media Query */
+@include pc_size_l {
+    .print {
+        &__inner {
+            padding: 0 5%;
+        }
+    }
+}
