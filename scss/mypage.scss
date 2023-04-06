@@ -6,6 +6,7 @@
             max-width: 472px;
 
             &-message {
+                display: block;
                 margin-top: 0;
                 margin-left: 16px;
             }
@@ -35,6 +36,12 @@
             &:last-of-type {
                 border-bottom: 0;
             }
+        }
+
+        &__content {
+            @include display-flex;
+            align-items: center;
+            width: 100%;
         }
 
         &__label {
@@ -92,6 +99,32 @@
             padding: 20px 31px 18px;
             font-size: $font_size_h3;
             line-height: ceil(($font_size_h3 * 1.45));
+        }
+    }
+}
+
+@include pc_size_l {
+    .mypage {
+        .input {
+            &__label {
+                margin-right: 3.65vw;
+            }
+        }
+    }
+}
+
+@include pc_size_s {
+    .mypage {
+        .input {
+            &-message {
+                width: 100%;
+                margin-top: 4px;
+                margin-left: 0;
+            }
+
+            &__content {
+                flex-wrap: wrap;
+            }
         }
     }
 }

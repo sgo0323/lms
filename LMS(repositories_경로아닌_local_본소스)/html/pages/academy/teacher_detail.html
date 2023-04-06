@@ -75,38 +75,42 @@
                                 </p>
                                 <p class="input__field">
                                     <label for="name" class="input__label">이름<span class="input__sup">*</span></label>
-                                    <input type="text" id="name" class="input" placeholder="이름을 입력해 주세요." value="김대교">
-                                    <!-- 유효성 메세지
-                                    <span class="input-message input-message--invalid">이름을 입력해 주세요.</span>
-                                    <span class="input-message input-message--invalid">이름은 2~20자 한글/영문으로 입력해주세요.</span>
-                                    -->
+                                    <span class="input__content">
+                                        <input type="text" id="name" class="input" placeholder="이름을 입력해 주세요." value="김대교">
+                                        <!-- 유효성 메세지 
+                                        <span class="input-message input-message--invalid">이름을 입력해 주세요.</span> -->
+                                        <span class="input-message input-message--invalid">이름은 2~20자 한글/영문으로 입력해주세요.</span>
+                                    </span>
                                 </p>
                                 <p class="input__field">
                                     <label for="cellphone" class="input__label">휴대폰번호<span class="input__sup">*</span></label>
-                                    <input type="text" id="cellphone" class="input" placeholder="휴대폰번호를 입력해 주세요." value="01023431234" maxlength='11' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
-                                    <!-- 유효성 메세지
-                                    <span class="input-message input-message--invalid">휴대폰번호는 10~11자리 숫자로 입력해 주세요.</span>
-                                    -->
+                                    <span class="input__content">
+                                        <input type="text" id="cellphone" class="input" placeholder="휴대폰번호를 입력해 주세요." value="01023431234" maxlength='11' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
+                                        <!-- 유효성 메세지 -->
+                                        <span class="input-message input-message--invalid">휴대폰번호는 10~11자리 숫자로 입력해 주세요.</span>
+                                    </span>
                                 </p>
                                 <p class="input__field">                                 
                                     <label for="birthday" class="input__label">생년월일<span class="input__sup">*</span></label>
-                                    <input type="text" id="birthday" class="input" placeholder="8자리 숫자만 입력" value="19871233" maxlength='8' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
-                                    <!-- 유효성 메세지 
-                                    <span class="input-message input-message--invalid">생년월일을 입력해 주세요.</span>
-                                    <span class="input-message input-message--invalid">생년월일은 8자리 숫자로 입력해 주세요.</span>
-                                    -->
+                                    <span class="input__content">
+                                        <input type="text" id="birthday" class="input" placeholder="8자리 숫자만 입력" value="19871233" maxlength='8' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autocomplete="off">
+                                        <!-- 유효성 메세지 
+                                        <span class="input-message input-message--invalid">생년월일을 입력해 주세요.</span>-->
+                                        <span class="input-message input-message--invalid">생년월일은 8자리 숫자로 입력해 주세요.</span>
+                                    </span>
                                 </p>
                                 <p class="input__field">
                                     <label for="email" class="input__label">이메일<span class="input__sup">*</span></label>
-                                    <span class="input__box">
-                                        <input type="email" id="email" class="input" placeholder="이메일 주소를 입력해 주세요." value="adsfdf@naver.com">
-                                        <button type="button" class="btn btn--medium btn--gray">중복체크</button>
+                                    <span class="input__content">
+                                        <span class="input__box">
+                                            <input type="email" id="email" class="input" placeholder="이메일 주소를 입력해 주세요." value="adsfdf@naver.com">
+                                            <button type="button" class="btn btn--medium btn--gray">중복체크</button>
+                                        </span>
+                                        <!-- 유효성 메세지
+                                        <span class="input-message">사용가능합니다.</span>
+                                        <span class="input-message input-message--invalid">사용이 불가능합니다.</span> -->
+                                        <span class="input-message input-message--invalid">중복체크를 진행해 주세요.</span>
                                     </span>
-                                    <!-- 유효성 메세지
-                                    <span class="input-message">사용가능합니다.</span>
-                                    <span class="input-message input-message--invalid">사용이 불가능합니다.</span>
-                                    <span class="input-message input-message--invalid">중복체크를 진행해 주세요.</span>
-                                    -->
                                 </p>
                                 <p class="input__field">
                                     <span class="input__label">최초가입일</span>
@@ -204,7 +208,7 @@
             <div class="modal__dialog modal--center">
                 <div class="modal__content">
                     <div class="modal__body">
-                        <h5 class="modal__title">정말 탈퇴하시겠습니까?</h5>
+                        <h5 class="modal__title">탈퇴가 완료 되었습니다.</h5>
                     </div>
                     <div class="modal__footer">
                         <button type="submit" class="btn btn--popup btn--primary" data-dismiss="modal">확인</button>

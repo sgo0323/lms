@@ -73,6 +73,12 @@
                 flex: 0 0 auto;
             }
         }
+
+        &__content {
+            @include display-flex;
+            align-items: center;
+            width: 100%;
+        }
         
         &__box {
             @include display-flex;
@@ -113,9 +119,43 @@
     .file {
         &__item {
             margin-left: 24px;
-
+            /*
             &:nth-of-type(n+2) {
                 margin-top: 0;
+            }*/
+        }
+    }
+}
+
+@include pc_size_l {
+    .academy {
+        .input {
+            &__label {
+                margin-right: 3.65vw;
+            }
+        }
+    }
+}
+
+@include pc_size_s {
+    .academy {
+        .input {
+            &-message {
+                width: 100%;
+                margin-top: 4px;
+                margin-left: 0;
+            }
+
+            &__content {
+                flex-wrap: wrap;
+            }
+        }
+
+        .file {
+            &__item {
+                width: 100%;
+                margin-top: 4px;
+                margin-left: 0;
             }
         }
     }
