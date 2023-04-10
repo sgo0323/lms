@@ -118,11 +118,11 @@
                         <button type="submit" class="btn btn--primary">조회</button>
                     </p>
                 </form>
-            </section>
+            </section> 
             <section class="search-result">
                 <div class="filter__content">
                     <p class="filter__txt">총<span class="filter-result">00</span>건</p>
-                    <a href="/lms/html/pages/academy/teacher_registration.html" class="btn btn--medium btn--gray">선생님 등록</a>
+                    <!-- <a href="/lms/html/pages/academy/teacher_registration.html" class="btn btn--medium btn--gray">선생님 등록</a> -->
                 </div>
                 <div class="table__box">
                     <table class="table table--zebra table-header--sticky">
@@ -134,7 +134,7 @@
                                 <th>재직상태</th>
                                 <th>이메일</th>
                                 <th>최종접속일</th>
-                                <th>관리</th>
+                                <th>초기화</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -145,7 +145,7 @@
                                 <td>재직</td>
                                 <td>asdfgh@naver.com</td>
                                 <td>2023.06.31</td>
-                                <td><a href="/lms/html/pages/academy/teacher_detail.html" class="btn btn--small btn--list">수정</a></td>
+                                <td><button type="button" class="btn btn--small btn--list" data-type="modal" data-target="#modal-password-reset">비밀번호</button></td>
                             </tr>
                             <tr>
                                 <td>내용</td>
@@ -154,7 +154,7 @@
                                 <td class="txt--red">휴직</td>
                                 <td>내용</td>
                                 <td>내용</td>
-                                <td><a href="/lms/html/pages/academy/teacher_detail.html" class="btn btn--small btn--list">수정</a></td>
+                                <td><button type="button" class="btn btn--small btn--list" data-type="modal" data-target="#modal-password-reset">비밀번호</button></td>
                             </tr>
                             <tr>
                                 <td>내용</td>
@@ -163,7 +163,7 @@
                                 <td class="txt--red">재직상태확인</td>
                                 <td>내용</td>
                                 <td>내용</td>
-                                <td><a href="/lms/html/pages/academy/teacher_detail.html" class="btn btn--small btn--list">수정</a></td>
+                                <td><button type="button" class="btn btn--small btn--list" data-type="modal" data-target="#modal-password-reset">비밀번호</button></td>
                             </tr>
                             <tr>
                                 <td>내용</td>
@@ -172,7 +172,7 @@
                                 <td>내용</td>
                                 <td>내용</td>
                                 <td>내용</td>
-                                <td><a href="/lms/html/pages/academy/teacher_detail.html" class="btn btn--small btn--list">수정</a></td>
+                                <td><button type="button" class="btn btn--small btn--list" data-type="modal" data-target="#modal-password-reset">비밀번호</button></td>
                             </tr>
                             <tr>
                                 <td>내용</td>
@@ -181,7 +181,7 @@
                                 <td>내용</td>
                                 <td>내용</td>
                                 <td>내용</td>
-                                <td><a href="/lms/html/pages/academy/teacher_detail.html" class="btn btn--small btn--list">수정</a></td>
+                                <td><button type="button" class="btn btn--small btn--list" data-type="modal" data-target="#modal-password-reset">비밀번호</button></td>
                             </tr>
                             <tr>
                                 <td>내용</td>
@@ -190,7 +190,7 @@
                                 <td>내용</td>
                                 <td>내용</td>
                                 <td>내용</td>
-                                <td><a href="/lms/html/pages/academy/teacher_detail.html" class="btn btn--small btn--list">수정</a></td>
+                                <td><button type="button" class="btn btn--small btn--list" data-type="modal" data-target="#modal-password-reset">비밀번호</button></td>
                             </tr>
                             <tr>
                                 <td>내용</td>
@@ -199,7 +199,7 @@
                                 <td>내용</td>
                                 <td>내용</td>
                                 <td>내용</td>
-                                <td><a href="/lms/html/pages/academy/teacher_detail.html" class="btn btn--small btn--list">수정</a></td>
+                                <td><button type="button" class="btn btn--small btn--list" data-type="modal" data-target="#modal-password-reset">비밀번호</button></td>
                             </tr>
                             <tr>
                                 <td>내용</td>
@@ -208,12 +208,45 @@
                                 <td>내용</td>
                                 <td>내용</td>
                                 <td>내용</td>
-                                <td><a href="/lms/html/pages/academy/teacher_detail.html" class="btn btn--small btn--list">수정</a></td>
+                                <td><button type="button" class="btn btn--small btn--list" data-type="modal" data-target="#modal-password-reset">비밀번호</button></td>
                             </tr>
                           </tbody>
                     </table>
                 </div>
             </section>
         </main>
+
+        <!-- 비밀번호 변경 초기화 -->
+        <div id="modal-password-reset" class="modal alert">
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">
+                            비밀번호를<br>
+                            초기화 하시겠습니까?
+                        </h5>
+                    </div>
+                    <div class="modal__footer">
+                        <p class="btn--half">
+                            <button type="button" class="btn btn--popup btn--primary-outline" data-dismiss="modal">취소</button>
+                            <button type="submit" class="btn btn--popup btn--primary" data-type="modal" data-target="#modal-confirm">확인</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-confirm" class="modal alert">
+            <div class="modal__dialog modal--center">
+                <div class="modal__content">
+                    <div class="modal__body">
+                        <h5 class="modal__title">비밀번호 초기화가<br>
+                            완료되었습니다.</h5>
+                    </div>
+                    <div class="modal__footer">
+                        <button type="submit" class="btn btn--popup btn--primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

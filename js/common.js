@@ -118,5 +118,23 @@ $(function() {
 
        // learning/personal_coaching.html 맞춤, 추천 학습 필터 버튼 css
        customizedBtn();
+
+       // 비밀번호 변경 초기화
+       $('[data-target="#modal-confirm"]').on('click', function(){
+            $('#modal-password-reset').hide();
+        });
+
+        // 탈퇴처리
+        $('[data-target="#modal-withdraw"]').on('click', function(){
+            $('#modal-modify').hide();
+        });
+        $('[data-target="#modal-complete"]').on('click', function(){
+            $('#modal-withdraw').hide();
+        });
+
+        // 대기해제
+        $('[data-target="#modal-standby-success"]').on('click', function(){
+            $('#modal-standby-account').hide();
+        });
     }, 200);
 });
