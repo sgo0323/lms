@@ -291,7 +291,7 @@ $dashboard_title_height   : 3.28vw;
             position: relative;
             padding-left: 1vw;
             font-size: 1.6vw;
-            font-weight: 700;
+            font-weight: 500;
             color: $color_gray_900;
             line-height: 2.4vw;
 
@@ -462,6 +462,11 @@ $dashboard_title_height   : 3.28vw;
             background-image: url('/lms/assets/images/ico_phi.svg');
         }
 
+        .complete, .none {
+            font-weight: 500;
+            color: $color_gray_700;
+        }  
+
         .standard {
             display: block;
             margin-top: 0.36vw;
@@ -473,13 +478,13 @@ $dashboard_title_height   : 3.28vw;
 
         .basic, .killer, .core {
             display: inline-block;
-            width: 5.5vw;
-            padding: 0.5vw 0.8vw;
+            //width: 5.5vw;
+            padding: 0.50vw 1.81vw;
             @include border-radius(1.1vw);
             font-size: 1.04vw;
             font-weight: 500;
             color: $color_gray_800;
-            text-align: left;
+            //text-align: left;
             line-height: 1.35vw;
         }
 
@@ -828,6 +833,16 @@ $dashboard_title_height   : 3.28vw;
                 margin-bottom: 0.39vw;
             }
             
+        }
+    }
+
+    .table {
+        .run-time {
+            font-weight: 700;
+
+            &::after {
+                display: none;
+            }
         }
     }
 }

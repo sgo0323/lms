@@ -113,11 +113,11 @@ $scrollbar_color : #D9D9D9;
     }
 
     &__item {
-        font-size: $font_size_h4;
+        font-size: $font_size_h1;
         font-weight: 700;
         color: #1A1D1F;
         text-align: center;
-        line-height: 1.6;
+        // line-height: 1;
         letter-spacing: -0.02em;
 
         span {
@@ -1126,6 +1126,14 @@ table, thead, tbody, tr, th, td {
                 }
             }
         }
+
+        .report {
+            &__table {
+                td {
+                    height: 62px;
+                }
+            }
+        }
     }
 
     &__link {
@@ -1242,6 +1250,14 @@ table, thead, tbody, tr, th, td {
                     &--list {
                         min-width: auto;
                         padding: 7.5px 30px 6.5px;
+                    }
+                }
+            }
+
+            .report {
+                &__table {
+                    td {
+                        height: 59px;
                     }
                 }
             }

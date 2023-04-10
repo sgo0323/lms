@@ -31,7 +31,7 @@
 
             &__link {
                 margin-left: 1.25vw;
-                padding: 5.5px 10px 4.5px;
+                padding: 5.5px 19px 4.5px;
                 border: 1px solid $color_gray_700;
                 @include border-radius(50px);
                 background: $color_white;
@@ -45,7 +45,7 @@
 
                 .btn {
                     &:nth-of-type(n+2) {
-                        margin-left: 0.83vw;
+                        margin-left: 13px;
                     }
                 }
             }
@@ -152,6 +152,14 @@
                     &:nth-of-type(n+2) {
                         margin-left: 16px;
                     }
+                }
+            }
+        }
+
+        .result {
+            &-customized {
+                .chip {
+                    margin-top: 8px;
                 }
             }
         }
@@ -361,6 +369,7 @@
                     }
 
                     .chip {
+                        margin-top: 4px;
                         font-size: $font_size_small;
                     }
                 }
@@ -618,6 +627,10 @@
         &__btn {
             margin-top: 1.25vw;
             margin-left: 0;
+        }
+
+        &__link {
+            padding: 5.5px 10px 4.5px;
         }
     }
 
